@@ -1,8 +1,5 @@
 // ----- MUST HAVE ATTRIBUTEs
 // -> text = ?""
-// -> font-size = ?""
-// -> font-color = ?""
-// -> font-family = ?""
 // -> typing-speed = int
 // -> erasing-speed = int
 // -> still-time = int
@@ -23,7 +20,7 @@ class TypewritingText extends HTMLElement {
         this.attachShadow({mode: 'open'});
         
         let styleElement = document.createElement("link");
-        styleElement.href = "../STYLES/TypewritingText-style.css";
+        styleElement.href = "../styles/TypewritingText-style.css";
         styleElement.rel = "stylesheet";
         this.shadowRoot.appendChild(styleElement);
 
@@ -40,16 +37,10 @@ class TypewritingText extends HTMLElement {
         });
 
         // Default attributes value
-        if (!this.hasAttribute("font-size")) this.setAttribute("font-size", "inherit");
-        if (!this.hasAttribute("font-color")) this.setAttribute("font-color", "inherit");
-        if (!this.hasAttribute("font-family")) this.setAttribute("font-family", "inherit");
         if (!this.hasAttribute("typing-speed")) this.setAttribute("typing-speed", TypewritingText.DEFAULT_TYPING_SPEED);
         if (!this.hasAttribute("still-time")) this.setAttribute("still-time", TypewritingText.DEFAULT_STILL_TIME);
         if (!this.hasAttribute("erasing-speed")) this.setAttribute("erasing-speed", TypewritingText.DEFAULT_ERASING_SPEED);
 
-        this.style.setProperty("--fontSize", this.getAttribute("font-size"));
-        this.style.setProperty("--fontColor", this.getAttribute("font-color"));
-        this.style.setProperty("--fontFamily", this.getAttribute("font-family"));
 
         let typingSpeed = parseFloat(this.getAttribute("typing-speed"));
         let stillTime = parseFloat(this.getAttribute("still-time"));

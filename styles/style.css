@@ -581,10 +581,6 @@ li.desaturate::before {
   text-justify: inter-word;
 }
 
-.proof-body {
-  display: none;
-}
-
 .body-visibility-icon {
   vertical-align: middle;
   margin-inline: .5em;
@@ -593,20 +589,13 @@ li.desaturate::before {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  padding: 4px;
 }
 
-.chbVisibility {
-  display: none; 
-}
-
-.body-visibility-icon:has(.chbVisibility:checked) span.off, .body-visibility-icon span.on {
-  display: none;
-}
-
-.body-visibility-icon:has(.chbVisibility:checked) span.on, .body-visibility-icon span.off {
-  display: inline-block;
-}
-
-.proof-header:has(.chbVisibility:checked) + .proof-body {
-  display: block;
+.body-visibility-icon:hover {
+  background-color: rgba(211, 211, 211, 0.5);
+  border-radius: 50%;
 }

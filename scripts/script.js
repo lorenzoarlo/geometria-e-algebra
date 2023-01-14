@@ -88,4 +88,3 @@ function visit_index_all(node, value)
     
 } 
 
-

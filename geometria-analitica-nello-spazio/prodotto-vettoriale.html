@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/index-style.css" />
+    <link rel="stylesheet" href="../styles/content-style.css" />
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
+    <script src="../scripts/script.js"></script>
+    <style>:root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }</style>
+    <meta name="theme-color" content="#296a15" />
+    <meta name="keywords" content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
+    <meta name="description" content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'.">
+    <meta name="robots" content="index">
+    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Geometria e algebra - Geometria analitica nello spazio - Prodotto vettoriale</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header-wrapper">
+            <div class="title-wrapper">
+                <span class="title">
+                    Geometria e algebra
+                </span>
+                <span class="subtitle">
+                    by lorenzoarlo
+                </span>
+            </div>
+            <span class="page-title">
+                Geometria analitica nello spazio
+            </span>
+        </header>
+        <section class="content-wrapper">
+            <h1 class="section-title">Prodotto vettoriale</h1>
+            <article class="content-container content-width">
+                <div class="definition environment" id="def9-18">
+ <h2 class="environment-title">
+  Definizione -
+  Prodotto vettoriale tra vettori
+ </h2>
+ <div class="environment-body">
+  Si definisce prodotto vettoriale un'operazione
+  <span class="math-block">
+   \[         \wedge = \mathbb{R}^{3} \times \mathbb{R}^{3} \to \mathbb{R}^{3}     \]
+  </span>
+  calcolabile nel seguente modo: considerando la base canonica di
+  <span class="math-span">
+   \( \mathbb{R}^{3}\)
+  </span>
+  <span class="math-block">
+   \[         B_{\mathbb{R}^{3}} = (e_{1}, e_{2}, e_{3}) = ((1, 0, 0), (0, 1, 0), (0, 0, 1))     \]
+  </span>
+  e due vettori
+  <span class="math-span">
+   \( v_{1} = (x_{1}, y_{1}, z_{1})\)
+  </span>
+  e
+  <span class="math-span">
+   \( v_{2} = (x_{2}, y_{2}, z_{2})\)
+  </span>
+  , il vettore risultato del prodotto vettoriale sarà il determinante della matrice
+  <span class="math-block">
+   \[         \left(         \begin{array}{ccc}             e_{1} &amp; e_{2} &amp; e_{3} \\             x_{1} &amp; y_{1} &amp; z_{1} \\             x_{2} &amp; y_{2} &amp; z_{2}         \end{array}         \right)     \]
+  </span>
+  ovvero
+  <span class="math-block">
+   \[         v_{1} \wedge v_{2} = det         \left(         \begin{array}{ccc}             e_{1} &amp; e_{2} &amp; e_{3} \\             x_{1} &amp; y_{1} &amp; z_{1} \\             x_{2} &amp; y_{2} &amp; z_{2}         \end{array}         \right)     \]
+  </span>
+ </div>
+</div>
+<div class="definition environment" id="def9-19">
+ <h2 class="environment-title">
+  Definizione -
+  Norma del prodotto vettoriale
+ </h2>
+ <div class="environment-body">
+  La norma del vettore risultato del prodotto vettoriale tra due vettori è il prodotto tra le norme dei due vettori e il seno dell'angolo compreso tra essi, ovvero
+  <span class="math-block">
+   \[         ||v_{1} \wedge v_{2}|| = ||v_{1}|| \cdot ||v_{2}|| \cdot \sin(\widehat{v_{1} v_{2}})     \]
+  </span>
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    Interpretazione geometrica
+   </h3>
+   <div class="environment-body">
+    La norma del prodotto vettoriale tra due vettori rappresenta l'area del parallelogramma costruito utilizzando i due vettori.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def9-20">
+ <h2 class="environment-title">
+  Definizione -
+  Prodotto vettoriale ortogonale ai vettori "fattori"
+ </h2>
+ <div class="environment-body">
+  Il vettore risultato del prodotto vettoriale tra due vettori
+  <span class="math-block">
+   \[         v_{1} \wedge v_{2}     \]
+  </span>
+  è ortogonale sia al vettore
+  <span class="math-span">
+   \( v_{1}\)
+  </span>
+  che al vettore
+  <span class="math-span">
+   \( v_{2}\)
+  </span>
+  , ovvero il loro prodotto scalare è nullo.
+ </div>
+</div>
+            </article>
+            <nav class="buttons-container content-width">
+                <a class="navigation-button previous" href="piani-nello-spazio.html" rel="nofollow"><span>Piani nello spazio</span></a>
+                
+            </nav>
+        </section>
+        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+            <span class="material-symbols-outlined">
+                keyboard_double_arrow_down
+            </span>
+        </div>
+        <footer class="footer-wrapper">
+            <div class="copyright-wrapper">
+                <span> &copy; Copyright 2023</span> /
+                <span>made by lorenzoarlo</span>
+            </div>
+            /
+            <div class="privacy-wrapper">
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze cookie</a></span> /
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow" target="_blank" >Privacy Policy</a></span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

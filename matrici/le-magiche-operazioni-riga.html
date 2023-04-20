@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/index-style.css" />
+    <link rel="stylesheet" href="../styles/content-style.css" />
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
+    <script src="../scripts/script.js"></script>
+    <style>:root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }</style>
+    <meta name="theme-color" content="#296a15" />
+    <meta name="keywords" content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
+    <meta name="description" content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'.">
+    <meta name="robots" content="index">
+    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Geometria e algebra - Matrici - Le magiche operazioni riga</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header-wrapper">
+            <div class="title-wrapper">
+                <span class="title">
+                    Geometria e algebra
+                </span>
+                <span class="subtitle">
+                    by lorenzoarlo
+                </span>
+            </div>
+            <span class="page-title">
+                Matrici
+            </span>
+        </header>
+        <section class="content-wrapper">
+            <h1 class="section-title">Le magiche operazioni riga</h1>
+            <article class="content-container content-width">
+                <div class="definition environment" id="def3-30">
+ <h2 class="environment-title">
+  Definizione -
+  Operazioni riga
+ </h2>
+ <div class="environment-body">
+  Considerando una matrice qualsiasi, allora si "effettua" un'operazione riga quando
+  <ul class="list-container">
+   <li class="list-item">
+    si aggiunge ad una riga della matrice un multiplo di un'altra riga;
+   </li>
+   <li class="list-item">
+    scambiano tra loro due righe della matrice;
+   </li>
+   <li class="list-item">
+    moltiplica una riga per uno scalare diverso da
+    <span class="math-span">
+     \( 0\)
+    </span>
+    .
+   </li>
+  </ul>
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    "Magiche operazioni riga" is the new "Gauss"
+   </h3>
+   <div class="environment-body">
+    Le operazioni riga in altri testi sono anche dette "mosse di Gauss" e sono utilizzate per attuare "l'algoritmo di Gauss", il quale permette di "ridurre" completamente una matrice. Nonostante non si utilizzi questa nomenclatura, i concetti sono i medesimi.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="myexample environment" id="example19">
+ <h2 class="environment-title">
+  Esempio -
+  Operazioni riga - Aggiungere ad una riga il multiplo di un'altra
+ </h2>
+ <div class="environment-body">
+  Considerando la matrice
+  <span class="math-span">
+   \( A \in M_{m \times n}(\mathbb{K})\)
+  </span>
+  <span class="math-block">
+   \[         A =         \left(         \begin{array}{cccc}             1 &amp; 0 &amp; 4 &amp; 3 \\             1 &amp; 1 &amp; 1 &amp; 1 \\             0 &amp; 1 &amp; 0 &amp; 4         \end{array}         \right)     \]
+  </span>
+  per scrivere che "si aggiunge due volte la terza alla seconda" si scrive
+  <span class="math-block">
+   \[         \left(         \begin{array}{cccc}             1 &amp; 0 &amp; 4 &amp; 3 \\             1 &amp; 1 &amp; 1 &amp; 1 \\             0 &amp; 1 &amp; 0 &amp; 4         \end{array}         \right)         \xrightarrow[]{R_{2} \leftarrow R_{2} + 2 R_{3}}         \left(         \begin{array}{cccc}             1 &amp; 0 &amp; 4 &amp; 3 \\             1 &amp; 3 &amp; 1 &amp; 9 \\             0 &amp; 1 &amp; 0 &amp; 4         \end{array}         \right)     \]
+  </span>
+ </div>
+</div>
+<div class="myexample environment" id="example20">
+ <h2 class="environment-title">
+  Esempio -
+  Operazioni riga - Scambiare due righe tra loro
+ </h2>
+ <div class="environment-body">
+  Considerando la matrice
+  <span class="math-span">
+   \( A \in M_{m \times n}(\mathbb{K})\)
+  </span>
+  <span class="math-block">
+   \[         A =         \left(         \begin{array}{cccc}             1 &amp; 0 &amp; 4 &amp; 3 \\             1 &amp; 1 &amp; 1 &amp; 1 \\             0 &amp; 1 &amp; 0 &amp; 4         \end{array}         \right)     \]
+  </span>
+  per scrivere che "si scambia la prima riga con la seconda" si scrive
+  <span class="math-block">
+   \[         \left(         \begin{array}{cccc}             1 &amp; 0 &amp; 4 &amp; 3 \\             1 &amp; 1 &amp; 1 &amp; 1 \\             0 &amp; 1 &amp; 0 &amp; 4         \end{array}         \right)         \xrightarrow[]{R_{1} \leftrightarrow R_{2}}         \left(         \begin{array}{cccc}             1 &amp; 1 &amp; 1 &amp; 1 \\             1 &amp; 0 &amp; 4 &amp; 3 \\             0 &amp; 1 &amp; 0 &amp; 4         \end{array}         \right)     \]
+  </span>
+ </div>
+</div>
+<div class="myexample environment" id="example21">
+ <h2 class="environment-title">
+  Esempio -
+  Operazioni riga - Moltiplicare una riga per uno scalare
+ </h2>
+ <div class="environment-body">
+  Considerando la matrice
+  <span class="math-span">
+   \( A \in M_{m \times n}(\mathbb{K})\)
+  </span>
+  <span class="math-block">
+   \[         A =         \left(         \begin{array}{cccc}             1 &amp; 0 &amp; 4 &amp; 3 \\             1 &amp; 1 &amp; 1 &amp; 1 \\             0 &amp; 1 &amp; 0 &amp; 4         \end{array}         \right)     \]
+  </span>
+  per scrivere che "si moltiplica per
+  <span class="math-span">
+   \( 3\)
+  </span>
+  la seconda riga" si scrive
+  <span class="math-block">
+   \[         \left(         \begin{array}{cccc}             1 &amp; 0 &amp; 4 &amp; 3 \\             1 &amp; 1 &amp; 1 &amp; 1 \\             0 &amp; 1 &amp; 0 &amp; 4         \end{array}         \right)         \xrightarrow[]{R_{2} \leftarrow 3 R_{2}}         \left(         \begin{array}{cccc}             1 &amp; 0 &amp; 4 &amp; 3 \\             3 &amp; 3 &amp; 3 &amp; 3 \\             0 &amp; 1 &amp; 0 &amp; 4         \end{array}         \right)     \]
+  </span>
+ </div>
+</div>
+<div class="definition environment" id="def3-31">
+ <h2 class="environment-title">
+  Definizione -
+  Utilizzare la matrice identica per effettuare operazioni riga
+ </h2>
+ <div class="environment-body">
+  Considerando una matrice
+  <span class="math-span">
+   \( A \in M_{m \times n}(\mathbb{K})\)
+  </span>
+  e una matrice quadrata
+  <span class="math-span">
+   \( I \in M_{m \times m}(\mathbb{K})\)
+  </span>
+  , allora effettuare le operazioni riga sulla matrice identica per poi moltiplicarla alla matrice
+  <span class="math-span">
+   \( A\)
+  </span>
+  (
+  <span class="math-span">
+   \( I_{modificata} \odot A\)
+  </span>
+  ), è equivalente ad effettuare le operazioni riga sulla matrice
+  <span class="math-span">
+   \( A\)
+  </span>
+  .
+ </div>
+</div>
+<div class="demonstration environment" id="dem3-7">
+ <h2 class="environment-title">
+  Dimostrazione -
+  Calcolo dell'inversa (se esiste) di una matrice con il metodo delle matrici affiancate
+ </h2>
+ <div class="environment-body">
+  Data la proposizione
+  <div class="proposition environment">
+   <h3 class="environment-title">
+    Enunciato
+   </h3>
+   <div class="environment-body">
+    Considerando una matrice
+    <span class="math-span">
+     \( A \in M_{m \times m}(\mathbb{K})\)
+    </span>
+    , per trovare la sua inversa (se esiste) è possibile affiancarla alla matrice identica
+    <span class="math-span">
+     \( m \times m\)
+    </span>
+    <span class="math-block">
+     \[             \begin{pmatrix}                 a &amp; b &amp; \left|\right. &amp; 1 &amp; 0 \\                 c &amp; d &amp; \left|\right. &amp; 0 &amp; 1             \end{pmatrix}         \]
+    </span>
+    e effettuare le operazioni riga al fine di portare la matrice identica a sinistra: una volta fatto ciò, a destra si troverà l'inversa.
+   </div>
+  </div>
+  <div class="proof environment">
+   <h3 class="environment-title">
+    Dimostrazione:
+    <span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">
+     visibility_off
+    </span>
+   </h3>
+   <div class="environment-body hyde">
+    Considerando due matrici quadrate
+    <span class="math-span">
+     \( A, I \in M_{m \times m}(\mathbb{K})\)
+    </span>
+    è possibile considerare ogni operazione riga come la moltiplicazione per matrici identiche modificate (
+    <span class="math-span">
+     \( E_{n-operazioni}\)
+    </span>
+    ), ovvero
+    <span class="math-block">
+     \[             \left(             \begin{array}{ccc}                 A &amp; \left|\right. &amp; I              \end{array}             \right)             \quad             \xrightarrow[]{operazione-riga}             \quad             \left(             \begin{array}{ccc}                 E_{1} \odot A                  &amp; \left|\right. &amp;                  E_{1} \odot I              \end{array}             \right)         \]
+    </span>
+    Dopo
+    <span class="math-span">
+     \( n\)
+    </span>
+    operazioni (nel caso esista l'inversa) si avrà
+    <span class="math-block">
+     \[             \left(             \begin{array}{lcl}                 E_{n} \odot E_{n - 1} \odot \ldots \odot E_{1} \odot A                 &amp; \left|\right. &amp;                 E_{n} \odot E_{n - 1} \odot \ldots \odot E_{1} \odot I             \end{array}             \right)         \]
+    </span>
+    e a sinistra la matrice identica
+    <span class="math-block">
+     \[             \left(             \begin{array}{lcl}                 I                 &amp; \left|\right. &amp;                 E_{n} \odot E_{n - 1} \odot \ldots \odot E_{1}             \end{array}             \right)         \]
+    </span>
+    Stiamo dicendo che
+    <span class="math-span">
+     \( (E_{n} \odot E_{n - 1} \odot \ldots \odot E_{1}) \odot (A) = I\)
+    </span>
+    , che è equivalente a dire che
+    <span class="math-span">
+     \( (E_{n} \odot E_{n - 1} \odot \ldots \odot E_{1})\)
+    </span>
+    è l'inversa di
+    <span class="math-span">
+     \( A\)
+    </span>
+    .
+    <br/>
+    Dato che si sono effettuate le medesime operazioni riga anche sulla matrice identica, si ha che la matrice
+    <span class="math-span">
+     \( (E_{n} \odot E_{n - 1} \odot \ldots \odot E_{1})\)
+    </span>
+    è la matrice che si trova a destra.
+    <br/>
+    Si è quindi dimostrata la proposizione.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="demonstration environment" id="dem3-8">
+ <h2 class="environment-title">
+  Dimostrazione -
+  Immutabilità dello spazio delle righe tramite operazioni riga
+ </h2>
+ <div class="environment-body">
+  Data la proposizione
+  <div class="proposition environment">
+   <h3 class="environment-title">
+    Enunciato
+   </h3>
+   <div class="environment-body">
+    Le operazioni riga non cambiano lo spazio delle righe di una matrice.
+   </div>
+  </div>
+  <div class="proof environment">
+   <h3 class="environment-title">
+    Dimostrazione:
+    <span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">
+     visibility_off
+    </span>
+   </h3>
+   <div class="environment-body hyde">
+    Per dimostrare tale proposizione è necessario esaminare l'effetto di ogni operazione riga sullo spazio delle righe.
+    <br/>
+    Per farlo consideriamo quindi la matrice
+    <span class="math-span">
+     \( A \in M_{m \times n}(\mathbb{K})\)
+    </span>
+    <span class="math-block">
+     \[             A =              \left(             \begin{array}{c}                 R_{1} \\                 R_{2} \\                 \vdots \\                 R_{m}             \end{array}             \right)         \]
+    </span>
+    e:
+    <ul class="list-container">
+     <li class="list-item">
+      aggiungendo ad una riga il multiplo di un'altra (ipotizziamo che sia
+      <span class="math-span">
+       \( R_{2})\)
+      </span>
+      , ovvero
+      <span class="math-block">
+       \[                 \xrightarrow[]{R_{1} \leftarrow R_{1} + k \cdot R_{2}}                 \left(                 \begin{array}{c}                     R_{1} + k \cdot R_{2} \\                     R_{2} \\                     \vdots \\                     R_{m}                 \end{array}                 \right)             \]
+      </span>
+      abbiamo che lo spazio delle righe è calcolato come
+      <span class="math-block">
+       \begin{aligned}                 &amp; a_{1} \cdot (R_{1} + k \cdot R_{2}) + a_{2} \cdot R_{2} + \ \ldots \ + a_{m} \cdot R_{m}                  &amp; = \\                 &amp; a_{1} \cdot R_{1} + a_{1} \cdot k \cdot R_{2} + a_{2} \cdot R_{2} + \ \ldots \ + a_{m} \cdot R_{m}                 &amp; = \\                 &amp; a_{1} \cdot R_{1} + (a_{1} \cdot k + a_{2}) \cdot R_{2} + \ \ldots \ + a_{m} \cdot R_{m}             \end{aligned}
+      </span>
+      quindi, lo spazio delle righe non cambia;
+     </li>
+     <li class="list-item">
+      scambiando una riga con un'altra lo spazio delle righe non cambia grazie alla proprietà commutativa della somma;
+     </li>
+     <li class="list-item">
+      moltiplicando una riga per uno scalare diverso da
+      <span class="math-span">
+       \( 0\)
+      </span>
+      , ovvero
+      <span class="math-block">
+       \[                 \xrightarrow[]{R_{1} \leftarrow \alpha \cdot R_{1}}                 \left(                 \begin{array}{c}                     \alpha \cdot R_{1} \\                     R_{2} \\                     \vdots \\                     R_{m}                 \end{array}                 \right)                 \]
+      </span>
+      abbiamo che lo spazio delle righe è calcolato come
+      <span class="math-block">
+       \begin{aligned}                     &amp; a_{1} \cdot (\alpha \cdot R_{1}) + a_{2} \cdot R_{2} + \ \ldots \ + a_{m} \cdot R_{m}                      &amp; = \\                     &amp; (a_{1} \cdot \alpha) \cdot R_{1} + a_{2} \cdot R_{2} + \ \ldots \ + a_{m} \cdot R_{m}                      &amp; = \\                 \end{aligned}
+      </span>
+      quindi, lo spazio delle righe non cambia.
+     </li>
+    </ul>
+    Si è quindi dimostrata la proposizione.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def3-32">
+ <h2 class="environment-title">
+  Definizione -
+  Matrice ridotta
+ </h2>
+ <div class="environment-body">
+  Una matrice si dice ridotta se:
+  <ul class="list-container">
+   <li class="list-item">
+    le righe nulle sono posizionate "in basso";
+   </li>
+   <li class="list-item">
+    le righe non nulle sono posizionate "in alto";
+   </li>
+   <li class="list-item">
+    i primi termini (orizzontalmente da sinistra a destra) non nulli, detti "pivot", si spostano sempre più a destra;
+   </li>
+  </ul>
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+   </h3>
+   <div class="environment-body">
+    Quando una matrice è completamente ridotta, sappiamo che ogni riga è linearmente indipendente rispetto le altre (ed è quindi una base per lo spazio delle righe).
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def3-33">
+ <h2 class="environment-title">
+  Definizione -
+  Matrice completamente ridotta
+ </h2>
+ <div class="environment-body">
+  Una matrice si dice completamente ridotta se è ridotta e:
+  <ul class="list-container">
+   <li class="list-item">
+    ogni pivot è uguale a
+    <span class="math-span">
+     \( 1\)
+    </span>
+    (all'unità del campo);
+   </li>
+   <li class="list-item">
+    nella colonna dei pivot, tutti gli altri elementi sono nulli.
+   </li>
+  </ul>
+ </div>
+</div>
+<div class="myexample environment" id="example22">
+ <h2 class="environment-title">
+  Esempio -
+  Trovare una base per una chiusura lineare utilizzando la riduzione delle matrici
+ </h2>
+ <div class="environment-body">
+  Considerando il sottospazio generato dalla seguente chiusura lineare
+  <span class="math-block">
+   \[         \lt           (2, 0, 1, 2, 1),           (1, 1, 1, 1, 1),          (0, -3, 1, 2, 1),           (3, -2, 3, 5, 3)         \gt      \]
+  </span>
+  trovarne una base.
+  <br/>
+  Dato che ci è stata fornita la chiusura lineare (ovvero il sistema di generatori), è sufficiente trovare dei vettori linearmente indipendenti appartenenti a tale chiusura. Per farlo, è possibile scrivere questi vettori sulle righe di una matrice e, considerando il sottospazio generato come lo spazio delle righe, ridurre la matrice per ottenerne una base.
+  <br/>
+  Quindi, data la seguente matrice
+  <span class="math-block">
+   \[         \left(         \begin{array}{ccccc}             2 &amp; 0 &amp; 1 &amp; 2 &amp; 1 \\             1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\             0 &amp; -3 &amp; 1 &amp; 2 &amp; 1 \\             3 &amp; -2 &amp; 3 &amp; 5 &amp; 3         \end{array}         \right)     \]
+  </span>
+  effettuiamo diverse operazioni riga fino a raggiungere una delle forme ridotte, ovvero
+  <span class="math-block">
+   \[         \left(         \begin{array}{ccccc}             1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\             0 &amp; 1 &amp; \frac{1}{2} &amp; 0 &amp; \frac{1}{2} \\             0 &amp; 0 &amp; \frac{5}{2} &amp; 2 &amp; \frac{5}{2} \\             0 &amp; 0 &amp; 0 &amp; 0 &amp; 0         \end{array}         \right)     \]
+  </span>
+  Possiamo quindi dire che una base per tale sottospazio è la seguente
+  <span class="math-block">
+   \[         B = (         (1, 1, 1, 1, 1),         (0, 1, \frac{1}{2}, 0, \frac{1}{2}),         (0, 0, \frac{5}{2}, 2, \frac{5}{2}),         )     \]
+  </span>
+ </div>
+</div>
+<div class="definition environment" id="def3-34">
+ <h2 class="environment-title">
+  Definizione -
+  Relazione tra operazioni riga e spazio delle colonne
+ </h2>
+ <div class="environment-body">
+  Le trasformazioni riga non cambiano le dipendenze lineari (ovvero come una colonna può essere ottenuta dalla combinazione lineare delle altre) tra le colonne, tuttavia cambiano lo spazio delle colonne.
+  <br/>
+  Dato che non cambiano le dipendenze lineari, non cambiano la dimensione dello spazio delle colonne.
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+   </h3>
+   <div class="environment-body">
+    Le operazioni riga non modificano il rango (né per righe, né per colonne) di una matrice (in quanto non cambiano le dipendenze lineari).
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def3-35">
+ <h2 class="environment-title">
+  Definizione -
+  Relazione operazioni riga e operazioni colonna
+ </h2>
+ <div class="environment-body">
+  Le operazioni colonna hanno le stesse proprietà delle operazioni riga. Esse, infatti:
+  <ul class="list-container">
+   <li class="list-item">
+    non modificano lo spazio delle colonne;
+   </li>
+   <li class="list-item">
+    non modificano le dipendenze lineari tra le righe (ma modificano lo spazio delle righe).
+   </li>
+  </ul>
+ </div>
+</div>
+<div class="demonstration environment" id="dem3-9">
+ <h2 class="environment-title">
+  Dimostrazione -
+  Rango per righe uguale al rango per colonne
+ </h2>
+ <div class="environment-body">
+  Dato il teorema
+  <div class="proposition environment">
+   <h3 class="environment-title">
+    Enunciato
+   </h3>
+   <div class="environment-body">
+    Il rango per righe di una matrice è uguale al rango per colonne della stessa matrice, ovvero
+    <span class="math-block">
+     \[             r_{\mathcal{C}}(A) = r_{\mathcal{R}}(A)         \]
+    </span>
+   </div>
+  </div>
+  <div class="proof environment">
+   <h3 class="environment-title">
+    Dimostrazione:
+    <span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">
+     visibility_off
+    </span>
+   </h3>
+   <div class="environment-body hyde">
+    Considerando una matrice
+    <span class="math-span">
+     \( A \in M_{m \times n}(\mathbb{K})\)
+    </span>
+    , è possibile ottenere la sua forma completamente ridotta tramite delle operazioni riga (che non modificano il rango per righe della matrice)
+    <span class="math-block">
+     \[             \left(             \begin{array}{cccc}                 1 &amp; x &amp; 0 &amp; y \\                 0 &amp; 0 &amp; 1 &amp; z \\                 0 &amp; 0 &amp; 0 &amp; 0             \end{array}             \right)         \]
+    </span>
+    Considerando quindi che
+    <span class="math-span">
+     \( x, y\)
+    </span>
+    e
+    <span class="math-span">
+     \( z\)
+    </span>
+    sono valori qualunque, questa è una generica matrice completamente ridotta: è possibile eliminare tali elementi sottraendo la colonna a sè stessa per
+    <span class="math-span">
+     \( x\)
+    </span>
+    (
+    <span class="math-span">
+     \( y\)
+    </span>
+    e
+    <span class="math-span">
+     \( z\)
+    </span>
+    ) volte.
+    <br/>
+    Applicando le giuste operazioni colonna è quindi possibile ottenere la seguente matrice
+    <span class="math-block">
+     \[             \left(             \begin{array}{cccc}                 1 &amp; 0 &amp; 0 &amp; 0 \\                 0 &amp; 0 &amp; 1 &amp; 0 \\                 0 &amp; 0 &amp; 0 &amp; 0             \end{array}             \right)         \]
+    </span>
+    e, invertendo le colonne in maniera adeguata, possiamo ottenere all'interno della matrice, una matrice identica
+    <span class="math-span">
+     \( n \times n\)
+    </span>
+    .
+    <span class="math-block">
+     \[             \left(             \begin{array}{cccc}                 1 &amp; 0 &amp; 0 &amp; 0 \\                 0 &amp; 1 &amp; 0 &amp; 0 \\                 0 &amp; 0 &amp; 0 &amp; 0             \end{array}             \right)         \]
+    </span>
+    Ciò rende evidente che il rango per righe sia uguale al rango per colonne (ovvero
+    <span class="math-span">
+     \( n\)
+    </span>
+    ), in quanto le righe linearmente indipendenti sono esattamente il numero di colonne linearmente indipendenti.
+    <br/>
+    Si è quindi verificata la proposizione.
+   </div>
+  </div>
+ </div>
+</div>
+            </article>
+            <nav class="buttons-container content-width">
+                <a class="navigation-button previous" href="l-anello-delle-matrici-quadrate-n-times-n.html" rel="nofollow"><span>L'anello delle matrici quadrate  \( n \times n\)</span></a>
+                <a class="navigation-button next" href="../sistemi-lineari/index.html" rel="nofollow"><span>Sistemi lineari</span></a>
+            </nav>
+        </section>
+        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+            <span class="material-symbols-outlined">
+                keyboard_double_arrow_down
+            </span>
+        </div>
+        <footer class="footer-wrapper">
+            <div class="copyright-wrapper">
+                <span> &copy; Copyright 2023</span> /
+                <span>made by lorenzoarlo</span>
+            </div>
+            /
+            <div class="privacy-wrapper">
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze cookie</a></span> /
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow" target="_blank" >Privacy Policy</a></span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/index-style.css" />
+    <link rel="stylesheet" href="../styles/content-style.css" />
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
+    <script src="../scripts/script.js"></script>
+    <style>:root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }</style>
+    <meta name="theme-color" content="#296a15" />
+    <meta name="keywords" content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
+    <meta name="description" content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'.">
+    <meta name="robots" content="index">
+    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Geometria e algebra - Autovalori e autovettori - Autovalori, autovettori e autospazi</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header-wrapper">
+            <div class="title-wrapper">
+                <span class="title">
+                    Geometria e algebra
+                </span>
+                <span class="subtitle">
+                    by lorenzoarlo
+                </span>
+            </div>
+            <span class="page-title">
+                Autovalori e autovettori
+            </span>
+        </header>
+        <section class="content-wrapper">
+            <h1 class="section-title">Autovalori, autovettori e autospazi</h1>
+            <article class="content-container content-width">
+                <div class="definition environment" id="def7-1">
+ <h2 class="environment-title">
+  Definizione -
+  Insieme
+  <span class="math-span">
+   \( U_{\lambda}\)
+  </span>
+ </h2>
+ <div class="environment-body">
+  L'insieme
+  <span class="math-span">
+   \( U_{\lambda}\)
+  </span>
+  , associato ad un endomorfismo
+  <span class="math-span">
+   \( f: V \to V\)
+  </span>
+  , è l'insieme composto da tutti i vettori la cui immagine è
+  <span class="math-span">
+   \( \lambda\)
+  </span>
+  volte il vettore, ovvero
+  <span class="math-block">
+   \[         U_{\lambda} = \{ v \in V \ : \ f(v) = \lambda \cdot v \}     \]
+  </span>
+ </div>
+</div>
+<div class="demonstration environment" id="dem7-1">
+ <h2 class="environment-title">
+  Dimostrazione -
+  <span class="math-span">
+   \( U_{\lambda}\)
+  </span>
+  come sottospazio vettoriale
+ </h2>
+ <div class="environment-body">
+  Data la proposizione
+  <div class="proposition environment">
+   <h3 class="environment-title">
+    Enunciato
+   </h3>
+   <div class="environment-body">
+    L'insieme
+    <span class="math-span">
+     \( U_{\lambda}\)
+    </span>
+    associato ad un endomorfismo
+    <span class="math-span">
+     \( f: V \to V\)
+    </span>
+    è un sottospazio vettoriale di
+    <span class="math-span">
+     \( V\)
+    </span>
+    .
+   </div>
+  </div>
+  <div class="proof environment">
+   <h3 class="environment-title">
+    Dimostrazione:
+    <span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">
+     visibility_off
+    </span>
+   </h3>
+   <div class="environment-body hyde">
+    Per dimostrare tale proposizione è necessario verificare che il vettore somma di due vettori e il vettore prodotto per uno scalare appartengono sempre ad
+    <span class="math-span">
+     \( U_{\lambda}\)
+    </span>
+    .
+    <br/>
+    Consideriamo quindi
+    <span class="math-span">
+     \( v, w \in U_{\lambda}\)
+    </span>
+    e
+    <span class="math-span">
+     \( \alpha, \beta \in \mathbb{R}\)
+    </span>
+    , e scriviamo per linearità che
+    <span class="math-block">
+     \begin{aligned}             &amp; f(\alpha \cdot v + \beta \cdot w) = \alpha \cdot f(v) + \beta \cdot f(w)              &amp; \iff         \end{aligned}
+    </span>
+    Ora, dato che
+    <span class="math-span">
+     \( v, w\)
+    </span>
+    appartengono ad
+    <span class="math-span">
+     \( U_{\lambda}\)
+    </span>
+    , sappiamo che la loro immagine è
+    <span class="math-block">
+     \begin{aligned}             &amp; f(\alpha \cdot v + \beta \cdot w) = \alpha \cdot (\lambda \cdot v) + \beta \cdot (\lambda \cdot w)             &amp; \iff         \end{aligned}
+    </span>
+    allora per la proprietà distributiva si può scrivere
+    <span class="math-block">
+     \begin{aligned}             &amp; f(\alpha \cdot v + \beta \cdot w) = \lambda \cdot (\alpha \cdot v + \beta \cdot w)             &amp;          \end{aligned}
+    </span>
+    che verifica la proposizione.
+   </div>
+  </div>
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    <span class="math-span">
+     \( U_{\lambda}\)
+    </span>
+    e il vettore nullo
+   </h3>
+   <div class="environment-body">
+    Come tutti i sottospazi vettoriali,
+    <span class="math-span">
+     \( U_{\lambda}\)
+    </span>
+    non è mai vuoto perchè contiene sempre almeno il vettore nullo.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def7-2">
+ <h2 class="environment-title">
+  Definizione -
+  Autovalori, autovettori e autospazi
+ </h2>
+ <div class="environment-body">
+  Considerando un insieme
+  <span class="math-span">
+   \( U_{\lambda}\)
+  </span>
+  associato ad un endomorfismo
+  <span class="math-span">
+   \( f: V \to V\)
+  </span>
+  , se contiene vettori diversi dal vettore nullo (che è sempre presente), si dice che
+  <span class="math-span">
+   \( U_{\lambda}\)
+  </span>
+  è un autospazio e
+  <span class="math-span">
+   \( \lambda\)
+  </span>
+  un autovalore.
+  <br/>
+  Tutti vettori che fanno parte di un autospazio, sono detti autovettori.
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    Attenzione!
+   </h3>
+   <div class="environment-body">
+    Si sta quindi dicendo che anche il vettore nullo è un autovettore, ma solo se appartiene ad
+    <span class="math-span">
+     \( U_{\lambda}\)
+    </span>
+    insieme ad altri vettori. In questo modo è possibile dire che ogni autospazio è un sottospazio vettoriale. Da notare che alcune definizioni non considerano mai il vettore nullo come un autovettore.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def7-3">
+ <h2 class="environment-title">
+  Definizione -
+  Trovare gli autovettori
+ </h2>
+ <div class="environment-body">
+  Considerando una matrice
+  <span class="math-span">
+   \( A \in M_{B_{V}, B_{V}}(f)\)
+  </span>
+  associata ad un endomorfismo
+  <span class="math-span">
+   \( f: V \to V\)
+  </span>
+  , si ha che l'immagine di un autovettore
+  <span class="math-span">
+   \( v\)
+  </span>
+  attraverso
+  <span class="math-span">
+   \( f\)
+  </span>
+  può essere scritta come
+  <span class="math-block">
+   \begin{aligned}         &amp; A \odot X = \lambda \cdot X         &amp; \iff     \end{aligned}
+  </span>
+  dove
+  <span class="math-span">
+   \( X\)
+  </span>
+  è la
+  <span class="math-span">
+   \( n\)
+  </span>
+  -upla di coordinate di
+  <span class="math-span">
+   \( v\)
+  </span>
+  .
+  <br/>
+  Allora per trovare tutti gli autovettori associati ad un certo autovalore
+  <span class="math-span">
+   \( \lambda\)
+  </span>
+  si può raggiungere la seguente forma
+  <span class="math-block">
+   \begin{aligned}         &amp; A \odot X - \lambda \cdot X = 0          &amp; \iff \\         &amp; (A - \lambda \cdot I) \odot X = 0         &amp;     \end{aligned}
+  </span>
+  che rappresenta un sistema lineare omogeneo.
+  <br/>
+  Considerando
+  <span class="math-span">
+   \( A \in M_{\mathcal{B}, \mathcal{B}}(f)\)
+  </span>
+  la matrice associata ad un endomorfismo
+  <span class="math-span">
+   \( f\)
+  </span>
+  e
+  <span class="math-span">
+   \( \lambda \in \mathbb{R}\)
+  </span>
+  , si dice matrice caratteristica la matrice
+  <span class="math-span">
+   \( (A - \lambda I)\)
+  </span>
+  .
+  <br/>
+  Il determinante di questa matrice è un polinomio nella variabile
+  <span class="math-span">
+   \( \lambda\)
+  </span>
+  ed è detto polinomio caratteristico di grado
+  <span class="math-span">
+   \( n\)
+  </span>
+  .
+ </div>
+</div>
+<div class="definition environment" id="def7-4">
+ <h2 class="environment-title">
+  Definizione -
+  Matrice caratteristica e polinomio caratteristico
+ </h2>
+ <div class="environment-body">
+  Considerando una matrice
+  <span class="math-span">
+   \( A \in M_{B_{V}, B_{V}}(f)\)
+  </span>
+  associata ad un endomorfismo
+  <span class="math-span">
+   \( f: V \to V\)
+  </span>
+  , la matrice
+  <span class="math-span">
+   \( A - \lambda \cdot I\)
+  </span>
+  si dice matrice caratteristica e il suo determinante, un polinomio nella variabile
+  <span class="math-span">
+   \( \lambda\)
+  </span>
+  di grado
+  <span class="math-span">
+   \( n\)
+  </span>
+  , è detto polinomio caratteristico.
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    Polinomio, tell me more
+   </h3>
+   <div class="environment-body">
+    Il polinomio caratteristico
+    <span class="math-span">
+     \( p_{A}(\lambda)\)
+    </span>
+    ci informa sia della traccia che del determinante di
+    <span class="math-span">
+     \( A\)
+    </span>
+    , infatti scritto nella forma
+    <span class="math-block">
+     \[             p_{A}(\lambda) = \lambda^{n} + (-1)^{n - 1} \cdot k \cdot \lambda^{n - 1} + \ \ldots \ + m         \]
+    </span>
+    si ha che il coefficiente
+    <span class="math-span">
+     \( k\)
+    </span>
+    di
+    <span class="math-span">
+     \( \lambda^{n - 1}\)
+    </span>
+    è la traccia di
+    <span class="math-span">
+     \( A\)
+    </span>
+    mentre il coefficiente
+    <span class="math-span">
+     \( m\)
+    </span>
+    è il determinante di
+    <span class="math-span">
+     \( A\)
+    </span>
+    .
+   </div>
+  </div>
+ </div>
+</div>
+<div class="demonstration environment" id="dem7-2">
+ <h2 class="environment-title">
+  Dimostrazione -
+  Polinomio caratteristico di due matrici simili
+ </h2>
+ <div class="environment-body">
+  Data la proprietà
+  <div class="proposition environment">
+   <h3 class="environment-title">
+    Enunciato
+   </h3>
+   <div class="environment-body">
+    Considerando due matrici
+    <span class="math-span">
+     \( A, B \in M_{n \times n}(\mathbb{K})\)
+    </span>
+    simili allora il polinomio di tali matrici è lo stesso, ovvero
+    <span class="math-block">
+     \[             A \sim B              \qquad \implies \qquad              p_{A}(\lambda) = p_{B}(\lambda)          \]
+    </span>
+   </div>
+  </div>
+  <div class="proof environment">
+   <h3 class="environment-title">
+    Dimostrazione:
+    <span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">
+     visibility_off
+    </span>
+   </h3>
+   <div class="environment-body hyde">
+    Per definizione, si ha che
+    <span class="math-block">
+     \begin{aligned}             &amp; p_{B}(\lambda) = p_{E^{-1} \odot A \odot E}(\lambda) = det((E^{-1} \odot A \odot E) - \lambda I)             &amp; \iff         \end{aligned}
+    </span>
+    Dato che
+    <span class="math-span">
+     \( E^{-1} \odot E = I\)
+    </span>
+    e che il prodotto per uno scalare è commutativo, si può scrivere che
+    <span class="math-block">
+     \begin{aligned}             &amp; det(E^{-1} \odot A \odot E - (E^{-1} \odot (\lambda I) \odot E))             &amp; \iff         \end{aligned}
+    </span>
+    e per la distributività si può raccogliere
+    <span class="math-span">
+     \( E^{-1}\)
+    </span>
+    a sinistra ed
+    <span class="math-span">
+     \( E\)
+    </span>
+    a destra, ottenendo così
+    <span class="math-block">
+     \begin{aligned}             &amp; det(E^{-1} \odot (A - (\lambda I)) \odot E)             &amp; \iff         \end{aligned}
+    </span>
+    Ora, grazie al teorema di Binet, si può scrivere
+    <span class="math-block">
+     \begin{aligned}             &amp; det(E^{-1}) \cdot det(A - \lambda I) \cdot det(E)             &amp; \iff         \end{aligned}
+    </span>
+    ed ora, grazie alla commutatività del prodotto tra scalari si può ottenere
+    <span class="math-block">
+     \begin{aligned}             &amp; det(E^{-1}) \cdot det(E) \cdot det(A - \lambda I)             &amp; \iff         \end{aligned}
+    </span>
+    che è esattamente il polinomio caratteristico di
+    <span class="math-span">
+     \( A\)
+    </span>
+    , in quanto
+    <span class="math-block">
+     \begin{aligned}             &amp; det(A - \lambda I) = p_{A}(\lambda)             &amp;         \end{aligned}
+    </span>
+    Si è quindi dimostrata la proposizione.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="demonstration environment" id="dem7-3">
+ <h2 class="environment-title">
+  Dimostrazione -
+  Teorema - Determinante nullo della matrice caratteristica come condizione necessaria e sufficiente affinchè
+  <span class="math-span">
+   \( \lambda\)
+  </span>
+  sia un autovalore
+ </h2>
+ <div class="environment-body">
+  Dato il teorema
+  <div class="proposition environment">
+   <h3 class="environment-title">
+    Enunciato
+   </h3>
+   <div class="environment-body">
+    Il numero
+    <span class="math-span">
+     \( \lambda \in \mathbb{R}\)
+    </span>
+    è un autovalore di
+    <span class="math-span">
+     \( f\)
+    </span>
+    se e solo se il determinante della matrice caratteristica
+    <span class="math-span">
+     \( (A - \lambda I)\)
+    </span>
+    è
+    <span class="math-span">
+     \( 0\)
+    </span>
+    .
+   </div>
+  </div>
+  <div class="proof environment">
+   <h3 class="environment-title">
+    Dimostrazione:
+    <span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">
+     visibility_off
+    </span>
+   </h3>
+   <div class="environment-body hyde">
+    Per dimostrare tale teorema è necessario dimostrare che
+    <ul class="list-container">
+     <li class="list-item">
+      "se
+      <span class="math-span">
+       \( \lambda\)
+      </span>
+      è un autovalore di
+      <span class="math-span">
+       \( f\)
+      </span>
+      , allora il determinante della matrice caratteristica
+      <span class="math-span">
+       \( (A - \lambda I)\)
+      </span>
+      è
+      <span class="math-span">
+       \( 0\)
+      </span>
+      ". Considerando che
+      <span class="math-span">
+       \( A\)
+      </span>
+      è la matrice associata ad
+      <span class="math-span">
+       \( f\)
+      </span>
+      e
+      <span class="math-span">
+       \( X\)
+      </span>
+      le coordinate di un qualsiasi vettore
+      <span class="math-span">
+       \( v \in V\)
+      </span>
+      , si ha che
+      <span class="math-block">
+       \begin{aligned}                 &amp; A \odot X = \lambda \cdot X                 &amp; \iff             \end{aligned}
+      </span>
+      Affinchè
+      <span class="math-span">
+       \( \lambda\)
+      </span>
+      sia un autovalore è necessario che
+      <span class="math-span">
+       \( U_{\lambda}\)
+      </span>
+      contenga altri vettori oltre a quello nullo. Per provarlo, possiamo scrivere l'espressione precedente come
+      <span class="math-block">
+       \begin{aligned}                 &amp; A \odot X = \lambda I \odot X                 &amp; \iff             \end{aligned}
+      </span>
+      e aggiungere da "entrambe le parti" l'opposto di
+      <span class="math-span">
+       \( \lambda I \odot X\)
+      </span>
+      ottenendo
+      <span class="math-block">
+       \begin{aligned}                 &amp; A \odot X - \lambda I \odot X = 0                 &amp; \iff             \end{aligned}
+      </span>
+      che per l'associatività è possibile scrivere come
+      <span class="math-block">
+       \begin{aligned}                 &amp; (A - \lambda I) \odot X = 0                 &amp;              \end{aligned}
+      </span>
+      Considerando quindi questa espressione come un sistema lineare, si ha che
+      <span class="math-span">
+       \( (A - \lambda I)\)
+      </span>
+      non deve avere rango massimo (altrimenti si avrebbe un'unica soluzione) ovvero il suo determinante deve essere nullo;
+     </li>
+     <li class="list-item">
+      "se il determinante della matrice caratteristica (
+      <span class="math-span">
+       \( A - \lambda I\)
+      </span>
+      ) è
+      <span class="math-span">
+       \( 0\)
+      </span>
+      , allora
+      <span class="math-span">
+       \( \lambda\)
+      </span>
+      è un autovalore di
+      <span class="math-span">
+       \( f\)
+      </span>
+      ". Supponiamo per assurdo che
+      <span class="math-span">
+       \( \lambda\)
+      </span>
+      non sia autovalore di
+      <span class="math-span">
+       \( f\)
+      </span>
+      : ciò implica che
+      <span class="math-span">
+       \( U_{\lambda}\)
+      </span>
+      sia composto dal solo vettore nullo, ovvero che non esiste vettore non nullo
+      <span class="math-span">
+       \( X\)
+      </span>
+      tale che
+      <span class="math-block">
+       \begin{aligned}                 &amp; \nexists X \neq 0 \ : \ A \odot X = \lambda \cdot X                 &amp; \iff             \end{aligned}
+      </span>
+      Continuando su questa via, si può aggiungere "da entrambe le parti" l'opposto di
+      <span class="math-span">
+       \( \lambda \cdot X\)
+      </span>
+      , ottenendo
+      <span class="math-block">
+       \begin{aligned}                 &amp; A \odot X - \lambda \cdot X = 0                 &amp; \iff             \end{aligned}
+      </span>
+      e raccogliendo
+      <span class="math-span">
+       \( X\)
+      </span>
+      per la proprietà distributiva si ottiene
+      <span class="math-block">
+       \begin{aligned}                 &amp; (A \odot - \lambda \cdot I) \odot X = 0                 &amp; \iff             \end{aligned}
+      </span>
+      che rappresenta un sistema lineare. Dato che sappiamo che il determinante di
+      <span class="math-span">
+       \( A \odot - \lambda \cdot I\)
+      </span>
+      è
+      <span class="math-span">
+       \( 0\)
+      </span>
+      , sappiamo che il suo rango non è massimo (ovvero
+      <span class="math-span">
+       \( \lt  n\)
+      </span>
+      come minimo). Dato che la dimensione dello spazio delle soluzioni è dato da
+      <span class="math-block">
+       \[                 dim(Sol(S)) = n - (\lt  n) = (\gt  0)              \]
+      </span>
+      si otterrebbe che la dimensione dello spazio delle soluzioni è maggiore di
+      <span class="math-span">
+       \( 0\)
+      </span>
+      che è un assurdo, in quanto sappiamo che la dimensione dello spazio delle soluzioni deve essere
+      <span class="math-span">
+       \( 0\)
+      </span>
+      (ovvero deve essere composto solo dal vettore nullo).
+     </li>
+    </ul>
+    Si è quindi dimostrato il teorema.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="myexample environment" id="example40">
+ <h2 class="environment-title">
+  Esempio -
+  Calcolo degli autovalori, autospazi e autovettori
+ </h2>
+ <div class="environment-body">
+  Considerando l'endomorfismo
+  <span class="math-span">
+   \( f: \mathbb{R}^{2} \to \mathbb{R}^{2}\)
+  </span>
+  <span class="math-block">
+   \[         f((x, y)) = (2x - y, 2x + 5y)     \]
+  </span>
+  e la matrice associata ad
+  <span class="math-span">
+   \( f\)
+  </span>
+  rispetto alla base canonica
+  <span class="math-block">
+   \[         A = M_{\varepsilon, \varepsilon}(f) =          \left(         \begin{array}{cc}             2 &amp; -1 \\             2 &amp; 5         \end{array}         \right)     \]
+  </span>
+  si vogliono trovare gli autovalori, gli autospazi e gli autovettori di
+  <span class="math-span">
+   \( f\)
+  </span>
+  .
+  <br/>
+  Scriviamo quindi la matrice caratteristica
+  <span class="math-block">
+   \[         A - \lambda I =          \left(         \begin{array}{cc}             2 &amp; -1 \\             2 &amp; 5         \end{array}         \right)         -         \left(         \begin{array}{cc}             \lambda &amp; 0 \\             0 &amp; \lambda         \end{array}         \right)         =          \left(         \begin{array}{cc}             2 - \lambda &amp; -1 \\             2 &amp; 5 - \lambda         \end{array}         \right)     \]
+  </span>
+  Il determinante di
+  <span class="math-span">
+   \( A - \lambda I\)
+  </span>
+  è
+  <span class="math-block">
+   \[         det(A - \lambda I) = (2 - \lambda) \cdot (5 - \lambda) - (-1 \cdot 2) = \lambda^{2} - 7 \lambda + 12     \]
+  </span>
+  Per trovare i valori per cui il determinante si annulla basta calcolare le radici, ovvero
+  <span class="math-block">
+   \[         \lambda_{1, 2} = \frac{7 \pm \sqrt{49 - 48}}{2}          \quad \implies \quad          \left\{         \begin{array}{lcl}            \lambda_{1}  &amp; = &amp; \frac{7 + 1}{2} = 4 \\            \lambda_{2}  &amp; = &amp; \frac{7 - 1}{2} = 3         \end{array}         \right.     \]
+  </span>
+  Abbiamo quindi ottenuto che gli autovalori di
+  <span class="math-span">
+   \( f\)
+  </span>
+  sono
+  <span class="math-span">
+   \( 3\)
+  </span>
+  e
+  <span class="math-span">
+   \( 4\)
+  </span>
+  .
+  <br/>
+  Per calcolare gli autospazi è sufficiente sostituire alla matrice caratteristica il valore di
+  <span class="math-span">
+   \( \lambda\)
+  </span>
+  e risolvere il sistema lineare:
+  <dl class="list-container">
+   <dd class="list-item">
+    <dt>
+     (
+     <span class="math-span">
+      \( \lambda = 3\)
+     </span>
+     )
+    </dt>
+    si ha quindi
+    <span class="math-block">
+     \begin{aligned}             &amp; (A - \lambda I)              \odot              X = 0             &amp; \iff \\             &amp; \left(             \begin{array}{cc}                 2 - \lambda &amp; -1 \\                 2 &amp; 5 - \lambda             \end{array}             \right)             \odot X = 0             &amp; \iff \\             &amp;             \left(             \begin{array}{cc}                 -1 &amp; -1 \\                 2 &amp; 2             \end{array}             \right)             \odot              \left(             \begin{array}{c}                 x \\                  y             \end{array}             \right)             =              \left(             \begin{array}{c}                 0 \\                  0             \end{array}             \right)             &amp; \iff \\             &amp; \left\{             \begin{array}{ccccc}                 -x &amp; - &amp; y &amp; = &amp; 0  \\                 2x &amp; + &amp; 2y &amp; = &amp; 0             \end{array}             \right.         \end{aligned}
+    </span>
+    la cui soluzione è
+    <span class="math-span">
+     \(          \left(         \begin{array}{c}             s \\             -s         \end{array}         \right)         \)
+    </span>
+    , ovvero si ha che
+    <span class="math-span">
+     \( U_{3} = \{ (s, -s) : s \in \mathbb{R} \}\)
+    </span>
+    che è equivalente a scrivere
+    <span class="math-span">
+     \( \lt (1, -1)\gt \)
+    </span>
+    .
+   </dd>
+   <dd class="list-item">
+    <dt>
+     (
+     <span class="math-span">
+      \( \lambda = 4\)
+     </span>
+     )
+    </dt>
+    si ha quindi
+    <span class="math-block">
+     \begin{aligned}             &amp; (A - \lambda I)              \odot              X = 0             &amp; \iff \\             &amp; \left(             \begin{array}{cc}                 2 - \lambda &amp; -1 \\                 2 &amp; 5 - \lambda             \end{array}             \right)             \odot X = 0             &amp; \iff \\             &amp;             \left(             \begin{array}{cc}                 -2 &amp; -1 \\                 2 &amp; 1             \end{array}             \right)             \odot              \left(             \begin{array}{c}                 x \\                  y             \end{array}             \right)             =              \left(             \begin{array}{c}                 0 \\                  0             \end{array}             \right)             &amp; \iff \\             &amp; \left\{             \begin{array}{ccccc}                 -2x &amp; - &amp; y &amp; = &amp; 0  \\                 2x &amp; + &amp; y &amp; = &amp; 0             \end{array}             \right.         \end{aligned}
+    </span>
+    la cui soluzione è
+    <span class="math-span">
+     \(          \left(         \begin{array}{c}             s \\             -2s         \end{array}         \right)         \)
+    </span>
+    , ovvero si ha che
+    <span class="math-span">
+     \( U_{4} = \{ (s, -2s) : s \in \mathbb{R} \}\)
+    </span>
+    che è equivalente a scrivere
+    <span class="math-span">
+     \( \lt (1, -2)\gt \)
+    </span>
+    .
+   </dd>
+  </dl>
+  Abbiamo quindi trovato gli autovalori, gli autospazi e gli autovettori.
+ </div>
+</div>
+<div class="demonstration environment" id="dem7-4">
+ <h2 class="environment-title">
+  Dimostrazione -
+  Autovalori per le composizioni di
+  <span class="math-span">
+   \( f^{n}\)
+  </span>
+ </h2>
+ <div class="environment-body">
+  Data la proposizione
+  <div class="proposition environment">
+   <h3 class="environment-title">
+    Enunciato
+   </h3>
+   <div class="environment-body">
+    Considerando
+    <span class="math-span">
+     \( v\)
+    </span>
+    un autovettore associato ad un autovalore
+    <span class="math-span">
+     \( \lambda\)
+    </span>
+    , si ha che all'
+    <span class="math-span">
+     \( n\)
+    </span>
+    -esima composizione di
+    <span class="math-span">
+     \( f\)
+    </span>
+    sarà associato l'autovettore
+    <span class="math-span">
+     \( \lambda^{n}\)
+    </span>
+    , ovvero
+    <span class="math-block">
+     \[             f(v) = \lambda \cdot v             \qquad             \implies             \qquad             f^{n}(v) = \lambda^{n} \cdot v         \]
+    </span>
+   </div>
+  </div>
+  <div class="proof environment">
+   <h3 class="environment-title">
+    Dimostrazione:
+    <span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">
+     visibility_off
+    </span>
+   </h3>
+   <div class="environment-body hyde">
+    Considerando la composizione
+    <span class="math-span">
+     \( f^{n}\)
+    </span>
+    dell'endomorfismo
+    <span class="math-span">
+     \( f\)
+    </span>
+    , si ha che
+    <span class="math-block">
+     \[            f_{1} \circ \ldots \circ f_{n} = \lambda \cdot f^{n-1}(v) = \lambda^{n} \cdot v         \]
+    </span>
+    che dimostra la proposizione.
+   </div>
+  </div>
+ </div>
+</div>
+<div class="definition environment" id="def7-5">
+ <h2 class="environment-title">
+  Definizione -
+  Elemento nullo come autovalore solo di funzioni non iniettive
+ </h2>
+ <div class="environment-body">
+  <span class="math-span">
+   \( \lambda = 0\)
+  </span>
+  è un autovalore di
+  <span class="math-span">
+   \( f\)
+  </span>
+  se e solo se
+  <span class="math-span">
+   \( f\)
+  </span>
+  è non iniettiva.
+  <div class="mynote environment">
+   <h3 class="environment-title">
+    Osservazioni personali -
+    Logica della dimostrazione
+   </h3>
+   <div class="environment-body">
+    Ciò è evidente anche dal fatto che se
+    <span class="math-span">
+     \( \lambda = 0\)
+    </span>
+    fosse un autovalore, l'immagine di molti vettori sarebbe la stessa. Si avrebbe infatti
+    <span class="math-span">
+     \( f(v) = 0 \cdot v = 0_{V}\)
+    </span>
+    per ogni vettore di
+    <span class="math-span">
+     \( V\)
+    </span>
+    .
+   </div>
+  </div>
+ </div>
+</div>
+<div class="demonstration environment" id="dem7-5">
+ <h2 class="environment-title">
+  Dimostrazione -
+  Autovalori e autovettori dell'inverso di un endomorfismo
+ </h2>
+ <div class="environment-body">
+  Data la proposizione
+  <div class="proposition environment">
+   <h3 class="environment-title">
+    Enunciato
+   </h3>
+   <div class="environment-body">
+    Considerando un endomorfismo
+    <span class="math-span">
+     \( f\)
+    </span>
+    invertibile, se
+    <span class="math-span">
+     \( v\)
+    </span>
+    è un autovettore per
+    <span class="math-span">
+     \( f\)
+    </span>
+    , esso lo è anche per
+    <span class="math-span">
+     \( f^{-1}\)
+    </span>
+    e l'autovalore ad esso associato è
+    <span class="math-span">
+     \( \frac{1}{\lambda}\)
+    </span>
+    .
+   </div>
+  </div>
+  <div class="proof environment">
+   <h3 class="environment-title">
+    Dimostrazione:
+    <span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">
+     visibility_off
+    </span>
+   </h3>
+   <div class="environment-body hyde">
+    Per dimostrare tale proposizione, consideriamo che
+    <span class="math-block">
+     \[             f(v) = \lambda \cdot v              \qquad \implies \qquad             v = f^{-1}(\lambda v)          \]
+    </span>
+    allora è possibile scrivere
+    <span class="math-block">
+     \begin{aligned}             &amp; v = f^{-1}(\lambda v)             &amp; \iff         \end{aligned}
+    </span>
+    e per la linearità di
+    <span class="math-span">
+     \( f^{-1}\)
+    </span>
+    <span class="math-block">
+     \begin{aligned}             &amp; v = \lambda \cdot f^{-1}(v)             &amp; \iff         \end{aligned}
+    </span>
+    Moltiplicando da "entrambe le parti" per il reciproco di
+    <span class="math-span">
+     \( \lambda\)
+    </span>
+    (che non è nullo, in quanto
+    <span class="math-span">
+     \( f\)
+    </span>
+    non sarebbe invertibile)         si ha che
+    <span class="math-block">
+     \[             \frac{1}{\lambda} v = f^{-1}(v)             \qquad \implies \qquad             f^{-1}(v) = \frac{1}{\lambda} v          \]
+    </span>
+    che dimostra la proposizione.
+   </div>
+  </div>
+ </div>
+</div>
+            </article>
+            <nav class="buttons-container content-width">
+                <a class="navigation-button previous" href="index.html" rel="nofollow"><span>Autovalori e autovettori</span></a>
+                <a class="navigation-button next" href="diagonalizzazione-di-una-matrice.html" rel="nofollow"><span>Diagonalizzazione di una matrice</span></a>
+            </nav>
+        </section>
+        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+            <span class="material-symbols-outlined">
+                keyboard_double_arrow_down
+            </span>
+        </div>
+        <footer class="footer-wrapper">
+            <div class="copyright-wrapper">
+                <span> &copy; Copyright 2023</span> /
+                <span>made by lorenzoarlo</span>
+            </div>
+            /
+            <div class="privacy-wrapper">
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze cookie</a></span> /
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow" target="_blank" >Privacy Policy</a></span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

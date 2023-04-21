@@ -58,6 +58,25 @@
     margin-block: 6px;
 }
 
+.image-environment, .image-wrapper {
+    margin-block: 6px;
+    display: grid;
+    place-items: center center;
+    
+}
+
+.image-environment .image-wrapper {
+    border: 3px solid #262626;
+    background-color: #26262650;
+    
+    padding: 10px;
+    max-width: min(80%, 600px);
+}
+
+.image-wrapper img {
+    width: 100%;
+}
+
 .hyde {
     display: none;
 }

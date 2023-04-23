@@ -66,11 +66,11 @@
 }
 
 .image-environment .image-wrapper {
-    border: 3px solid #262626;
-    background-color: #26262650;
+    /* border: 3px solid #262626; */
+    /* background-color: #26262650; */
     
-    padding: 10px;
-    max-width: min(80%, 600px);
+    /* padding: 10px; */
+    max-width: min(50%, 300px);
 }
 
 .image-wrapper img {

@@ -7,8 +7,8 @@ window.addEventListener("DOMContentLoaded", async function() {
     });
     observer.observe(footer);
 
-    await load_lacb();
     insert_cookie_button();
+    await load_lacb();
 })  
 
 function scroll_to_bottom() {
@@ -31,7 +31,7 @@ function load_lacb() {
             const scriptNode = document.createElement("script");
             scriptNode.textContent = testo;
             document.body.appendChild(scriptNode);
-            
+
             resolve(true);
         }).catch(function(error) {
             resolve(false);

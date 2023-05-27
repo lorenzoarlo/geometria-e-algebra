@@ -1,7 +1,5 @@
 let footer = null;
-window.addEventListener("DOMContentLoaded", function() {
-    load_lacb();
-
+window.addEventListener("DOMContentLoaded", async function() {
     footer = document.querySelector("footer");
     const scroll_to_bottom_btn = document.querySelector(".scroll-to-bottom-button");
     const observer = new IntersectionObserver(function(e) {
@@ -9,6 +7,8 @@ window.addEventListener("DOMContentLoaded", function() {
     });
     observer.observe(footer);
 
+    await load_lacb();
+    insert_cookie_button();
 })  
 
 function scroll_to_bottom() {
@@ -24,9 +24,28 @@ function toggle_proof(event) {
 
 function load_lacb() {
     const LACB_URL = "https://raw.githubusercontent.com/lorenzoarlo/website-utilities/main/lacb.js"
-    fetch(LACB_URL).then(function(doc) {
-        return doc.text();
-    }).then(function(testo) {
-        eval(testo);
-    })
+    return new Promise(function(resolve) {
+        fetch(LACB_URL).then(function(doc) {
+            return doc.text();
+        }).then(function(testo) {
+            eval(testo);
+            resolve(true);
+        }).catch(function(error) {
+            resolve(false);
+        });
+    });   
+}
+
+function insert_cookie_button() {
+    const onAcceptScriptPath  = "https://raw.githubusercontent.com/lorenzoarlo/website-utilities/main/accept.js";
+    const onDeclineScriptPath = "https://raw.githubusercontent.com/lorenzoarlo/website-utilities/main/decline.js";
+    const onFindMorePagePath = "https://lorenzoarlo.github.io/privacy-and-cookies/";
+    
+    
+    const lacb = document.createElement("lorenzoarlo-cookiebutton");
+    lacb.setAttribute("on-accept-script-path", onAcceptScriptPath);
+    lacb.setAttribute("on-decline-script-path", onDeclineScriptPath);
+    lacb.setAttribute("on-find-more-page-path", onFindMorePagePath);
+
+    document.body.appendChild(lacb);
 }

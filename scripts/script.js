@@ -28,7 +28,10 @@ function load_lacb() {
         fetch(LACB_URL).then(function(doc) {
             return doc.text();
         }).then(function(testo) {
-            eval(testo);
+            const scriptNode = document.createElement("script");
+            scriptNode.textContent = testo;
+            document.body.appendChild(scriptNode);
+            
             resolve(true);
         }).catch(function(error) {
             resolve(false);

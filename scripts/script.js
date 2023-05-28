@@ -7,9 +7,20 @@ window.addEventListener("DOMContentLoaded", async function() {
     });
     observer.observe(footer);
 
+
     insert_cookie_button();
     await load_lacb();
-})  
+
+    const cookies = lacb.get_cookies();
+    if(cookies['statistics']) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-78NHLXDQD8');
+    }
+
+});
 
 function scroll_to_bottom() {
     if(footer !== null) footer.scrollIntoView({"behavior": "smooth"});

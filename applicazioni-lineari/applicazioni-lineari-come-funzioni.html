@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="./../styles/style.css" />
     <link rel="stylesheet" href="./../styles/index-style.css" />
     <link rel="stylesheet" href="./../styles/main-index-page-style.css" />
+    <link media="print" rel="stylesheet" href="./../styles/print.css"  />
     
         <link rel="stylesheet" href="./../styles/content-style.css" />
     
-    <style>:root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }</style>
+    <style>
+        :root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }
+    </style>
     <meta name="application-name" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-title" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +34,7 @@
     <script src="./../scripts/script.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
     <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
+    <script async src="https://raw.githubusercontent.com/lorenzoarlo/website-utilities/main/lacb.js"></script>
     <title>Geometria e algebra - Applicazioni lineari - Applicazioni lineari come funzioni </title>
 </head>
 <body>
@@ -87,5 +90,10 @@
                 </div>
             </footer>
     </div>
+    <lorenzoarlo-cookiebutton
+       on-accept-script-path="https://raw.githubusercontent.com/lorenzoarlo/website-utilities/main/accept.js" 
+       on-decline-script-path="https://raw.githubusercontent.com/lorenzoarlo/website-utilities/main/decline.js" 
+       on-find-more-page-path="https://lorenzoarlo.github.io/privacy-and-cookies/">
+    </lorenzoarlo-cookiebutton>
 </body>
 </html>

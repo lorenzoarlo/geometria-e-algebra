@@ -8,8 +8,8 @@ window.addEventListener("DOMContentLoaded", async function() {
     observer.observe(footer);
 
 
-    // insert_cookie_button();
-    // await load_lacb();
+    insert_cookie_button();
+    await load_lacb();
 
     const cookies = lacb.get_cookies();
     if(cookies['statistics']) {

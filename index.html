@@ -1,84 +1,1985 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="IT">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/index-style.css" />
     <link rel="stylesheet" href="./styles/main-index-page-style.css" />
-    <link media="print" rel="stylesheet" href="./styles/print.css"  />
-    
+    <link media="print" rel="stylesheet" href="./styles/print.css" />
+
     <style>
-        :root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }
+      :root {
+        --bg-clr: #296a15;
+        --fg-clr: #e8e3e3;
+      }
     </style>
     <meta name="application-name" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-title" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#296a15" />
-    <link rel="apple-touch-icon" sizes="144x144" href="./apple-icon-144x144.png">
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="./android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
-    <meta name="msapplication-TileColor" content="#296a15">
-    <meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
-    <link rel="manifest" href="./manifest.json">
-    <meta name="keywords" content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
-    <meta name="description" content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'.">
-    <meta name="robots" content="index">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="themeColor" content="#296a15">
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./apple-icon-144x144.png" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./android-icon-192x192.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./favicon-96x96.png" />
+    <meta name="msapplication-TileColor" content="#296a15" />
+    <meta name="msapplication-TileImage" content="./ms-icon-144x144.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <meta
+      name="keywords"
+      content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
+    <meta
+      name="description"
+      content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'." />
+    <meta name="robots" content="index" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="themeColor" content="#296a15" />
     <script src="./scripts/script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
-    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
+    <script
+      defer
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <title>Geometria e algebra</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header class="header-wrapper">
-            <div class="title-wrapper content-width">
-                <h1 class="title">
-                    Geometria e algebra
-                </h1>
-                <span class="subtitle">
-                    by lorenzoarlo
-                </span>
-            </div>
-            <div class="about-wrapper content-width">
-                <h1 class="section-title">about</h1>
-                <p>
-                    Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'.
-                </p>
-            </div>
-        </header>
-        <section class="content-wrapper">
-            <h1 class="section-title">indice</h1>
-            <div class="index-container content-width">
-                <ul class="parent-ul"><li class="section-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html">Operazioni e strutture algebriche</a><ul><li class="subsection-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html">Gruppi, anelli e campi</a><ul><li class="definition-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-1">Definizione - Operazione interna su un insieme</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-2">Definizione - Struttura algebrica</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-3">Definizione - Gruppo</a></li><li class="myexample-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#example1">Esempio - Verificare che una struttura sia un gruppo</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-4">Definizione - Gruppo commutativo</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-5">Definizione - Anello</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-6">Definizione - Anello unitario</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-7">Definizione - Anello commutativo</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-8">Definizione - Divisori dello zero negli anelli</a></li><li class="demonstration-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#dem1-1">Dimostrazione - Elemento neutro di \( +\) come elemento nullo per \( \cdot\) in un anello</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-9">Definizione - Campo</a></li><li class="demonstration-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#dem1-2">Dimostrazione - Campi senza divisori dello zero</a></li><li class="demonstration-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#dem1-3">Dimostrazione - Condizione necessaria e sufficiente per gli insiemi delle classi di modulo per essere un campo</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-10">Definizione - Campi di caratteristica \( n\)</a></li></ul></li><li class="subsection-li"><a href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html">Omomorfismi e isomorfismi</a><ul><li class="definition-li"><a href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#def1-11">Definizione - Omomorfismo di gruppi</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#def1-12">Definizione - Funzione suriettiva</a></li><li class="myexample-li"><a href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#example2">Esempio - Verificare se una funzione è suriettiva - Esempio 1</a></li><li class="myexample-li"><a href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#example3">Esempio - Verificare se una funzione è suriettiva - Esempio 2</a></li><li class="myexample-li"><a href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#example4">Esempio - Verificare se una funzione è suriettiva - Esempio 3</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#def1-13">Definizione - Funzione iniettiva</a></li><li class="myexample-li"><a href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#example5">Esempio - Verificare se una funzione è iniettiva - Esempio 1</a></li><li class="myexample-li"><a href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#example6">Esempio - Verificare se una funzione è iniettiva - Esempio 2</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#def1-14">Definizione - Funzione biettiva</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#def1-15">Definizione - Isomorfismo tra gruppi</a></li><li class="definition-li"><a href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#def1-16">Definizione - Generalizzazione di omomorfismo e isomorfismo</a></li><li class="demonstration-li"><a href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#dem1-4">Dimostrazione - Esistenza di un omomorfismo tra gruppi e commutatività di un gruppo come condizione sufficiente per la commutatività dell'altro</a></li></ul></li></ul></li><li class="section-li"><a href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html">Spazi vettoriali</a><ul><li class="subsection-li"><a href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html">Nozioni preliminari su vettori e spazi vettoriali</a><ul><li class="definition-li"><a href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html#def2-1">Definizione - Vettore</a></li><li class="definition-li"><a href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html#def2-2">Definizione - \( (\mathbb{R}^{n}, +)\) come gruppo commutativo</a></li><li class="definition-li"><a href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html#def2-3">Definizione - Somma tra vettori</a></li><li class="definition-li"><a href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html#def2-4">Definizione - Moltiplicazione per uno scalare</a></li><li class="definition-li"><a href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html#def2-5">Definizione - Spazio vettoriale</a></li></ul></li><li class="subsection-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html">Combinazione lineare e lineare indipendenza</a><ul><li class="definition-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-6">Definizione - Combinazione lineare di vettori</a></li><li class="definition-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-7">Definizione - Chiusura lineare</a></li><li class="definition-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-8">Definizione - Sistema di generatori</a></li><li class="definition-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-9">Definizione - Verificare che dei vettori siano un sistema di generatori</a></li><li class="myexample-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#example7">Esempio - Verificare che dei vettori siano un sistema di generatori</a></li><li class="definition-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-10">Definizione - Lineare indipendenza</a></li><li class="definition-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-11">Definizione - Verificare che dei vettori siano linearmente indipendenti - Primo metodo</a></li><li class="myexample-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#example8">Esempio - Verificare che dei vettori siano linearmente indipendenti - Primo metodo</a></li><li class="demonstration-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#dem2-1">Dimostrazione - Vettori linearmente indipendenti se e solo se nessuno è combinazione lineare degli altri</a></li><li class="definition-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-12">Definizione - Vettore nullo linearmente dipendente</a></li><li class="definition-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-13">Definizione - Vettori duplicati linearmente dipendenti</a></li><li class="definition-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-14">Definizione - Base</a></li><li class="definition-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-15">Definizione - Base canonica</a></li><li class="demonstration-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#dem2-2">Dimostrazione - Combinazione lineare unica rispetto ad una base</a></li><li class="definition-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-16">Definizione - Spazio vettoriale finitamente generato</a></li><li class="demonstration-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#dem2-3">Dimostrazione - Esistenza di una base per ogni spazio finitamente generato</a></li><li class="definition-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-17">Definizione - Relazione cardinalità dei sistemi di generatori e di vettori linearmente indipendenti</a></li><li class="demonstration-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#dem2-4">Dimostrazione - Equipotenza delle basi</a></li><li class="definition-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-18">Definizione - Dimensione di uno spazio vettoriale</a></li><li class="demonstration-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#dem2-5">Dimostrazione - Teorema del completamento a una base</a></li><li class="demonstration-li"><a href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#dem2-6">Dimostrazione - Cardinalità di una base come numero massimo di vettori linearmente indipendenti</a></li></ul></li><li class="subsection-li"><a href="spazi-vettoriali/sottostrutture-algebriche.html">Sottostrutture algebriche</a><ul><li class="definition-li"><a href="spazi-vettoriali/sottostrutture-algebriche.html#def2-19">Definizione - Sottostruttura algebrica</a></li><li class="definition-li"><a href="spazi-vettoriali/sottostrutture-algebriche.html#def2-20">Definizione - Sottospazio vettoriale</a></li><li class="definition-li"><a href="spazi-vettoriali/sottostrutture-algebriche.html#def2-21">Definizione - Verificare che uno spazio vettoriale sia sottospazio di un altro</a></li><li class="myexample-li"><a href="spazi-vettoriali/sottostrutture-algebriche.html#example9">Esempio - Verificare che uno spazio vettoriale sia sottospazio di un altro</a></li><li class="definition-li"><a href="spazi-vettoriali/sottostrutture-algebriche.html#def2-22">Definizione - Sottospazi affini (traslati di un sottospazio vettoriale)</a></li></ul></li><li class="subsection-li"><a href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html">Operazioni tra sottospazi vettoriali</a><ul><li class="definition-li"><a href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#def2-23">Definizione - Sottospazio generato</a></li><li class="definition-li"><a href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#def2-24">Definizione - Intersezione tra sottospazi vettoriali</a></li><li class="demonstration-li"><a href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#dem2-7">Dimostrazione - Intersezione tra sottospazi di \( V\) come sottospazio di \( V\)</a></li><li class="definition-li"><a href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#def2-25">Definizione - Somma tra sottospazi vettoriali</a></li><li class="demonstration-li"><a href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#dem2-8">Dimostrazione - Somma tra sottospazi di \( V\) come sottospazio di \( V\)</a></li><li class="demonstration-li"><a href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#dem2-9">Dimostrazione - Formula di Grassmann</a></li><li class="definition-li"><a href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#def2-26">Definizione - Somma diretta tra sottospazi vettoriali</a></li></ul></li></ul></li><li class="section-li"><a href="matrici/lo-spazio-vettoriale-delle-matrici.html">Matrici</a><ul><li class="subsection-li"><a href="matrici/lo-spazio-vettoriale-delle-matrici.html">Lo spazio vettoriale delle matrici</a><ul><li class="definition-li"><a href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-1">Definizione - Matrice (definizione informale)</a></li><li class="definition-li"><a href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-2">Definizione - Matrice (definizione formale)</a></li><li class="definition-li"><a href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-3">Definizione - Rappresentazione di una matrice</a></li><li class="definition-li"><a href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-4">Definizione - Somma tra matrici</a></li><li class="definition-li"><a href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-5">Definizione - Prodotto matrice per uno scalare</a></li><li class="definition-li"><a href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-6">Definizione - Matrici come gruppo commutativo</a></li><li class="definition-li"><a href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-7">Definizione - Matrici come spazi vettoriali</a></li><li class="definition-li"><a href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-8">Definizione - Matrice quadrata</a></li><li class="definition-li"><a href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-9">Definizione - Minore di una matrice \( m \times n\)</a></li><li class="definition-li"><a href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-10">Definizione - Orlato di un minore</a></li></ul></li><li class="subsection-li"><a href="matrici/l-anello-delle-matrici-quadrate.html">L'anello delle matrici quadrate</a><ul><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-11">Definizione - Matrice triangolare</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-12">Definizione - Matrice diagonale</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-13">Definizione - Matrice trasposta</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-14">Definizione - Somma di trasposte equivalente alla trasposizione della somma</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-15">Definizione - Traccia di una matrice</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-16">Definizione - Matrice simmetrica</a></li><li class="demonstration-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#dem3-1">Dimostrazione - Somma di matrici simmetriche come matrice simmetrica</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-17">Definizione - Matrice antisimmetrica</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-18">Definizione - Spazio delle righe (e delle colonne) di una matrice</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-19">Definizione - Rango per righe (e per colonne) di una matrice</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-20">Definizione - Prodotto tra matrici</a></li><li class="myexample-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#example10">Esempio - Calcolare il prodotto tra matrici</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-21">Definizione - Proprietà del prodotto tra matrici</a></li><li class="demonstration-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#dem3-2">Dimostrazione - Traccia della matrice prodotto \( A \odot B\) equivalente alla traccia della matrice prodotto \( B \odot A\)</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-22">Definizione - Traccia invariante rispetto alla permutazione ciclica del prodotto tra matrici</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-23">Definizione - Anello delle matrici quadrate</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-24">Definizione - Matrice identica (unità moltiplicativa dell'anello delle matrici quadrate)</a></li><li class="demonstration-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#dem3-3">Dimostrazione - Divisori dello zero nell'anello delle matrici quadrate</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-25">Definizione - Invertibilità di una matrice e matrice inversa - Prima definizione</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-26">Definizione - Condizione necessaria e sufficiente per l'invertibilità di una matrice</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-27">Definizione - Matrice singolare</a></li><li class="demonstration-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#dem3-4">Dimostrazione - Unicità della matrice inversa</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-28">Definizione - Invertibilità della matrice prodotto di due matrici invertibili</a></li><li class="demonstration-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#dem3-5">Dimostrazione - Inversa del prodotto \( A \odot B\) come prodotto di \( B^{-1} \odot A^{-1}\)</a></li><li class="demonstration-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#dem3-6">Dimostrazione - Trasposta del prodotto \( A \odot B\) come prodotto di \( {}^{t} \! B \odot {}^{t} \! A\)</a></li><li class="definition-li"><a href="matrici/l-anello-delle-matrici-quadrate.html#def3-29">Definizione - Elevamento a potenza di matrici quadrate</a></li></ul></li><li class="subsection-li"><a href="matrici/operazioni-riga.html">Operazioni riga</a><ul><li class="definition-li"><a href="matrici/operazioni-riga.html#def3-30">Definizione - Operazioni riga</a></li><li class="myexample-li"><a href="matrici/operazioni-riga.html#example11">Esempio - Operazioni riga - Aggiungere ad una riga il multiplo di un'altra</a></li><li class="myexample-li"><a href="matrici/operazioni-riga.html#example12">Esempio - Operazioni riga - Scambiare due righe tra loro</a></li><li class="myexample-li"><a href="matrici/operazioni-riga.html#example13">Esempio - Operazioni riga - Moltiplicare una riga per uno scalare</a></li><li class="definition-li"><a href="matrici/operazioni-riga.html#def3-31">Definizione - Utilizzare la matrice identica per effettuare operazioni riga</a></li><li class="demonstration-li"><a href="matrici/operazioni-riga.html#dem3-7">Dimostrazione - Calcolo dell'inversa (se esiste) di una matrice con il metodo delle matrici affiancate</a></li><li class="demonstration-li"><a href="matrici/operazioni-riga.html#dem3-8">Dimostrazione - Immutabilità dello spazio delle righe tramite operazioni riga</a></li><li class="definition-li"><a href="matrici/operazioni-riga.html#def3-32">Definizione - Matrice ridotta</a></li><li class="definition-li"><a href="matrici/operazioni-riga.html#def3-33">Definizione - Matrice completamente ridotta</a></li><li class="myexample-li"><a href="matrici/operazioni-riga.html#example14">Esempio - Trovare una base per una chiusura lineare utilizzando la riduzione delle matrici</a></li><li class="definition-li"><a href="matrici/operazioni-riga.html#def3-34">Definizione - Relazione tra operazioni riga e spazio delle colonne</a></li><li class="definition-li"><a href="matrici/operazioni-riga.html#def3-35">Definizione - Relazione operazioni riga e operazioni colonna</a></li><li class="demonstration-li"><a href="matrici/operazioni-riga.html#dem3-9">Dimostrazione - Rango per righe uguale al rango per colonne</a></li></ul></li></ul></li><li class="section-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html">Sistemi lineari</a><ul><li class="subsection-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html">Sistemi lineari come matrici</a><ul><li class="definition-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-1">Definizione - Sistema lineare</a></li><li class="definition-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-2">Definizione - Rappresentazione matriciale di un sistema lineare</a></li><li class="definition-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-3">Definizione - Soluzioni di un sistema lineare</a></li><li class="definition-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-4">Definizione - Spazio delle soluzioni di un sistema lineare</a></li><li class="myexample-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#example15">Esempio - Spazio delle soluzioni di un sistema lineare</a></li><li class="definition-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-5">Definizione - Operazioni riga su un sistema lineare</a></li><li class="definition-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-6">Definizione - Risoluzione di un sistema lineare utilizzando la matrice associata nella sua forma completamente ridotta</a></li><li class="myexample-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#example16">Esempio - Risoluzione di un sistema lineare utilizzando la matrice associata nella sua forma completamente ridotta</a></li><li class="demonstration-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#dem4-1">Dimostrazione - Teorema di Rouchè-Capelli</a></li><li class="definition-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-7">Definizione - Dimensione dello spazio delle soluzioni</a></li><li class="definition-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-8">Definizione - Sistema omogeneo</a></li><li class="definition-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-9">Definizione - Sistema lineare omogeneo associato</a></li><li class="demonstration-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#dem4-2">Dimostrazione - Soluzioni del sistema come somma della soluzione del sistema lineare omogeneo associato e una soluzione particolare del sistema</a></li><li class="myexample-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#example17">Esempio - Soluzioni del sistema come somma della soluzione del sistema lineare omogeneo associato e una soluzione particolare del sistema</a></li><li class="definition-li"><a href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-10">Definizione - Sistema normale</a></li></ul></li></ul></li><li class="section-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html">Applicazioni lineari</a><ul><li class="subsection-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html">Applicazioni lineari come funzioni</a><ul><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-1">Definizione - Applicazione lineare tra spazi vettoriali</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-1">Dimostrazione - Immagine del vettore nullo rispetto ad un'applicazione lineare uguale al vettore nullo</a></li><li class="myexample-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#example18">Esempio - Applicazione lineare</a></li><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-2">Definizione - Applicazioni lineari come endomorfismi</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-2">Dimostrazione - Teorema fondamentale delle applicazioni lineari</a></li><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-3">Definizione - Immagine di un'applicazione lineare</a></li><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-4">Definizione - Applicazione lineare suriettiva</a></li><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-5">Definizione - Applicazione lineare iniettiva</a></li><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-6">Definizione - Nucleo di un'applicazione lineare</a></li><li class="myexample-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#example19">Esempio - Calcolare il kernel di un'applicazione lineare</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-3">Dimostrazione - Nucleo di \( f: V \to W\) come sottospazio vettoriale di \( V\)</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-4">Dimostrazione - Immagine di \( f: V \to W\) come sottospazio vettoriale di \( W\)</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-5">Dimostrazione - Nucleo di un'applicazione lineare iniettiva composto solo dal vettore nullo</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-6">Dimostrazione - Equazione dimensionale</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-7">Dimostrazione - Iniettività e suriettività di un'applicazione lineare nel caso la dimensione degli spazi vettoriali sia uguale</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-8">Dimostrazione - Suriettività di \( f: V \to W\) e relazione tra le dimensioni di \( V\) e \( W\)</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-9">Dimostrazione - Iniettività di \( f: V \to W\) e relazione tra le dimensioni di \( V\) e \( W\)</a></li><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-7">Definizione - Applicazione lineare biunivoca come isomorfismo e spazi vettoriali isomorfi</a></li><li class="myexample-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#example20">Esempio - Spazi vettoriali isomorfi</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-10">Dimostrazione - Funzione inversa di un isomorfismo come isomorfismo</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-11">Dimostrazione - Composizione di applicazioni lineari come applicazione lineare</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-12">Dimostrazione - Corollario - Composizioni di isomorfismi</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-13">Dimostrazione - Isomorfismo associato alla \( n\)-upla delle coordinate</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-14">Dimostrazione - Spazi vettoriali della stessa dimensione isomorfi</a></li></ul></li><li class="subsection-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html">Applicazioni lineari come matrici</a><ul><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#dem5-15">Dimostrazione - Matrice associata ad un'applicazione lineare</a></li><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-8">Definizione - Costruzione della matrice associata ad un'applicazione lineare</a></li><li class="myexample-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#example21">Esempio - Calcolare l'immagine di un vettore tramite la matrice associata all'applicazione lineare</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#dem5-16">Dimostrazione - Dimensione dell'immagine di un'applicazione lineare come rango della matrice associata</a></li><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-9">Definizione - Corollario - Equazione dimensionale con il rango della matrice associata</a></li><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-10">Definizione - Matrice associata della composizione di applicazioni lineari</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#dem5-17">Dimostrazione - Matrice associata all'applicazione lineare identità</a></li><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-11">Definizione - Matrice associata all'inversa di un'applicazione lineare</a></li><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-12">Definizione - Matrice per il cambiamento di base</a></li><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-13">Definizione - Costruzione della matrice cambiamento di base utilizzando le basi canoniche</a></li><li class="myexample-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#example22">Esempio - Costruzione della matrice cambiamento di base utilizzando le basi canoniche</a></li><li class="demonstration-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#dem5-18">Dimostrazione - Matrice invertibile se e solo se il rango è massimo</a></li><li class="definition-li"><a href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-14">Definizione - Cambio delle basi legate alla matrice associata ad un'applicazione lineare</a></li></ul></li><li class="subsection-li"><a href="applicazioni-lineari/matrici-simili.html">Matrici simili</a><ul><li class="definition-li"><a href="applicazioni-lineari/matrici-simili.html#def5-15">Definizione - Matrici simili</a></li><li class="demonstration-li"><a href="applicazioni-lineari/matrici-simili.html#dem5-19">Dimostrazione - Riflessività di matrici simili</a></li><li class="demonstration-li"><a href="applicazioni-lineari/matrici-simili.html#dem5-20">Dimostrazione - Simmetria di matrici simili</a></li><li class="demonstration-li"><a href="applicazioni-lineari/matrici-simili.html#dem5-21">Dimostrazione - Transitività di matrici simili</a></li><li class="demonstration-li"><a href="applicazioni-lineari/matrici-simili.html#dem5-22">Dimostrazione - Similarità tra matrici legate allo stesso endomorfismo rispetto a basi diverse</a></li><li class="demonstration-li"><a href="applicazioni-lineari/matrici-simili.html#dem5-23">Dimostrazione - Traccia di matrici simili</a></li><li class="demonstration-li"><a href="applicazioni-lineari/matrici-simili.html#dem5-24">Dimostrazione - Rango di matrici simili</a></li></ul></li></ul></li><li class="section-li"><a href="determinante/definizioni-di-determinante.html">Determinante</a><ul><li class="subsection-li"><a href="determinante/definizioni-di-determinante.html">Definizioni di determinante</a><ul><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-1">Definizione - Determinante - Definizione generale</a></li><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-2">Definizione - Determinante - Definizione geometrica informale</a></li><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-3">Definizione - Permutazione</a></li><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-4">Definizione - Segno di una permutazione</a></li><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-5">Definizione - Permutazione inversa</a></li><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-6">Definizione - Determinante - Definizione per permutazioni</a></li><li class="myexample-li"><a href="determinante/definizioni-di-determinante.html#example23">Esempio - Calcolo del determinante per permutazioni</a></li><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-7">Definizione - Complemento algebrico di un elemento di una matrice</a></li><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-8">Definizione - Determinante - Teorema di Laplace</a></li><li class="myexample-li"><a href="determinante/definizioni-di-determinante.html#example24">Esempio - Calcolo del determinante con il teorema di Laplace</a></li><li class="demonstration-li"><a href="determinante/definizioni-di-determinante.html#dem6-1">Dimostrazione - Multilinearità del determinante</a></li><li class="myexample-li"><a href="determinante/definizioni-di-determinante.html#example25">Esempio - Multilinearità del determinante</a></li><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-9">Definizione - Alternatività del determinante</a></li><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-10">Definizione - Normalizzazione del determinante</a></li><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-11">Definizione - Determinante - Definizione come funzione</a></li><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-12">Definizione - Determinante di una matrice triangolare</a></li><li class="demonstration-li"><a href="determinante/definizioni-di-determinante.html#dem6-2">Dimostrazione - Determinante di una matrice trasposta</a></li><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-13">Definizione - Teorema di Binet</a></li><li class="demonstration-li"><a href="determinante/definizioni-di-determinante.html#dem6-3">Dimostrazione - Determinante della matrice inversa</a></li><li class="demonstration-li"><a href="determinante/definizioni-di-determinante.html#dem6-4">Dimostrazione - Effetti delle operazioni riga sul determinante</a></li><li class="demonstration-li"><a href="determinante/definizioni-di-determinante.html#dem6-5">Dimostrazione - Determinante in una matrice con rango non massimo</a></li><li class="definition-li"><a href="determinante/definizioni-di-determinante.html#def6-14">Definizione - Calcolo del determinante di una matrice \( 3 \times 3\) con la regola di Sarrus</a></li><li class="demonstration-li"><a href="determinante/definizioni-di-determinante.html#dem6-6">Dimostrazione - Determinante di matrici simili</a></li></ul></li><li class="subsection-li"><a href="determinante/utilizzi-del-determinante.html">Utilizzi del determinante</a><ul><li class="myexample-li"><a href="determinante/utilizzi-del-determinante.html#example26">Esempio - Calcolare il rango di una matrice contenente parametri</a></li><li class="myexample-li"><a href="determinante/utilizzi-del-determinante.html#example27">Esempio - Verificare la lineare indipendenza di vettori contenenti parametri</a></li><li class="definition-li"><a href="determinante/utilizzi-del-determinante.html#def6-15">Definizione - Rango di una matrice non quadrata utilizzando il determinante e i minori</a></li><li class="myexample-li"><a href="determinante/utilizzi-del-determinante.html#example28">Esempio - Calcolo del rango di una matrice non quadrata utilizzando il determinante e i minori</a></li><li class="definition-li"><a href="determinante/utilizzi-del-determinante.html#def6-16">Definizione - Teorema di Kronecker</a></li><li class="myexample-li"><a href="determinante/utilizzi-del-determinante.html#example29">Esempio - Discussione di un sistema lineare parametrico</a></li><li class="definition-li"><a href="determinante/utilizzi-del-determinante.html#def6-17">Definizione - Calcolo della matrice inversa utilizzando il determinante</a></li><li class="myexample-li"><a href="determinante/utilizzi-del-determinante.html#example30">Esempio - Calcolo della matrice inversa utilizzando il determinante</a></li><li class="definition-li"><a href="determinante/utilizzi-del-determinante.html#def6-18">Definizione - Risoluzione di un sistema lineare con il metodo di Cramer</a></li><li class="myexample-li"><a href="determinante/utilizzi-del-determinante.html#example31">Esempio - Risoluzione di un sistema lineare utilizzando il metodo di Cramer</a></li></ul></li></ul></li><li class="section-li"><a href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html">Autovalori e autovettori</a><ul><li class="subsection-li"><a href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html">Autovalori, autovettori e autospazi</a><ul><li class="definition-li"><a href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#def7-1">Definizione - Insieme \( U_{\lambda}\)</a></li><li class="demonstration-li"><a href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#dem7-1">Dimostrazione - \( U_{\lambda}\) come sottospazio vettoriale</a></li><li class="definition-li"><a href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#def7-2">Definizione - Autovalori, autovettori e autospazi</a></li><li class="definition-li"><a href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#def7-3">Definizione - Trovare gli autovettori</a></li><li class="definition-li"><a href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#def7-4">Definizione - Matrice caratteristica e polinomio caratteristico</a></li><li class="demonstration-li"><a href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#dem7-2">Dimostrazione - Polinomio caratteristico di due matrici simili</a></li><li class="demonstration-li"><a href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#dem7-3">Dimostrazione - Teorema - Determinante nullo della matrice caratteristica come condizione necessaria e sufficiente affinchè \( \lambda\) sia un autovalore</a></li><li class="myexample-li"><a href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#example32">Esempio - Calcolo degli autovalori, autospazi e autovettori</a></li><li class="demonstration-li"><a href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#dem7-4">Dimostrazione - Autovalori per le composizioni di \( f^{n}\)</a></li><li class="definition-li"><a href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#def7-5">Definizione - Elemento nullo come autovalore solo di funzioni non iniettive</a></li><li class="demonstration-li"><a href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#dem7-5">Dimostrazione - Autovalori e autovettori dell'inverso di un endomorfismo</a></li></ul></li><li class="subsection-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html">Diagonalizzazione di una matrice</a><ul><li class="definition-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-6">Definizione - Base spettrale</a></li><li class="definition-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-7">Definizione - Endomorfismo semplice</a></li><li class="definition-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-8">Definizione - Matrice associata ad un endomorfismo semplice rispetto alla base spettrale</a></li><li class="definition-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-9">Definizione - Molteplicità algebrica degli autovalori</a></li><li class="definition-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-10">Definizione - Molteplicità geometrica degli autovalori</a></li><li class="definition-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-11">Definizione - Relazione molteplicità algebrica e geometrica degli autovalori</a></li><li class="demonstration-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#dem7-6">Dimostrazione - Lineare indipendenza di vettori appartenenti a diversi autospazi</a></li><li class="demonstration-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#dem7-7">Dimostrazione - Condizione necessaria e sufficiente che garantisce la semplicità di un endomorfismo</a></li><li class="myexample-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#example33">Esempio - Diagonalizzazione di una matrice</a></li><li class="definition-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-12">Definizione - Esistenza di almeno un autovalore per ogni endomorfismo di dimensione dispari</a></li><li class="demonstration-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#dem7-8">Dimostrazione - Diagonalizzabilità di una matrice data l'esistenza di \( n\) autovalori distinti</a></li><li class="myexample-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#example34">Esempio - Utilizzo della diagonalizzabilità di una matrice data l'esistenza di \( n\) autovalori distinti</a></li><li class="definition-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-13">Definizione - Teorema - Diagonalizzabilità di ogni matrice simmetrica</a></li><li class="myexample-li"><a href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#example35">Esempio - Diagonalizzabilità di una matrice contenente parametri</a></li></ul></li></ul></li><li class="section-li"><a href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html">Spazi vettoriali euclidei</a><ul><li class="subsection-li"><a href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html">Forme bilineari e prodotto scalare</a><ul><li class="definition-li"><a href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html#def8-1">Definizione - Forma bilineare reali</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html#dem8-1">Dimostrazione - Rappresentazione di una forma bilineare</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html#def8-2">Definizione - Prodotto scalare</a></li><li class="myexample-li"><a href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html#example36">Esempio - Prodotto scalare standard</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html#def8-3">Definizione - Forma bilineare definita positiva associata ad una  matrice con tutti autovalori positivi</a></li></ul></li><li class="subsection-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html">Spazi vettoriali euclidei</a><ul><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-4">Definizione - Spazio vettoriale euclideo</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-5">Definizione - Norma di un vettore</a></li><li class="myexample-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example37">Esempio - Esempio di calcolo della norma nel caso del prodotto scalare standard</a></li><li class="myexample-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example38">Esempio - Esempio del calcolo della norma nel caso di un prodotto scalare qualsiasi</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-6">Definizione - Angolo tra due vettori</a></li><li class="myexample-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example39">Esempio - Esempio di calcolo dell'angolo tra due vettori nel caso del prodotto scalare standard</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-7">Definizione - Norma di un vettore sempre maggiore o uguale a \( 0\)</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-2">Dimostrazione - Norma del multiplo di un vettore</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-3">Dimostrazione - Quadrato della norma della somma di due vettori</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-4">Dimostrazione - Disuguaglianza di Cauchy-Schwarz</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-8">Definizione - Vettori ortogonali</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-9">Definizione - Base ortogonale</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-10">Definizione - Base ortonormale</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-5">Dimostrazione - Coordinate di un vettore rispetto ad una base ortonormale</a></li><li class="myexample-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example40">Esempio - Calcolo delle coordinate di un vettore rispetto ad una base ortonormale</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-6">Dimostrazione - Metodo di ortonormalizzazione di Gram-Schmidt</a></li><li class="myexample-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example41">Esempio - Ortonormalizzazione di una base con Gram-Schmidt</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-7">Dimostrazione - Esistenza di una base ortogonale (e ortonormale) per ogni spazio vettoriale euclideo</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-8">Dimostrazione - Lineare indipendenza tra vettori ortogonali</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-9">Dimostrazione - Teorema di completamento a una base ortogonale (o ortonormale)</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-11">Definizione - Associazione di ogni prodotto scalare alla matrice identica</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-12">Definizione - Complemento ortogonale di un sottospazio vettoriale euclideo</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-10">Dimostrazione - Complemento ortogonale come sottospazio vettoriale</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-13">Definizione - Calcolare una base per il complemento ortogonale di un sottospazio vettoriale</a></li><li class="myexample-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example42">Esempio - Calcolo di una base per il complemento ortogonale di un sottospazio vettoriale</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-11">Dimostrazione - Dimensione del complemento ortogonale di un sottospazio vettoriale</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-12">Dimostrazione - Complemento ortogonale del complemento ortogonale</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-14">Definizione - Matrice ortogonale</a></li><li class="myexample-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example43">Esempio - Esempio di matrice ortogonale</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-13">Dimostrazione - Determinante di una matrice ortogonale</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-15">Definizione - Matrici ortogonalmente diagonalizzabili</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-16">Definizione - Teorema spettrale</a></li><li class="definition-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-17">Definizione - Isometria</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-14">Dimostrazione - Matrice associata ad una isometria</a></li><li class="demonstration-li"><a href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-15">Dimostrazione - 1 autovalore di ogni matrice \( n \times n\) ortogonale, con determinante positivo e \( n\) dispari</a></li></ul></li></ul></li><li class="section-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html">Geometria analitica nello spazio</a><ul><li class="subsection-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html">Rette nello spazio</a><ul><li class="definition-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-1">Definizione - Retta in \( \mathbb{R}^{3}\)</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-2">Definizione - Rappresentazione cartesiana di una retta in \( \mathbb{R}^{3}\)</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-3">Definizione - Rappresentazione parametrica di una retta in \( \mathbb{R}^{3}\)</a></li><li class="myexample-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html#example44">Esempio - Esempio di rappresentazione di una retta in \( \mathbb{R}^{3}\)</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-4">Definizione - Giacitura della retta</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-5">Definizione - Relazione tra le posizioni di due rette in \( \mathbb{R}^{3}\)</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-6">Definizione - Rette parallele</a></li><li class="myexample-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html#example45">Esempio - Verifica parallelismo tra rette</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-7">Definizione - Rette ortogonali</a></li><li class="myexample-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html#example46">Esempio - Verifica ortogonalismo tra rette</a></li><li class="myexample-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html#example47">Esempio - Intersezione tra due rette</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-8">Definizione - Retta passante per due punti</a></li></ul></li><li class="subsection-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html">Piani nello spazio</a><ul><li class="definition-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-9">Definizione - Piano in \( \mathbb{R}^{3}\)</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-10">Definizione - Rappresentazione cartesiana di un piano in \( \mathbb{R}^{3}\)</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-11">Definizione - Rappresentazione parametrica di un piano in \( \mathbb{R}^{3}\)</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-12">Definizione - Giacitura di un piano</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-13">Definizione - Piani paralleli</a></li><li class="myexample-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#example48">Esempio - Verifica parallelismo tra piani</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-14">Definizione - Piani ortogonali</a></li><li class="myexample-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#example49">Esempio - Verifica ortogonalismo tra piani</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-15">Definizione - Retta parallela ad un piano</a></li><li class="myexample-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#example50">Esempio - Verifica parallelismo tra retta e piano</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-16">Definizione - Retta ortogonale ad un piano</a></li><li class="myexample-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#example51">Esempio - Verifica ortogonalismo tra retta e piano</a></li><li class="myexample-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#example52">Esempio - Equazione cartesiana di un piano passante per tre punti non allineati</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-17">Definizione - Fascio di piani</a></li></ul></li><li class="subsection-li"><a href="geometria-analitica-nello-spazio/prodotto-vettoriale.html">Prodotto vettoriale</a><ul><li class="definition-li"><a href="geometria-analitica-nello-spazio/prodotto-vettoriale.html#def9-18">Definizione - Prodotto vettoriale tra vettori</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/prodotto-vettoriale.html#def9-19">Definizione - Norma del prodotto vettoriale</a></li><li class="definition-li"><a href="geometria-analitica-nello-spazio/prodotto-vettoriale.html#def9-20">Definizione - Prodotto vettoriale ortogonale ai vettori "fattori"</a></li></ul></li></ul></li></ul>
-            </div>
-            <nav class="buttons-container content-width">
-                <a class="navigation-button next" href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow"><span>Gruppi, anelli e campi</span></a>
-            </nav>
-        </section>
-        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
-            <span class="material-symbols-outlined">
-                keyboard_double_arrow_down
-            </span>
+      <header class="header-wrapper">
+        <div class="title-wrapper content-width">
+          <h1 class="title"> Geometria e algebra </h1>
+          <span class="subtitle"> by lorenzoarlo </span>
         </div>
-            <footer class="footer-wrapper">
-                <div class="copyright-wrapper">
-                    <span> &copy; Copyright 2024</span> /
-                    <span>made by <a href="https://github.com/lorenzoarlo" rel="nofollow">lorenzoarlo</a></span>
-                </div>
-                /
-                <div class="privacy-wrapper">
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze
-                            cookie</a></span> /
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow"
-                            target="_blank">Privacy Policy</a></span>
-                </div>
-            </footer> 
+        <div class="about-wrapper content-width">
+          <h1 class="section-title">about</h1>
+          <p>
+            Il seguente sito contiene gli appunti, le definizioni e le
+            dimostrazioni spiegate del corso 'Geometria e algebra'.
+          </p>
+        </div>
+      </header>
+      <section class="content-wrapper">
+        <h1 class="section-title">indice</h1>
+        <div class="index-container content-width">
+          <ul class="parent-ul"
+            ><li class="section-li"
+              ><a
+                href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                >Operazioni e strutture algebriche</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                    >Gruppi, anelli e campi</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-1"
+                        >Definizione - Operazione interna su un insieme</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-2"
+                        >Definizione - Struttura algebrica</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-3"
+                        >Definizione - Gruppo</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#example1"
+                        >Esempio - Verificare che una struttura sia un gruppo</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-4"
+                        >Definizione - Gruppo commutativo</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-5"
+                        >Definizione - Anello</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-6"
+                        >Definizione - Anello unitario</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-7"
+                        >Definizione - Anello commutativo</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-8"
+                        >Definizione - Divisori dello zero negli anelli</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#dem1-1"
+                        >Dimostrazione - Elemento neutro di \( +\) come elemento
+                        nullo per \( \cdot\) in un anello</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-9"
+                        >Definizione - Campo</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#dem1-2"
+                        >Dimostrazione - Campi senza divisori dello zero</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#dem1-3"
+                        >Dimostrazione - Condizione necessaria e sufficiente per
+                        gli insiemi delle classi di modulo per essere un
+                        campo</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html#def1-10"
+                        >Definizione - Campi di caratteristica \( n\)</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html"
+                    >Omomorfismi e isomorfismi</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#def1-11"
+                        >Definizione - Omomorfismo di gruppi</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#def1-12"
+                        >Definizione - Funzione suriettiva</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#example2"
+                        >Esempio - Verificare se una funzione è suriettiva -
+                        Esempio 1</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#example3"
+                        >Esempio - Verificare se una funzione è suriettiva -
+                        Esempio 2</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#example4"
+                        >Esempio - Verificare se una funzione è suriettiva -
+                        Esempio 3</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#def1-13"
+                        >Definizione - Funzione iniettiva</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#example5"
+                        >Esempio - Verificare se una funzione è iniettiva -
+                        Esempio 1</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#example6"
+                        >Esempio - Verificare se una funzione è iniettiva -
+                        Esempio 2</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#def1-14"
+                        >Definizione - Funzione biettiva</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#def1-15"
+                        >Definizione - Isomorfismo tra gruppi</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#def1-16"
+                        >Definizione - Generalizzazione di omomorfismo e
+                        isomorfismo</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html#dem1-4"
+                        >Dimostrazione - Esistenza di un omomorfismo tra gruppi
+                        e commutatività di un gruppo come condizione sufficiente
+                        per la commutatività dell'altro</a
+                      ></li
+                    ></ul
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                >Spazi vettoriali</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                    >Nozioni preliminari su vettori e spazi vettoriali</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html#def2-1"
+                        >Definizione - Vettore</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html#def2-2"
+                        >Definizione - \( (\mathbb{R}^{n}, +)\) come gruppo
+                        commutativo</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html#def2-3"
+                        >Definizione - Somma tra vettori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html#def2-4"
+                        >Definizione - Moltiplicazione per uno scalare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html#def2-5"
+                        >Definizione - Spazio vettoriale</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html"
+                    >Combinazione lineare e lineare indipendenza</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-6"
+                        >Definizione - Combinazione lineare di vettori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-7"
+                        >Definizione - Chiusura lineare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-8"
+                        >Definizione - Sistema di generatori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-9"
+                        >Definizione - Verificare che dei vettori siano un
+                        sistema di generatori</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#example7"
+                        >Esempio - Verificare che dei vettori siano un sistema
+                        di generatori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-10"
+                        >Definizione - Lineare indipendenza</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-11"
+                        >Definizione - Verificare che dei vettori siano
+                        linearmente indipendenti - Primo metodo</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#example8"
+                        >Esempio - Verificare che dei vettori siano linearmente
+                        indipendenti - Primo metodo</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#dem2-1"
+                        >Dimostrazione - Vettori linearmente indipendenti se e
+                        solo se nessuno è combinazione lineare degli altri</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-12"
+                        >Definizione - Vettore nullo linearmente dipendente</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-13"
+                        >Definizione - Vettori duplicati linearmente
+                        dipendenti</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-14"
+                        >Definizione - Base</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-15"
+                        >Definizione - Base canonica</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#dem2-2"
+                        >Dimostrazione - Combinazione lineare unica rispetto ad
+                        una base</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-16"
+                        >Definizione - Spazio vettoriale finitamente generato</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#dem2-3"
+                        >Dimostrazione - Esistenza di una base per ogni spazio
+                        finitamente generato</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-17"
+                        >Definizione - Relazione cardinalità dei sistemi di
+                        generatori e di vettori linearmente indipendenti</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#dem2-4"
+                        >Dimostrazione - Equipotenza delle basi</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#def2-18"
+                        >Definizione - Dimensione di uno spazio vettoriale</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#dem2-5"
+                        >Dimostrazione - Teorema del completamento a una base</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html#dem2-6"
+                        >Dimostrazione - Cardinalità di una base come numero
+                        massimo di vettori linearmente indipendenti</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="spazi-vettoriali/sottostrutture-algebriche.html"
+                    >Sottostrutture algebriche</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/sottostrutture-algebriche.html#def2-19"
+                        >Definizione - Sottostruttura algebrica</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/sottostrutture-algebriche.html#def2-20"
+                        >Definizione - Sottospazio vettoriale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/sottostrutture-algebriche.html#def2-21"
+                        >Definizione - Verificare che uno spazio vettoriale sia
+                        sottospazio di un altro</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="spazi-vettoriali/sottostrutture-algebriche.html#example9"
+                        >Esempio - Verificare che uno spazio vettoriale sia
+                        sottospazio di un altro</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/sottostrutture-algebriche.html#def2-22"
+                        >Definizione - Sottospazi affini (traslati di un
+                        sottospazio vettoriale)</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html"
+                    >Operazioni tra sottospazi vettoriali</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#def2-23"
+                        >Definizione - Sottospazio generato</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#def2-24"
+                        >Definizione - Intersezione tra sottospazi vettoriali</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#dem2-7"
+                        >Dimostrazione - Intersezione tra sottospazi di \( V\)
+                        come sottospazio di \( V\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#def2-25"
+                        >Definizione - Somma tra sottospazi vettoriali</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#dem2-8"
+                        >Dimostrazione - Somma tra sottospazi di \( V\) come
+                        sottospazio di \( V\)</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#dem2-9"
+                        >Dimostrazione - Formula di Grassmann</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html#def2-26"
+                        >Definizione - Somma diretta tra sottospazi
+                        vettoriali</a
+                      ></li
+                    ></ul
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a href="matrici/lo-spazio-vettoriale-delle-matrici.html"
+                >Matrici</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a href="matrici/lo-spazio-vettoriale-delle-matrici.html"
+                    >Lo spazio vettoriale delle matrici</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-1"
+                        >Definizione - Matrice (definizione informale)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-2"
+                        >Definizione - Matrice (definizione formale)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-3"
+                        >Definizione - Rappresentazione di una matrice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-4"
+                        >Definizione - Somma tra matrici</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-5"
+                        >Definizione - Prodotto matrice per uno scalare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-6"
+                        >Definizione - Matrici come gruppo commutativo</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-7"
+                        >Definizione - Matrici come spazi vettoriali</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-8"
+                        >Definizione - Matrice quadrata</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-9"
+                        >Definizione - Minore di una matrice \( m \times n\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/lo-spazio-vettoriale-delle-matrici.html#def3-10"
+                        >Definizione - Orlato di un minore</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="matrici/l-anello-delle-matrici-quadrate.html"
+                    >L'anello delle matrici quadrate</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-11"
+                        >Definizione - Matrice triangolare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-12"
+                        >Definizione - Matrice diagonale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-13"
+                        >Definizione - Matrice trasposta</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-14"
+                        >Definizione - Somma di trasposte equivalente alla
+                        trasposizione della somma</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-15"
+                        >Definizione - Traccia di una matrice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-16"
+                        >Definizione - Matrice simmetrica</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#dem3-1"
+                        >Dimostrazione - Somma di matrici simmetriche come
+                        matrice simmetrica</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-17"
+                        >Definizione - Matrice antisimmetrica</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-18"
+                        >Definizione - Spazio delle righe (e delle colonne) di
+                        una matrice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-19"
+                        >Definizione - Rango per righe (e per colonne) di una
+                        matrice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-20"
+                        >Definizione - Prodotto tra matrici</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#example10"
+                        >Esempio - Calcolare il prodotto tra matrici</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-21"
+                        >Definizione - Proprietà del prodotto tra matrici</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#dem3-2"
+                        >Dimostrazione - Traccia della matrice prodotto \( A
+                        \odot B\) equivalente alla traccia della matrice
+                        prodotto \( B \odot A\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-22"
+                        >Definizione - Traccia invariante rispetto alla
+                        permutazione ciclica del prodotto tra matrici</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-23"
+                        >Definizione - Anello delle matrici quadrate</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-24"
+                        >Definizione - Matrice identica (unità moltiplicativa
+                        dell'anello delle matrici quadrate)</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#dem3-3"
+                        >Dimostrazione - Divisori dello zero nell'anello delle
+                        matrici quadrate</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-25"
+                        >Definizione - Invertibilità di una matrice e matrice
+                        inversa - Prima definizione</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-26"
+                        >Definizione - Condizione necessaria e sufficiente per
+                        l'invertibilità di una matrice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-27"
+                        >Definizione - Matrice singolare</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#dem3-4"
+                        >Dimostrazione - Unicità della matrice inversa</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-28"
+                        >Definizione - Invertibilità della matrice prodotto di
+                        due matrici invertibili</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#dem3-5"
+                        >Dimostrazione - Inversa del prodotto \( A \odot B\)
+                        come prodotto di \( B^{-1} \odot A^{-1}\)</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#dem3-6"
+                        >Dimostrazione - Trasposta del prodotto \( A \odot B\)
+                        come prodotto di \( {}^{t} \! B \odot {}^{t} \! A\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="matrici/l-anello-delle-matrici-quadrate.html#def3-29"
+                        >Definizione - Elevamento a potenza di matrici
+                        quadrate</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="matrici/operazioni-riga.html">Operazioni riga</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a href="matrici/operazioni-riga.html#def3-30"
+                        >Definizione - Operazioni riga</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="matrici/operazioni-riga.html#example11"
+                        >Esempio - Operazioni riga - Aggiungere ad una riga il
+                        multiplo di un'altra</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="matrici/operazioni-riga.html#example12"
+                        >Esempio - Operazioni riga - Scambiare due righe tra
+                        loro</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="matrici/operazioni-riga.html#example13"
+                        >Esempio - Operazioni riga - Moltiplicare una riga per
+                        uno scalare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="matrici/operazioni-riga.html#def3-31"
+                        >Definizione - Utilizzare la matrice identica per
+                        effettuare operazioni riga</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="matrici/operazioni-riga.html#dem3-7"
+                        >Dimostrazione - Calcolo dell'inversa (se esiste) di una
+                        matrice con il metodo delle matrici affiancate</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="matrici/operazioni-riga.html#dem3-8"
+                        >Dimostrazione - Immutabilità dello spazio delle righe
+                        tramite operazioni riga</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="matrici/operazioni-riga.html#def3-32"
+                        >Definizione - Matrice ridotta</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="matrici/operazioni-riga.html#def3-33"
+                        >Definizione - Matrice completamente ridotta</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="matrici/operazioni-riga.html#example14"
+                        >Esempio - Trovare una base per una chiusura lineare
+                        utilizzando la riduzione delle matrici</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="matrici/operazioni-riga.html#def3-34"
+                        >Definizione - Relazione tra operazioni riga e spazio
+                        delle colonne</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="matrici/operazioni-riga.html#def3-35"
+                        >Definizione - Relazione operazioni riga e operazioni
+                        colonna</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="matrici/operazioni-riga.html#dem3-9"
+                        >Dimostrazione - Rango per righe uguale al rango per
+                        colonne</a
+                      ></li
+                    ></ul
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a href="sistemi-lineari/sistemi-lineari-come-matrici.html"
+                >Sistemi lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a href="sistemi-lineari/sistemi-lineari-come-matrici.html"
+                    >Sistemi lineari come matrici</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-1"
+                        >Definizione - Sistema lineare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-2"
+                        >Definizione - Rappresentazione matriciale di un sistema
+                        lineare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-3"
+                        >Definizione - Soluzioni di un sistema lineare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-4"
+                        >Definizione - Spazio delle soluzioni di un sistema
+                        lineare</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#example15"
+                        >Esempio - Spazio delle soluzioni di un sistema
+                        lineare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-5"
+                        >Definizione - Operazioni riga su un sistema lineare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-6"
+                        >Definizione - Risoluzione di un sistema lineare
+                        utilizzando la matrice associata nella sua forma
+                        completamente ridotta</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#example16"
+                        >Esempio - Risoluzione di un sistema lineare utilizzando
+                        la matrice associata nella sua forma completamente
+                        ridotta</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#dem4-1"
+                        >Dimostrazione - Teorema di Rouchè-Capelli</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-7"
+                        >Definizione - Dimensione dello spazio delle
+                        soluzioni</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-8"
+                        >Definizione - Sistema omogeneo</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-9"
+                        >Definizione - Sistema lineare omogeneo associato</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#dem4-2"
+                        >Dimostrazione - Soluzioni del sistema come somma della
+                        soluzione del sistema lineare omogeneo associato e una
+                        soluzione particolare del sistema</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#example17"
+                        >Esempio - Soluzioni del sistema come somma della
+                        soluzione del sistema lineare omogeneo associato e una
+                        soluzione particolare del sistema</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="sistemi-lineari/sistemi-lineari-come-matrici.html#def4-10"
+                        >Definizione - Sistema normale</a
+                      ></li
+                    ></ul
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                >Applicazioni lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                    >Applicazioni lineari come funzioni</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-1"
+                        >Definizione - Applicazione lineare tra spazi
+                        vettoriali</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-1"
+                        >Dimostrazione - Immagine del vettore nullo rispetto ad
+                        un'applicazione lineare uguale al vettore nullo</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#example18"
+                        >Esempio - Applicazione lineare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-2"
+                        >Definizione - Applicazioni lineari come endomorfismi</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-2"
+                        >Dimostrazione - Teorema fondamentale delle applicazioni
+                        lineari</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-3"
+                        >Definizione - Immagine di un'applicazione lineare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-4"
+                        >Definizione - Applicazione lineare suriettiva</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-5"
+                        >Definizione - Applicazione lineare iniettiva</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-6"
+                        >Definizione - Nucleo di un'applicazione lineare</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#example19"
+                        >Esempio - Calcolare il kernel di un'applicazione
+                        lineare</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-3"
+                        >Dimostrazione - Nucleo di \( f: V \to W\) come
+                        sottospazio vettoriale di \( V\)</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-4"
+                        >Dimostrazione - Immagine di \( f: V \to W\) come
+                        sottospazio vettoriale di \( W\)</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-5"
+                        >Dimostrazione - Nucleo di un'applicazione lineare
+                        iniettiva composto solo dal vettore nullo</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-6"
+                        >Dimostrazione - Equazione dimensionale</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-7"
+                        >Dimostrazione - Iniettività e suriettività di
+                        un'applicazione lineare nel caso la dimensione degli
+                        spazi vettoriali sia uguale</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-8"
+                        >Dimostrazione - Suriettività di \( f: V \to W\) e
+                        relazione tra le dimensioni di \( V\) e \( W\)</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-9"
+                        >Dimostrazione - Iniettività di \( f: V \to W\) e
+                        relazione tra le dimensioni di \( V\) e \( W\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#def5-7"
+                        >Definizione - Applicazione lineare biunivoca come
+                        isomorfismo e spazi vettoriali isomorfi</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#example20"
+                        >Esempio - Spazi vettoriali isomorfi</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-10"
+                        >Dimostrazione - Funzione inversa di un isomorfismo come
+                        isomorfismo</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-11"
+                        >Dimostrazione - Composizione di applicazioni lineari
+                        come applicazione lineare</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-12"
+                        >Dimostrazione - Corollario - Composizioni di
+                        isomorfismi</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-13"
+                        >Dimostrazione - Isomorfismo associato alla \( n\)-upla
+                        delle coordinate</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-funzioni.html#dem5-14"
+                        >Dimostrazione - Spazi vettoriali della stessa
+                        dimensione isomorfi</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="applicazioni-lineari/applicazioni-lineari-come-matrici.html"
+                    >Applicazioni lineari come matrici</a
+                  ><ul
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#dem5-15"
+                        >Dimostrazione - Matrice associata ad un'applicazione
+                        lineare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-8"
+                        >Definizione - Costruzione della matrice associata ad
+                        un'applicazione lineare</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#example21"
+                        >Esempio - Calcolare l'immagine di un vettore tramite la
+                        matrice associata all'applicazione lineare</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#dem5-16"
+                        >Dimostrazione - Dimensione dell'immagine di
+                        un'applicazione lineare come rango della matrice
+                        associata</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-9"
+                        >Definizione - Corollario - Equazione dimensionale con
+                        il rango della matrice associata</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-10"
+                        >Definizione - Matrice associata della composizione di
+                        applicazioni lineari</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#dem5-17"
+                        >Dimostrazione - Matrice associata all'applicazione
+                        lineare identità</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-11"
+                        >Definizione - Matrice associata all'inversa di
+                        un'applicazione lineare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-12"
+                        >Definizione - Matrice per il cambiamento di base</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-13"
+                        >Definizione - Costruzione della matrice cambiamento di
+                        base utilizzando le basi canoniche</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#example22"
+                        >Esempio - Costruzione della matrice cambiamento di base
+                        utilizzando le basi canoniche</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#dem5-18"
+                        >Dimostrazione - Matrice invertibile se e solo se il
+                        rango è massimo</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/applicazioni-lineari-come-matrici.html#def5-14"
+                        >Definizione - Cambio delle basi legate alla matrice
+                        associata ad un'applicazione lineare</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="applicazioni-lineari/matrici-simili.html"
+                    >Matrici simili</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="applicazioni-lineari/matrici-simili.html#def5-15"
+                        >Definizione - Matrici simili</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/matrici-simili.html#dem5-19"
+                        >Dimostrazione - Riflessività di matrici simili</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/matrici-simili.html#dem5-20"
+                        >Dimostrazione - Simmetria di matrici simili</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/matrici-simili.html#dem5-21"
+                        >Dimostrazione - Transitività di matrici simili</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/matrici-simili.html#dem5-22"
+                        >Dimostrazione - Similarità tra matrici legate allo
+                        stesso endomorfismo rispetto a basi diverse</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/matrici-simili.html#dem5-23"
+                        >Dimostrazione - Traccia di matrici simili</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="applicazioni-lineari/matrici-simili.html#dem5-24"
+                        >Dimostrazione - Rango di matrici simili</a
+                      ></li
+                    ></ul
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a href="determinante/definizioni-di-determinante.html"
+                >Determinante</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a href="determinante/definizioni-di-determinante.html"
+                    >Definizioni di determinante</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-1"
+                        >Definizione - Determinante - Definizione generale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-2"
+                        >Definizione - Determinante - Definizione geometrica
+                        informale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-3"
+                        >Definizione - Permutazione</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-4"
+                        >Definizione - Segno di una permutazione</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-5"
+                        >Definizione - Permutazione inversa</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-6"
+                        >Definizione - Determinante - Definizione per
+                        permutazioni</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#example23"
+                        >Esempio - Calcolo del determinante per permutazioni</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-7"
+                        >Definizione - Complemento algebrico di un elemento di
+                        una matrice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-8"
+                        >Definizione - Determinante - Teorema di Laplace</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#example24"
+                        >Esempio - Calcolo del determinante con il teorema di
+                        Laplace</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#dem6-1"
+                        >Dimostrazione - Multilinearità del determinante</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#example25"
+                        >Esempio - Multilinearità del determinante</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-9"
+                        >Definizione - Alternatività del determinante</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-10"
+                        >Definizione - Normalizzazione del determinante</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-11"
+                        >Definizione - Determinante - Definizione come
+                        funzione</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-12"
+                        >Definizione - Determinante di una matrice
+                        triangolare</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#dem6-2"
+                        >Dimostrazione - Determinante di una matrice
+                        trasposta</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-13"
+                        >Definizione - Teorema di Binet</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#dem6-3"
+                        >Dimostrazione - Determinante della matrice inversa</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#dem6-4"
+                        >Dimostrazione - Effetti delle operazioni riga sul
+                        determinante</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#dem6-5"
+                        >Dimostrazione - Determinante in una matrice con rango
+                        non massimo</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#def6-14"
+                        >Definizione - Calcolo del determinante di una matrice
+                        \( 3 \times 3\) con la regola di Sarrus</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="determinante/definizioni-di-determinante.html#dem6-6"
+                        >Dimostrazione - Determinante di matrici simili</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="determinante/utilizzi-del-determinante.html"
+                    >Utilizzi del determinante</a
+                  ><ul
+                    ><li class="myexample-li"
+                      ><a
+                        href="determinante/utilizzi-del-determinante.html#example26"
+                        >Esempio - Calcolare il rango di una matrice contenente
+                        parametri</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="determinante/utilizzi-del-determinante.html#example27"
+                        >Esempio - Verificare la lineare indipendenza di vettori
+                        contenenti parametri</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/utilizzi-del-determinante.html#def6-15"
+                        >Definizione - Rango di una matrice non quadrata
+                        utilizzando il determinante e i minori</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="determinante/utilizzi-del-determinante.html#example28"
+                        >Esempio - Calcolo del rango di una matrice non quadrata
+                        utilizzando il determinante e i minori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/utilizzi-del-determinante.html#def6-16"
+                        >Definizione - Teorema di Kronecker</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="determinante/utilizzi-del-determinante.html#example29"
+                        >Esempio - Discussione di un sistema lineare
+                        parametrico</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/utilizzi-del-determinante.html#def6-17"
+                        >Definizione - Calcolo della matrice inversa utilizzando
+                        il determinante</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="determinante/utilizzi-del-determinante.html#example30"
+                        >Esempio - Calcolo della matrice inversa utilizzando il
+                        determinante</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="determinante/utilizzi-del-determinante.html#def6-18"
+                        >Definizione - Risoluzione di un sistema lineare con il
+                        metodo di Cramer</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="determinante/utilizzi-del-determinante.html#example31"
+                        >Esempio - Risoluzione di un sistema lineare utilizzando
+                        il metodo di Cramer</a
+                      ></li
+                    ></ul
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                >Autovalori e autovettori</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                    >Autovalori, autovettori e autospazi</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#def7-1"
+                        >Definizione - Insieme \( U_{\lambda}\)</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#dem7-1"
+                        >Dimostrazione - \( U_{\lambda}\) come sottospazio
+                        vettoriale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#def7-2"
+                        >Definizione - Autovalori, autovettori e autospazi</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#def7-3"
+                        >Definizione - Trovare gli autovettori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#def7-4"
+                        >Definizione - Matrice caratteristica e polinomio
+                        caratteristico</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#dem7-2"
+                        >Dimostrazione - Polinomio caratteristico di due matrici
+                        simili</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#dem7-3"
+                        >Dimostrazione - Teorema - Determinante nullo della
+                        matrice caratteristica come condizione necessaria e
+                        sufficiente affinchè \( \lambda\) sia un autovalore</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#example32"
+                        >Esempio - Calcolo degli autovalori, autospazi e
+                        autovettori</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#dem7-4"
+                        >Dimostrazione - Autovalori per le composizioni di \(
+                        f^{n}\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#def7-5"
+                        >Definizione - Elemento nullo come autovalore solo di
+                        funzioni non iniettive</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html#dem7-5"
+                        >Dimostrazione - Autovalori e autovettori dell'inverso
+                        di un endomorfismo</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html"
+                    >Diagonalizzazione di una matrice</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-6"
+                        >Definizione - Base spettrale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-7"
+                        >Definizione - Endomorfismo semplice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-8"
+                        >Definizione - Matrice associata ad un endomorfismo
+                        semplice rispetto alla base spettrale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-9"
+                        >Definizione - Molteplicità algebrica degli
+                        autovalori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-10"
+                        >Definizione - Molteplicità geometrica degli
+                        autovalori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-11"
+                        >Definizione - Relazione molteplicità algebrica e
+                        geometrica degli autovalori</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#dem7-6"
+                        >Dimostrazione - Lineare indipendenza di vettori
+                        appartenenti a diversi autospazi</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#dem7-7"
+                        >Dimostrazione - Condizione necessaria e sufficiente che
+                        garantisce la semplicità di un endomorfismo</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#example33"
+                        >Esempio - Diagonalizzazione di una matrice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-12"
+                        >Definizione - Esistenza di almeno un autovalore per
+                        ogni endomorfismo di dimensione dispari</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#dem7-8"
+                        >Dimostrazione - Diagonalizzabilità di una matrice data
+                        l'esistenza di \( n\) autovalori distinti</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#example34"
+                        >Esempio - Utilizzo della diagonalizzabilità di una
+                        matrice data l'esistenza di \( n\) autovalori
+                        distinti</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#def7-13"
+                        >Definizione - Teorema - Diagonalizzabilità di ogni
+                        matrice simmetrica</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html#example35"
+                        >Esempio - Diagonalizzabilità di una matrice contenente
+                        parametri</a
+                      ></li
+                    ></ul
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                >Spazi vettoriali euclidei</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                    >Forme bilineari e prodotto scalare</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html#def8-1"
+                        >Definizione - Forma bilineare reali</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html#dem8-1"
+                        >Dimostrazione - Rappresentazione di una forma
+                        bilineare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html#def8-2"
+                        >Definizione - Prodotto scalare</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html#example36"
+                        >Esempio - Prodotto scalare standard</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html#def8-3"
+                        >Definizione - Forma bilineare definita positiva
+                        associata ad una matrice con tutti autovalori
+                        positivi</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html"
+                    >Spazi vettoriali euclidei</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-4"
+                        >Definizione - Spazio vettoriale euclideo</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-5"
+                        >Definizione - Norma di un vettore</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example37"
+                        >Esempio - Esempio di calcolo della norma nel caso del
+                        prodotto scalare standard</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example38"
+                        >Esempio - Esempio del calcolo della norma nel caso di
+                        un prodotto scalare qualsiasi</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-6"
+                        >Definizione - Angolo tra due vettori</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example39"
+                        >Esempio - Esempio di calcolo dell'angolo tra due
+                        vettori nel caso del prodotto scalare standard</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-7"
+                        >Definizione - Norma di un vettore sempre maggiore o
+                        uguale a \( 0\)</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-2"
+                        >Dimostrazione - Norma del multiplo di un vettore</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-3"
+                        >Dimostrazione - Quadrato della norma della somma di due
+                        vettori</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-4"
+                        >Dimostrazione - Disuguaglianza di Cauchy-Schwarz</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-8"
+                        >Definizione - Vettori ortogonali</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-9"
+                        >Definizione - Base ortogonale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-10"
+                        >Definizione - Base ortonormale</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-5"
+                        >Dimostrazione - Coordinate di un vettore rispetto ad
+                        una base ortonormale</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example40"
+                        >Esempio - Calcolo delle coordinate di un vettore
+                        rispetto ad una base ortonormale</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-6"
+                        >Dimostrazione - Metodo di ortonormalizzazione di
+                        Gram-Schmidt</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example41"
+                        >Esempio - Ortonormalizzazione di una base con
+                        Gram-Schmidt</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-7"
+                        >Dimostrazione - Esistenza di una base ortogonale (e
+                        ortonormale) per ogni spazio vettoriale euclideo</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-8"
+                        >Dimostrazione - Lineare indipendenza tra vettori
+                        ortogonali</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-9"
+                        >Dimostrazione - Teorema di completamento a una base
+                        ortogonale (o ortonormale)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-11"
+                        >Definizione - Associazione di ogni prodotto scalare
+                        alla matrice identica</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-12"
+                        >Definizione - Complemento ortogonale di un sottospazio
+                        vettoriale euclideo</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-10"
+                        >Dimostrazione - Complemento ortogonale come sottospazio
+                        vettoriale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-13"
+                        >Definizione - Calcolare una base per il complemento
+                        ortogonale di un sottospazio vettoriale</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example42"
+                        >Esempio - Calcolo di una base per il complemento
+                        ortogonale di un sottospazio vettoriale</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-11"
+                        >Dimostrazione - Dimensione del complemento ortogonale
+                        di un sottospazio vettoriale</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-12"
+                        >Dimostrazione - Complemento ortogonale del complemento
+                        ortogonale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-14"
+                        >Definizione - Matrice ortogonale</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#example43"
+                        >Esempio - Esempio di matrice ortogonale</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-13"
+                        >Dimostrazione - Determinante di una matrice
+                        ortogonale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-15"
+                        >Definizione - Matrici ortogonalmente
+                        diagonalizzabili</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-16"
+                        >Definizione - Teorema spettrale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#def8-17"
+                        >Definizione - Isometria</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-14"
+                        >Dimostrazione - Matrice associata ad una isometria</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a
+                        href="spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html#dem8-15"
+                        >Dimostrazione - 1 autovalore di ogni matrice \( n
+                        \times n\) ortogonale, con determinante positivo e \(
+                        n\) dispari</a
+                      ></li
+                    ></ul
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                >Geometria analitica nello spazio</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                    >Rette nello spazio</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-1"
+                        >Definizione - Retta in \( \mathbb{R}^{3}\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-2"
+                        >Definizione - Rappresentazione cartesiana di una retta
+                        in \( \mathbb{R}^{3}\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-3"
+                        >Definizione - Rappresentazione parametrica di una retta
+                        in \( \mathbb{R}^{3}\)</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/rette-nello-spazio.html#example44"
+                        >Esempio - Esempio di rappresentazione di una retta in
+                        \( \mathbb{R}^{3}\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-4"
+                        >Definizione - Giacitura della retta</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-5"
+                        >Definizione - Relazione tra le posizioni di due rette
+                        in \( \mathbb{R}^{3}\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-6"
+                        >Definizione - Rette parallele</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/rette-nello-spazio.html#example45"
+                        >Esempio - Verifica parallelismo tra rette</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-7"
+                        >Definizione - Rette ortogonali</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/rette-nello-spazio.html#example46"
+                        >Esempio - Verifica ortogonalismo tra rette</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/rette-nello-spazio.html#example47"
+                        >Esempio - Intersezione tra due rette</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/rette-nello-spazio.html#def9-8"
+                        >Definizione - Retta passante per due punti</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="geometria-analitica-nello-spazio/piani-nello-spazio.html"
+                    >Piani nello spazio</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-9"
+                        >Definizione - Piano in \( \mathbb{R}^{3}\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-10"
+                        >Definizione - Rappresentazione cartesiana di un piano
+                        in \( \mathbb{R}^{3}\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-11"
+                        >Definizione - Rappresentazione parametrica di un piano
+                        in \( \mathbb{R}^{3}\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-12"
+                        >Definizione - Giacitura di un piano</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-13"
+                        >Definizione - Piani paralleli</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#example48"
+                        >Esempio - Verifica parallelismo tra piani</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-14"
+                        >Definizione - Piani ortogonali</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#example49"
+                        >Esempio - Verifica ortogonalismo tra piani</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-15"
+                        >Definizione - Retta parallela ad un piano</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#example50"
+                        >Esempio - Verifica parallelismo tra retta e piano</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-16"
+                        >Definizione - Retta ortogonale ad un piano</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#example51"
+                        >Esempio - Verifica ortogonalismo tra retta e piano</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#example52"
+                        >Esempio - Equazione cartesiana di un piano passante per
+                        tre punti non allineati</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/piani-nello-spazio.html#def9-17"
+                        >Definizione - Fascio di piani</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="geometria-analitica-nello-spazio/prodotto-vettoriale.html"
+                    >Prodotto vettoriale</a
+                  ><ul
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/prodotto-vettoriale.html#def9-18"
+                        >Definizione - Prodotto vettoriale tra vettori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/prodotto-vettoriale.html#def9-19"
+                        >Definizione - Norma del prodotto vettoriale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a
+                        href="geometria-analitica-nello-spazio/prodotto-vettoriale.html#def9-20"
+                        >Definizione - Prodotto vettoriale ortogonale ai vettori
+                        "fattori"</a
+                      ></li
+                    ></ul
+                  ></li
+                ></ul
+              ></li
+            ></ul
+          >
+        </div>
+        <nav class="buttons-container content-width">
+          <a
+            class="navigation-button next"
+            href="operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+            rel="nofollow"
+            ><span>Gruppi, anelli e campi</span></a
+          >
+        </nav>
+      </section>
+      <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+        <span class="material-symbols-outlined">
+          keyboard_double_arrow_down
+        </span>
+      </div>
+      <footer class="footer-wrapper">
+        <div class="copyright-wrapper">
+          <span> &copy; Copyright 2024</span> /
+          <span
+            >made by
+            <a href="https://github.com/lorenzoarlo" rel="nofollow"
+              >lorenzoarlo</a
+            ></span
+          >
+        </div>
+        /
+        <div class="privacy-wrapper">
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/"
+              rel="nofollow"
+              >Pannello preferenze cookie</a
+            ></span
+          >
+          /
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html"
+              rel="nofollow"
+              target="_blank"
+              >Privacy Policy</a
+            ></span
+          >
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

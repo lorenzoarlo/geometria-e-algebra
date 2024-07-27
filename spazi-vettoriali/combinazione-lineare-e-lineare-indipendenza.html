@@ -1,93 +1,1136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="IT">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="./../styles/style.css" />
     <link rel="stylesheet" href="./../styles/index-style.css" />
     <link rel="stylesheet" href="./../styles/main-index-page-style.css" />
-    <link media="print" rel="stylesheet" href="./../styles/print.css"  />
-    
-        <link rel="stylesheet" href="./../styles/content-style.css" />
-    
+    <link media="print" rel="stylesheet" href="./../styles/print.css" />
+
+    <link rel="stylesheet" href="./../styles/content-style.css" />
+
     <style>
-        :root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }
+      :root {
+        --bg-clr: #296a15;
+        --fg-clr: #e8e3e3;
+      }
     </style>
     <meta name="application-name" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-title" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#296a15" />
-    <link rel="apple-touch-icon" sizes="144x144" href="./../apple-icon-144x144.png">
-    <link rel="icon" type="image/x-icon" href="./../favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="./../android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./../favicon-96x96.png">
-    <meta name="msapplication-TileColor" content="#296a15">
-    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png">
-    <link rel="manifest" href="./../manifest.json">
-    <meta name="keywords" content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
-    <meta name="description" content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'.">
-    <meta name="robots" content="index">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="themeColor" content="#296a15">
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./../apple-icon-144x144.png" />
+    <link rel="icon" type="image/x-icon" href="./../favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./../android-icon-192x192.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./../favicon-96x96.png" />
+    <meta name="msapplication-TileColor" content="#296a15" />
+    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png" />
+    <link rel="manifest" href="./../manifest.json" />
+    <meta
+      name="keywords"
+      content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
+    <meta
+      name="description"
+      content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'." />
+    <meta name="robots" content="index" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="themeColor" content="#296a15" />
     <script src="./../scripts/script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
-    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <title>Geometria e algebra - Spazi vettoriali - Combinazione lineare e lineare indipendenza </title>
-</head>
-<body>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
+    <script
+      defer
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title
+      >Geometria e algebra - Spazi vettoriali - Combinazione lineare e lineare
+      indipendenza
+    </title>
+  </head>
+  <body>
     <div class="container">
-        <header class="header-wrapper">
-            <div class="title-wrapper">
-                <span class="title">
-                    Geometria e algebra
-                </span>
-                <span class="subtitle">
-                    by lorenzoarlo
-                </span>
-            </div>
-            <span class="page-title">
-                Spazi vettoriali
-            </span>
-        </header>
-        <aside class="sidebar">
-            <h2 class="sidebar-title">Geometria e algebra</h2>
-            <div class="index-container">
-                <ul class="parent-ul"><li class="section-li"><a href="../index.html" rel="nofollow">Indice</a></li><li class="section-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Operazioni e strutture algebriche</a><ul><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Gruppi, anelli e campi</a></li><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html" rel="nofollow">Omomorfismi e isomorfismi</a></li></ul></li><li class="section-li current">Spazi vettoriali<ul><li class="subsection-li "><a href="nozioni-preliminari-su-vettori-e-spazi-vettoriali.html" rel="nofollow">Nozioni preliminari su vettori e spazi vettoriali</a></li><li class="subsection-li current">Combinazione lineare e lineare indipendenza<ul><li class="definition-li"><a href="#def2-6" rel="nofollow">Combinazione lineare di vettori</a></li><li class="definition-li"><a href="#def2-7" rel="nofollow">Chiusura lineare</a></li><li class="definition-li"><a href="#def2-8" rel="nofollow">Sistema di generatori</a></li><li class="definition-li"><a href="#def2-9" rel="nofollow">Verificare che dei vettori siano un sistema di generatori</a></li><li class="myexample-li"><a href="#example7" rel="nofollow">Verificare che dei vettori siano un sistema di generatori</a></li><li class="definition-li"><a href="#def2-10" rel="nofollow">Lineare indipendenza</a></li><li class="definition-li"><a href="#def2-11" rel="nofollow">Verificare che dei vettori siano linearmente indipendenti - Primo metodo</a></li><li class="myexample-li"><a href="#example8" rel="nofollow">Verificare che dei vettori siano linearmente indipendenti - Primo metodo</a></li><li class="demonstration-li"><a href="#dem2-1" rel="nofollow">Vettori linearmente indipendenti se e solo se nessuno è combinazione lineare degli altri</a></li><li class="definition-li"><a href="#def2-12" rel="nofollow">Vettore nullo linearmente dipendente</a></li><li class="definition-li"><a href="#def2-13" rel="nofollow">Vettori duplicati linearmente dipendenti</a></li><li class="definition-li"><a href="#def2-14" rel="nofollow">Base</a></li><li class="definition-li"><a href="#def2-15" rel="nofollow">Base canonica</a></li><li class="demonstration-li"><a href="#dem2-2" rel="nofollow">Combinazione lineare unica rispetto ad una base</a></li><li class="definition-li"><a href="#def2-16" rel="nofollow">Spazio vettoriale finitamente generato</a></li><li class="demonstration-li"><a href="#dem2-3" rel="nofollow">Esistenza di una base per ogni spazio finitamente generato</a></li><li class="definition-li"><a href="#def2-17" rel="nofollow">Relazione cardinalità dei sistemi di generatori e di vettori linearmente indipendenti</a></li><li class="demonstration-li"><a href="#dem2-4" rel="nofollow">Equipotenza delle basi</a></li><li class="definition-li"><a href="#def2-18" rel="nofollow">Dimensione di uno spazio vettoriale</a></li><li class="demonstration-li"><a href="#dem2-5" rel="nofollow">Teorema del completamento a una base</a></li><li class="demonstration-li"><a href="#dem2-6" rel="nofollow">Cardinalità di una base come numero massimo di vettori linearmente indipendenti</a></li></ul></li><li class="subsection-li "><a href="sottostrutture-algebriche.html" rel="nofollow">Sottostrutture algebriche</a></li><li class="subsection-li "><a href="operazioni-tra-sottospazi-vettoriali.html" rel="nofollow">Operazioni tra sottospazi vettoriali</a></li></ul></li><li class="section-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Matrici</a><ul><li class="subsection-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Lo spazio vettoriale delle matrici</a></li><li class="subsection-li "><a href="../matrici/l-anello-delle-matrici-quadrate.html" rel="nofollow">L'anello delle matrici quadrate</a></li><li class="subsection-li "><a href="../matrici/operazioni-riga.html" rel="nofollow">Operazioni riga</a></li></ul></li><li class="section-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari</a><ul><li class="subsection-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari come matrici</a></li></ul></li><li class="section-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html" rel="nofollow">Applicazioni lineari</a><ul><li class="subsection-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html" rel="nofollow">Applicazioni lineari come funzioni</a></li><li class="subsection-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-matrici.html" rel="nofollow">Applicazioni lineari come matrici</a></li><li class="subsection-li "><a href="../applicazioni-lineari/matrici-simili.html" rel="nofollow">Matrici simili</a></li></ul></li><li class="section-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Determinante</a><ul><li class="subsection-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Definizioni di determinante</a></li><li class="subsection-li "><a href="../determinante/utilizzi-del-determinante.html" rel="nofollow">Utilizzi del determinante</a></li></ul></li><li class="section-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori e autovettori</a><ul><li class="subsection-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori, autovettori e autospazi</a></li><li class="subsection-li "><a href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html" rel="nofollow">Diagonalizzazione di una matrice</a></li></ul></li><li class="section-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Spazi vettoriali euclidei</a><ul><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Forme bilineari e prodotto scalare</a></li><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html" rel="nofollow">Spazi vettoriali euclidei</a></li></ul></li><li class="section-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Geometria analitica nello spazio</a><ul><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Rette nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/piani-nello-spazio.html" rel="nofollow">Piani nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html" rel="nofollow">Prodotto vettoriale</a></li></ul></li></ul>
-            </div>
-        </aside>
-        <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button" >
-            keyboard_double_arrow_right
+      <header class="header-wrapper">
+        <div class="title-wrapper">
+          <span class="title"> Geometria e algebra </span>
+          <span class="subtitle"> by lorenzoarlo </span>
         </div>
-        <section class="content-wrapper">
-            <h1 class="section-title content-width">Combinazione lineare e lineare indipendenza</h1>
-            <article class="content-container content-width">
-                <div class="definition environment" id="def2-6"><h2 class="environment-title">Definizione - Combinazione lineare di vettori</h2><div class="environment-body">     In uno spazio vettoriale, una <strong>combinazione lineare</strong> è una <strong>somma di multipli di vettori</strong> che permette di "creare" <strong>altri vettori</strong>, ovvero considerando <span class="math-span">\( a_{i} \in \mathbb{K}\)</span> e <span class="math-span">\( v \in V\)</span>     <span class="math-block">\[         a_{1} \cdot v_{1} + a_{2} \cdot v_{2} + \ \ldots \ + a_{s} \cdot v_{s}     \]</span> </div></div><div class="definition environment" id="def2-7"><h2 class="environment-title">Definizione - Chiusura lineare</h2><div class="environment-body">     La <strong>chiusura lineare è l'insieme di tutti i vettori generabili con combinazioni lineari di un insieme di vettori</strong>, ovvero considerando <span class="math-span">\( (v_{1}, \ \ldots \ , v_{s}) \in V\)</span>     <span class="math-block">\[         \lt v_{1}, \ \ldots \ , v_{s} \gt          \ = \          \{          a_{1} \cdot v_{1} + a_{2} \cdot v_{2} + \ \ldots \ + a_{s} \cdot v_{s}          \ \mid \          a_{1}, \ \ldots \ , a_{s} \in \mathbb{R}          \}     \]</span>     la chiusura lineare può essere indicata anche con <span class="math-span">\( span(v_{1}, \ \ldots \ , v_{s}\)</span>). </div></div><div class="definition environment" id="def2-8"><h2 class="environment-title">Definizione - Sistema di generatori</h2><div class="environment-body">     Un sistema di generatori per uno spazio vettoriale <span class="math-span">\( V\)</span> è un insieme di vettori     <span class="math-block">\[         \{ v_{1}, \ \ldots \ , v_{s} \}      \]</span>     per cui     <span class="math-block">\[         \lt v_{1}, \ \ldots \ , v_{s} \gt = V     \]</span>     ovvero si ha che <strong>tutti i vettori</strong> di <span class="math-span">\( V\)</span> possono <strong>essere scritti come combinazione lineare</strong> di tale "sistema di generatori". </div></div><div class="definition environment" id="def2-9"><h2 class="environment-title">Definizione - Verificare che dei vettori siano un sistema di generatori</h2><div class="environment-body">     Per verificare che un insieme di vettori è un sistema di generatori, è necessario risolvere il sistema lineare (di incognite <span class="math-span">\( a_{1}\)</span>, <span class="math-span">\( a_{2}\)</span>, <span class="math-span">\( a_{3}\)</span>) generato dalla seguente uguaglianza     <span class="math-block">\[         (x, y) = a_{1} \cdot v_{1} + a_{2} \cdot v_{2} + a_{3} \cdot v_{3}     \]</span>     Se il sistema ha soluzione, allora l'insieme di vettori è un sistema di generatori. </div></div><div class="myexample environment" id="example7"><h2 class="environment-title">Esempio - Verificare che dei vettori siano un sistema di generatori</h2><div class="environment-body collapsed">     Considerando lo spazio vettoriale <span class="math-span">\( \mathbb{R}^{2}\)</span> e il seguente insieme di vettori     <span class="math-block">\[         ((1, 1), (1, 2), (1, -1))     \]</span>     verificare che tali vettori siano un sistema di generatori.     <br/>     Per verificare che i tre vettori siano un sistema di generatori è sufficiente esplicitare la seguente uguaglianza     <span class="math-block">\begin{aligned}         &amp; (x, y) = a_{1} (1, 1) + a_{2} (1, 2) + a_{3} (1, -1)         &amp; \iff \\         &amp; (x, y) = (a_{1} + a_{2} + a_{3}, \ a_{1} + 2 \cdot a_{2} - a_{3})         &amp;     \end{aligned}</span>     che equivale a scrivere il sistema     <span class="math-block">\[         \left\{         \begin{array}{ccccccc}             a_{1} &amp; + &amp; a_{2} &amp; + &amp; a_{3} &amp; = &amp; x  \\             a_{1} &amp; + &amp; 2 \cdot a_{2} &amp; - &amp; a_{3} &amp; = &amp; y  \\         \end{array}         \right.     \]</span>     dove le incognite sono <span class="math-span">\( a_{1}\)</span>, <span class="math-span">\( a_{2}\)</span> e <span class="math-span">\( a_{3}\)</span>. Nel caso esista soluzione, significa che i vettori sono un sistema di generatori.     <br/>     Risolvendo il sistema lineare, si ottiene la seguente soluzione     <span class="math-block">\[         \left\{         \begin{array}{ccccccc}             a_{1} &amp; = &amp; t \\             a_{2} &amp; = &amp; -\frac{2}{3}t &amp; + &amp; \frac{x + y}{3} \\             a_{3} &amp; = &amp; \frac{1}{3}t &amp; + &amp; \frac{2}{3}x &amp; - &amp; \frac{1}{3}y         \end{array}         \right.     \]</span>     che significa che i tre vettori sono un sistema di generatori. </div><div class="environment-tail"><span class="material-symbols-outlined body-visibility-icon" onclick="expand_environment(event)">expand_more</span></div></div><div class="definition environment" id="def2-10"><h2 class="environment-title">Definizione - Lineare indipendenza</h2><div class="environment-body">     L'<span class="math-span">\( s\)</span>-upla <span class="math-span">\( (v_{1}, \ \ldots \ , v_{s})\)</span> si dice <strong>linearmente indipendente</strong> se l'unico modo per ottenere <strong>il vettore nullo</strong> dalla combinazione lineare di tali vettori è che tutti i coefficienti <span class="math-span">\( a_{i}\)</span> siano nulli, ovvero     <span class="math-block">\[         a_{1} \cdot v_{1} + \ \ldots \ + a_{s} \cdot v_{s} = 0_{V}         \qquad \implies \qquad         a_{1} = \ \ldots \ = a_{s} = 0     \]</span> </div></div><div class="definition environment" id="def2-11"><h2 class="environment-title">Definizione - Verificare che dei vettori siano linearmente indipendenti - Primo metodo</h2><div class="environment-body">     Per verificare che un insieme di vettori sia linearmente indipendente, è necessario risolvere il sistema lineare (di incognite <span class="math-span">\( a_{1}, a_{2}, a_{3})\)</span> generato dalla seguente uguaglianza     <span class="math-block">\[         (0, 0) = a_{1} \cdot v_{1} + a_{2} \cdot v_{2} + a_{3} \cdot v_{3}     \]</span>     Nel caso il sistema abbia una sola soluzione (ovvero <span class="math-span">\( a_{1} = a_{2} = a_{3} = 0\)</span>), l'insieme di vettori è linearmente indipendente. </div></div><div class="myexample environment" id="example8"><h2 class="environment-title">Esempio - Verificare che dei vettori siano linearmente indipendenti - Primo metodo</h2><div class="environment-body collapsed">     Considerando lo spazio vettoriale <span class="math-span">\( \mathbb{R}^{2}\)</span> e il seguente insieme di vettori     <span class="math-block">\[         ((1, 1), (1, 2), (1, -1))     \]</span>     verificare che tali vettori siano linearmente indipendenti.     <br/>     Per verificare che i tre vettori sono linearmente indipendenti è sufficiente esplicitare la seguente uguaglianza     <span class="math-block">\begin{aligned}         &amp; (0, 0) = a_{1} (1, 1) + a_{2} (1, 2) + a_{3} (1, -1)         &amp; \iff \\         &amp; (x, y) = (a_{1} + a_{2} + a_{3}, \ a_{1} + 2 \cdot a_{2} - a_{3})         &amp;     \end{aligned}</span>     che equivale a scrivere il sistema     <span class="math-block">\[         \left\{         \begin{array}{ccccccc}             a_{1} &amp; + &amp; a_{2} &amp; + &amp; a_{3} &amp; = &amp; 0  \\             a_{1} &amp; + &amp; 2 \cdot a_{2} &amp; - &amp; a_{3} &amp; = &amp; 0  \\         \end{array}         \right.     \]</span>     dove le incognite sono <span class="math-span">\( a_{1}\)</span>, <span class="math-span">\( a_{2}\)</span> e <span class="math-span">\( a_{3}\)</span>. Nel caso esista una sola soluzione, significa che i vettori sono linearmente indipendenti.     <br/>     Risolvendo il sistema lineare, si ottiene la seguente soluzione     <span class="math-block">\[         \left\{         \begin{array}{ccc}             a_{1} &amp; = &amp; t \\             a_{2} &amp; = &amp; -\frac{2}{3}t\\             a_{3} &amp; = &amp; \frac{1}{3}t         \end{array}         \right.     \]</span>     Dato che le soluzioni sono infinite, tali vettori non sono linearmente indipendenti. </div><div class="environment-tail"><span class="material-symbols-outlined body-visibility-icon" onclick="expand_environment(event)">expand_more</span></div></div><div class="demonstration environment" id="dem2-1"><h2 class="environment-title">Dimostrazione - Vettori linearmente indipendenti se e solo se nessuno è combinazione lineare degli altri</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         I vettori <span class="math-span">\( (v_{1}, \ \ldots \ , v_{s})\)</span> sono <strong>linearmente indipendenti</strong> se e solo se <strong>nessuno di essi si può scrivere come combinazione lineare dei rimanenti</strong>.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare tale proposizione, è necessario dimostrare che         <ul class="list-container"><li class="list-item">"se i vettori sono linearmente indipendenti, allora nessuno di essi si può scrivere come combinazione lineare degli altri". <br/>             Dunque, supponendo che i vettori <span class="math-span">\( (v_{1}, \ \ldots \ , v_{s})\)</span> sono linearmente indipendenti, supponiamo per assurdo che uno di questi vettori è combinazione lineare degli altri, ovvero             <span class="math-block">\begin{aligned}                 &amp; v_{1} = a_{2} \cdot v_{2} + \ \ldots \ + a_{s} \cdot v_{s}                  &amp; \iff             \end{aligned}</span>             Ora, "portando tutto a sinistra" si ottiene             <span class="math-block">\begin{aligned}                 &amp; 1 \cdot v_{1} - a_{2} \cdot v_{2} - \ \ldots \ - a_{s} \cdot v_{s} = 0_{V}             \end{aligned}</span>             che è un assurdo, in quanto abbiamo scritto il vettore nullo senza che i coefficienti siano tutti nulli;             </li><li class="list-item">"se nessuno dei vettori si può scrivere come combinazione lineare degli altri, allora sono linearmente indipendenti".             <br/>             Dunque, ipotizzando per assurdo che <span class="math-span">\( (v_{1}, \ \ldots \ , v_{s})\)</span> non siano linearmente indipendenti, si avrebbe una combinazione lineare             <span class="math-block">\begin{aligned}                 &amp; a_{1} \cdot v_{1} + a_{2} \cdot v_{2} + \ \ldots \ + a_{s} \cdot v_{s} = 0_{V}                 &amp; \iff             \end{aligned}</span>             non composta da tutti coefficienti nulli (ipotizziamo quindi che <span class="math-span">\( a_{1}\)</span> non sia nullo) e "portando a destra" tutti gli altri vettori si avrebbe             <span class="math-block">\begin{aligned}                 &amp; a_{1} \cdot v_{1} = - a_{2} \cdot v_{2} + \ \ldots \ - a_{s} \cdot v_{s}                 &amp;             \end{aligned}</span>             che è una contraddizione, in quanto abbiamo scritto un vettore come combinazione lineare degli altri.         </li></ul>         Si è quindi dimostrata la proposizione     </div></div>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Definizioni lineare indipendenza ugualmente valide</h3><div class="environment-body">         Questa definizione di lineare indipendenza e la precedente sono entrambe definizioni valide per descrivere la lineare indipendenza.          <br/>         Tuttavia la prima è più semplice (in quanto non privilegia alcun elemento) per le dimostrazioni, mentre la seconda risulta essere più utile per il calcolo.     </div></div> </div></div><div class="definition environment" id="def2-12"><h2 class="environment-title">Definizione - Vettore nullo linearmente dipendente</h2><div class="environment-body">     Una qualsiasi <span class="math-span">\( s\)</span>-upla <strong>contenente il vettore nullo</strong>, <strong>non</strong> è linearmente <strong>indipendente</strong>, in quanto il vettore nullo è sempre combinazione lineare dei rimanenti. </div></div><div class="definition environment" id="def2-13"><h2 class="environment-title">Definizione - Vettori duplicati linearmente dipendenti</h2><div class="environment-body">     Una qualsiasi <span class="math-span">\( s\)</span>-upla contenente<strong> due vettori uguali non è linearmente indipendenti</strong>, in quanto tale vettore è combinazione lineare di sè stesso. </div></div><div class="definition environment" id="def2-14"><h2 class="environment-title">Definizione - Base</h2><div class="environment-body">     Una <strong>base per uno spazio vettoriale</strong> è un qualunque <strong>sistema di generatori che sia anche linearmente indipendente</strong>. </div></div><div class="definition environment" id="def2-15"><h2 class="environment-title">Definizione - Base canonica</h2><div class="environment-body">     Considerando un qualsiasi spazio vettoriale <span class="math-span">\( \mathbb{R}^{n}\)</span>, si definisce <strong>base canonica</strong> il seguente insieme di <span class="math-span">\( n\)</span>-uple     <span class="math-block">\begin{aligned}         &amp; e_{1} = (1, 0, \ \ldots \ , 0) \\         &amp; e_{2} = (0, 1, \ \ldots \ , 0) \\         &amp; \vdots \\         &amp; e_{n} = (0, 0, \ \ldots \ , n)     \end{aligned}</span>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Basi per <span class="math-span">\( \mathbb{R}^{n}\)</span> infinite</h3><div class="environment-body">         Notiamo che le basi di questi spazi vettoriali sono un numero infinito, in quanto i possibili coefficienti  moltiplicabili (i reali) sono infiniti.     </div></div> </div></div><div class="demonstration environment" id="dem2-2"><h2 class="environment-title">Dimostrazione - Combinazione lineare unica rispetto ad una base</h2><div class="environment-body">     Data l'affermazione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando una base         <span class="math-block">\[             B = (v_{1}, \ \ldots \ , v_{n} )         \]</span>         per lo spazio vettoriale <span class="math-span">\( V\)</span>, allora è possibile associare ad ogni vettore <span class="math-span">\( v \in V\)</span>, una e una sola <strong><span class="math-span">\( n\)</span>-upla di coordinate</strong> rispetto a <span class="math-span">\( B\)</span>.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Supponiamo che esistano due combinazioni lineari di <span class="math-span">\( v\)</span> rispetto a <span class="math-span">\( B\)</span>, ovvero         <span class="math-block">\begin{aligned}             &amp; v = x_{1} \cdot v_{1} + \ \ldots \ + x_{n} v_{n}              \\             &amp; v = y_{1} \cdot v_{1} + \ \ldots \ + y_{n} v_{n}          \end{aligned}</span>         allora è lecito scrivere         <span class="math-block">\begin{aligned}             &amp; x_{1} \cdot v_{1} + \ \ldots \ + x_{n} v_{n} = y_{1} \cdot v_{1} + \ \ldots \ + y_{n} v_{n}             &amp; \iff         \end{aligned}</span>         e, portando prima tutto a sinistra e poi raccogliendo i vettori <span class="math-span">\( v_{i}\)</span>, si ottiene         <span class="math-block">\begin{aligned}             &amp; x_{1} \cdot v_{1} + \ \ldots \ + x_{n} v_{n} - y_{1} \cdot v_{1} - \ \ldots \ - y_{n} v_{n} = 0_{V}             &amp; \iff \\             &amp; (x_{1} - y_{1}) \cdot v_{1} + \ \ldots \ + (x_{n} - y_{n}) \cdot v_{n} = 0_{V}         \end{aligned}</span>         Considerando la lineare indipendenza, si ha che l'unico modo per ottenere il vettore nullo è che tutti i coefficienti siano nulli, per cui <span class="math-span">\( x_{i} - y_{i}\)</span> deve essere uguale a <span class="math-span">\( 0\)</span>: ciò significa che <span class="math-span">\( x_{i}\)</span> e <span class="math-span">\( y_{i}\)</span> sono uguali e per questo esiste un'unica <span class="math-span">\( n\)</span>-upla di coordinate.         <br/>         Si è quindi dimostrata la proposizione.     </div></div> </div></div><div class="definition environment" id="def2-16"><h2 class="environment-title">Definizione - Spazio vettoriale finitamente generato</h2><div class="environment-body">     Uno spazio vettoriale si dice <strong>finitamente generato</strong> se ammette un <strong>sistema di generatori composto da un numero finito di elementi</strong>.     <div class="mynote environment"><h3 class="environment-title">Nota bene - Esempio di spazio vettoriale non finitamente generato</h3><div class="environment-body">         Un esempio di spazio vettoriale non finitamente generato è lo spazio dei polinomi         <span class="math-block">\[             (\mathbb{R}, \mathbb{R}[x], +, \cdot )         \]</span>         in quanto esiste un numero di gradi infinito.     </div></div> </div></div><div class="demonstration environment" id="dem2-3"><h2 class="environment-title">Dimostrazione - Esistenza di una base per ogni spazio finitamente generato</h2><div class="environment-body">     Dato il teorema     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Ogni <strong>spazio vettoriale finitamente generato ammette almeno una base</strong>.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Considerando un qualsiasi insieme di vettori, è possibile o che tali vettori non siano un sistema di generatori o che non siano linearmente indipendenti: in caso contrario si avrebbe quindi una base.         <br/>         Nel caso tali vettori non siano un sistema di generatori, è sufficiente aggiungere i vettori che non sono generati dalla chiusura lineare.         <br/>         Nel caso invece siano un sistema di generatori ma non siano linearmente indipendenti, è sufficiente eliminare i vettori che sono combinazione lineare degli altri: si ottiene quindi una base.     </div></div>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Base dello spazio vettoriale nullo</h3><div class="environment-body">         Alcune definizioni considerano che lo spazio vettoriale nullo non ammette base. In questo caso, si può considerare come sua base l'insieme vuoto <span class="math-span">\( \varnothing\)</span>.     </div></div> </div></div><div class="definition environment" id="def2-17"><h2 class="environment-title">Definizione - Relazione cardinalità dei sistemi di generatori e di vettori linearmente indipendenti</h2><div class="environment-body">     Considerando <span class="math-span">\( G\)</span> un sistema di generatori e <span class="math-span">\( S\)</span> un insieme di vettori linearmente indipendenti appartenenti allo stesso spazio vettoriale, allora la cardinalità di <span class="math-span">\( G\)</span> è maggiore o uguale alla cardinalità di <span class="math-span">\( S\)</span>, ovvero      <span class="math-block">\[         \left| G \right| \geq \left| S \right|     \]</span>     Inoltre, se <span class="math-span">\( \left| G \right| = \left| S \right|\)</span>, possiamo dire che entrambi sono basi per lo spazio vettoriale. </div></div><div class="demonstration environment" id="dem2-4"><h2 class="environment-title">Dimostrazione - Equipotenza delle basi</h2><div class="environment-body">     Dato il teorema     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         <strong>Tutte le basi</strong> di uno spazio vettoriale <span class="math-span">\( V\)</span> finitamente generato <strong>hanno la stessa cardinalità</strong>.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Considerando due basi <span class="math-span">\( B_{1}\)</span> e <span class="math-span">\( B_{2}\)</span> per <span class="math-span">\( V\)</span> si ha che, per definizione di base, entrambe sono sia un sistema di generatori sia che siano linearmente indipendenti.          <br/>         Quindi, dato che <span class="math-span">\( B_{1}\)</span> è un sistema di generatori e <span class="math-span">\( B_{2}\)</span> è linearmente indipendente, possiamo dire che la cardinalità di <span class="math-span">\( B_{1}\)</span> è maggiore o uguale della cardinalità di <span class="math-span">\( B_{2}\)</span>, ovvero         <span class="math-block">\[             \left| B_{1} \right| \geq \left| B_{2} \right|         \]</span>         Tuttavia, si ha che anche <span class="math-span">\( B_{2}\)</span> è un sistema di generatori e <span class="math-span">\( B_{1}\)</span> è linearmente indipendente, quindi la cardinalità di <span class="math-span">\( B_{2}\)</span> è maggiore o uguale alla cardinalità di <span class="math-span">\( B_{1}\)</span>, ovvero         <span class="math-block">\[             \left| B_{2} \right| \geq \left| B_{1} \right|         \]</span>         Unendo le due relazione, si ha infine che         <span class="math-block">\[             \left| B_{1} \right| \geq \left| B_{2} \right| \geq \left| B_{1} \right|             \qquad \implies \qquad             \left| B_{1} \right| = \left| B_{2} \right|         \]</span>     </div></div> </div></div><div class="definition environment" id="def2-18"><h2 class="environment-title">Definizione - Dimensione di uno spazio vettoriale</h2><div class="environment-body">     Si dice <strong>dimensione di uno spazio vettoriale</strong> la <strong>cardinalità di una sua qualunque base</strong>.     <br/>     Nel caso lo spazio vettoriale non sia finitamente generato possiamo dire che la sua dimensione è <span class="math-span">\( \infty\)</span>. </div></div><div class="demonstration environment" id="dem2-5"><h2 class="environment-title">Dimostrazione - Teorema del completamento a una base</h2><div class="environment-body">     Dato il seguente teorema      <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Ogni insieme linearmente indipendente sottoinsieme di uno spazio vettoriale finitamente generato <strong>può essere completato ad una base</strong> per tale spazio vettoriale.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Considerando          <span class="math-block">\[             (w_{1}, \ \ldots \ , w_{k})         \]</span>         una <span class="math-span">\( k\)</span>-upla di vettori linearmente indipendenti, nel caso essa sia già un sistema di generatori è possibile dire che è già una base.          <br/>         Nel caso non lo sia, allora esiste un vettore <span class="math-span">\( w_{k + 1}\)</span> che non è combinazione lineare della <span class="math-span">\( k\)</span>-upla. Consideriamo quindi la nuova <span class="math-span">\( k + 1\)</span>-upla         <span class="math-block">\[             (w_{1}, \ \ldots \ , w_{k}, w_{k + 1})         \]</span>         È quindi necessario verificare che tali vettori siano linearmente indipendenti. Ciò non avviene in due casi:         <ul class="list-container"><li class="list-item">se <span class="math-span">\( w_{k + 1}\)</span> è combinazione lineare dei rimanenti (che non avviene proprio perchè abbiamo scelto uno che non è combinazione lineare degli altri);             </li><li class="list-item">se uno dei primi <span class="math-span">\( k\)</span> vettori è combinazione lineare degli altri, ovvero ipotizziamo per assurdo che <span class="math-span">\( w_{1}\)</span> (o uno degli altri vettori) è combinazione lineare dei rimanenti              <span class="math-block">\begin{aligned}                 &amp; w_{1} = a_{2} \cdot w_{2} + \ \ldots \ + a_{k} \cdot w_{k} + a_{k + 1} \cdot w_{k + 1}                 &amp; \iff             \end{aligned}</span>             si ha che sicuramente <span class="math-span">\( a_{k + 1}\)</span> non è nullo (per la lineare indipendenza dei primi <span class="math-span">\( k\)</span> vettori). Detto ciò, si può quindi isolare <span class="math-span">\( w_{k + 1}\)</span>, ottenendo quindi             <span class="math-block">\begin{aligned}                 &amp; a_{k + 1} \cdot w_{k + 1} = w_{1} - a_{2} \cdot w_{2} - \ \ldots \ - a_{k} \cdot w_{k}                 &amp; \iff             \end{aligned}</span>             e moltiplicando per l'inverso di <span class="math-span">\( a_{k + 1}\)</span> (che non è nullo)             <span class="math-block">\begin{aligned}                 &amp; w_{k + 1} = \frac{w_{1}}{a_{k + 1}} - \frac{a_{2}}{a_{k + 1}} \cdot w_{2} - \ \ldots \ - \frac{a_{k}}{a_{k + 1}} \cdot w_{k}                 &amp; \iff             \end{aligned}</span>             si è ottenuto quindi un assurdo (ovvero <span class="math-span">\( w_{k + 1}\)</span> come combinazione lineare dei rimanenti). Dunque la <span class="math-span">\( k + 1\)</span>-upla è linearmente indipendente.         </li></ul>         A questo punto se la <span class="math-span">\( k + 1\)</span>-upla è un sistema di generatori si è dimostrato il teorema, altrimenti è possibile ripetere il procedimento fino al raggiungimento di una base (che prima o poi terminerà in quanto lo spazio è finitamente generato).     </div></div> </div></div><div class="demonstration environment" id="dem2-6"><h2 class="environment-title">Dimostrazione - Cardinalità di una base come numero massimo di vettori linearmente indipendenti</h2><div class="environment-body">     Dato il teorema     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando <span class="math-span">\( dim(V)\)</span> la dimensione di uno spazio vettoriale <span class="math-span">\( V\)</span>, allora il numero massimo di vettori linearmente indipendenti ammissibili in quello spazio è proprio <span class="math-span">\( dim(V)\)</span>.          <br/>         Inoltre, se la cardinalità di tale insieme di vettori è proprio <span class="math-span">\( dim(V)\)</span>, si ha che tali vettori sono una base per <span class="math-span">\( V\)</span>.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare che il numero massimo di vettori linearmente indipendenti sia proprio la dimensione di una qualsiasi base è possibile utilizzare il "teorema del completamento ad una base", che ci permette di dire che è possibile aggiungere vettori ad un insieme di vettori linearmente indipendenti fino all'ottenimento di una base. Tuttavia, per "l'equipotenza delle basi", si ha che nel momento in cui l'insieme di vettori è una base, esso ha proprio <span class="math-span">\( dim(V)\)</span> elementi.         <br/>         Per lo stesso motivo, si ha che se un insieme linearmente indipendente ha <span class="math-span">\( dim(V)\)</span> elementi, allora esso è una base.     </div></div> </div></div>
-            </article>
-            <nav class="buttons-container content-width">
-                <a class="navigation-button previous" href="nozioni-preliminari-su-vettori-e-spazi-vettoriali.html" rel="nofollow"><span>Nozioni preliminari su vettori e spazi vettoriali</span></a>
-                <a class="navigation-button next" href="sottostrutture-algebriche.html" rel="nofollow"><span>Sottostrutture algebriche</span></a>
-            </nav>
-        </section>
-        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
-            <span class="material-symbols-outlined">
-                keyboard_double_arrow_down
-            </span>
+        <span class="page-title"> Spazi vettoriali </span>
+      </header>
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Geometria e algebra</h2>
+        <div class="index-container">
+          <ul class="parent-ul"
+            ><li class="section-li"
+              ><a href="../index.html" rel="nofollow">Indice</a></li
+            ><li class="section-li"
+              ><a
+                href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                rel="nofollow"
+                >Operazioni e strutture algebriche</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                    rel="nofollow"
+                    >Gruppi, anelli e campi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html"
+                    rel="nofollow"
+                    >Omomorfismi e isomorfismi</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li current"
+              >Spazi vettoriali<ul
+                ><li class="subsection-li"
+                  ><a
+                    href="nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                    rel="nofollow"
+                    >Nozioni preliminari su vettori e spazi vettoriali</a
+                  ></li
+                ><li class="subsection-li current"
+                  >Combinazione lineare e lineare indipendenza<ul
+                    ><li class="definition-li"
+                      ><a href="#def2-6" rel="nofollow"
+                        >Combinazione lineare di vettori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-7" rel="nofollow">Chiusura lineare</a></li
+                    ><li class="definition-li"
+                      ><a href="#def2-8" rel="nofollow"
+                        >Sistema di generatori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-9" rel="nofollow"
+                        >Verificare che dei vettori siano un sistema di
+                        generatori</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="#example7" rel="nofollow"
+                        >Verificare che dei vettori siano un sistema di
+                        generatori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-10" rel="nofollow"
+                        >Lineare indipendenza</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-11" rel="nofollow"
+                        >Verificare che dei vettori siano linearmente
+                        indipendenti - Primo metodo</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="#example8" rel="nofollow"
+                        >Verificare che dei vettori siano linearmente
+                        indipendenti - Primo metodo</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem2-1" rel="nofollow"
+                        >Vettori linearmente indipendenti se e solo se nessuno è
+                        combinazione lineare degli altri</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-12" rel="nofollow"
+                        >Vettore nullo linearmente dipendente</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-13" rel="nofollow"
+                        >Vettori duplicati linearmente dipendenti</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-14" rel="nofollow">Base</a></li
+                    ><li class="definition-li"
+                      ><a href="#def2-15" rel="nofollow">Base canonica</a></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem2-2" rel="nofollow"
+                        >Combinazione lineare unica rispetto ad una base</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-16" rel="nofollow"
+                        >Spazio vettoriale finitamente generato</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem2-3" rel="nofollow"
+                        >Esistenza di una base per ogni spazio finitamente
+                        generato</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-17" rel="nofollow"
+                        >Relazione cardinalità dei sistemi di generatori e di
+                        vettori linearmente indipendenti</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem2-4" rel="nofollow"
+                        >Equipotenza delle basi</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-18" rel="nofollow"
+                        >Dimensione di uno spazio vettoriale</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem2-5" rel="nofollow"
+                        >Teorema del completamento a una base</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem2-6" rel="nofollow"
+                        >Cardinalità di una base come numero massimo di vettori
+                        linearmente indipendenti</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="sottostrutture-algebriche.html" rel="nofollow"
+                    >Sottostrutture algebriche</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="operazioni-tra-sottospazi-vettoriali.html"
+                    rel="nofollow"
+                    >Operazioni tra sottospazi vettoriali</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                rel="nofollow"
+                >Matrici</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                    rel="nofollow"
+                    >Lo spazio vettoriale delle matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/l-anello-delle-matrici-quadrate.html"
+                    rel="nofollow"
+                    >L'anello delle matrici quadrate</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="../matrici/operazioni-riga.html" rel="nofollow"
+                    >Operazioni riga</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                rel="nofollow"
+                >Sistemi lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Sistemi lineari come matrici</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                rel="nofollow"
+                >Applicazioni lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come funzioni</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/applicazioni-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/matrici-simili.html"
+                    rel="nofollow"
+                    >Matrici simili</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../determinante/definizioni-di-determinante.html"
+                rel="nofollow"
+                >Determinante</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/definizioni-di-determinante.html"
+                    rel="nofollow"
+                    >Definizioni di determinante</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/utilizzi-del-determinante.html"
+                    rel="nofollow"
+                    >Utilizzi del determinante</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                rel="nofollow"
+                >Autovalori e autovettori</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                    rel="nofollow"
+                    >Autovalori, autovettori e autospazi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html"
+                    rel="nofollow"
+                    >Diagonalizzazione di una matrice</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                rel="nofollow"
+                >Spazi vettoriali euclidei</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                    rel="nofollow"
+                    >Forme bilineari e prodotto scalare</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html"
+                    rel="nofollow"
+                    >Spazi vettoriali euclidei</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                rel="nofollow"
+                >Geometria analitica nello spazio</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                    rel="nofollow"
+                    >Rette nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/piani-nello-spazio.html"
+                    rel="nofollow"
+                    >Piani nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html"
+                    rel="nofollow"
+                    >Prodotto vettoriale</a
+                  ></li
+                ></ul
+              ></li
+            ></ul
+          >
         </div>
-            <footer class="footer-wrapper">
-                <div class="copyright-wrapper">
-                    <span> &copy; Copyright 2024</span> /
-                    <span>made by <a href="https://github.com/lorenzoarlo" rel="nofollow">lorenzoarlo</a></span>
-                </div>
-                /
-                <div class="privacy-wrapper">
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze
-                            cookie</a></span> /
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow"
-                            target="_blank">Privacy Policy</a></span>
-                </div>
-            </footer>
+      </aside>
+      <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button">
+        keyboard_double_arrow_right
+      </div>
+      <section class="content-wrapper">
+        <h1 class="section-title content-width"
+          >Combinazione lineare e lineare indipendenza</h1
+        >
+        <article class="content-container content-width">
+          <div class="definition environment" id="def2-6"
+            ><h2 class="environment-title"
+              >Definizione - Combinazione lineare di vettori</h2
+            ><div class="environment-body">
+              In uno spazio vettoriale, una
+              <strong>combinazione lineare</strong> è una
+              <strong>somma di multipli di vettori</strong> che permette di
+              "creare" <strong>altri vettori</strong>, ovvero considerando
+              <span class="math-span">\( a_{i} \in \mathbb{K}\)</span> e
+              <span class="math-span">\( v \in V\)</span>
+              <span class="math-block"
+                >\[ a_{1} \cdot v_{1} + a_{2} \cdot v_{2} + \ \ldots \ + a_{s}
+                \cdot v_{s} \]</span
+              >
+            </div></div
+          ><div class="definition environment" id="def2-7"
+            ><h2 class="environment-title">Definizione - Chiusura lineare</h2
+            ><div class="environment-body">
+              La
+              <strong
+                >chiusura lineare è l'insieme di tutti i vettori generabili con
+                combinazioni lineari di un insieme di vettori</strong
+              >, ovvero considerando
+              <span class="math-span"
+                >\( (v_{1}, \ \ldots \ , v_{s}) \in V\)</span
+              >
+              <span class="math-block"
+                >\[ \lt v_{1}, \ \ldots \ , v_{s} \gt \ = \ \{ a_{1} \cdot v_{1}
+                + a_{2} \cdot v_{2} + \ \ldots \ + a_{s} \cdot v_{s} \ \mid \
+                a_{1}, \ \ldots \ , a_{s} \in \mathbb{R} \} \]</span
+              >
+              la chiusura lineare può essere indicata anche con
+              <span class="math-span">\( span(v_{1}, \ \ldots \ , v_{s}\)</span
+              >).
+            </div></div
+          ><div class="definition environment" id="def2-8"
+            ><h2 class="environment-title"
+              >Definizione - Sistema di generatori</h2
+            ><div class="environment-body">
+              Un sistema di generatori per uno spazio vettoriale
+              <span class="math-span">\( V\)</span> è un insieme di vettori
+              <span class="math-block"
+                >\[ \{ v_{1}, \ \ldots \ , v_{s} \} \]</span
+              >
+              per cui
+              <span class="math-block"
+                >\[ \lt v_{1}, \ \ldots \ , v_{s} \gt = V \]</span
+              >
+              ovvero si ha che <strong>tutti i vettori</strong> di
+              <span class="math-span">\( V\)</span> possono
+              <strong>essere scritti come combinazione lineare</strong> di tale
+              "sistema di generatori".
+            </div></div
+          ><div class="definition environment" id="def2-9"
+            ><h2 class="environment-title"
+              >Definizione - Verificare che dei vettori siano un sistema di
+              generatori</h2
+            ><div class="environment-body">
+              Per verificare che un insieme di vettori è un sistema di
+              generatori, è necessario risolvere il sistema lineare (di
+              incognite <span class="math-span">\( a_{1}\)</span>,
+              <span class="math-span">\( a_{2}\)</span>,
+              <span class="math-span">\( a_{3}\)</span>) generato dalla seguente
+              uguaglianza
+              <span class="math-block"
+                >\[ (x, y) = a_{1} \cdot v_{1} + a_{2} \cdot v_{2} + a_{3} \cdot
+                v_{3} \]</span
+              >
+              Se il sistema ha soluzione, allora l'insieme di vettori è un
+              sistema di generatori.
+            </div></div
+          ><div class="myexample environment" id="example7"
+            ><h2 class="environment-title"
+              >Esempio - Verificare che dei vettori siano un sistema di
+              generatori</h2
+            ><div class="environment-body collapsed">
+              Considerando lo spazio vettoriale
+              <span class="math-span">\( \mathbb{R}^{2}\)</span> e il seguente
+              insieme di vettori
+              <span class="math-block">\[ ((1, 1), (1, 2), (1, -1)) \]</span>
+              verificare che tali vettori siano un sistema di generatori. <br />
+              Per verificare che i tre vettori siano un sistema di generatori è
+              sufficiente esplicitare la seguente uguaglianza
+              <span class="math-block"
+                >\begin{aligned} &amp; (x, y) = a_{1} (1, 1) + a_{2} (1, 2) +
+                a_{3} (1, -1) &amp; \iff \\ &amp; (x, y) = (a_{1} + a_{2} +
+                a_{3}, \ a_{1} + 2 \cdot a_{2} - a_{3}) &amp;
+                \end{aligned}</span
+              >
+              che equivale a scrivere il sistema
+              <span class="math-block"
+                >\[ \left\{ \begin{array}{ccccccc} a_{1} &amp; + &amp; a_{2}
+                &amp; + &amp; a_{3} &amp; = &amp; x \\ a_{1} &amp; + &amp; 2
+                \cdot a_{2} &amp; - &amp; a_{3} &amp; = &amp; y \\ \end{array}
+                \right. \]</span
+              >
+              dove le incognite sono <span class="math-span">\( a_{1}\)</span>,
+              <span class="math-span">\( a_{2}\)</span> e
+              <span class="math-span">\( a_{3}\)</span>. Nel caso esista
+              soluzione, significa che i vettori sono un sistema di generatori.
+              <br />
+              Risolvendo il sistema lineare, si ottiene la seguente soluzione
+              <span class="math-block"
+                >\[ \left\{ \begin{array}{ccccccc} a_{1} &amp; = &amp; t \\
+                a_{2} &amp; = &amp; -\frac{2}{3}t &amp; + &amp; \frac{x + y}{3}
+                \\ a_{3} &amp; = &amp; \frac{1}{3}t &amp; + &amp; \frac{2}{3}x
+                &amp; - &amp; \frac{1}{3}y \end{array} \right. \]</span
+              >
+              che significa che i tre vettori sono un sistema di generatori. </div
+            ><div class="environment-tail"
+              ><span
+                class="material-symbols-outlined body-visibility-icon"
+                onclick="expand_environment(event)"
+                >expand_more</span
+              ></div
+            ></div
+          ><div class="definition environment" id="def2-10"
+            ><h2 class="environment-title"
+              >Definizione - Lineare indipendenza</h2
+            ><div class="environment-body">
+              L'<span class="math-span">\( s\)</span>-upla
+              <span class="math-span">\( (v_{1}, \ \ldots \ , v_{s})\)</span> si
+              dice <strong>linearmente indipendente</strong> se l'unico modo per
+              ottenere <strong>il vettore nullo</strong> dalla combinazione
+              lineare di tali vettori è che tutti i coefficienti
+              <span class="math-span">\( a_{i}\)</span> siano nulli, ovvero
+              <span class="math-block"
+                >\[ a_{1} \cdot v_{1} + \ \ldots \ + a_{s} \cdot v_{s} = 0_{V}
+                \qquad \implies \qquad a_{1} = \ \ldots \ = a_{s} = 0 \]</span
+              >
+            </div></div
+          ><div class="definition environment" id="def2-11"
+            ><h2 class="environment-title"
+              >Definizione - Verificare che dei vettori siano linearmente
+              indipendenti - Primo metodo</h2
+            ><div class="environment-body">
+              Per verificare che un insieme di vettori sia linearmente
+              indipendente, è necessario risolvere il sistema lineare (di
+              incognite
+              <span class="math-span">\( a_{1}, a_{2}, a_{3})\)</span> generato
+              dalla seguente uguaglianza
+              <span class="math-block"
+                >\[ (0, 0) = a_{1} \cdot v_{1} + a_{2} \cdot v_{2} + a_{3} \cdot
+                v_{3} \]</span
+              >
+              Nel caso il sistema abbia una sola soluzione (ovvero
+              <span class="math-span">\( a_{1} = a_{2} = a_{3} = 0\)</span>),
+              l'insieme di vettori è linearmente indipendente.
+            </div></div
+          ><div class="myexample environment" id="example8"
+            ><h2 class="environment-title"
+              >Esempio - Verificare che dei vettori siano linearmente
+              indipendenti - Primo metodo</h2
+            ><div class="environment-body collapsed">
+              Considerando lo spazio vettoriale
+              <span class="math-span">\( \mathbb{R}^{2}\)</span> e il seguente
+              insieme di vettori
+              <span class="math-block">\[ ((1, 1), (1, 2), (1, -1)) \]</span>
+              verificare che tali vettori siano linearmente indipendenti. <br />
+              Per verificare che i tre vettori sono linearmente indipendenti è
+              sufficiente esplicitare la seguente uguaglianza
+              <span class="math-block"
+                >\begin{aligned} &amp; (0, 0) = a_{1} (1, 1) + a_{2} (1, 2) +
+                a_{3} (1, -1) &amp; \iff \\ &amp; (x, y) = (a_{1} + a_{2} +
+                a_{3}, \ a_{1} + 2 \cdot a_{2} - a_{3}) &amp;
+                \end{aligned}</span
+              >
+              che equivale a scrivere il sistema
+              <span class="math-block"
+                >\[ \left\{ \begin{array}{ccccccc} a_{1} &amp; + &amp; a_{2}
+                &amp; + &amp; a_{3} &amp; = &amp; 0 \\ a_{1} &amp; + &amp; 2
+                \cdot a_{2} &amp; - &amp; a_{3} &amp; = &amp; 0 \\ \end{array}
+                \right. \]</span
+              >
+              dove le incognite sono <span class="math-span">\( a_{1}\)</span>,
+              <span class="math-span">\( a_{2}\)</span> e
+              <span class="math-span">\( a_{3}\)</span>. Nel caso esista una
+              sola soluzione, significa che i vettori sono linearmente
+              indipendenti. <br />
+              Risolvendo il sistema lineare, si ottiene la seguente soluzione
+              <span class="math-block"
+                >\[ \left\{ \begin{array}{ccc} a_{1} &amp; = &amp; t \\ a_{2}
+                &amp; = &amp; -\frac{2}{3}t\\ a_{3} &amp; = &amp; \frac{1}{3}t
+                \end{array} \right. \]</span
+              >
+              Dato che le soluzioni sono infinite, tali vettori non sono
+              linearmente indipendenti. </div
+            ><div class="environment-tail"
+              ><span
+                class="material-symbols-outlined body-visibility-icon"
+                onclick="expand_environment(event)"
+                >expand_more</span
+              ></div
+            ></div
+          ><div class="demonstration environment" id="dem2-1"
+            ><h2 class="environment-title"
+              >Dimostrazione - Vettori linearmente indipendenti se e solo se
+              nessuno è combinazione lineare degli altri</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  I vettori
+                  <span class="math-span"
+                    >\( (v_{1}, \ \ldots \ , v_{s})\)</span
+                  >
+                  sono <strong>linearmente indipendenti</strong> se e solo se
+                  <strong
+                    >nessuno di essi si può scrivere come combinazione lineare
+                    dei rimanenti</strong
+                  >.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale proposizione, è necessario dimostrare che
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >"se i vettori sono linearmente indipendenti, allora
+                      nessuno di essi si può scrivere come combinazione lineare
+                      degli altri". <br />
+                      Dunque, supponendo che i vettori
+                      <span class="math-span"
+                        >\( (v_{1}, \ \ldots \ , v_{s})\)</span
+                      >
+                      sono linearmente indipendenti, supponiamo per assurdo che
+                      uno di questi vettori è combinazione lineare degli altri,
+                      ovvero
+                      <span class="math-block"
+                        >\begin{aligned} &amp; v_{1} = a_{2} \cdot v_{2} + \
+                        \ldots \ + a_{s} \cdot v_{s} &amp; \iff
+                        \end{aligned}</span
+                      >
+                      Ora, "portando tutto a sinistra" si ottiene
+                      <span class="math-block"
+                        >\begin{aligned} &amp; 1 \cdot v_{1} - a_{2} \cdot v_{2}
+                        - \ \ldots \ - a_{s} \cdot v_{s} = 0_{V}
+                        \end{aligned}</span
+                      >
+                      che è un assurdo, in quanto abbiamo scritto il vettore
+                      nullo senza che i coefficienti siano tutti nulli; </li
+                    ><li class="list-item"
+                      >"se nessuno dei vettori si può scrivere come combinazione
+                      lineare degli altri, allora sono linearmente
+                      indipendenti". <br />
+                      Dunque, ipotizzando per assurdo che
+                      <span class="math-span"
+                        >\( (v_{1}, \ \ldots \ , v_{s})\)</span
+                      >
+                      non siano linearmente indipendenti, si avrebbe una
+                      combinazione lineare
+                      <span class="math-block"
+                        >\begin{aligned} &amp; a_{1} \cdot v_{1} + a_{2} \cdot
+                        v_{2} + \ \ldots \ + a_{s} \cdot v_{s} = 0_{V} &amp;
+                        \iff \end{aligned}</span
+                      >
+                      non composta da tutti coefficienti nulli (ipotizziamo
+                      quindi che <span class="math-span">\( a_{1}\)</span> non
+                      sia nullo) e "portando a destra" tutti gli altri vettori
+                      si avrebbe
+                      <span class="math-block"
+                        >\begin{aligned} &amp; a_{1} \cdot v_{1} = - a_{2} \cdot
+                        v_{2} + \ \ldots \ - a_{s} \cdot v_{s} &amp;
+                        \end{aligned}</span
+                      >
+                      che è una contraddizione, in quanto abbiamo scritto un
+                      vettore come combinazione lineare degli altri.
+                    </li></ul
+                  >
+                  Si è quindi dimostrata la proposizione
+                </div></div
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - Definizioni lineare indipendenza ugualmente
+                  valide</h3
+                ><div class="environment-body">
+                  Questa definizione di lineare indipendenza e la precedente
+                  sono entrambe definizioni valide per descrivere la lineare
+                  indipendenza. <br />
+                  Tuttavia la prima è più semplice (in quanto non privilegia
+                  alcun elemento) per le dimostrazioni, mentre la seconda
+                  risulta essere più utile per il calcolo.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def2-12"
+            ><h2 class="environment-title"
+              >Definizione - Vettore nullo linearmente dipendente</h2
+            ><div class="environment-body">
+              Una qualsiasi <span class="math-span">\( s\)</span>-upla
+              <strong>contenente il vettore nullo</strong>,
+              <strong>non</strong> è linearmente <strong>indipendente</strong>,
+              in quanto il vettore nullo è sempre combinazione lineare dei
+              rimanenti.
+            </div></div
+          ><div class="definition environment" id="def2-13"
+            ><h2 class="environment-title"
+              >Definizione - Vettori duplicati linearmente dipendenti</h2
+            ><div class="environment-body">
+              Una qualsiasi <span class="math-span">\( s\)</span>-upla
+              contenente<strong>
+                due vettori uguali non è linearmente indipendenti</strong
+              >, in quanto tale vettore è combinazione lineare di sè stesso.
+            </div></div
+          ><div class="definition environment" id="def2-14"
+            ><h2 class="environment-title">Definizione - Base</h2
+            ><div class="environment-body">
+              Una <strong>base per uno spazio vettoriale</strong> è un qualunque
+              <strong
+                >sistema di generatori che sia anche linearmente
+                indipendente</strong
+              >.
+            </div></div
+          ><div class="definition environment" id="def2-15"
+            ><h2 class="environment-title">Definizione - Base canonica</h2
+            ><div class="environment-body">
+              Considerando un qualsiasi spazio vettoriale
+              <span class="math-span">\( \mathbb{R}^{n}\)</span>, si definisce
+              <strong>base canonica</strong> il seguente insieme di
+              <span class="math-span">\( n\)</span>-uple
+              <span class="math-block"
+                >\begin{aligned} &amp; e_{1} = (1, 0, \ \ldots \ , 0) \\ &amp;
+                e_{2} = (0, 1, \ \ldots \ , 0) \\ &amp; \vdots \\ &amp; e_{n} =
+                (0, 0, \ \ldots \ , n) \end{aligned}</span
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - Basi per
+                  <span class="math-span">\( \mathbb{R}^{n}\)</span>
+                  infinite</h3
+                ><div class="environment-body">
+                  Notiamo che le basi di questi spazi vettoriali sono un numero
+                  infinito, in quanto i possibili coefficienti moltiplicabili (i
+                  reali) sono infiniti.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem2-2"
+            ><h2 class="environment-title"
+              >Dimostrazione - Combinazione lineare unica rispetto ad una
+              base</h2
+            ><div class="environment-body">
+              Data l'affermazione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando una base
+                  <span class="math-block"
+                    >\[ B = (v_{1}, \ \ldots \ , v_{n} ) \]</span
+                  >
+                  per lo spazio vettoriale
+                  <span class="math-span">\( V\)</span>, allora è possibile
+                  associare ad ogni vettore
+                  <span class="math-span">\( v \in V\)</span>, una e una sola
+                  <strong
+                    ><span class="math-span">\( n\)</span>-upla di
+                    coordinate</strong
+                  >
+                  rispetto a <span class="math-span">\( B\)</span>.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Supponiamo che esistano due combinazioni lineari di
+                  <span class="math-span">\( v\)</span> rispetto a
+                  <span class="math-span">\( B\)</span>, ovvero
+                  <span class="math-block"
+                    >\begin{aligned} &amp; v = x_{1} \cdot v_{1} + \ \ldots \ +
+                    x_{n} v_{n} \\ &amp; v = y_{1} \cdot v_{1} + \ \ldots \ +
+                    y_{n} v_{n} \end{aligned}</span
+                  >
+                  allora è lecito scrivere
+                  <span class="math-block"
+                    >\begin{aligned} &amp; x_{1} \cdot v_{1} + \ \ldots \ +
+                    x_{n} v_{n} = y_{1} \cdot v_{1} + \ \ldots \ + y_{n} v_{n}
+                    &amp; \iff \end{aligned}</span
+                  >
+                  e, portando prima tutto a sinistra e poi raccogliendo i
+                  vettori <span class="math-span">\( v_{i}\)</span>, si ottiene
+                  <span class="math-block"
+                    >\begin{aligned} &amp; x_{1} \cdot v_{1} + \ \ldots \ +
+                    x_{n} v_{n} - y_{1} \cdot v_{1} - \ \ldots \ - y_{n} v_{n} =
+                    0_{V} &amp; \iff \\ &amp; (x_{1} - y_{1}) \cdot v_{1} + \
+                    \ldots \ + (x_{n} - y_{n}) \cdot v_{n} = 0_{V}
+                    \end{aligned}</span
+                  >
+                  Considerando la lineare indipendenza, si ha che l'unico modo
+                  per ottenere il vettore nullo è che tutti i coefficienti siano
+                  nulli, per cui
+                  <span class="math-span">\( x_{i} - y_{i}\)</span> deve essere
+                  uguale a <span class="math-span">\( 0\)</span>: ciò significa
+                  che <span class="math-span">\( x_{i}\)</span> e
+                  <span class="math-span">\( y_{i}\)</span> sono uguali e per
+                  questo esiste un'unica
+                  <span class="math-span">\( n\)</span>-upla di coordinate.
+                  <br />
+                  Si è quindi dimostrata la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def2-16"
+            ><h2 class="environment-title"
+              >Definizione - Spazio vettoriale finitamente generato</h2
+            ><div class="environment-body">
+              Uno spazio vettoriale si dice
+              <strong>finitamente generato</strong> se ammette un
+              <strong
+                >sistema di generatori composto da un numero finito di
+                elementi</strong
+              >.
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - Esempio di spazio vettoriale non finitamente
+                  generato</h3
+                ><div class="environment-body">
+                  Un esempio di spazio vettoriale non finitamente generato è lo
+                  spazio dei polinomi
+                  <span class="math-block"
+                    >\[ (\mathbb{R}, \mathbb{R}[x], +, \cdot ) \]</span
+                  >
+                  in quanto esiste un numero di gradi infinito.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem2-3"
+            ><h2 class="environment-title"
+              >Dimostrazione - Esistenza di una base per ogni spazio finitamente
+              generato</h2
+            ><div class="environment-body">
+              Dato il teorema
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Ogni
+                  <strong
+                    >spazio vettoriale finitamente generato ammette almeno una
+                    base</strong
+                  >.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Considerando un qualsiasi insieme di vettori, è possibile o
+                  che tali vettori non siano un sistema di generatori o che non
+                  siano linearmente indipendenti: in caso contrario si avrebbe
+                  quindi una base. <br />
+                  Nel caso tali vettori non siano un sistema di generatori, è
+                  sufficiente aggiungere i vettori che non sono generati dalla
+                  chiusura lineare. <br />
+                  Nel caso invece siano un sistema di generatori ma non siano
+                  linearmente indipendenti, è sufficiente eliminare i vettori
+                  che sono combinazione lineare degli altri: si ottiene quindi
+                  una base.
+                </div></div
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - Base dello spazio vettoriale nullo</h3
+                ><div class="environment-body">
+                  Alcune definizioni considerano che lo spazio vettoriale nullo
+                  non ammette base. In questo caso, si può considerare come sua
+                  base l'insieme vuoto
+                  <span class="math-span">\( \varnothing\)</span>.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def2-17"
+            ><h2 class="environment-title"
+              >Definizione - Relazione cardinalità dei sistemi di generatori e
+              di vettori linearmente indipendenti</h2
+            ><div class="environment-body">
+              Considerando <span class="math-span">\( G\)</span> un sistema di
+              generatori e <span class="math-span">\( S\)</span> un insieme di
+              vettori linearmente indipendenti appartenenti allo stesso spazio
+              vettoriale, allora la cardinalità di
+              <span class="math-span">\( G\)</span> è maggiore o uguale alla
+              cardinalità di <span class="math-span">\( S\)</span>, ovvero
+              <span class="math-block"
+                >\[ \left| G \right| \geq \left| S \right| \]</span
+              >
+              Inoltre, se
+              <span class="math-span"
+                >\( \left| G \right| = \left| S \right|\)</span
+              >, possiamo dire che entrambi sono basi per lo spazio vettoriale.
+            </div></div
+          ><div class="demonstration environment" id="dem2-4"
+            ><h2 class="environment-title"
+              >Dimostrazione - Equipotenza delle basi</h2
+            ><div class="environment-body">
+              Dato il teorema
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  <strong>Tutte le basi</strong> di uno spazio vettoriale
+                  <span class="math-span">\( V\)</span> finitamente generato
+                  <strong>hanno la stessa cardinalità</strong>.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Considerando due basi
+                  <span class="math-span">\( B_{1}\)</span> e
+                  <span class="math-span">\( B_{2}\)</span> per
+                  <span class="math-span">\( V\)</span> si ha che, per
+                  definizione di base, entrambe sono sia un sistema di
+                  generatori sia che siano linearmente indipendenti. <br />
+                  Quindi, dato che <span class="math-span">\( B_{1}\)</span> è
+                  un sistema di generatori e
+                  <span class="math-span">\( B_{2}\)</span> è linearmente
+                  indipendente, possiamo dire che la cardinalità di
+                  <span class="math-span">\( B_{1}\)</span> è maggiore o uguale
+                  della cardinalità di
+                  <span class="math-span">\( B_{2}\)</span>, ovvero
+                  <span class="math-block"
+                    >\[ \left| B_{1} \right| \geq \left| B_{2} \right| \]</span
+                  >
+                  Tuttavia, si ha che anche
+                  <span class="math-span">\( B_{2}\)</span> è un sistema di
+                  generatori e <span class="math-span">\( B_{1}\)</span> è
+                  linearmente indipendente, quindi la cardinalità di
+                  <span class="math-span">\( B_{2}\)</span> è maggiore o uguale
+                  alla cardinalità di <span class="math-span">\( B_{1}\)</span>,
+                  ovvero
+                  <span class="math-block"
+                    >\[ \left| B_{2} \right| \geq \left| B_{1} \right| \]</span
+                  >
+                  Unendo le due relazione, si ha infine che
+                  <span class="math-block"
+                    >\[ \left| B_{1} \right| \geq \left| B_{2} \right| \geq
+                    \left| B_{1} \right| \qquad \implies \qquad \left| B_{1}
+                    \right| = \left| B_{2} \right| \]</span
+                  >
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def2-18"
+            ><h2 class="environment-title"
+              >Definizione - Dimensione di uno spazio vettoriale</h2
+            ><div class="environment-body">
+              Si dice <strong>dimensione di uno spazio vettoriale</strong> la
+              <strong>cardinalità di una sua qualunque base</strong>. <br />
+              Nel caso lo spazio vettoriale non sia finitamente generato
+              possiamo dire che la sua dimensione è
+              <span class="math-span">\( \infty\)</span>.
+            </div></div
+          ><div class="demonstration environment" id="dem2-5"
+            ><h2 class="environment-title"
+              >Dimostrazione - Teorema del completamento a una base</h2
+            ><div class="environment-body">
+              Dato il seguente teorema
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Ogni insieme linearmente indipendente sottoinsieme di uno
+                  spazio vettoriale finitamente generato
+                  <strong>può essere completato ad una base</strong> per tale
+                  spazio vettoriale.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Considerando
+                  <span class="math-block"
+                    >\[ (w_{1}, \ \ldots \ , w_{k}) \]</span
+                  >
+                  una <span class="math-span">\( k\)</span>-upla di vettori
+                  linearmente indipendenti, nel caso essa sia già un sistema di
+                  generatori è possibile dire che è già una base. <br />
+                  Nel caso non lo sia, allora esiste un vettore
+                  <span class="math-span">\( w_{k + 1}\)</span> che non è
+                  combinazione lineare della
+                  <span class="math-span">\( k\)</span>-upla. Consideriamo
+                  quindi la nuova <span class="math-span">\( k + 1\)</span>-upla
+                  <span class="math-block"
+                    >\[ (w_{1}, \ \ldots \ , w_{k}, w_{k + 1}) \]</span
+                  >
+                  È quindi necessario verificare che tali vettori siano
+                  linearmente indipendenti. Ciò non avviene in due casi:
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >se <span class="math-span">\( w_{k + 1}\)</span> è
+                      combinazione lineare dei rimanenti (che non avviene
+                      proprio perchè abbiamo scelto uno che non è combinazione
+                      lineare degli altri); </li
+                    ><li class="list-item"
+                      >se uno dei primi
+                      <span class="math-span">\( k\)</span> vettori è
+                      combinazione lineare degli altri, ovvero ipotizziamo per
+                      assurdo che <span class="math-span">\( w_{1}\)</span> (o
+                      uno degli altri vettori) è combinazione lineare dei
+                      rimanenti
+                      <span class="math-block"
+                        >\begin{aligned} &amp; w_{1} = a_{2} \cdot w_{2} + \
+                        \ldots \ + a_{k} \cdot w_{k} + a_{k + 1} \cdot w_{k + 1}
+                        &amp; \iff \end{aligned}</span
+                      >
+                      si ha che sicuramente
+                      <span class="math-span">\( a_{k + 1}\)</span> non è nullo
+                      (per la lineare indipendenza dei primi
+                      <span class="math-span">\( k\)</span> vettori). Detto ciò,
+                      si può quindi isolare
+                      <span class="math-span">\( w_{k + 1}\)</span>, ottenendo
+                      quindi
+                      <span class="math-block"
+                        >\begin{aligned} &amp; a_{k + 1} \cdot w_{k + 1} = w_{1}
+                        - a_{2} \cdot w_{2} - \ \ldots \ - a_{k} \cdot w_{k}
+                        &amp; \iff \end{aligned}</span
+                      >
+                      e moltiplicando per l'inverso di
+                      <span class="math-span">\( a_{k + 1}\)</span> (che non è
+                      nullo)
+                      <span class="math-block"
+                        >\begin{aligned} &amp; w_{k + 1} = \frac{w_{1}}{a_{k +
+                        1}} - \frac{a_{2}}{a_{k + 1}} \cdot w_{2} - \ \ldots \ -
+                        \frac{a_{k}}{a_{k + 1}} \cdot w_{k} &amp; \iff
+                        \end{aligned}</span
+                      >
+                      si è ottenuto quindi un assurdo (ovvero
+                      <span class="math-span">\( w_{k + 1}\)</span> come
+                      combinazione lineare dei rimanenti). Dunque la
+                      <span class="math-span">\( k + 1\)</span>-upla è
+                      linearmente indipendente.
+                    </li></ul
+                  >
+                  A questo punto se la
+                  <span class="math-span">\( k + 1\)</span>-upla è un sistema di
+                  generatori si è dimostrato il teorema, altrimenti è possibile
+                  ripetere il procedimento fino al raggiungimento di una base
+                  (che prima o poi terminerà in quanto lo spazio è finitamente
+                  generato).
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem2-6"
+            ><h2 class="environment-title"
+              >Dimostrazione - Cardinalità di una base come numero massimo di
+              vettori linearmente indipendenti</h2
+            ><div class="environment-body">
+              Dato il teorema
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando <span class="math-span">\( dim(V)\)</span> la
+                  dimensione di uno spazio vettoriale
+                  <span class="math-span">\( V\)</span>, allora il numero
+                  massimo di vettori linearmente indipendenti ammissibili in
+                  quello spazio è proprio
+                  <span class="math-span">\( dim(V)\)</span>. <br />
+                  Inoltre, se la cardinalità di tale insieme di vettori è
+                  proprio <span class="math-span">\( dim(V)\)</span>, si ha che
+                  tali vettori sono una base per
+                  <span class="math-span">\( V\)</span>.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare che il numero massimo di vettori linearmente
+                  indipendenti sia proprio la dimensione di una qualsiasi base è
+                  possibile utilizzare il "teorema del completamento ad una
+                  base", che ci permette di dire che è possibile aggiungere
+                  vettori ad un insieme di vettori linearmente indipendenti fino
+                  all'ottenimento di una base. Tuttavia, per "l'equipotenza
+                  delle basi", si ha che nel momento in cui l'insieme di vettori
+                  è una base, esso ha proprio
+                  <span class="math-span">\( dim(V)\)</span> elementi. <br />
+                  Per lo stesso motivo, si ha che se un insieme linearmente
+                  indipendente ha
+                  <span class="math-span">\( dim(V)\)</span> elementi, allora
+                  esso è una base.
+                </div></div
+              >
+            </div></div
+          >
+        </article>
+        <nav class="buttons-container content-width">
+          <a
+            class="navigation-button previous"
+            href="nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+            rel="nofollow"
+            ><span>Nozioni preliminari su vettori e spazi vettoriali</span></a
+          >
+          <a
+            class="navigation-button next"
+            href="sottostrutture-algebriche.html"
+            rel="nofollow"
+            ><span>Sottostrutture algebriche</span></a
+          >
+        </nav>
+      </section>
+      <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+        <span class="material-symbols-outlined">
+          keyboard_double_arrow_down
+        </span>
+      </div>
+      <footer class="footer-wrapper">
+        <div class="copyright-wrapper">
+          <span> &copy; Copyright 2024</span> /
+          <span
+            >made by
+            <a href="https://github.com/lorenzoarlo" rel="nofollow"
+              >lorenzoarlo</a
+            ></span
+          >
+        </div>
+        /
+        <div class="privacy-wrapper">
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/"
+              rel="nofollow"
+              >Pannello preferenze cookie</a
+            ></span
+          >
+          /
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html"
+              rel="nofollow"
+              target="_blank"
+              >Privacy Policy</a
+            ></span
+          >
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

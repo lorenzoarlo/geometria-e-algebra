@@ -1,93 +1,408 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="IT">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="./../styles/style.css" />
     <link rel="stylesheet" href="./../styles/index-style.css" />
     <link rel="stylesheet" href="./../styles/main-index-page-style.css" />
-    <link media="print" rel="stylesheet" href="./../styles/print.css"  />
-    
-        <link rel="stylesheet" href="./../styles/content-style.css" />
-    
+    <link media="print" rel="stylesheet" href="./../styles/print.css" />
+
+    <link rel="stylesheet" href="./../styles/content-style.css" />
+
     <style>
-        :root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }
+      :root {
+        --bg-clr: #296a15;
+        --fg-clr: #e8e3e3;
+      }
     </style>
     <meta name="application-name" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-title" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#296a15" />
-    <link rel="apple-touch-icon" sizes="144x144" href="./../apple-icon-144x144.png">
-    <link rel="icon" type="image/x-icon" href="./../favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="./../android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./../favicon-96x96.png">
-    <meta name="msapplication-TileColor" content="#296a15">
-    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png">
-    <link rel="manifest" href="./../manifest.json">
-    <meta name="keywords" content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
-    <meta name="description" content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'.">
-    <meta name="robots" content="index">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="themeColor" content="#296a15">
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./../apple-icon-144x144.png" />
+    <link rel="icon" type="image/x-icon" href="./../favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./../android-icon-192x192.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./../favicon-96x96.png" />
+    <meta name="msapplication-TileColor" content="#296a15" />
+    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png" />
+    <link rel="manifest" href="./../manifest.json" />
+    <meta
+      name="keywords"
+      content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
+    <meta
+      name="description"
+      content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'." />
+    <meta name="robots" content="index" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="themeColor" content="#296a15" />
     <script src="./../scripts/script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
-    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <title>Geometria e algebra - Geometria analitica nello spazio - Prodotto vettoriale </title>
-</head>
-<body>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
+    <script
+      defer
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title
+      >Geometria e algebra - Geometria analitica nello spazio - Prodotto
+      vettoriale
+    </title>
+  </head>
+  <body>
     <div class="container">
-        <header class="header-wrapper">
-            <div class="title-wrapper">
-                <span class="title">
-                    Geometria e algebra
-                </span>
-                <span class="subtitle">
-                    by lorenzoarlo
-                </span>
-            </div>
-            <span class="page-title">
-                Geometria analitica nello spazio
-            </span>
-        </header>
-        <aside class="sidebar">
-            <h2 class="sidebar-title">Geometria e algebra</h2>
-            <div class="index-container">
-                <ul class="parent-ul"><li class="section-li"><a href="../index.html" rel="nofollow">Indice</a></li><li class="section-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Operazioni e strutture algebriche</a><ul><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Gruppi, anelli e campi</a></li><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html" rel="nofollow">Omomorfismi e isomorfismi</a></li></ul></li><li class="section-li "><a href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html" rel="nofollow">Spazi vettoriali</a><ul><li class="subsection-li "><a href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html" rel="nofollow">Nozioni preliminari su vettori e spazi vettoriali</a></li><li class="subsection-li "><a href="../spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html" rel="nofollow">Combinazione lineare e lineare indipendenza</a></li><li class="subsection-li "><a href="../spazi-vettoriali/sottostrutture-algebriche.html" rel="nofollow">Sottostrutture algebriche</a></li><li class="subsection-li "><a href="../spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html" rel="nofollow">Operazioni tra sottospazi vettoriali</a></li></ul></li><li class="section-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Matrici</a><ul><li class="subsection-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Lo spazio vettoriale delle matrici</a></li><li class="subsection-li "><a href="../matrici/l-anello-delle-matrici-quadrate.html" rel="nofollow">L'anello delle matrici quadrate</a></li><li class="subsection-li "><a href="../matrici/operazioni-riga.html" rel="nofollow">Operazioni riga</a></li></ul></li><li class="section-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari</a><ul><li class="subsection-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari come matrici</a></li></ul></li><li class="section-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html" rel="nofollow">Applicazioni lineari</a><ul><li class="subsection-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html" rel="nofollow">Applicazioni lineari come funzioni</a></li><li class="subsection-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-matrici.html" rel="nofollow">Applicazioni lineari come matrici</a></li><li class="subsection-li "><a href="../applicazioni-lineari/matrici-simili.html" rel="nofollow">Matrici simili</a></li></ul></li><li class="section-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Determinante</a><ul><li class="subsection-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Definizioni di determinante</a></li><li class="subsection-li "><a href="../determinante/utilizzi-del-determinante.html" rel="nofollow">Utilizzi del determinante</a></li></ul></li><li class="section-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori e autovettori</a><ul><li class="subsection-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori, autovettori e autospazi</a></li><li class="subsection-li "><a href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html" rel="nofollow">Diagonalizzazione di una matrice</a></li></ul></li><li class="section-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Spazi vettoriali euclidei</a><ul><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Forme bilineari e prodotto scalare</a></li><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html" rel="nofollow">Spazi vettoriali euclidei</a></li></ul></li><li class="section-li current">Geometria analitica nello spazio<ul><li class="subsection-li "><a href="rette-nello-spazio.html" rel="nofollow">Rette nello spazio</a></li><li class="subsection-li "><a href="piani-nello-spazio.html" rel="nofollow">Piani nello spazio</a></li><li class="subsection-li current">Prodotto vettoriale<ul><li class="definition-li"><a href="#def9-18" rel="nofollow">Prodotto vettoriale tra vettori</a></li><li class="definition-li"><a href="#def9-19" rel="nofollow">Norma del prodotto vettoriale</a></li><li class="definition-li"><a href="#def9-20" rel="nofollow">Prodotto vettoriale ortogonale ai vettori "fattori"</a></li></ul></li></ul></li></ul>
-            </div>
-        </aside>
-        <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button" >
-            keyboard_double_arrow_right
+      <header class="header-wrapper">
+        <div class="title-wrapper">
+          <span class="title"> Geometria e algebra </span>
+          <span class="subtitle"> by lorenzoarlo </span>
         </div>
-        <section class="content-wrapper">
-            <h1 class="section-title content-width">Prodotto vettoriale</h1>
-            <article class="content-container content-width">
-                <div class="definition environment" id="def9-18"><h2 class="environment-title">Definizione - Prodotto vettoriale tra vettori</h2><div class="environment-body">     Si definisce prodotto vettoriale un'operazione     <span class="math-block">\[         \wedge = \mathbb{R}^{3} \times \mathbb{R}^{3} \to \mathbb{R}^{3}     \]</span>     calcolabile nel seguente modo: considerando la base canonica di <span class="math-span">\( \mathbb{R}^{3}\)</span>      <span class="math-block">\[         B_{\mathbb{R}^{3}} = (e_{1}, e_{2}, e_{3}) = ((1, 0, 0), (0, 1, 0), (0, 0, 1))     \]</span>     e due vettori <span class="math-span">\( v_{1} = (x_{1}, y_{1}, z_{1})\)</span> e <span class="math-span">\( v_{2} = (x_{2}, y_{2}, z_{2})\)</span>, il vettore risultato del prodotto vettoriale sarà il determinante della matrice     <span class="math-block">\[         \left(         \begin{array}{ccc}             e_{1} &amp; e_{2} &amp; e_{3} \\             x_{1} &amp; y_{1} &amp; z_{1} \\             x_{2} &amp; y_{2} &amp; z_{2}         \end{array}         \right)     \]</span> ovvero     <span class="math-block">\[         v_{1} \wedge v_{2} = det         \left(         \begin{array}{ccc}             e_{1} &amp; e_{2} &amp; e_{3} \\             x_{1} &amp; y_{1} &amp; z_{1} \\             x_{2} &amp; y_{2} &amp; z_{2}         \end{array}         \right)     \]</span> </div></div><div class="definition environment" id="def9-19"><h2 class="environment-title">Definizione - Norma del prodotto vettoriale</h2><div class="environment-body">     La norma del vettore risultato del prodotto vettoriale tra due vettori è il prodotto tra le norme dei due vettori e il seno dell'angolo compreso tra essi, ovvero     <span class="math-block">\[         ||v_{1} \wedge v_{2}|| = ||v_{1}|| \cdot ||v_{2}|| \cdot \sin(\widehat{v_{1} v_{2}})     \]</span>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Interpretazione geometrica</h3><div class="environment-body">         La norma del prodotto vettoriale tra due vettori rappresenta l'area del parallelogramma costruito utilizzando i due vettori.     </div></div> </div></div><div class="definition environment" id="def9-20"><h2 class="environment-title">Definizione - Prodotto vettoriale ortogonale ai vettori "fattori"</h2><div class="environment-body">     Il vettore risultato del prodotto vettoriale tra due vettori     <span class="math-block">\[         v_{1} \wedge v_{2}     \]</span>     è ortogonale sia al vettore <span class="math-span">\( v_{1}\)</span> che al vettore <span class="math-span">\( v_{2}\)</span>, ovvero il loro prodotto scalare è nullo. </div></div>
-            </article>
-            <nav class="buttons-container content-width">
-                <a class="navigation-button previous" href="piani-nello-spazio.html" rel="nofollow"><span>Piani nello spazio</span></a>
-                
-            </nav>
-        </section>
-        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
-            <span class="material-symbols-outlined">
-                keyboard_double_arrow_down
-            </span>
+        <span class="page-title"> Geometria analitica nello spazio </span>
+      </header>
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Geometria e algebra</h2>
+        <div class="index-container">
+          <ul class="parent-ul"
+            ><li class="section-li"
+              ><a href="../index.html" rel="nofollow">Indice</a></li
+            ><li class="section-li"
+              ><a
+                href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                rel="nofollow"
+                >Operazioni e strutture algebriche</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                    rel="nofollow"
+                    >Gruppi, anelli e campi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html"
+                    rel="nofollow"
+                    >Omomorfismi e isomorfismi</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                rel="nofollow"
+                >Spazi vettoriali</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                    rel="nofollow"
+                    >Nozioni preliminari su vettori e spazi vettoriali</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html"
+                    rel="nofollow"
+                    >Combinazione lineare e lineare indipendenza</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/sottostrutture-algebriche.html"
+                    rel="nofollow"
+                    >Sottostrutture algebriche</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html"
+                    rel="nofollow"
+                    >Operazioni tra sottospazi vettoriali</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                rel="nofollow"
+                >Matrici</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                    rel="nofollow"
+                    >Lo spazio vettoriale delle matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/l-anello-delle-matrici-quadrate.html"
+                    rel="nofollow"
+                    >L'anello delle matrici quadrate</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="../matrici/operazioni-riga.html" rel="nofollow"
+                    >Operazioni riga</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                rel="nofollow"
+                >Sistemi lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Sistemi lineari come matrici</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                rel="nofollow"
+                >Applicazioni lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come funzioni</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/applicazioni-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/matrici-simili.html"
+                    rel="nofollow"
+                    >Matrici simili</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../determinante/definizioni-di-determinante.html"
+                rel="nofollow"
+                >Determinante</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/definizioni-di-determinante.html"
+                    rel="nofollow"
+                    >Definizioni di determinante</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/utilizzi-del-determinante.html"
+                    rel="nofollow"
+                    >Utilizzi del determinante</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                rel="nofollow"
+                >Autovalori e autovettori</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                    rel="nofollow"
+                    >Autovalori, autovettori e autospazi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html"
+                    rel="nofollow"
+                    >Diagonalizzazione di una matrice</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                rel="nofollow"
+                >Spazi vettoriali euclidei</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                    rel="nofollow"
+                    >Forme bilineari e prodotto scalare</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html"
+                    rel="nofollow"
+                    >Spazi vettoriali euclidei</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li current"
+              >Geometria analitica nello spazio<ul
+                ><li class="subsection-li"
+                  ><a href="rette-nello-spazio.html" rel="nofollow"
+                    >Rette nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="piani-nello-spazio.html" rel="nofollow"
+                    >Piani nello spazio</a
+                  ></li
+                ><li class="subsection-li current"
+                  >Prodotto vettoriale<ul
+                    ><li class="definition-li"
+                      ><a href="#def9-18" rel="nofollow"
+                        >Prodotto vettoriale tra vettori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def9-19" rel="nofollow"
+                        >Norma del prodotto vettoriale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def9-20" rel="nofollow"
+                        >Prodotto vettoriale ortogonale ai vettori "fattori"</a
+                      ></li
+                    ></ul
+                  ></li
+                ></ul
+              ></li
+            ></ul
+          >
         </div>
-            <footer class="footer-wrapper">
-                <div class="copyright-wrapper">
-                    <span> &copy; Copyright 2024</span> /
-                    <span>made by <a href="https://github.com/lorenzoarlo" rel="nofollow">lorenzoarlo</a></span>
-                </div>
-                /
-                <div class="privacy-wrapper">
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze
-                            cookie</a></span> /
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow"
-                            target="_blank">Privacy Policy</a></span>
-                </div>
-            </footer>
+      </aside>
+      <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button">
+        keyboard_double_arrow_right
+      </div>
+      <section class="content-wrapper">
+        <h1 class="section-title content-width">Prodotto vettoriale</h1>
+        <article class="content-container content-width">
+          <div class="definition environment" id="def9-18"
+            ><h2 class="environment-title"
+              >Definizione - Prodotto vettoriale tra vettori</h2
+            ><div class="environment-body">
+              Si definisce prodotto vettoriale un'operazione
+              <span class="math-block"
+                >\[ \wedge = \mathbb{R}^{3} \times \mathbb{R}^{3} \to
+                \mathbb{R}^{3} \]</span
+              >
+              calcolabile nel seguente modo: considerando la base canonica di
+              <span class="math-span">\( \mathbb{R}^{3}\)</span>
+              <span class="math-block"
+                >\[ B_{\mathbb{R}^{3}} = (e_{1}, e_{2}, e_{3}) = ((1, 0, 0), (0,
+                1, 0), (0, 0, 1)) \]</span
+              >
+              e due vettori
+              <span class="math-span">\( v_{1} = (x_{1}, y_{1}, z_{1})\)</span>
+              e
+              <span class="math-span">\( v_{2} = (x_{2}, y_{2}, z_{2})\)</span>,
+              il vettore risultato del prodotto vettoriale sarà il determinante
+              della matrice
+              <span class="math-block"
+                >\[ \left( \begin{array}{ccc} e_{1} &amp; e_{2} &amp; e_{3} \\
+                x_{1} &amp; y_{1} &amp; z_{1} \\ x_{2} &amp; y_{2} &amp; z_{2}
+                \end{array} \right) \]</span
+              >
+              ovvero
+              <span class="math-block"
+                >\[ v_{1} \wedge v_{2} = det \left( \begin{array}{ccc} e_{1}
+                &amp; e_{2} &amp; e_{3} \\ x_{1} &amp; y_{1} &amp; z_{1} \\
+                x_{2} &amp; y_{2} &amp; z_{2} \end{array} \right) \]</span
+              >
+            </div></div
+          ><div class="definition environment" id="def9-19"
+            ><h2 class="environment-title"
+              >Definizione - Norma del prodotto vettoriale</h2
+            ><div class="environment-body">
+              La norma del vettore risultato del prodotto vettoriale tra due
+              vettori è il prodotto tra le norme dei due vettori e il seno
+              dell'angolo compreso tra essi, ovvero
+              <span class="math-block"
+                >\[ ||v_{1} \wedge v_{2}|| = ||v_{1}|| \cdot ||v_{2}|| \cdot
+                \sin(\widehat{v_{1} v_{2}}) \]</span
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - Interpretazione geometrica</h3
+                ><div class="environment-body">
+                  La norma del prodotto vettoriale tra due vettori rappresenta
+                  l'area del parallelogramma costruito utilizzando i due
+                  vettori.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def9-20"
+            ><h2 class="environment-title"
+              >Definizione - Prodotto vettoriale ortogonale ai vettori
+              "fattori"</h2
+            ><div class="environment-body">
+              Il vettore risultato del prodotto vettoriale tra due vettori
+              <span class="math-block">\[ v_{1} \wedge v_{2} \]</span> è
+              ortogonale sia al vettore
+              <span class="math-span">\( v_{1}\)</span> che al vettore
+              <span class="math-span">\( v_{2}\)</span>, ovvero il loro prodotto
+              scalare è nullo.
+            </div></div
+          >
+        </article>
+        <nav class="buttons-container content-width">
+          <a
+            class="navigation-button previous"
+            href="piani-nello-spazio.html"
+            rel="nofollow"
+            ><span>Piani nello spazio</span></a
+          >
+        </nav>
+      </section>
+      <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+        <span class="material-symbols-outlined">
+          keyboard_double_arrow_down
+        </span>
+      </div>
+      <footer class="footer-wrapper">
+        <div class="copyright-wrapper">
+          <span> &copy; Copyright 2024</span> /
+          <span
+            >made by
+            <a href="https://github.com/lorenzoarlo" rel="nofollow"
+              >lorenzoarlo</a
+            ></span
+          >
+        </div>
+        /
+        <div class="privacy-wrapper">
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/"
+              rel="nofollow"
+              >Pannello preferenze cookie</a
+            ></span
+          >
+          /
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html"
+              rel="nofollow"
+              target="_blank"
+              >Privacy Policy</a
+            ></span
+          >
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

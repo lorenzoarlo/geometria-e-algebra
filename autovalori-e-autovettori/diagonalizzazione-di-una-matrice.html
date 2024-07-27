@@ -1,93 +1,1146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="IT">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="./../styles/style.css" />
     <link rel="stylesheet" href="./../styles/index-style.css" />
     <link rel="stylesheet" href="./../styles/main-index-page-style.css" />
-    <link media="print" rel="stylesheet" href="./../styles/print.css"  />
-    
-        <link rel="stylesheet" href="./../styles/content-style.css" />
-    
+    <link media="print" rel="stylesheet" href="./../styles/print.css" />
+
+    <link rel="stylesheet" href="./../styles/content-style.css" />
+
     <style>
-        :root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }
+      :root {
+        --bg-clr: #296a15;
+        --fg-clr: #e8e3e3;
+      }
     </style>
     <meta name="application-name" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-title" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#296a15" />
-    <link rel="apple-touch-icon" sizes="144x144" href="./../apple-icon-144x144.png">
-    <link rel="icon" type="image/x-icon" href="./../favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="./../android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./../favicon-96x96.png">
-    <meta name="msapplication-TileColor" content="#296a15">
-    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png">
-    <link rel="manifest" href="./../manifest.json">
-    <meta name="keywords" content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
-    <meta name="description" content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'.">
-    <meta name="robots" content="index">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="themeColor" content="#296a15">
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./../apple-icon-144x144.png" />
+    <link rel="icon" type="image/x-icon" href="./../favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./../android-icon-192x192.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./../favicon-96x96.png" />
+    <meta name="msapplication-TileColor" content="#296a15" />
+    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png" />
+    <link rel="manifest" href="./../manifest.json" />
+    <meta
+      name="keywords"
+      content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
+    <meta
+      name="description"
+      content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'." />
+    <meta name="robots" content="index" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="themeColor" content="#296a15" />
     <script src="./../scripts/script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
-    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <title>Geometria e algebra - Autovalori e autovettori - Diagonalizzazione di una matrice </title>
-</head>
-<body>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
+    <script
+      defer
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title
+      >Geometria e algebra - Autovalori e autovettori - Diagonalizzazione di una
+      matrice
+    </title>
+  </head>
+  <body>
     <div class="container">
-        <header class="header-wrapper">
-            <div class="title-wrapper">
-                <span class="title">
-                    Geometria e algebra
-                </span>
-                <span class="subtitle">
-                    by lorenzoarlo
-                </span>
-            </div>
-            <span class="page-title">
-                Autovalori e autovettori
-            </span>
-        </header>
-        <aside class="sidebar">
-            <h2 class="sidebar-title">Geometria e algebra</h2>
-            <div class="index-container">
-                <ul class="parent-ul"><li class="section-li"><a href="../index.html" rel="nofollow">Indice</a></li><li class="section-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Operazioni e strutture algebriche</a><ul><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Gruppi, anelli e campi</a></li><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html" rel="nofollow">Omomorfismi e isomorfismi</a></li></ul></li><li class="section-li "><a href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html" rel="nofollow">Spazi vettoriali</a><ul><li class="subsection-li "><a href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html" rel="nofollow">Nozioni preliminari su vettori e spazi vettoriali</a></li><li class="subsection-li "><a href="../spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html" rel="nofollow">Combinazione lineare e lineare indipendenza</a></li><li class="subsection-li "><a href="../spazi-vettoriali/sottostrutture-algebriche.html" rel="nofollow">Sottostrutture algebriche</a></li><li class="subsection-li "><a href="../spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html" rel="nofollow">Operazioni tra sottospazi vettoriali</a></li></ul></li><li class="section-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Matrici</a><ul><li class="subsection-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Lo spazio vettoriale delle matrici</a></li><li class="subsection-li "><a href="../matrici/l-anello-delle-matrici-quadrate.html" rel="nofollow">L'anello delle matrici quadrate</a></li><li class="subsection-li "><a href="../matrici/operazioni-riga.html" rel="nofollow">Operazioni riga</a></li></ul></li><li class="section-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari</a><ul><li class="subsection-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari come matrici</a></li></ul></li><li class="section-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html" rel="nofollow">Applicazioni lineari</a><ul><li class="subsection-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html" rel="nofollow">Applicazioni lineari come funzioni</a></li><li class="subsection-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-matrici.html" rel="nofollow">Applicazioni lineari come matrici</a></li><li class="subsection-li "><a href="../applicazioni-lineari/matrici-simili.html" rel="nofollow">Matrici simili</a></li></ul></li><li class="section-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Determinante</a><ul><li class="subsection-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Definizioni di determinante</a></li><li class="subsection-li "><a href="../determinante/utilizzi-del-determinante.html" rel="nofollow">Utilizzi del determinante</a></li></ul></li><li class="section-li current">Autovalori e autovettori<ul><li class="subsection-li "><a href="autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori, autovettori e autospazi</a></li><li class="subsection-li current">Diagonalizzazione di una matrice<ul><li class="definition-li"><a href="#def7-6" rel="nofollow">Base spettrale</a></li><li class="definition-li"><a href="#def7-7" rel="nofollow">Endomorfismo semplice</a></li><li class="definition-li"><a href="#def7-8" rel="nofollow">Matrice associata ad un endomorfismo semplice rispetto alla base spettrale</a></li><li class="definition-li"><a href="#def7-9" rel="nofollow">Molteplicità algebrica degli autovalori</a></li><li class="definition-li"><a href="#def7-10" rel="nofollow">Molteplicità geometrica degli autovalori</a></li><li class="definition-li"><a href="#def7-11" rel="nofollow">Relazione molteplicità algebrica e geometrica degli autovalori</a></li><li class="demonstration-li"><a href="#dem7-6" rel="nofollow">Lineare indipendenza di vettori appartenenti a diversi autospazi</a></li><li class="demonstration-li"><a href="#dem7-7" rel="nofollow">Condizione necessaria e sufficiente che garantisce la semplicità di un endomorfismo</a></li><li class="myexample-li"><a href="#example33" rel="nofollow">Diagonalizzazione di una matrice</a></li><li class="definition-li"><a href="#def7-12" rel="nofollow">Esistenza di almeno un autovalore per ogni endomorfismo di dimensione dispari</a></li><li class="demonstration-li"><a href="#dem7-8" rel="nofollow">Diagonalizzabilità di una matrice data l'esistenza di \( n\) autovalori distinti</a></li><li class="myexample-li"><a href="#example34" rel="nofollow">Utilizzo della diagonalizzabilità di una matrice data l'esistenza di \( n\) autovalori distinti</a></li><li class="definition-li"><a href="#def7-13" rel="nofollow">Teorema - Diagonalizzabilità di ogni matrice simmetrica</a></li><li class="myexample-li"><a href="#example35" rel="nofollow">Diagonalizzabilità di una matrice contenente parametri</a></li></ul></li></ul></li><li class="section-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Spazi vettoriali euclidei</a><ul><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Forme bilineari e prodotto scalare</a></li><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html" rel="nofollow">Spazi vettoriali euclidei</a></li></ul></li><li class="section-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Geometria analitica nello spazio</a><ul><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Rette nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/piani-nello-spazio.html" rel="nofollow">Piani nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html" rel="nofollow">Prodotto vettoriale</a></li></ul></li></ul>
-            </div>
-        </aside>
-        <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button" >
-            keyboard_double_arrow_right
+      <header class="header-wrapper">
+        <div class="title-wrapper">
+          <span class="title"> Geometria e algebra </span>
+          <span class="subtitle"> by lorenzoarlo </span>
         </div>
-        <section class="content-wrapper">
-            <h1 class="section-title content-width">Diagonalizzazione di una matrice</h1>
-            <article class="content-container content-width">
-                <div class="definition environment" id="def7-6"><h2 class="environment-title">Definizione - Base spettrale</h2><div class="environment-body">     Considerando un endomorfismo <span class="math-span">\( f: V \to V\)</span>, ogni base di <span class="math-span">\( V\)</span> composta solamente da autovettori di <span class="math-span">\( f\)</span> si dice base spettrale. </div></div><div class="definition environment" id="def7-7"><h2 class="environment-title">Definizione - Endomorfismo semplice</h2><div class="environment-body">     Un endomorfismo <span class="math-span">\( f\)</span> che ammette almeno una base spettrale, si dice semplice.     <div class="mynote environment"><h3 class="environment-title">Nota bene - Esempio di endomorfismo non semplice</h3><div class="environment-body">         Un esempio di endomorfismo non semplice è la rotazione di <span class="math-span">\( 90^\circ\)</span> in senso orario nel piano (infatti solo il vettore nullo ha come immagine un multiplo di sè stesso).      </div></div> </div></div><div class="definition environment" id="def7-8"><h2 class="environment-title">Definizione - Matrice associata ad un endomorfismo semplice rispetto alla base spettrale</h2><div class="environment-body">     Considerando una base spettrale <span class="math-span">\( B = (v_{1}, \ \ldots \ , v_{n})\)</span> per un endomorfismo <span class="math-span">\( f\)</span>, allora la matrice associata all'endomorfismo <span class="math-span">\( f\)</span> rispetto alla base <span class="math-span">\( B\)</span> (<span class="math-span">\( M_{B, B}(f)\)</span>) è diagonale. Su tale diagonale compaiono gli autovalori associati agli autovettori <span class="math-span">\( (v_{1}, \ \ldots \ , v_{n})\)</span>.     <br/>     Viceversa, si può dire che se una matrice associata ad un endomorfismo rispetto ad una base è diagonale, allora tale base è spettrale.      <div class="mynote environment"><h3 class="environment-title">Nota bene - Tell me why</h3><div class="environment-body">         Ciò risulta evidente costruendo la matrice associata ad <span class="math-span">\( f\)</span>. Infatti le colonne della matrice sono le coordinate dell'immagine di ogni vettore della base rispetto alla base <span class="math-span">\( B\)</span>, ovvero:         <span class="math-block">\begin{aligned}             &amp; f(v_{1}) = \lambda_{1} \cdot v_{1} + 0 \cdot v_{2} + \ \ldots \ + 0 \cdot v_{n}              &amp; \\             &amp; f(v_{2}) = 0 \cdot v_{1} + \lambda_{2} \cdot v_{2} + \ \ldots \ + 0 \cdot v_{n}              &amp; \\             &amp; \vdots &amp;              \\             &amp; f(v_{n}) = 0 \cdot v_{1} + 0 \cdot v_{2} + \ \ldots \ + \lambda_{n} \cdot v_{n}              &amp;         \end{aligned}</span>         che sarebbe         <span class="math-block">\[             M_{B, B}(f) =             \left(             \begin{array}{cccc}                 \lambda_{1} &amp; 0 &amp; \cdots &amp; 0 \\                 0 &amp; \lambda_{2} &amp; \cdots &amp; 0 \\                 \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\                 0 &amp; 0 &amp; \cdots &amp; \lambda_{n}             \end{array}             \right)         \]</span>     </div></div> </div></div><div class="definition environment" id="def7-9"><h2 class="environment-title">Definizione - Molteplicità algebrica degli autovalori</h2><div class="environment-body">     Considerando la matrice <span class="math-span">\( A \in M_{n \times n}(\mathbb{K})\)</span> associata all'endomorfismo <span class="math-span">\( f\)</span> e <span class="math-span">\( \lambda_{1}, \ \ldots \ , \lambda_{s}\)</span> i suoi autovalori (con <span class="math-span">\( s \leq n\)</span>), allora è possibile scrivere il polinomio caratteristico di <span class="math-span">\( A\)</span> come     <span class="math-block">\[         p_{A} = (\lambda - a_{1})^{k_{1}} \cdot (\lambda - a_{2})^{k^{2}} \cdot \ \ldots \ \cdot (\lambda - a_{s})^{k_{s}} \cdot q(\lambda)     \]</span>     dove <span class="math-span">\( a_{1}, \ \ldots \ , a_{s}\)</span> sono le radici per cui si annulla il polinomio). Definiamo quindi <span class="math-span">\( k_{i}\)</span> la molteplicità algebrica dell'autovalore <span class="math-span">\( \lambda_{i}\)</span>, ovvero     <span class="math-block">\[         ma(\lambda_{i}) = k_{i}     \]</span>     <div class="mynote environment"><h3 class="environment-title">Nota bene - In poche parole</h3><div class="environment-body">         La molteplicità algebrica si può definire anche come il numero di volte in cui l'autovalore <span class="math-span">\( \lambda_{i}\)</span> annulla il polinomio caratteristico.     </div></div> </div></div><div class="definition environment" id="def7-10"><h2 class="environment-title">Definizione - Molteplicità geometrica degli autovalori</h2><div class="environment-body">     Considerando la matrice <span class="math-span">\( A \in M_{n \times n}(\mathbb{K})\)</span> associata all'endomorfismo <span class="math-span">\( f\)</span> e <span class="math-span">\( \lambda_{1}, \ \ldots \ , \lambda_{s}\)</span> i suoi autovalori (con <span class="math-span">\( s \leq n\)</span>), si definisce molteplicità geometrica di un autovalore <span class="math-span">\( \lambda_{i}\)</span> la dimensione dell'autospazio a lui associato, ovvero     <span class="math-block">\[         mg(\lambda_{i}) = dim(U_{\lambda_{i}})     \]</span>     Detto ciò, si ha che la molteplicità geometrica di un autovalore è uguale a <span class="math-span">\( n\)</span> meno il rango della matrice caratteristica, ovvero     <span class="math-block">\[         dim(U_{\lambda_{i}}) = mg(\lambda_{i}) = n - r(A - \lambda_{i}I)     \]</span> </div></div><div class="definition environment" id="def7-11"><h2 class="environment-title">Definizione - Relazione molteplicità algebrica e geometrica degli autovalori</h2><div class="environment-body">     Considerando <span class="math-span">\( \lambda\)</span> un autovalore dell'endomorfismo <span class="math-span">\( f\)</span>, si ha che     <span class="math-block">\[         1 \leq mg(\lambda) \leq ma(\lambda)     \]</span>     <div class="mynote environment"><h3 class="environment-title">Nota bene - </h3><div class="environment-body">        Il fatto che la molteplicità geometrica di <span class="math-span">\( \lambda\)</span> debba essere maggiore o uguale a <span class="math-span">\( 1\)</span> è banale: infatti se la dimensione di <span class="math-span">\( U_{\lambda}\)</span> fosse <span class="math-span">\( 0\)</span> non si avrebbe un autospazio (in quanto ci sarebbe solo il vettore nullo).     </div></div> </div></div><div class="demonstration environment" id="dem7-6"><h2 class="environment-title">Dimostrazione - Lineare indipendenza di vettori appartenenti a diversi autospazi</h2><div class="environment-body">     Dato il lemma     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando un endomorfismo <span class="math-span">\( f: V \to V\)</span> e i suoi autospazi <span class="math-span">\( U_{\lambda_{1}}, \ \ldots \ , U_{\lambda_{k}}\)</span>, allora i vettori appartenenti agli autospazi sono linearmente indipendenti tra loro.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare ciò, ipotizziamo per assurdo che la <span class="math-span">\( k\)</span>-upla di vettori <span class="math-span">\( (v_{1}, \ \ldots \ , v_{k})\)</span> provenienti da autospazi distinti  siano linearmente dipendenti. Possiamo quindi dire che esiste almeno una <span class="math-span">\( k\)</span>-upla di coordinate non nulla <span class="math-span">\( (\alpha_{1}, \ \ldots \ , \alpha_{k})\)</span> che soddisfa tale equazione         <span class="math-block">\[             \alpha_{1} \cdot v_{1} + \ \ldots \ + \alpha_{k} \cdot v_{k} = 0         \]</span>         Tra una di queste <span class="math-span">\( k\)</span>-uple non nulle, scegliamo la <span class="math-span">\( k\)</span>-upla il cui numero di elementi non nulli è minimizzato, ovvero il numero di valori non nulli è il più piccolo possibile, ma non è <span class="math-span">\( 0\)</span> (ovvero non si deve considerare la <span class="math-span">\( k\)</span>-upla nulla). Chiamiamo tale <span class="math-span">\( k\)</span>-upla <span class="math-span">\( (\bar{\alpha}_{1}, \ \ldots \ , \bar{\alpha}_{k})\)</span>.         <br/>         Riprendendo la relazione enunciata in precedenza, è lecito scrivere         <span class="math-block">\begin{aligned}             &amp; \bar{\alpha}_{1} \cdot v_{1} +  \ \ldots \ + \bar{\alpha}_{k} \cdot v_{k} = 0             &amp; \iff         \end{aligned}</span>         Applicando a ciò quindi l'endomorfismo <span class="math-span">\( f\)</span>         <span class="math-block">\begin{aligned}             &amp; f(\bar{\alpha}_{1} \cdot v_{1} +  \ \ldots \ + \bar{\alpha}_{k} \cdot v_{k}) = f(0)             &amp; \iff         \end{aligned}</span>         è possibile utilizzare la linearità per ottenere         <span class="math-block">\begin{aligned}             &amp; \bar{\alpha}_{1} \cdot f(v_{1}) +  \ \ldots \ +  \bar{\alpha}_{k} \cdot f(v_{k}) = 0             &amp; \iff         \end{aligned}</span>         Ora, scrivendo l'immagine dei vettori si ottiene         <span class="math-block">\begin{aligned}             &amp; \bar{\alpha}_{1} \cdot \lambda_{1} \cdot v_{1} +  \ \ldots \ +  \bar{\alpha}_{k} \cdot \lambda_{k} \cdot v_{k} = 0             &amp; \iff         \end{aligned}</span>         Ora, ritornando all'uguaglianza          <span class="math-block">\begin{aligned}             &amp; \bar{\alpha}_{1} \cdot v_{1} +  \ \ldots \ + \bar{\alpha}_{k} \cdot v_{k} = 0             &amp; \iff         \end{aligned}</span>         invece di applicare l'endomorfismo, consideriamo che <span class="math-span">\( \lambda_{1} \neq 0\)</span> (o un qualsiasi altro autovalore non nullo) e moltiplichiamolo all'equazione da "entrambe le parti", ovvero         <span class="math-block">\begin{aligned}             &amp; \bar{\alpha}_{1} \cdot \lambda_{1} \cdot v_{1} +  \ \ldots \ + \bar{\alpha}_{k} \cdot \lambda_{1} \cdot v_{k} = 0             &amp; \iff         \end{aligned}</span>         Ora, ricordando che stiamo lavorando con delle uguaglianze, è lecito scrivere         <span class="math-block">\begin{aligned}             &amp; \bar{\alpha}_{1} \cdot \lambda_{1} \cdot v_{1} +  \ \ldots \ +  \bar{\alpha}_{k} \cdot \lambda_{k} \cdot v_{k} = \bar{\alpha}_{1} \cdot \lambda_{1} \cdot v_{1} +  \ \ldots \ + \bar{\alpha}_{k} \cdot \lambda_{1} \cdot v_{k}             &amp; \iff         \end{aligned}</span>         Aggiungendo da entrambe le parti l'opposto del termine di destra, si ottiene         <span class="math-block">\begin{aligned}             &amp; \bar{\alpha}_{2} \cdot \lambda_{2} \cdot v_{2} +  \ \ldots \ +  \bar{\alpha}_{k} \cdot \lambda_{k} \cdot v_{k} - \bar{\alpha}_{2} \cdot \lambda_{1} \cdot v_{2} -  \ \ldots \ - \bar{\alpha}_{k} \cdot \lambda_{1} \cdot v_{k} = 0             &amp; \iff         \end{aligned}</span>         Facendo notare che il termine <span class="math-span">\( \bar{\alpha}_{1} \cdot \lambda_{1} \cdot v_{1}\)</span> si è annullato, possiamo raccogliere i coefficienti <span class="math-span">\( \bar{\alpha}_{i}\)</span> e scrivere         <span class="math-block">\begin{aligned}            &amp; \bar{\alpha}_{2} \cdot (\lambda_{2} - \lambda_{1}) \cdot v_{2} + \ \ldots \ + \bar{\alpha}_{k} \cdot (\lambda_{k} - \lambda{1}) \cdot v_{2} = 0            &amp;         \end{aligned}</span>         Dato che tutti i valori <span class="math-span">\( \lambda\)</span> sono distinti (in quanto provenienti da autospazi differenti), allora si ha che le differenze <span class="math-span">\( (\lambda_{i} - \lambda_{1})\)</span> non saranno mai nulle. Abbiamo quindi raggiunto un assurdo, in quanto avremmo trovato una <span class="math-span">\( k\)</span>-upla in cui il numero di elementi non nulli è minore della <span class="math-span">\( k\)</span>-upla <span class="math-span">\( (\bar{\alpha}_{1}, \ \ldots \ , \bar{\alpha}_{k})\)</span> in quanto <span class="math-span">\( \bar{\alpha}_{1}\)</span> è ora nullo.          <br/>         Si è dimostrata quindi la proposizione.     </div></div> </div></div><div class="demonstration environment" id="dem7-7"><h2 class="environment-title">Dimostrazione - Condizione necessaria e sufficiente che garantisce la semplicità di un endomorfismo</h2><div class="environment-body">     Dato il teorema     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Un endomorfismo <span class="math-span">\( f: V \to V\)</span>, (con <span class="math-span">\( dim(V) = n\)</span>) è semplice se e solo se la somma delle dimensioni di tutti i suoi autospazi è uguale a <span class="math-span">\( n\)</span>, ovvero         <span class="math-block">\[             \sum dim(U_{\lambda_{i}}) = n         \]</span>             </div></div>     <div class="mynote environment"><h3 class="environment-title">Nota bene - In altre parole</h3><div class="environment-body">         Dire che la somma delle dimensioni degli autospazi deve essere <span class="math-span">\( n\)</span> è equivalente a dire che la somma delle molteplicità geometriche degli autovalori deve essere <span class="math-span">\( n\)</span>, ovvero         <span class="math-block">\[             \sum mg(\lambda_{i}) = n         \]</span>     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare tale teorema è necessario dimostrare che         <ul class="list-container"><li class="list-item">"se la somma delle dimensioni di tutti gli autospazi di un endomorfismo <span class="math-span">\( f\)</span> è <span class="math-span">\( n\)</span>, allora <span class="math-span">\( f\)</span> è semplice".              <br/>             Per dimostrarlo è necessario provare che esiste una base spettrale per <span class="math-span">\( f\)</span>. Consideriamo quindi di costruirla unendo le basi degli autospazi:             <span class="math-block">\begin{aligned}                 &amp; B_{U_{\lambda_{1}}} = (v_{1}^{1}, \ \ldots \ , v_{r_{1}}^{1}) \\                 &amp; B_{U_{\lambda_{2}}} = (v_{1}^{2}, \ \ldots \ , v_{r_{2}}^{2}) \\                 &amp; \vdots \\                 &amp; B_{U_{\lambda_{k}}} = (v_{1}^{k}, \ \ldots \ , v_{r_{k}}^{k})             \end{aligned}</span>             dove l'apice indica l'autospazio di appartenenza, ed il pedice la posizione del vettore in ogni base (<span class="math-span">\( r_{k}\)</span> indica la dimensione dell'autospazio). Otteniamo quindi una base <span class="math-span">\( B_{V}\)</span> per <span class="math-span">\( V\)</span> contenente <span class="math-span">\( n\)</span> vettori. Per provare che sia una base, è sufficiente provare la lineare indipendenza, ovvero che tutti i coefficienti possono essere solo nulli.             <span class="math-block">\begin{aligned}                 &amp;                 \begin{array}{lclc}                     0 &amp; = &amp;                      \alpha_{1}^{1} \cdot v_{1}^{1} + \ \ldots \ + \alpha_{r_{1}}^{1} \cdot v_{r_{1}}^{1} &amp; + \\                     &amp; + &amp; \alpha_{1}^{2} \cdot v_{1}^{2} + \ \ldots \ + \alpha_{r_{1}}^{2} \cdot v_{r_{2}}^{2}                      &amp; + \\                     &amp; + &amp; \ldots &amp; + \\                     &amp; + &amp; \alpha_{1}^{k} \cdot v_{1}^{k} + \ \ldots \ + \alpha_{r_{k}}^{k} \cdot v_{r_{k}}^{k} &amp;                 \end{array}                 &amp; \iff             \end{aligned}</span>             Dato che ogni riga è combinazione lineare di un distinto autospazio, è possibile sostituirla con un vettore qualsiasi appartenente a quell'autospazio, ovvero             <span class="math-block">\begin{aligned}                 &amp; 0 = v^{1} + v^{2} + \ \ldots \ + v^{k}                 &amp; \iff             \end{aligned}</span>             Sappiamo tuttavia che, per il lemma sulla "lineare indipendenza di vettori appartenenti a diversi autospazi", che tali vettori sono linearmente indipendenti tra loro. Abbiamo quindi la combinazione lineare del vettore nullo di vettori linearmente indipendenti tra loro: tali vettori devono quindi essere tutti nulli. Se ogni vettore <span class="math-span">\( v^{i}\)</span> è nullo, otteniamo             <span class="math-block">\begin{aligned}                 &amp; 0 = \alpha_{1}^{i} \cdot v_{1}^{i} + \ \ldots \ + \alpha_{r_{1}}^{i} \cdot v_{r_{1}}^{i}                 &amp;              \end{aligned}</span>             ovvero la combinazione lineare del vettore nullo di vettori linearmente indipendenti: ogni coordinata deve essere quindi nulla. Dato che si è verificata la lineare indipendenza, si è dimostrata l'implicazione.             </li><li class="list-item">"se un endomorfismo <span class="math-span">\( f\)</span> è semplice, allora la somma delle dimensioni di tutti i suoi autospazi è <span class="math-span">\( n\)</span>".              <br/>             Per dimostrare ciò consideriamo che <span class="math-span">\( f\)</span> semplice implica l'esistenza di una base <span class="math-span">\( B_{V}\)</span> per <span class="math-span">\( V\)</span> composta da <span class="math-span">\( n\)</span> autovettori: esistono quindi almeno <span class="math-span">\( n\)</span> autovettori linearmente indipendenti tra loro. Inoltre sappiamo che non possono esistere più di <span class="math-span">\( n\)</span> autovettori linearmente indipendenti, in quanto il massimo numero di vettori linearmente indipendenti è proprio <span class="math-span">\( n\)</span> (altrimenti due basi avrebbero dimensione diversa). Si ha quindi che la somma delle dimensioni di autospazi è proprio <span class="math-span">\( n\)</span>. Si è quindi dimostrata l'implicazione.         </li></ul>         Si è quindi verificato il teorema.     </div></div> </div></div><div class="myexample environment" id="example33"><h2 class="environment-title">Esempio - Diagonalizzazione di una matrice</h2><div class="environment-body collapsed">     Dire se la matrice      <span class="math-block">\[         A =          \left(         \begin{array}{ccc}             3 &amp; 0 &amp; 0 \\             -4 &amp; -1 &amp; -8 \\             0 &amp; 0 &amp; 3         \end{array}         \right)     \]</span>     è diagonalizzabile. Se lo è, calcolare una base spettrale e la relativa forma diagonale di <span class="math-span">\( A\)</span>.     <br/>     Innanzitutto, calcoliamo il polinomio caratteristico di <span class="math-span">\( A\)</span>, ovvero     <span class="math-block">\[         p_{A}(\lambda) = det         \left(         \begin{array}{ccc}             3 - \lambda &amp; 0 &amp; 0 \\             -4 &amp; -1 - \lambda &amp; -8 \\             0 &amp; 0 &amp; 3 - \lambda         \end{array}         \right)         =          (\lambda - 3)^{2} \cdot (\lambda + 1)     \]</span>     da cui otteniamo gli autovalori <span class="math-span">\( 3\)</span> e <span class="math-span">\( -1\)</span>.     <br/>     È banale ottenere la molteplicità geometrica dell'autovalore <span class="math-span">\( -1\)</span>: infatti abbiamo che la sua molteplicità algebrica è <span class="math-span">\( 1\)</span> e per la relazione <span class="math-span">\( 1 \leq mg(-1) \leq ma(-1)\)</span> è semplice ottenere che la sua molteplicità geometrica è <span class="math-span">\( 1\)</span>.     <br/>     Per quanto riguarda l'autovalore <span class="math-span">\( 3\)</span>, è più complicato in quanto è necessario calcolare la dimensione dell'autospazio <span class="math-span">\( U_{3}\)</span>, ovvero sostituendo alla matrice caratteristica <span class="math-span">\( \lambda = 3\)</span>, si ottiene     <span class="math-block">\[         \left(         \begin{array}{ccc}             0 &amp; 0 &amp; 0 \\             4 &amp; 4 &amp; 8 \\             0 &amp; 0 &amp; 0         \end{array}         \right)     \]</span>     e considerandola come un sistema lineare     <span class="math-block">\[         \left\{          \begin{array}{ccccccc}              4x &amp; + &amp; 4y &amp; + &amp; 8z &amp; = &amp; 0 \\         \end{array}         \right.     \]</span>     e risolvendolo in forma parametrica si ottiene      <span class="math-block">\[         \left\{          \begin{array}{ccl}              x &amp; = &amp; -s - 2t \\              y &amp; = &amp; s  \\              z &amp; = &amp; t          \end{array}         \right.         \qquad         \implies         \qquad         \left(         \begin{array}{c}             x \\             y \\             z         \end{array}         \right)         =         s \cdot          \left(         \begin{array}{c}             -1 \\             1 \\             0         \end{array}         \right)         +          t \cdot          \left(         \begin{array}{c}             -2 \\             0 \\             1         \end{array}         \right)     \]</span>     Abbiamo quindi ottenuto che la dimensione di <span class="math-span">\( U_{3}\)</span> è <span class="math-span">\( 2\)</span> e gli autovettori associati sono <span class="math-span">\( ((-1, 1, 0), (-2, 0, 1))\)</span>. Ora sappiamo che la matrice è diagonalizzabile in quanto      <span class="math-block">\[         mg(-1) + mg(3) = 1 + 2 = n     \]</span>     Per ottenere una base spettrale è sufficiente calcolare un autovettore per l'autovalore <span class="math-span">\( \lambda = -1\)</span>. Per farlo utilizziamo quindi lo stesso procedimento di prima, ovvero     <span class="math-block">\[         \left(         \begin{array}{ccc}             -4 &amp; 0 &amp; 0 \\             4 &amp; 0 &amp; 8 \\             0 &amp; 0 &amp; -4         \end{array}         \right)     \]</span>     e considerandola come un sistema lineare     <span class="math-block">\[         \left\{          \begin{array}{ccccccc}             -4x &amp; + &amp; 0  &amp; + &amp; 0 &amp; = &amp; 0 \\              4x &amp; + &amp; 0 &amp; + &amp; 8z &amp; = &amp; 0 \\              0 &amp; + &amp; 0 &amp; - &amp; 4z &amp; = &amp; 0         \end{array}         \right.     \]</span>     e risolvendolo in forma parametrica si ottiene      <span class="math-block">\[         \left\{          \begin{array}{ccl}              x &amp; = &amp; 0 \\              y &amp; = &amp; s  \\              z &amp; = &amp; 0          \end{array}         \right.         \qquad         \implies         \qquad         \left(         \begin{array}{c}             x \\             y \\             z         \end{array}         \right)         =         s \cdot          \left(         \begin{array}{c}             0 \\             1 \\             0         \end{array}         \right)     \]</span>     da cui si ottiene che l'autovettore associato all'autovalore <span class="math-span">\( -1\)</span> è <span class="math-span">\( (0, 1, 0)\)</span>.     <br/>     In conclusione, data la base spettrale <span class="math-span">\( ((-1, 1, 0), (-2, 0, 1), (0, 1, 0))\)</span> otterremo la matrice diagonale     <span class="math-block">\[         \left(         \begin{array}{ccc}             3 &amp; 0 &amp; 0 \\             0 &amp; 3 &amp; 0 \\             0 &amp; 0 &amp; -1         \end{array}         \right)     \]</span> </div><div class="environment-tail"><span class="material-symbols-outlined body-visibility-icon" onclick="expand_environment(event)">expand_more</span></div></div><div class="definition environment" id="def7-12"><h2 class="environment-title">Definizione - Esistenza di almeno un autovalore per ogni endomorfismo di dimensione dispari</h2><div class="environment-body">     Considerando un endomorfismo <span class="math-span">\( f: V \to V\)</span> dove <span class="math-span">\( dim(V) = n\)</span>, se <span class="math-span">\( n\)</span> è dispari si ha sempre almeno un autovalore, in quanto il grado del polinomio caratteristico è dispari. </div></div><div class="demonstration environment" id="dem7-8"><h2 class="environment-title">Dimostrazione - Diagonalizzabilità di una matrice data l'esistenza di <span class="math-span">\( n\)</span> autovalori distinti</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Se una matrice <span class="math-span">\( A \in M_{n \times n}(\mathbb{R})\)</span> associata ad un endomorfismo <span class="math-span">\( f\)</span> ha <span class="math-span">\( n\)</span> autovalori distinti, allora è diagonalizzabile.      </div></div>     <div class="mynote environment"><h3 class="environment-title">Nota bene - In altre parole</h3><div class="environment-body">         Ciò è equivalente a dire che un endomorfismo <span class="math-span">\( f: V \to V\)</span>  che ammette <span class="math-span">\( n\)</span> (ovvero un numero pari alla dimensione di <span class="math-span">\( V\)</span>) autovalori distinti è semplice.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare ciò consideriamo che la molteplicità geometrica di ogni autovalore non può essere inferiore a <span class="math-span">\( 1\)</span>: nel caso avessimo <span class="math-span">\( n\)</span> autovalori distinti otterremo che la somma delle dimensioni degli autospazi è almeno pari a <span class="math-span">\( n\)</span> e, dato che sono linearmente indipendenti, si ha che non possono essere più di <span class="math-span">\( n\)</span> (altrimenti sarebbero una base con una dimensione diversa da altre basi). Otteniamo quindi che la somma delle dimensioni è esattamente <span class="math-span">\( n\)</span>, implicando quindi l'esistenza di una base spettrale (e la semplicità dell'endomorfismo).     </div></div> </div></div><div class="myexample environment" id="example34"><h2 class="environment-title">Esempio - Utilizzo della diagonalizzabilità di una matrice data l'esistenza di <span class="math-span">\( n\)</span> autovalori distinti</h2><div class="environment-body collapsed">     Data la matrice     <span class="math-block">\[         A =         \begin{pmatrix}            1 &amp; 7 &amp; 4 \\            0 &amp; 3 &amp; -10 \\            0 &amp; 0 &amp; 8         \end{pmatrix}     \]</span>     dire se esiste una base spettrale.     <br/>     Per farlo si è sufficiente calcolare il polinomio caratteristico di <span class="math-span">\( A\)</span>, ovvero     <span class="math-block">\begin{aligned}         p_{A}(\lambda) = det(A - \lambda I) = det         \left(         \begin{array}{ccc}             1 - \lambda &amp; 7 &amp; 4 \\             0 &amp; 3 - \lambda &amp; -10 \\             0 &amp; 0 &amp; 8 - \lambda         \end{array}         \right)         = (1 - \lambda) \cdot (3 - \lambda) \cdot (8 - \lambda)     \end{aligned}</span>     ovvero ammette <span class="math-span">\( 3\)</span> autovalori distinti: ciò implica l'esistenza di una base spettrale. </div><div class="environment-tail"><span class="material-symbols-outlined body-visibility-icon" onclick="expand_environment(event)">expand_more</span></div></div><div class="definition environment" id="def7-13"><h2 class="environment-title">Definizione - Teorema - Diagonalizzabilità di ogni matrice simmetrica</h2><div class="environment-body">     Considerando una matrice simmetrica, essa è diagonalizzabile. </div></div><div class="myexample environment" id="example35"><h2 class="environment-title">Esempio - Diagonalizzabilità di una matrice contenente parametri</h2><div class="environment-body collapsed">     Dato il seguente endomorfismo     <span class="math-block">\begin{aligned}         &amp; f: \mathbb{R}^{3} \to \mathbb{R}^{3}          &amp; f(x, y, z) = (kx + 2y - z, x + ky - z, 2z)      \end{aligned}</span>     dire per quali valori di <span class="math-span">\( k\)</span>, l'endomorfismo <span class="math-span">\( f\)</span> è semplice.     <br/>     Per rispondere a tale domanda, innanzitutto scriviamo la matrice associata <span class="math-span">\( A\)</span>,     <span class="math-block">\[         A =          \left(         \begin{array}{ccc}             k &amp; 2 &amp; -1 \\             1 &amp; k &amp; -1 \\             0 &amp; 0 &amp; 2         \end{array}         \right)     \]</span>     e calcoliamo il polinomio caratteristico     <span class="math-block">\[         p_{A}(\lambda) = det         \left(         \begin{array}{ccc}             k - \lambda &amp; 2 &amp; -1 \\             1 &amp; k - \lambda &amp; -1 \\             0 &amp; 0 &amp; 2 - \lambda         \end{array}         \right)         = (2 - \lambda) \cdot [(k - \lambda)^{2} - 2]     \]</span>     gli autovalori sono quindi <span class="math-span">\( 2\)</span>, <span class="math-span">\( k - \sqrt{2}\)</span> e <span class="math-span">\( k + \sqrt{2}\)</span>.      <br/>     Tali valori sono distinti per la maggior parte dei valori di <span class="math-span">\( k\)</span>: gli unici casi che non rientrano in ciò sono:     <ul class="list-container"><li class="list-item">quando <span class="math-span">\( 2\)</span> e <span class="math-span">\( k - \sqrt{2}\)</span> coincidono, ovvero <span class="math-span">\( k = 2 + \sqrt{2}\)</span>;         </li><li class="list-item">quando <span class="math-span">\( 2\)</span> e <span class="math-span">\( k + \sqrt{2}\)</span> coincidono, ovvero <span class="math-span">\( k = 2 - \sqrt{2}\)</span>;         </li><li class="list-item">quando <span class="math-span">\( k - \sqrt{2}\)</span> e <span class="math-span">\( k + \sqrt{2}\)</span> coincidono, ovvero mai.     </li></ul>     Ora, è sufficiente proseguire l'esercizio solo per <span class="math-span">\( k = 2 + \sqrt{2}\)</span> e <span class="math-span">\( k = 2 - \sqrt{2}\)</span>.     <br/>     Quindi, considerando <span class="math-span">\( k = 2 \pm \sqrt{2}\)</span> abbiamo la matrice caratteristica uguale a         <span class="math-block">\[             A =              \left(             \begin{array}{ccc}                 (2 \pm \sqrt{2}) - \lambda &amp; 2 &amp; -1 \\                 1 &amp; (2 \pm \sqrt{2}) - \lambda &amp; -1 \\                 0 &amp; 0 &amp; 2 - \lambda             \end{array}             \right)         \]</span>         e il polinomio caratteristico è pari a <span class="math-span">\( p_{A}(\lambda) = (2 - \lambda) \cdot ((2 \pm \sqrt{2}) - \lambda)^{2}\)</span>. È quindi sufficiente calcolare la molteplicità geometrica di <span class="math-span">\( (2 \pm \sqrt{2})\)</span> in quanto la molteplicità geometrica di <span class="math-span">\( 2\)</span> è <span class="math-span">\( 1\)</span>. Quindi, calcolando <span class="math-span">\( U_{2 \pm \lambda}\)</span>, scriviamo il sistema lineare sostituendo a <span class="math-span">\( \lambda\)</span> rispettivamente <span class="math-span">\( (2 \pm \sqrt{2})\)</span>:         <span class="math-block">\[             \left\{                 \begin{array}{ccccccc}                      0 &amp; + &amp; 2y &amp; - &amp; z &amp; = &amp; 0 \\                      x &amp; + &amp; 0 &amp; - &amp; z &amp; = &amp; 0 \\                      0 &amp; + &amp; 2y &amp; \mp &amp; (\sqrt{2}) z &amp; = &amp; 0 \\                 \end{array}             \right.         \]</span>         da cui otteniamo un sistema la cui soluzione è unica (ovvero <span class="math-span">\( mg(2 \pm \lambda) = 0\)</span>), per cui per questi valori la matrice non è diagonalizzabile. </div><div class="environment-tail"><span class="material-symbols-outlined body-visibility-icon" onclick="expand_environment(event)">expand_more</span></div></div>
-            </article>
-            <nav class="buttons-container content-width">
-                <a class="navigation-button previous" href="autovalori-autovettori-e-autospazi.html" rel="nofollow"><span>Autovalori, autovettori e autospazi</span></a>
-                <a class="navigation-button next" href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow"><span>Forme bilineari e prodotto scalare</span></a>
-            </nav>
-        </section>
-        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
-            <span class="material-symbols-outlined">
-                keyboard_double_arrow_down
-            </span>
+        <span class="page-title"> Autovalori e autovettori </span>
+      </header>
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Geometria e algebra</h2>
+        <div class="index-container">
+          <ul class="parent-ul"
+            ><li class="section-li"
+              ><a href="../index.html" rel="nofollow">Indice</a></li
+            ><li class="section-li"
+              ><a
+                href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                rel="nofollow"
+                >Operazioni e strutture algebriche</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                    rel="nofollow"
+                    >Gruppi, anelli e campi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html"
+                    rel="nofollow"
+                    >Omomorfismi e isomorfismi</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                rel="nofollow"
+                >Spazi vettoriali</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                    rel="nofollow"
+                    >Nozioni preliminari su vettori e spazi vettoriali</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html"
+                    rel="nofollow"
+                    >Combinazione lineare e lineare indipendenza</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/sottostrutture-algebriche.html"
+                    rel="nofollow"
+                    >Sottostrutture algebriche</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html"
+                    rel="nofollow"
+                    >Operazioni tra sottospazi vettoriali</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                rel="nofollow"
+                >Matrici</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                    rel="nofollow"
+                    >Lo spazio vettoriale delle matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/l-anello-delle-matrici-quadrate.html"
+                    rel="nofollow"
+                    >L'anello delle matrici quadrate</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="../matrici/operazioni-riga.html" rel="nofollow"
+                    >Operazioni riga</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                rel="nofollow"
+                >Sistemi lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Sistemi lineari come matrici</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                rel="nofollow"
+                >Applicazioni lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come funzioni</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/applicazioni-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/matrici-simili.html"
+                    rel="nofollow"
+                    >Matrici simili</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../determinante/definizioni-di-determinante.html"
+                rel="nofollow"
+                >Determinante</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/definizioni-di-determinante.html"
+                    rel="nofollow"
+                    >Definizioni di determinante</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/utilizzi-del-determinante.html"
+                    rel="nofollow"
+                    >Utilizzi del determinante</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li current"
+              >Autovalori e autovettori<ul
+                ><li class="subsection-li"
+                  ><a
+                    href="autovalori-autovettori-e-autospazi.html"
+                    rel="nofollow"
+                    >Autovalori, autovettori e autospazi</a
+                  ></li
+                ><li class="subsection-li current"
+                  >Diagonalizzazione di una matrice<ul
+                    ><li class="definition-li"
+                      ><a href="#def7-6" rel="nofollow">Base spettrale</a></li
+                    ><li class="definition-li"
+                      ><a href="#def7-7" rel="nofollow"
+                        >Endomorfismo semplice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def7-8" rel="nofollow"
+                        >Matrice associata ad un endomorfismo semplice rispetto
+                        alla base spettrale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def7-9" rel="nofollow"
+                        >Molteplicità algebrica degli autovalori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def7-10" rel="nofollow"
+                        >Molteplicità geometrica degli autovalori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def7-11" rel="nofollow"
+                        >Relazione molteplicità algebrica e geometrica degli
+                        autovalori</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem7-6" rel="nofollow"
+                        >Lineare indipendenza di vettori appartenenti a diversi
+                        autospazi</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem7-7" rel="nofollow"
+                        >Condizione necessaria e sufficiente che garantisce la
+                        semplicità di un endomorfismo</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="#example33" rel="nofollow"
+                        >Diagonalizzazione di una matrice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def7-12" rel="nofollow"
+                        >Esistenza di almeno un autovalore per ogni endomorfismo
+                        di dimensione dispari</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem7-8" rel="nofollow"
+                        >Diagonalizzabilità di una matrice data l'esistenza di
+                        \( n\) autovalori distinti</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="#example34" rel="nofollow"
+                        >Utilizzo della diagonalizzabilità di una matrice data
+                        l'esistenza di \( n\) autovalori distinti</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def7-13" rel="nofollow"
+                        >Teorema - Diagonalizzabilità di ogni matrice
+                        simmetrica</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="#example35" rel="nofollow"
+                        >Diagonalizzabilità di una matrice contenente
+                        parametri</a
+                      ></li
+                    ></ul
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                rel="nofollow"
+                >Spazi vettoriali euclidei</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                    rel="nofollow"
+                    >Forme bilineari e prodotto scalare</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html"
+                    rel="nofollow"
+                    >Spazi vettoriali euclidei</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                rel="nofollow"
+                >Geometria analitica nello spazio</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                    rel="nofollow"
+                    >Rette nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/piani-nello-spazio.html"
+                    rel="nofollow"
+                    >Piani nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html"
+                    rel="nofollow"
+                    >Prodotto vettoriale</a
+                  ></li
+                ></ul
+              ></li
+            ></ul
+          >
         </div>
-            <footer class="footer-wrapper">
-                <div class="copyright-wrapper">
-                    <span> &copy; Copyright 2024</span> /
-                    <span>made by <a href="https://github.com/lorenzoarlo" rel="nofollow">lorenzoarlo</a></span>
-                </div>
-                /
-                <div class="privacy-wrapper">
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze
-                            cookie</a></span> /
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow"
-                            target="_blank">Privacy Policy</a></span>
-                </div>
-            </footer>
+      </aside>
+      <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button">
+        keyboard_double_arrow_right
+      </div>
+      <section class="content-wrapper">
+        <h1 class="section-title content-width"
+          >Diagonalizzazione di una matrice</h1
+        >
+        <article class="content-container content-width">
+          <div class="definition environment" id="def7-6"
+            ><h2 class="environment-title">Definizione - Base spettrale</h2
+            ><div class="environment-body">
+              Considerando un endomorfismo
+              <span class="math-span">\( f: V \to V\)</span>, ogni base di
+              <span class="math-span">\( V\)</span> composta solamente da
+              autovettori di <span class="math-span">\( f\)</span> si dice base
+              spettrale.
+            </div></div
+          ><div class="definition environment" id="def7-7"
+            ><h2 class="environment-title"
+              >Definizione - Endomorfismo semplice</h2
+            ><div class="environment-body">
+              Un endomorfismo <span class="math-span">\( f\)</span> che ammette
+              almeno una base spettrale, si dice semplice.
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - Esempio di endomorfismo non semplice</h3
+                ><div class="environment-body">
+                  Un esempio di endomorfismo non semplice è la rotazione di
+                  <span class="math-span">\( 90^\circ\)</span> in senso orario
+                  nel piano (infatti solo il vettore nullo ha come immagine un
+                  multiplo di sè stesso).
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def7-8"
+            ><h2 class="environment-title"
+              >Definizione - Matrice associata ad un endomorfismo semplice
+              rispetto alla base spettrale</h2
+            ><div class="environment-body">
+              Considerando una base spettrale
+              <span class="math-span"
+                >\( B = (v_{1}, \ \ldots \ , v_{n})\)</span
+              >
+              per un endomorfismo <span class="math-span">\( f\)</span>, allora
+              la matrice associata all'endomorfismo
+              <span class="math-span">\( f\)</span> rispetto alla base
+              <span class="math-span">\( B\)</span> (<span class="math-span"
+                >\( M_{B, B}(f)\)</span
+              >) è diagonale. Su tale diagonale compaiono gli autovalori
+              associati agli autovettori
+              <span class="math-span">\( (v_{1}, \ \ldots \ , v_{n})\)</span>.
+              <br />
+              Viceversa, si può dire che se una matrice associata ad un
+              endomorfismo rispetto ad una base è diagonale, allora tale base è
+              spettrale.
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - Tell me why</h3
+                ><div class="environment-body">
+                  Ciò risulta evidente costruendo la matrice associata ad
+                  <span class="math-span">\( f\)</span>. Infatti le colonne
+                  della matrice sono le coordinate dell'immagine di ogni vettore
+                  della base rispetto alla base
+                  <span class="math-span">\( B\)</span>, ovvero:
+                  <span class="math-block"
+                    >\begin{aligned} &amp; f(v_{1}) = \lambda_{1} \cdot v_{1} +
+                    0 \cdot v_{2} + \ \ldots \ + 0 \cdot v_{n} &amp; \\ &amp;
+                    f(v_{2}) = 0 \cdot v_{1} + \lambda_{2} \cdot v_{2} + \
+                    \ldots \ + 0 \cdot v_{n} &amp; \\ &amp; \vdots &amp; \\
+                    &amp; f(v_{n}) = 0 \cdot v_{1} + 0 \cdot v_{2} + \ \ldots \
+                    + \lambda_{n} \cdot v_{n} &amp; \end{aligned}</span
+                  >
+                  che sarebbe
+                  <span class="math-block"
+                    >\[ M_{B, B}(f) = \left( \begin{array}{cccc} \lambda_{1}
+                    &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; \lambda_{2} &amp;
+                    \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp;
+                    \vdots \\ 0 &amp; 0 &amp; \cdots &amp; \lambda_{n}
+                    \end{array} \right) \]</span
+                  >
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def7-9"
+            ><h2 class="environment-title"
+              >Definizione - Molteplicità algebrica degli autovalori</h2
+            ><div class="environment-body">
+              Considerando la matrice
+              <span class="math-span"
+                >\( A \in M_{n \times n}(\mathbb{K})\)</span
+              >
+              associata all'endomorfismo <span class="math-span">\( f\)</span> e
+              <span class="math-span"
+                >\( \lambda_{1}, \ \ldots \ , \lambda_{s}\)</span
+              >
+              i suoi autovalori (con
+              <span class="math-span">\( s \leq n\)</span>), allora è possibile
+              scrivere il polinomio caratteristico di
+              <span class="math-span">\( A\)</span> come
+              <span class="math-block"
+                >\[ p_{A} = (\lambda - a_{1})^{k_{1}} \cdot (\lambda -
+                a_{2})^{k^{2}} \cdot \ \ldots \ \cdot (\lambda - a_{s})^{k_{s}}
+                \cdot q(\lambda) \]</span
+              >
+              dove
+              <span class="math-span">\( a_{1}, \ \ldots \ , a_{s}\)</span> sono
+              le radici per cui si annulla il polinomio). Definiamo quindi
+              <span class="math-span">\( k_{i}\)</span> la molteplicità
+              algebrica dell'autovalore
+              <span class="math-span">\( \lambda_{i}\)</span>, ovvero
+              <span class="math-block">\[ ma(\lambda_{i}) = k_{i} \]</span>
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - In poche parole</h3
+                ><div class="environment-body">
+                  La molteplicità algebrica si può definire anche come il numero
+                  di volte in cui l'autovalore
+                  <span class="math-span">\( \lambda_{i}\)</span> annulla il
+                  polinomio caratteristico.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def7-10"
+            ><h2 class="environment-title"
+              >Definizione - Molteplicità geometrica degli autovalori</h2
+            ><div class="environment-body">
+              Considerando la matrice
+              <span class="math-span"
+                >\( A \in M_{n \times n}(\mathbb{K})\)</span
+              >
+              associata all'endomorfismo <span class="math-span">\( f\)</span> e
+              <span class="math-span"
+                >\( \lambda_{1}, \ \ldots \ , \lambda_{s}\)</span
+              >
+              i suoi autovalori (con
+              <span class="math-span">\( s \leq n\)</span>), si definisce
+              molteplicità geometrica di un autovalore
+              <span class="math-span">\( \lambda_{i}\)</span> la dimensione
+              dell'autospazio a lui associato, ovvero
+              <span class="math-block"
+                >\[ mg(\lambda_{i}) = dim(U_{\lambda_{i}}) \]</span
+              >
+              Detto ciò, si ha che la molteplicità geometrica di un autovalore è
+              uguale a <span class="math-span">\( n\)</span> meno il rango della
+              matrice caratteristica, ovvero
+              <span class="math-block"
+                >\[ dim(U_{\lambda_{i}}) = mg(\lambda_{i}) = n - r(A -
+                \lambda_{i}I) \]</span
+              >
+            </div></div
+          ><div class="definition environment" id="def7-11"
+            ><h2 class="environment-title"
+              >Definizione - Relazione molteplicità algebrica e geometrica degli
+              autovalori</h2
+            ><div class="environment-body">
+              Considerando <span class="math-span">\( \lambda\)</span> un
+              autovalore dell'endomorfismo
+              <span class="math-span">\( f\)</span>, si ha che
+              <span class="math-block"
+                >\[ 1 \leq mg(\lambda) \leq ma(\lambda) \]</span
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - </h3
+                ><div class="environment-body">
+                  Il fatto che la molteplicità geometrica di
+                  <span class="math-span">\( \lambda\)</span> debba essere
+                  maggiore o uguale a <span class="math-span">\( 1\)</span> è
+                  banale: infatti se la dimensione di
+                  <span class="math-span">\( U_{\lambda}\)</span> fosse
+                  <span class="math-span">\( 0\)</span> non si avrebbe un
+                  autospazio (in quanto ci sarebbe solo il vettore nullo).
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem7-6"
+            ><h2 class="environment-title"
+              >Dimostrazione - Lineare indipendenza di vettori appartenenti a
+              diversi autospazi</h2
+            ><div class="environment-body">
+              Dato il lemma
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando un endomorfismo
+                  <span class="math-span">\( f: V \to V\)</span> e i suoi
+                  autospazi
+                  <span class="math-span"
+                    >\( U_{\lambda_{1}}, \ \ldots \ , U_{\lambda_{k}}\)</span
+                  >, allora i vettori appartenenti agli autospazi sono
+                  linearmente indipendenti tra loro.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare ciò, ipotizziamo per assurdo che la
+                  <span class="math-span">\( k\)</span>-upla di vettori
+                  <span class="math-span"
+                    >\( (v_{1}, \ \ldots \ , v_{k})\)</span
+                  >
+                  provenienti da autospazi distinti siano linearmente
+                  dipendenti. Possiamo quindi dire che esiste almeno una
+                  <span class="math-span">\( k\)</span>-upla di coordinate non
+                  nulla
+                  <span class="math-span"
+                    >\( (\alpha_{1}, \ \ldots \ , \alpha_{k})\)</span
+                  >
+                  che soddisfa tale equazione
+                  <span class="math-block"
+                    >\[ \alpha_{1} \cdot v_{1} + \ \ldots \ + \alpha_{k} \cdot
+                    v_{k} = 0 \]</span
+                  >
+                  Tra una di queste <span class="math-span">\( k\)</span>-uple
+                  non nulle, scegliamo la
+                  <span class="math-span">\( k\)</span>-upla il cui numero di
+                  elementi non nulli è minimizzato, ovvero il numero di valori
+                  non nulli è il più piccolo possibile, ma non è
+                  <span class="math-span">\( 0\)</span> (ovvero non si deve
+                  considerare la <span class="math-span">\( k\)</span>-upla
+                  nulla). Chiamiamo tale
+                  <span class="math-span">\( k\)</span>-upla
+                  <span class="math-span"
+                    >\( (\bar{\alpha}_{1}, \ \ldots \ ,
+                    \bar{\alpha}_{k})\)</span
+                  >. <br />
+                  Riprendendo la relazione enunciata in precedenza, è lecito
+                  scrivere
+                  <span class="math-block"
+                    >\begin{aligned} &amp; \bar{\alpha}_{1} \cdot v_{1} + \
+                    \ldots \ + \bar{\alpha}_{k} \cdot v_{k} = 0 &amp; \iff
+                    \end{aligned}</span
+                  >
+                  Applicando a ciò quindi l'endomorfismo
+                  <span class="math-span">\( f\)</span>
+                  <span class="math-block"
+                    >\begin{aligned} &amp; f(\bar{\alpha}_{1} \cdot v_{1} + \
+                    \ldots \ + \bar{\alpha}_{k} \cdot v_{k}) = f(0) &amp; \iff
+                    \end{aligned}</span
+                  >
+                  è possibile utilizzare la linearità per ottenere
+                  <span class="math-block"
+                    >\begin{aligned} &amp; \bar{\alpha}_{1} \cdot f(v_{1}) + \
+                    \ldots \ + \bar{\alpha}_{k} \cdot f(v_{k}) = 0 &amp; \iff
+                    \end{aligned}</span
+                  >
+                  Ora, scrivendo l'immagine dei vettori si ottiene
+                  <span class="math-block"
+                    >\begin{aligned} &amp; \bar{\alpha}_{1} \cdot \lambda_{1}
+                    \cdot v_{1} + \ \ldots \ + \bar{\alpha}_{k} \cdot
+                    \lambda_{k} \cdot v_{k} = 0 &amp; \iff \end{aligned}</span
+                  >
+                  Ora, ritornando all'uguaglianza
+                  <span class="math-block"
+                    >\begin{aligned} &amp; \bar{\alpha}_{1} \cdot v_{1} + \
+                    \ldots \ + \bar{\alpha}_{k} \cdot v_{k} = 0 &amp; \iff
+                    \end{aligned}</span
+                  >
+                  invece di applicare l'endomorfismo, consideriamo che
+                  <span class="math-span">\( \lambda_{1} \neq 0\)</span> (o un
+                  qualsiasi altro autovalore non nullo) e moltiplichiamolo
+                  all'equazione da "entrambe le parti", ovvero
+                  <span class="math-block"
+                    >\begin{aligned} &amp; \bar{\alpha}_{1} \cdot \lambda_{1}
+                    \cdot v_{1} + \ \ldots \ + \bar{\alpha}_{k} \cdot
+                    \lambda_{1} \cdot v_{k} = 0 &amp; \iff \end{aligned}</span
+                  >
+                  Ora, ricordando che stiamo lavorando con delle uguaglianze, è
+                  lecito scrivere
+                  <span class="math-block"
+                    >\begin{aligned} &amp; \bar{\alpha}_{1} \cdot \lambda_{1}
+                    \cdot v_{1} + \ \ldots \ + \bar{\alpha}_{k} \cdot
+                    \lambda_{k} \cdot v_{k} = \bar{\alpha}_{1} \cdot \lambda_{1}
+                    \cdot v_{1} + \ \ldots \ + \bar{\alpha}_{k} \cdot
+                    \lambda_{1} \cdot v_{k} &amp; \iff \end{aligned}</span
+                  >
+                  Aggiungendo da entrambe le parti l'opposto del termine di
+                  destra, si ottiene
+                  <span class="math-block"
+                    >\begin{aligned} &amp; \bar{\alpha}_{2} \cdot \lambda_{2}
+                    \cdot v_{2} + \ \ldots \ + \bar{\alpha}_{k} \cdot
+                    \lambda_{k} \cdot v_{k} - \bar{\alpha}_{2} \cdot \lambda_{1}
+                    \cdot v_{2} - \ \ldots \ - \bar{\alpha}_{k} \cdot
+                    \lambda_{1} \cdot v_{k} = 0 &amp; \iff \end{aligned}</span
+                  >
+                  Facendo notare che il termine
+                  <span class="math-span"
+                    >\( \bar{\alpha}_{1} \cdot \lambda_{1} \cdot v_{1}\)</span
+                  >
+                  si è annullato, possiamo raccogliere i coefficienti
+                  <span class="math-span">\( \bar{\alpha}_{i}\)</span> e
+                  scrivere
+                  <span class="math-block"
+                    >\begin{aligned} &amp; \bar{\alpha}_{2} \cdot (\lambda_{2} -
+                    \lambda_{1}) \cdot v_{2} + \ \ldots \ + \bar{\alpha}_{k}
+                    \cdot (\lambda_{k} - \lambda{1}) \cdot v_{2} = 0 &amp;
+                    \end{aligned}</span
+                  >
+                  Dato che tutti i valori
+                  <span class="math-span">\( \lambda\)</span> sono distinti (in
+                  quanto provenienti da autospazi differenti), allora si ha che
+                  le differenze
+                  <span class="math-span"
+                    >\( (\lambda_{i} - \lambda_{1})\)</span
+                  >
+                  non saranno mai nulle. Abbiamo quindi raggiunto un assurdo, in
+                  quanto avremmo trovato una
+                  <span class="math-span">\( k\)</span>-upla in cui il numero di
+                  elementi non nulli è minore della
+                  <span class="math-span">\( k\)</span>-upla
+                  <span class="math-span"
+                    >\( (\bar{\alpha}_{1}, \ \ldots \ ,
+                    \bar{\alpha}_{k})\)</span
+                  >
+                  in quanto
+                  <span class="math-span">\( \bar{\alpha}_{1}\)</span> è ora
+                  nullo. <br />
+                  Si è dimostrata quindi la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem7-7"
+            ><h2 class="environment-title"
+              >Dimostrazione - Condizione necessaria e sufficiente che
+              garantisce la semplicità di un endomorfismo</h2
+            ><div class="environment-body">
+              Dato il teorema
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Un endomorfismo
+                  <span class="math-span">\( f: V \to V\)</span>, (con
+                  <span class="math-span">\( dim(V) = n\)</span>) è semplice se
+                  e solo se la somma delle dimensioni di tutti i suoi autospazi
+                  è uguale a <span class="math-span">\( n\)</span>, ovvero
+                  <span class="math-block"
+                    >\[ \sum dim(U_{\lambda_{i}}) = n \]</span
+                  >
+                </div></div
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - In altre parole</h3
+                ><div class="environment-body">
+                  Dire che la somma delle dimensioni degli autospazi deve essere
+                  <span class="math-span">\( n\)</span> è equivalente a dire che
+                  la somma delle molteplicità geometriche degli autovalori deve
+                  essere <span class="math-span">\( n\)</span>, ovvero
+                  <span class="math-block">\[ \sum mg(\lambda_{i}) = n \]</span>
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale teorema è necessario dimostrare che
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >"se la somma delle dimensioni di tutti gli autospazi di
+                      un endomorfismo <span class="math-span">\( f\)</span> è
+                      <span class="math-span">\( n\)</span>, allora
+                      <span class="math-span">\( f\)</span> è semplice". <br />
+                      Per dimostrarlo è necessario provare che esiste una base
+                      spettrale per <span class="math-span">\( f\)</span>.
+                      Consideriamo quindi di costruirla unendo le basi degli
+                      autospazi:
+                      <span class="math-block"
+                        >\begin{aligned} &amp; B_{U_{\lambda_{1}}} = (v_{1}^{1},
+                        \ \ldots \ , v_{r_{1}}^{1}) \\ &amp; B_{U_{\lambda_{2}}}
+                        = (v_{1}^{2}, \ \ldots \ , v_{r_{2}}^{2}) \\ &amp;
+                        \vdots \\ &amp; B_{U_{\lambda_{k}}} = (v_{1}^{k}, \
+                        \ldots \ , v_{r_{k}}^{k}) \end{aligned}</span
+                      >
+                      dove l'apice indica l'autospazio di appartenenza, ed il
+                      pedice la posizione del vettore in ogni base (<span
+                        class="math-span"
+                        >\( r_{k}\)</span
+                      >
+                      indica la dimensione dell'autospazio). Otteniamo quindi
+                      una base <span class="math-span">\( B_{V}\)</span> per
+                      <span class="math-span">\( V\)</span> contenente
+                      <span class="math-span">\( n\)</span> vettori. Per provare
+                      che sia una base, è sufficiente provare la lineare
+                      indipendenza, ovvero che tutti i coefficienti possono
+                      essere solo nulli.
+                      <span class="math-block"
+                        >\begin{aligned} &amp; \begin{array}{lclc} 0 &amp; =
+                        &amp; \alpha_{1}^{1} \cdot v_{1}^{1} + \ \ldots \ +
+                        \alpha_{r_{1}}^{1} \cdot v_{r_{1}}^{1} &amp; + \\ &amp;
+                        + &amp; \alpha_{1}^{2} \cdot v_{1}^{2} + \ \ldots \ +
+                        \alpha_{r_{1}}^{2} \cdot v_{r_{2}}^{2} &amp; + \\ &amp;
+                        + &amp; \ldots &amp; + \\ &amp; + &amp; \alpha_{1}^{k}
+                        \cdot v_{1}^{k} + \ \ldots \ + \alpha_{r_{k}}^{k} \cdot
+                        v_{r_{k}}^{k} &amp; \end{array} &amp; \iff
+                        \end{aligned}</span
+                      >
+                      Dato che ogni riga è combinazione lineare di un distinto
+                      autospazio, è possibile sostituirla con un vettore
+                      qualsiasi appartenente a quell'autospazio, ovvero
+                      <span class="math-block"
+                        >\begin{aligned} &amp; 0 = v^{1} + v^{2} + \ \ldots \ +
+                        v^{k} &amp; \iff \end{aligned}</span
+                      >
+                      Sappiamo tuttavia che, per il lemma sulla "lineare
+                      indipendenza di vettori appartenenti a diversi autospazi",
+                      che tali vettori sono linearmente indipendenti tra loro.
+                      Abbiamo quindi la combinazione lineare del vettore nullo
+                      di vettori linearmente indipendenti tra loro: tali vettori
+                      devono quindi essere tutti nulli. Se ogni vettore
+                      <span class="math-span">\( v^{i}\)</span> è nullo,
+                      otteniamo
+                      <span class="math-block"
+                        >\begin{aligned} &amp; 0 = \alpha_{1}^{i} \cdot
+                        v_{1}^{i} + \ \ldots \ + \alpha_{r_{1}}^{i} \cdot
+                        v_{r_{1}}^{i} &amp; \end{aligned}</span
+                      >
+                      ovvero la combinazione lineare del vettore nullo di
+                      vettori linearmente indipendenti: ogni coordinata deve
+                      essere quindi nulla. Dato che si è verificata la lineare
+                      indipendenza, si è dimostrata l'implicazione. </li
+                    ><li class="list-item"
+                      >"se un endomorfismo
+                      <span class="math-span">\( f\)</span> è semplice, allora
+                      la somma delle dimensioni di tutti i suoi autospazi è
+                      <span class="math-span">\( n\)</span>". <br />
+                      Per dimostrare ciò consideriamo che
+                      <span class="math-span">\( f\)</span> semplice implica
+                      l'esistenza di una base
+                      <span class="math-span">\( B_{V}\)</span> per
+                      <span class="math-span">\( V\)</span> composta da
+                      <span class="math-span">\( n\)</span> autovettori:
+                      esistono quindi almeno
+                      <span class="math-span">\( n\)</span> autovettori
+                      linearmente indipendenti tra loro. Inoltre sappiamo che
+                      non possono esistere più di
+                      <span class="math-span">\( n\)</span> autovettori
+                      linearmente indipendenti, in quanto il massimo numero di
+                      vettori linearmente indipendenti è proprio
+                      <span class="math-span">\( n\)</span> (altrimenti due basi
+                      avrebbero dimensione diversa). Si ha quindi che la somma
+                      delle dimensioni di autospazi è proprio
+                      <span class="math-span">\( n\)</span>. Si è quindi
+                      dimostrata l'implicazione.
+                    </li></ul
+                  >
+                  Si è quindi verificato il teorema.
+                </div></div
+              >
+            </div></div
+          ><div class="myexample environment" id="example33"
+            ><h2 class="environment-title"
+              >Esempio - Diagonalizzazione di una matrice</h2
+            ><div class="environment-body collapsed">
+              Dire se la matrice
+              <span class="math-block"
+                >\[ A = \left( \begin{array}{ccc} 3 &amp; 0 &amp; 0 \\ -4 &amp;
+                -1 &amp; -8 \\ 0 &amp; 0 &amp; 3 \end{array} \right) \]</span
+              >
+              è diagonalizzabile. Se lo è, calcolare una base spettrale e la
+              relativa forma diagonale di <span class="math-span">\( A\)</span>.
+              <br />
+              Innanzitutto, calcoliamo il polinomio caratteristico di
+              <span class="math-span">\( A\)</span>, ovvero
+              <span class="math-block"
+                >\[ p_{A}(\lambda) = det \left( \begin{array}{ccc} 3 - \lambda
+                &amp; 0 &amp; 0 \\ -4 &amp; -1 - \lambda &amp; -8 \\ 0 &amp; 0
+                &amp; 3 - \lambda \end{array} \right) = (\lambda - 3)^{2} \cdot
+                (\lambda + 1) \]</span
+              >
+              da cui otteniamo gli autovalori
+              <span class="math-span">\( 3\)</span> e
+              <span class="math-span">\( -1\)</span>. <br />
+              È banale ottenere la molteplicità geometrica dell'autovalore
+              <span class="math-span">\( -1\)</span>: infatti abbiamo che la sua
+              molteplicità algebrica è <span class="math-span">\( 1\)</span> e
+              per la relazione
+              <span class="math-span">\( 1 \leq mg(-1) \leq ma(-1)\)</span> è
+              semplice ottenere che la sua molteplicità geometrica è
+              <span class="math-span">\( 1\)</span>. <br />
+              Per quanto riguarda l'autovalore
+              <span class="math-span">\( 3\)</span>, è più complicato in quanto
+              è necessario calcolare la dimensione dell'autospazio
+              <span class="math-span">\( U_{3}\)</span>, ovvero sostituendo alla
+              matrice caratteristica
+              <span class="math-span">\( \lambda = 3\)</span>, si ottiene
+              <span class="math-block"
+                >\[ \left( \begin{array}{ccc} 0 &amp; 0 &amp; 0 \\ 4 &amp; 4
+                &amp; 8 \\ 0 &amp; 0 &amp; 0 \end{array} \right) \]</span
+              >
+              e considerandola come un sistema lineare
+              <span class="math-block"
+                >\[ \left\{ \begin{array}{ccccccc} 4x &amp; + &amp; 4y &amp; +
+                &amp; 8z &amp; = &amp; 0 \\ \end{array} \right. \]</span
+              >
+              e risolvendolo in forma parametrica si ottiene
+              <span class="math-block"
+                >\[ \left\{ \begin{array}{ccl} x &amp; = &amp; -s - 2t \\ y
+                &amp; = &amp; s \\ z &amp; = &amp; t \end{array} \right. \qquad
+                \implies \qquad \left( \begin{array}{c} x \\ y \\ z \end{array}
+                \right) = s \cdot \left( \begin{array}{c} -1 \\ 1 \\ 0
+                \end{array} \right) + t \cdot \left( \begin{array}{c} -2 \\ 0 \\
+                1 \end{array} \right) \]</span
+              >
+              Abbiamo quindi ottenuto che la dimensione di
+              <span class="math-span">\( U_{3}\)</span> è
+              <span class="math-span">\( 2\)</span> e gli autovettori associati
+              sono <span class="math-span">\( ((-1, 1, 0), (-2, 0, 1))\)</span>.
+              Ora sappiamo che la matrice è diagonalizzabile in quanto
+              <span class="math-block">\[ mg(-1) + mg(3) = 1 + 2 = n \]</span>
+              Per ottenere una base spettrale è sufficiente calcolare un
+              autovettore per l'autovalore
+              <span class="math-span">\( \lambda = -1\)</span>. Per farlo
+              utilizziamo quindi lo stesso procedimento di prima, ovvero
+              <span class="math-block"
+                >\[ \left( \begin{array}{ccc} -4 &amp; 0 &amp; 0 \\ 4 &amp; 0
+                &amp; 8 \\ 0 &amp; 0 &amp; -4 \end{array} \right) \]</span
+              >
+              e considerandola come un sistema lineare
+              <span class="math-block"
+                >\[ \left\{ \begin{array}{ccccccc} -4x &amp; + &amp; 0 &amp; +
+                &amp; 0 &amp; = &amp; 0 \\ 4x &amp; + &amp; 0 &amp; + &amp; 8z
+                &amp; = &amp; 0 \\ 0 &amp; + &amp; 0 &amp; - &amp; 4z &amp; =
+                &amp; 0 \end{array} \right. \]</span
+              >
+              e risolvendolo in forma parametrica si ottiene
+              <span class="math-block"
+                >\[ \left\{ \begin{array}{ccl} x &amp; = &amp; 0 \\ y &amp; =
+                &amp; s \\ z &amp; = &amp; 0 \end{array} \right. \qquad \implies
+                \qquad \left( \begin{array}{c} x \\ y \\ z \end{array} \right) =
+                s \cdot \left( \begin{array}{c} 0 \\ 1 \\ 0 \end{array} \right)
+                \]</span
+              >
+              da cui si ottiene che l'autovettore associato all'autovalore
+              <span class="math-span">\( -1\)</span> è
+              <span class="math-span">\( (0, 1, 0)\)</span>. <br />
+              In conclusione, data la base spettrale
+              <span class="math-span"
+                >\( ((-1, 1, 0), (-2, 0, 1), (0, 1, 0))\)</span
+              >
+              otterremo la matrice diagonale
+              <span class="math-block"
+                >\[ \left( \begin{array}{ccc} 3 &amp; 0 &amp; 0 \\ 0 &amp; 3
+                &amp; 0 \\ 0 &amp; 0 &amp; -1 \end{array} \right) \]</span
+              > </div
+            ><div class="environment-tail"
+              ><span
+                class="material-symbols-outlined body-visibility-icon"
+                onclick="expand_environment(event)"
+                >expand_more</span
+              ></div
+            ></div
+          ><div class="definition environment" id="def7-12"
+            ><h2 class="environment-title"
+              >Definizione - Esistenza di almeno un autovalore per ogni
+              endomorfismo di dimensione dispari</h2
+            ><div class="environment-body">
+              Considerando un endomorfismo
+              <span class="math-span">\( f: V \to V\)</span> dove
+              <span class="math-span">\( dim(V) = n\)</span>, se
+              <span class="math-span">\( n\)</span> è dispari si ha sempre
+              almeno un autovalore, in quanto il grado del polinomio
+              caratteristico è dispari.
+            </div></div
+          ><div class="demonstration environment" id="dem7-8"
+            ><h2 class="environment-title"
+              >Dimostrazione - Diagonalizzabilità di una matrice data
+              l'esistenza di <span class="math-span">\( n\)</span> autovalori
+              distinti</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Se una matrice
+                  <span class="math-span"
+                    >\( A \in M_{n \times n}(\mathbb{R})\)</span
+                  >
+                  associata ad un endomorfismo
+                  <span class="math-span">\( f\)</span> ha
+                  <span class="math-span">\( n\)</span> autovalori distinti,
+                  allora è diagonalizzabile.
+                </div></div
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - In altre parole</h3
+                ><div class="environment-body">
+                  Ciò è equivalente a dire che un endomorfismo
+                  <span class="math-span">\( f: V \to V\)</span> che ammette
+                  <span class="math-span">\( n\)</span> (ovvero un numero pari
+                  alla dimensione di <span class="math-span">\( V\)</span>)
+                  autovalori distinti è semplice.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare ciò consideriamo che la molteplicità geometrica
+                  di ogni autovalore non può essere inferiore a
+                  <span class="math-span">\( 1\)</span>: nel caso avessimo
+                  <span class="math-span">\( n\)</span> autovalori distinti
+                  otterremo che la somma delle dimensioni degli autospazi è
+                  almeno pari a <span class="math-span">\( n\)</span> e, dato
+                  che sono linearmente indipendenti, si ha che non possono
+                  essere più di
+                  <span class="math-span">\( n\)</span> (altrimenti sarebbero
+                  una base con una dimensione diversa da altre basi). Otteniamo
+                  quindi che la somma delle dimensioni è esattamente
+                  <span class="math-span">\( n\)</span>, implicando quindi
+                  l'esistenza di una base spettrale (e la semplicità
+                  dell'endomorfismo).
+                </div></div
+              >
+            </div></div
+          ><div class="myexample environment" id="example34"
+            ><h2 class="environment-title"
+              >Esempio - Utilizzo della diagonalizzabilità di una matrice data
+              l'esistenza di <span class="math-span">\( n\)</span> autovalori
+              distinti</h2
+            ><div class="environment-body collapsed">
+              Data la matrice
+              <span class="math-block"
+                >\[ A = \begin{pmatrix} 1 &amp; 7 &amp; 4 \\ 0 &amp; 3 &amp; -10
+                \\ 0 &amp; 0 &amp; 8 \end{pmatrix} \]</span
+              >
+              dire se esiste una base spettrale. <br />
+              Per farlo si è sufficiente calcolare il polinomio caratteristico
+              di <span class="math-span">\( A\)</span>, ovvero
+              <span class="math-block"
+                >\begin{aligned} p_{A}(\lambda) = det(A - \lambda I) = det
+                \left( \begin{array}{ccc} 1 - \lambda &amp; 7 &amp; 4 \\ 0 &amp;
+                3 - \lambda &amp; -10 \\ 0 &amp; 0 &amp; 8 - \lambda \end{array}
+                \right) = (1 - \lambda) \cdot (3 - \lambda) \cdot (8 - \lambda)
+                \end{aligned}</span
+              >
+              ovvero ammette <span class="math-span">\( 3\)</span> autovalori
+              distinti: ciò implica l'esistenza di una base spettrale. </div
+            ><div class="environment-tail"
+              ><span
+                class="material-symbols-outlined body-visibility-icon"
+                onclick="expand_environment(event)"
+                >expand_more</span
+              ></div
+            ></div
+          ><div class="definition environment" id="def7-13"
+            ><h2 class="environment-title"
+              >Definizione - Teorema - Diagonalizzabilità di ogni matrice
+              simmetrica</h2
+            ><div class="environment-body">
+              Considerando una matrice simmetrica, essa è diagonalizzabile.
+            </div></div
+          ><div class="myexample environment" id="example35"
+            ><h2 class="environment-title"
+              >Esempio - Diagonalizzabilità di una matrice contenente
+              parametri</h2
+            ><div class="environment-body collapsed">
+              Dato il seguente endomorfismo
+              <span class="math-block"
+                >\begin{aligned} &amp; f: \mathbb{R}^{3} \to \mathbb{R}^{3}
+                &amp; f(x, y, z) = (kx + 2y - z, x + ky - z, 2z)
+                \end{aligned}</span
+              >
+              dire per quali valori di <span class="math-span">\( k\)</span>,
+              l'endomorfismo <span class="math-span">\( f\)</span> è semplice.
+              <br />
+              Per rispondere a tale domanda, innanzitutto scriviamo la matrice
+              associata <span class="math-span">\( A\)</span>,
+              <span class="math-block"
+                >\[ A = \left( \begin{array}{ccc} k &amp; 2 &amp; -1 \\ 1 &amp;
+                k &amp; -1 \\ 0 &amp; 0 &amp; 2 \end{array} \right) \]</span
+              >
+              e calcoliamo il polinomio caratteristico
+              <span class="math-block"
+                >\[ p_{A}(\lambda) = det \left( \begin{array}{ccc} k - \lambda
+                &amp; 2 &amp; -1 \\ 1 &amp; k - \lambda &amp; -1 \\ 0 &amp; 0
+                &amp; 2 - \lambda \end{array} \right) = (2 - \lambda) \cdot [(k
+                - \lambda)^{2} - 2] \]</span
+              >
+              gli autovalori sono quindi <span class="math-span">\( 2\)</span>,
+              <span class="math-span">\( k - \sqrt{2}\)</span> e
+              <span class="math-span">\( k + \sqrt{2}\)</span>. <br />
+              Tali valori sono distinti per la maggior parte dei valori di
+              <span class="math-span">\( k\)</span>: gli unici casi che non
+              rientrano in ciò sono:
+              <ul class="list-container"
+                ><li class="list-item"
+                  >quando <span class="math-span">\( 2\)</span> e
+                  <span class="math-span">\( k - \sqrt{2}\)</span> coincidono,
+                  ovvero
+                  <span class="math-span">\( k = 2 + \sqrt{2}\)</span>; </li
+                ><li class="list-item"
+                  >quando <span class="math-span">\( 2\)</span> e
+                  <span class="math-span">\( k + \sqrt{2}\)</span> coincidono,
+                  ovvero
+                  <span class="math-span">\( k = 2 - \sqrt{2}\)</span>; </li
+                ><li class="list-item"
+                  >quando <span class="math-span">\( k - \sqrt{2}\)</span> e
+                  <span class="math-span">\( k + \sqrt{2}\)</span> coincidono,
+                  ovvero mai.
+                </li></ul
+              >
+              Ora, è sufficiente proseguire l'esercizio solo per
+              <span class="math-span">\( k = 2 + \sqrt{2}\)</span> e
+              <span class="math-span">\( k = 2 - \sqrt{2}\)</span>. <br />
+              Quindi, considerando
+              <span class="math-span">\( k = 2 \pm \sqrt{2}\)</span> abbiamo la
+              matrice caratteristica uguale a
+              <span class="math-block"
+                >\[ A = \left( \begin{array}{ccc} (2 \pm \sqrt{2}) - \lambda
+                &amp; 2 &amp; -1 \\ 1 &amp; (2 \pm \sqrt{2}) - \lambda &amp; -1
+                \\ 0 &amp; 0 &amp; 2 - \lambda \end{array} \right) \]</span
+              >
+              e il polinomio caratteristico è pari a
+              <span class="math-span"
+                >\( p_{A}(\lambda) = (2 - \lambda) \cdot ((2 \pm \sqrt{2}) -
+                \lambda)^{2}\)</span
+              >. È quindi sufficiente calcolare la molteplicità geometrica di
+              <span class="math-span">\( (2 \pm \sqrt{2})\)</span> in quanto la
+              molteplicità geometrica di <span class="math-span">\( 2\)</span> è
+              <span class="math-span">\( 1\)</span>. Quindi, calcolando
+              <span class="math-span">\( U_{2 \pm \lambda}\)</span>, scriviamo
+              il sistema lineare sostituendo a
+              <span class="math-span">\( \lambda\)</span> rispettivamente
+              <span class="math-span">\( (2 \pm \sqrt{2})\)</span>:
+              <span class="math-block"
+                >\[ \left\{ \begin{array}{ccccccc} 0 &amp; + &amp; 2y &amp; -
+                &amp; z &amp; = &amp; 0 \\ x &amp; + &amp; 0 &amp; - &amp; z
+                &amp; = &amp; 0 \\ 0 &amp; + &amp; 2y &amp; \mp &amp; (\sqrt{2})
+                z &amp; = &amp; 0 \\ \end{array} \right. \]</span
+              >
+              da cui otteniamo un sistema la cui soluzione è unica (ovvero
+              <span class="math-span">\( mg(2 \pm \lambda) = 0\)</span>), per
+              cui per questi valori la matrice non è diagonalizzabile. </div
+            ><div class="environment-tail"
+              ><span
+                class="material-symbols-outlined body-visibility-icon"
+                onclick="expand_environment(event)"
+                >expand_more</span
+              ></div
+            ></div
+          >
+        </article>
+        <nav class="buttons-container content-width">
+          <a
+            class="navigation-button previous"
+            href="autovalori-autovettori-e-autospazi.html"
+            rel="nofollow"
+            ><span>Autovalori, autovettori e autospazi</span></a
+          >
+          <a
+            class="navigation-button next"
+            href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+            rel="nofollow"
+            ><span>Forme bilineari e prodotto scalare</span></a
+          >
+        </nav>
+      </section>
+      <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+        <span class="material-symbols-outlined">
+          keyboard_double_arrow_down
+        </span>
+      </div>
+      <footer class="footer-wrapper">
+        <div class="copyright-wrapper">
+          <span> &copy; Copyright 2024</span> /
+          <span
+            >made by
+            <a href="https://github.com/lorenzoarlo" rel="nofollow"
+              >lorenzoarlo</a
+            ></span
+          >
+        </div>
+        /
+        <div class="privacy-wrapper">
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/"
+              rel="nofollow"
+              >Pannello preferenze cookie</a
+            ></span
+          >
+          /
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html"
+              rel="nofollow"
+              target="_blank"
+              >Privacy Policy</a
+            ></span
+          >
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

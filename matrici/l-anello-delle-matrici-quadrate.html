@@ -1,93 +1,1400 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="IT">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="./../styles/style.css" />
     <link rel="stylesheet" href="./../styles/index-style.css" />
     <link rel="stylesheet" href="./../styles/main-index-page-style.css" />
-    <link media="print" rel="stylesheet" href="./../styles/print.css"  />
-    
-        <link rel="stylesheet" href="./../styles/content-style.css" />
-    
+    <link media="print" rel="stylesheet" href="./../styles/print.css" />
+
+    <link rel="stylesheet" href="./../styles/content-style.css" />
+
     <style>
-        :root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }
+      :root {
+        --bg-clr: #296a15;
+        --fg-clr: #e8e3e3;
+      }
     </style>
     <meta name="application-name" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-title" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#296a15" />
-    <link rel="apple-touch-icon" sizes="144x144" href="./../apple-icon-144x144.png">
-    <link rel="icon" type="image/x-icon" href="./../favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="./../android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./../favicon-96x96.png">
-    <meta name="msapplication-TileColor" content="#296a15">
-    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png">
-    <link rel="manifest" href="./../manifest.json">
-    <meta name="keywords" content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
-    <meta name="description" content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'.">
-    <meta name="robots" content="index">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="themeColor" content="#296a15">
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./../apple-icon-144x144.png" />
+    <link rel="icon" type="image/x-icon" href="./../favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./../android-icon-192x192.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./../favicon-96x96.png" />
+    <meta name="msapplication-TileColor" content="#296a15" />
+    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png" />
+    <link rel="manifest" href="./../manifest.json" />
+    <meta
+      name="keywords"
+      content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
+    <meta
+      name="description"
+      content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'." />
+    <meta name="robots" content="index" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="themeColor" content="#296a15" />
     <script src="./../scripts/script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
-    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <title>Geometria e algebra - Matrici - L'anello delle matrici quadrate </title>
-</head>
-<body>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
+    <script
+      defer
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title
+      >Geometria e algebra - Matrici - L'anello delle matrici quadrate
+    </title>
+  </head>
+  <body>
     <div class="container">
-        <header class="header-wrapper">
-            <div class="title-wrapper">
-                <span class="title">
-                    Geometria e algebra
-                </span>
-                <span class="subtitle">
-                    by lorenzoarlo
-                </span>
-            </div>
-            <span class="page-title">
-                Matrici
-            </span>
-        </header>
-        <aside class="sidebar">
-            <h2 class="sidebar-title">Geometria e algebra</h2>
-            <div class="index-container">
-                <ul class="parent-ul"><li class="section-li"><a href="../index.html" rel="nofollow">Indice</a></li><li class="section-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Operazioni e strutture algebriche</a><ul><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Gruppi, anelli e campi</a></li><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html" rel="nofollow">Omomorfismi e isomorfismi</a></li></ul></li><li class="section-li "><a href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html" rel="nofollow">Spazi vettoriali</a><ul><li class="subsection-li "><a href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html" rel="nofollow">Nozioni preliminari su vettori e spazi vettoriali</a></li><li class="subsection-li "><a href="../spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html" rel="nofollow">Combinazione lineare e lineare indipendenza</a></li><li class="subsection-li "><a href="../spazi-vettoriali/sottostrutture-algebriche.html" rel="nofollow">Sottostrutture algebriche</a></li><li class="subsection-li "><a href="../spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html" rel="nofollow">Operazioni tra sottospazi vettoriali</a></li></ul></li><li class="section-li current">Matrici<ul><li class="subsection-li "><a href="lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Lo spazio vettoriale delle matrici</a></li><li class="subsection-li current">L'anello delle matrici quadrate<ul><li class="definition-li"><a href="#def3-11" rel="nofollow">Matrice triangolare</a></li><li class="definition-li"><a href="#def3-12" rel="nofollow">Matrice diagonale</a></li><li class="definition-li"><a href="#def3-13" rel="nofollow">Matrice trasposta</a></li><li class="definition-li"><a href="#def3-14" rel="nofollow">Somma di trasposte equivalente alla trasposizione della somma</a></li><li class="definition-li"><a href="#def3-15" rel="nofollow">Traccia di una matrice</a></li><li class="definition-li"><a href="#def3-16" rel="nofollow">Matrice simmetrica</a></li><li class="demonstration-li"><a href="#dem3-1" rel="nofollow">Somma di matrici simmetriche come matrice simmetrica</a></li><li class="definition-li"><a href="#def3-17" rel="nofollow">Matrice antisimmetrica</a></li><li class="definition-li"><a href="#def3-18" rel="nofollow">Spazio delle righe (e delle colonne) di una matrice</a></li><li class="definition-li"><a href="#def3-19" rel="nofollow">Rango per righe (e per colonne) di una matrice</a></li><li class="definition-li"><a href="#def3-20" rel="nofollow">Prodotto tra matrici</a></li><li class="myexample-li"><a href="#example10" rel="nofollow">Calcolare il prodotto tra matrici</a></li><li class="definition-li"><a href="#def3-21" rel="nofollow">Proprietà del prodotto tra matrici</a></li><li class="demonstration-li"><a href="#dem3-2" rel="nofollow">Traccia della matrice prodotto \( A \odot B\) equivalente alla traccia della matrice prodotto \( B \odot A\)</a></li><li class="definition-li"><a href="#def3-22" rel="nofollow">Traccia invariante rispetto alla permutazione ciclica del prodotto tra matrici</a></li><li class="definition-li"><a href="#def3-23" rel="nofollow">Anello delle matrici quadrate</a></li><li class="definition-li"><a href="#def3-24" rel="nofollow">Matrice identica (unità moltiplicativa dell'anello delle matrici quadrate)</a></li><li class="demonstration-li"><a href="#dem3-3" rel="nofollow">Divisori dello zero nell'anello delle matrici quadrate</a></li><li class="definition-li"><a href="#def3-25" rel="nofollow">Invertibilità di una matrice e matrice inversa - Prima definizione</a></li><li class="definition-li"><a href="#def3-26" rel="nofollow">Condizione necessaria e sufficiente per l'invertibilità di una matrice</a></li><li class="definition-li"><a href="#def3-27" rel="nofollow">Matrice singolare</a></li><li class="demonstration-li"><a href="#dem3-4" rel="nofollow">Unicità della matrice inversa</a></li><li class="definition-li"><a href="#def3-28" rel="nofollow">Invertibilità della matrice prodotto di due matrici invertibili</a></li><li class="demonstration-li"><a href="#dem3-5" rel="nofollow">Inversa del prodotto \( A \odot B\) come prodotto di \( B^{-1} \odot A^{-1}\)</a></li><li class="demonstration-li"><a href="#dem3-6" rel="nofollow">Trasposta del prodotto \( A \odot B\) come prodotto di \( {}^{t} \! B \odot {}^{t} \! A\)</a></li><li class="definition-li"><a href="#def3-29" rel="nofollow">Elevamento a potenza di matrici quadrate</a></li></ul></li><li class="subsection-li "><a href="operazioni-riga.html" rel="nofollow">Operazioni riga</a></li></ul></li><li class="section-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari</a><ul><li class="subsection-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari come matrici</a></li></ul></li><li class="section-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html" rel="nofollow">Applicazioni lineari</a><ul><li class="subsection-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html" rel="nofollow">Applicazioni lineari come funzioni</a></li><li class="subsection-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-matrici.html" rel="nofollow">Applicazioni lineari come matrici</a></li><li class="subsection-li "><a href="../applicazioni-lineari/matrici-simili.html" rel="nofollow">Matrici simili</a></li></ul></li><li class="section-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Determinante</a><ul><li class="subsection-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Definizioni di determinante</a></li><li class="subsection-li "><a href="../determinante/utilizzi-del-determinante.html" rel="nofollow">Utilizzi del determinante</a></li></ul></li><li class="section-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori e autovettori</a><ul><li class="subsection-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori, autovettori e autospazi</a></li><li class="subsection-li "><a href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html" rel="nofollow">Diagonalizzazione di una matrice</a></li></ul></li><li class="section-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Spazi vettoriali euclidei</a><ul><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Forme bilineari e prodotto scalare</a></li><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html" rel="nofollow">Spazi vettoriali euclidei</a></li></ul></li><li class="section-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Geometria analitica nello spazio</a><ul><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Rette nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/piani-nello-spazio.html" rel="nofollow">Piani nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html" rel="nofollow">Prodotto vettoriale</a></li></ul></li></ul>
-            </div>
-        </aside>
-        <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button" >
-            keyboard_double_arrow_right
+      <header class="header-wrapper">
+        <div class="title-wrapper">
+          <span class="title"> Geometria e algebra </span>
+          <span class="subtitle"> by lorenzoarlo </span>
         </div>
-        <section class="content-wrapper">
-            <h1 class="section-title content-width">L'anello delle matrici quadrate</h1>
-            <article class="content-container content-width">
-                <div class="definition environment" id="def3-11"><h2 class="environment-title">Definizione - Matrice triangolare</h2><div class="environment-body">     Una matrice quadrata <span class="math-span">\( A \in M_{n \times n}(\mathbb{K})\)</span> si dice     <ul class="list-container"><li class="list-item"><strong>triangolare alta</strong> se gli <strong>elementi al di sotto della diagonale principale sono tutti nulli</strong>, ovvero         <span class="math-block">\[             a_{i, j} = 0 \qquad \forall \ i \gt j         \]</span>         </li><li class="list-item"><strong>triangolare bassa</strong> se gli <strong>elementi al di sopra della diagonale principale sono tutti nulli</strong>, ovvero         <span class="math-block">\[             a_{i, j} = 0 \qquad \forall \ i \lt j         \]</span>     </li></ul>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Ad esempio - Matrice triangolare alta</h3><div class="environment-body">         La matrice <span class="math-span">\( A \in M_{4 \times 4}(\mathbb{K})\)</span> è          <span class="math-block">\[             A =              \left(             \begin{array}{ccccc}                 1 &amp; 2 &amp; 3 &amp; 4 \\                 0 &amp; 5 &amp; 6 &amp; 2 \\                 0 &amp; 0 &amp; 1 &amp; 3 \\                 0 &amp; 0 &amp; 0 &amp; 1             \end{array}             \right)         \]</span>         una matrice triangolare alta.     </div></div>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Ad esempio - Matrice triangolare bassa</h3><div class="environment-body">         La matrice <span class="math-span">\( A \in M_{4 \times 4}(\mathbb{K})\)</span> è          <span class="math-block">\[             A =              \left(             \begin{array}{ccccc}                 1 &amp; 0 &amp; 0 &amp; 0 \\                 3 &amp; 5 &amp; 0 &amp; 0 \\                 4 &amp; 2 &amp; 1 &amp; 0 \\                 5 &amp; 2 &amp; 1 &amp; 3             \end{array}             \right)         \]</span>         una matrice triangolare bassa.     </div></div> </div></div><div class="definition environment" id="def3-12"><h2 class="environment-title">Definizione - Matrice diagonale</h2><div class="environment-body">     Una matrice quadrata che è <strong>contemporaneamente una matrice triangolare alta e una matrice triangolare bassa</strong>, è detta <strong>matrice diagonale</strong>.     <div class="mynote environment"><h3 class="environment-title">Nota bene - Ad esempio</h3><div class="environment-body">         La matrice <span class="math-span">\( A \in M_{4 \times 4}(\mathbb{K})\)</span> è          <span class="math-block">\[             A =              \left(             \begin{array}{ccccc}                 1 &amp; 0 &amp; 0 &amp; 0 \\                 0 &amp; 5 &amp; 0 &amp; 0 \\                 0 &amp; 0 &amp; 1 &amp; 0 \\                 0 &amp; 0 &amp; 0 &amp; 1             \end{array}             \right)         \]</span>         una matrice diagonale.     </div></div> </div></div><div class="definition environment" id="def3-13"><h2 class="environment-title">Definizione - Matrice trasposta</h2><div class="environment-body">     Considerando la matrice <span class="math-span">\( A \in M_{m \times n}(\mathbb{K})\)</span>     <span class="math-block">\[         A =         \left(         \begin{array}{c}             a_{i, j}         \end{array}         \right)     \]</span>     la <strong>matrice trasposta</strong> di <span class="math-span">\( A\)</span> (<span class="math-span">\( {}^t \! {A}\)</span>) è la matrice in cui <strong>le righe e le colonne sono invertite</strong>, ovvero     <span class="math-block">\[         {}^t \! {A} =          \left(         \begin{array}{c}             a_{j, i}         \end{array}         \right)     \]</span>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Ad esempio</h3><div class="environment-body">         Considerando la matrice          <span class="math-block">\[             A =              \left(             \begin{array}{ccc}                 1 &amp; 2 &amp; 3 \\                 4 &amp; 5 &amp; 6             \end{array}             \right)         \]</span>         allora la sua trasposta sarà la matrice         <span class="math-block">\[             {}^{t} \! A =              \left(             \begin{array}{cc}                 1 &amp; 4 \\                 2 &amp; 5 \\                 3 &amp; 6             \end{array}             \right)         \]</span>     </div></div> </div></div><div class="definition environment" id="def3-14"><h2 class="environment-title">Definizione - Somma di trasposte equivalente alla trasposizione della somma</h2><div class="environment-body">     La <strong>somma di due matrici quadrate trasposte</strong> è equivalente alla <strong>trasposizione della somma delle due matrici</strong>     <span class="math-block">\[         {}^t \! {A} + {}^t \! {B} = {}^t \! {(A + B)}      \]</span> </div></div><div class="definition environment" id="def3-15"><h2 class="environment-title">Definizione - Traccia di una matrice</h2><div class="environment-body">     La traccia di una matrice <span class="math-span">\( A \in M_{n \times n}(\mathbb{K})\)</span> è la <strong>somma degli elementi che si trovano sulla diagonale principale</strong>, ovvero     <span class="math-block">\[         tr(A) = \sum_{i = 1}^{n} a_{i, i}     \]</span> </div></div><div class="definition environment" id="def3-16"><h2 class="environment-title">Definizione - Matrice simmetrica</h2><div class="environment-body">     Una matrice quadrata <span class="math-span">\( A\)</span> si dice <strong>simmetrica</strong> se è u<strong>guale alla sua trasposta</strong>, ovvero     <span class="math-block">\[         A = {}^t \! {A}     \]</span>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Ad esempio</h3><div class="environment-body">         La matrice          <span class="math-block">\[             \left(             \begin{array}{ccc}                 1 &amp; 2 &amp; 3\\                 2 &amp; 4 &amp; 5\\                 3 &amp; 5 &amp; 6             \end{array}             \right)         \]</span>           è simmetrica.     </div></div> </div></div><div class="demonstration environment" id="dem3-1"><h2 class="environment-title">Dimostrazione - Somma di matrici simmetriche come matrice simmetrica</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando <strong>due matrici simmetriche</strong> <span class="math-span">\( A, B \in M_{n \times n}(\mathbb{K})\)</span>, allora <strong>la matrice somma</strong> <span class="math-span">\( A + B\)</span> è anch'essa una <strong>matrice simmetrica</strong>.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare tale proposizione è necessario dimostrare che (considerando <span class="math-span">\( A\)</span> e <span class="math-span">\( B\)</span> due matrici simmetriche)         <span class="math-block">\[             A + B = {}^{t} \! (A + B)         \]</span>         Considerando quindi che, per definizione di matrice simmetrica, le matrici <span class="math-span">\( A\)</span> e <span class="math-span">\( B\)</span> sono uguali alle loro trasposte         <span class="math-block">\begin{aligned}             &amp; A + B = {}^{t} \! A + {}^{t} \! B             &amp; \iff         \end{aligned}</span>         e che la somma delle trasposte è uguale alla trasposta della somma         <span class="math-block">\begin{aligned}             &amp; A + B = {}^{t} \! (A + B)             &amp;         \end{aligned}</span>         si è dimostrata la proposizione.     </div></div> </div></div><div class="definition environment" id="def3-17"><h2 class="environment-title">Definizione - Matrice antisimmetrica</h2><div class="environment-body">     Una matrice quadrata <span class="math-span">\( A\)</span> si dice <strong>antisimmetrica</strong> se è uguale all'<strong>opposto della sua trasposta</strong>, ovvero     <span class="math-block">\[         A = - {}^t \! {A}     \]</span>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Ad esempio</h3><div class="environment-body">         La matrice          <span class="math-block">\[             \left(             \begin{array}{ccc}                 0 &amp; -1 &amp; -7 \\                 1 &amp; 0 &amp; -4 \\                 7 &amp; 4 &amp; 0             \end{array}             \right)         \]</span>           è antisimmetrica.     </div></div> </div></div><div class="definition environment" id="def3-18"><h2 class="environment-title">Definizione - Spazio delle righe (e delle colonne) di una matrice</h2><div class="environment-body">     Considerando <span class="math-span">\( A \in M_{m \times n}(\mathbb{K})\)</span>, lo <strong>spazio delle righe</strong> di <span class="math-span">\( A\)</span> è l'<strong>insieme di tutte le combinazione lineari delle <span class="math-span">\( n\)</span>-uple delle righe</strong>, ovvero     <span class="math-block">\[         \mathcal{R}(A) = \ \lt r_{1}, r_{2}, \ \ldots \ , r_{n} \gt     \]</span>     Analogamente, lo <strong>spazio delle colonne</strong> è l'i<strong>nsieme di tutte le combinazioni lineari dell <span class="math-span">\( m\)</span>-uple delle colonne</strong>, ovvero      <span class="math-block">\[         \mathcal{C}(A) = \ \lt c_{1}, c_{2}, \ \ldots \ , c_{m} \gt     \]</span> </div></div><div class="definition environment" id="def3-19"><h2 class="environment-title">Definizione - Rango per righe (e per colonne) di una matrice</h2><div class="environment-body">     Considerando <span class="math-span">\( A \in M_{m \times n}(\mathbb{K})\)</span>, il <strong>rango per righe di una matrice è la dimensione dello spazio delle righe</strong> di tale matrice, ovvero     <span class="math-block">\[         r_{\mathcal{R}}(A) = dim(\lt r_{1}, r_{2}, \ \ldots \ , r_{n}\gt)     \]</span>     Analogamente il <strong>rango per colonne è la dimensione dello spazio delle colonne</strong> di tale matrice, ovvero      <span class="math-block">\[         r_{\mathcal{C}}(A) = dim(\lt r_{1}, r_{2}, \ \ldots \ , r_{n}\gt)     \]</span> </div></div><div class="definition environment" id="def3-20"><h2 class="environment-title">Definizione - Prodotto tra matrici</h2><div class="environment-body">     Considerando una matrice <span class="math-span">\( A \in M_{m \times x}(\mathbb{K})\)</span> di <span class="math-span">\( m\)</span> righe e <span class="math-span">\( x\)</span> colonne e una matrice <span class="math-span">\( B \in M_{x \times n}(\mathbb{K})\)</span> di <span class="math-span">\( x\)</span> righe e <span class="math-span">\( n\)</span> colonne (ovvero il numero di colonne di <span class="math-span">\( A\)</span> è uguale al numero di righe di <span class="math-span">\( B\)</span>), allora la matrice prodotto è una matrice <span class="math-span">\( C \in M_{m \times n}\)</span> di <span class="math-span">\( m\)</span> righe e <span class="math-span">\( n\)</span> colonne contenente in ogni "cella" <span class="math-span">\( i, j\)</span> la <strong>somma di tutti i prodotti della <span class="math-span">\( i\)</span>-esima riga e della <span class="math-span">\( j\)</span>-esima colonna</strong>, ovvero     <span class="math-block">\[         A \odot B = C         \qquad         \text{con } c_{i, j} = \sum_{k = 1}^{x} a_{i, k} + b_{k, j}     \]</span>     Si ha quindi che <strong>il prodotto tra matrici non è generalmente commutativo</strong>.     <div class="mynote environment"><h3 class="environment-title">Nota bene - Il prodotto matriciale in altre parole</h3><div class="environment-body">         Altro metodo utile per ricordare l'ordine delle operazioni è prima predisporre la matrice prodotto, come una matrice <span class="math-span">\( m \times n\)</span> (nel caso il prodotto sia tra matrici <span class="math-span">\( m \times k\)</span> e <span class="math-span">\( k \times n\)</span>) e poi "riempire" la matrice inserendo nel punto <span class="math-span">\( (i,j)\)</span> la somma dei prodotti della riga <span class="math-span">\( i\)</span> della prima matrice con la colonna <span class="math-span">\( j\)</span> della seconda.     </div></div> </div></div><div class="myexample environment" id="example10"><h2 class="environment-title">Esempio - Calcolare il prodotto tra matrici</h2><div class="environment-body collapsed">     Considerando le matrici     <span class="math-block">\begin{aligned}         &amp; A =         \left(         \begin{array}{ccc}             1 &amp; 2 &amp; 3 \\             4 &amp; 5 &amp; 6 \\         \end{array}         \right)         &amp; B =         \left(         \begin{array}{cc}             7 &amp; 8 \\             9 &amp; 1 \\             2 &amp; 3         \end{array}         \right)     \end{aligned}</span>     calcolare il prodotto <span class="math-span">\( A \odot B\)</span>.     <br/>     Dato che abbiamo una matrice <span class="math-span">\( 2 \times 3\)</span> e una matrice <span class="math-span">\( 3 \times 2\)</span>, la matrice prodotto sarà una matrice <span class="math-span">\( 2 \times 2\)</span>, ovvero     <span class="math-block">\[         \begin{array}{ccl}             \left(         \begin{array}{ccc}             1 &amp; 2 &amp; 3 \\             4 &amp; 5 &amp; 6 \\         \end{array}         \right)         \odot         \left(         \begin{array}{cc}             7 &amp; 8 \\             9 &amp; 1 \\             2 &amp; 3         \end{array}         \right)         &amp; = &amp;         \\         \left(         \begin{array}{cc}             (1 \cdot 7 + 2 \cdot 9 + 3 \cdot 2) &amp; (1 \cdot 8 + 2 \cdot 1 + 3 \cdot 3) \\             (4 \cdot 7 + 5 \cdot 9 + 6 \cdot 2) &amp; (4 \cdot 8 + 5 \cdot 6 + 3 \cdot 3) \\         \end{array}         \right)         &amp; = &amp;          \left(         \begin{array}{cc}             31 &amp; 19 \\             85 &amp; 71 \\         \end{array}         \right)         \end{array}     \]</span>  </div><div class="environment-tail"><span class="material-symbols-outlined body-visibility-icon" onclick="expand_environment(event)">expand_more</span></div></div><div class="definition environment" id="def3-21"><h2 class="environment-title">Definizione - Proprietà del prodotto tra matrici</h2><div class="environment-body">     Considerando tre matrici <span class="math-span">\( A, B, C\)</span> il cui prodotto è ammissibile, allora è valida:     <ul class="list-container"><li class="list-item">la <strong>proprietà associativa</strong>, ovvero         <span class="math-block">\[             (A \odot B) \odot C = A \odot (B \odot C)         \]</span>         </li><li class="list-item">la <strong>proprietà distributiva</strong>, ovvero         <span class="math-block">\[             A \odot (B + C) = A \odot B + A \odot C         \]</span>     </li></ul>     Si ricorda tuttavia che il <strong>prodotto tra matrici non è generalmente commutativo</strong>. </div></div><div class="demonstration environment" id="dem3-2"><h2 class="environment-title">Dimostrazione - Traccia della matrice prodotto <span class="math-span">\( A \odot B\)</span> equivalente alla traccia della matrice prodotto <span class="math-span">\( B \odot A\)</span></h2><div class="environment-body">     Dato la seguente proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando due matrici <span class="math-span">\( A, B \in M_{n \times n}(\mathbb{K})\)</span>, la traccia del prodotto <span class="math-span">\( A \odot B\)</span> è equivalente alla traccia del prodotto <span class="math-span">\( B \odot A\)</span>, ovvero         <span class="math-block">\[             tr(A \odot B) = tr(B \odot A)         \]</span>     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare la proposizione, consideriamo la matrice <span class="math-span">\( C\)</span> come la matrice prodotto <span class="math-span">\( A \odot B\)</span> e <span class="math-span">\( D\)</span> la matrice prodotto <span class="math-span">\( B \odot A\)</span>, ovvero         <span class="math-block">\[             \begin{array}{lcl}                 A                  &amp; = &amp;                  \left(                 \begin{array}{c}                     a_{i, j}                 \end{array}                 \right)                 \\                 B                  &amp; = &amp;                  \left(                 \begin{array}{c}                     b_{i, j}                 \end{array}                 \right)                 \\                 C = A \odot B                 &amp; = &amp;                  \left(                 \begin{array}{c}                     c_{i, j}                 \end{array}                 \right)                 \\                 D = B \odot A                 &amp; = &amp;                  \left(                 \begin{array}{c}                     d_{i, j}                 \end{array}                 \right)             \end{array}         \]</span>         Allora è possibile scrivere un qualsiasi elemento <span class="math-span">\( c_{i, j}\)</span> come         <span class="math-block">\[             c_{i, j} = \sum_{r = 1}^{n}(a_{i, r} \cdot b_{r, j})         \]</span>         e un qualsiasi elemento <span class="math-span">\( d_{i, j}\)</span> come          <span class="math-block">\[             d_{i, j} = \sum_{r = 1}^{n}(b_{i, r} \cdot a_{r, j})         \]</span>         Scrivendo quindi in questo modo le tracce di <span class="math-span">\( C\)</span> e <span class="math-span">\( D\)</span> si avrà         <span class="math-block">\begin{aligned}             &amp; tr(C) = \sum_{i = 1}^{n}(c_{i, i}) = \sum_{i = 1}^{n}(\sum_{r = 1}^{n}(a_{i, r} \cdot b_{r, i}))             \\             &amp; tr(D) = \sum_{i = 1}^{n}(d_{i, i}) = \sum_{i = 1}^{n}(\sum_{r = 1}^{n}(b_{i, r} \cdot a_{r, i}))         \end{aligned}</span>         Commutando prima il prodotto interno alla sommatoria della traccia di <span class="math-span">\( D\)</span> e poi commutando l'ordine delle sommatorie (ovvero invertendo gli indici <span class="math-span">\( i\)</span> e <span class="math-span">\( r\)</span> grazie alla proprietà delle sommatorie), si ottiene         <span class="math-block">\begin{aligned}             \sum_{i = 1}^{n}(\sum_{r = 1}^{n}(a_{i, r} \cdot b_{r, i})) = \sum_{i = 1}^{n}(\sum_{r = 1}^{n}(a_{i, r} \cdot b_{r, i}))         \end{aligned}</span>         che dimostra la proposizione.     </div></div> </div></div><div class="definition environment" id="def3-22"><h2 class="environment-title">Definizione - Traccia invariante rispetto alla permutazione ciclica del prodotto tra matrici</h2><div class="environment-body">     Considerando tre matrici <span class="math-span">\( A, B, C \in M_{n \times n}(f)\)</span>, allora la traccia è invariante rispetto alla permutazione ciclica, ovvero     <span class="math-block">\[         tr(A \odot B \odot C) = tr(B \odot C \odot A) = tr(C \odot A \odot B)     \]</span>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Attenzione!</h3><div class="environment-body">         È da notare che la relazione non comprende <span class="math-span">\( tr(BAC)\)</span> e <span class="math-span">\( tr(ACB)\)</span> e <span class="math-span">\( tr(CBA)\)</span> im quanto non sono permutazioni cicliche.     </div></div> </div></div><div class="definition environment" id="def3-23"><h2 class="environment-title">Definizione - Anello delle matrici quadrate</h2><div class="environment-body">     La struttura algebrica     <span class="math-block">\[         (M_{n \times n}(\mathbb{K}), +, \odot)     \]</span>     dove <span class="math-span">\( \odot\)</span> è il prodotto righe per colonne tra matrici, è un <strong>anello con unità</strong>. </div></div><div class="definition environment" id="def3-24"><h2 class="environment-title">Definizione - Matrice identica (unità moltiplicativa dell'anello delle matrici quadrate)</h2><div class="environment-body">     La <strong>matrice identica</strong> (anche detta unità moltiplicativa dell'anello delle matrici quadrate <span class="math-span">\( (M_{n \times n}(\mathbb{K}), +, \odot)\)</span>) è la matrice diagonale     <span class="math-block">\[         I_{n} =         \begin{pmatrix}             1 &amp; 0 &amp; 0 &amp; 0 \\             0 &amp; 1 &amp; 0 &amp; 0 \\             0 &amp; 0 &amp; \ddots &amp; 0 \\             0 &amp; 0 &amp; 0 &amp; 1         \end{pmatrix}     \]</span> </div></div><div class="demonstration environment" id="dem3-3"><h2 class="environment-title">Dimostrazione - Divisori dello zero nell'anello delle matrici quadrate</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         L'anello delle matrici quadrate <strong>ammette divisori dello zero</strong>.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare questa proposizione, consideriamo le matrici quadrate non nulle <span class="math-span">\( A, B \in M_{n \times n}(\mathbb{K})\)</span>         <span class="math-block">\[             A = B =              \left(             \begin{array}{cc}                 0 &amp; 0 \\                 1 &amp; 0             \end{array}             \right)         \]</span>         ed effettuando il prodotto <span class="math-span">\( A \odot B\)</span>         <span class="math-block">\[             \left(             \begin{array}{cc}                 0 &amp; 0 \\                 1 &amp; 0              \end{array}             \right)             \odot             \left(             \begin{array}{cc}                 0 &amp; 0 \\                 1 &amp; 0             \end{array}             \right)             =             \left(             \begin{array}{cc}                 0 &amp; 0 \\                 0 &amp; 0             \end{array}             \right)         \]</span>         si ottiene la matrice nulla, dimostrando quindi la proposizione.     </div></div> </div></div><div class="definition environment" id="def3-25"><h2 class="environment-title">Definizione - Invertibilità di una matrice e matrice inversa - Prima definizione</h2><div class="environment-body">     Data una matrice <span class="math-span">\( A \in M_{n \times n}(\mathbb{K})\)</span> essa <strong>ammette inversa</strong> (<span class="math-span">\( A^{-1}\)</span>) se <strong>esiste una matrice tale che il prodotto matriciale tra le due è la matrice identica</strong>, ovvero     <span class="math-block">\[         A \odot A^{-1} = A^{-1} \odot A = I     \]</span>     Tale matrice, è detta matrice inversa di <span class="math-span">\( A\)</span>.     <div class="mynote environment"><h3 class="environment-title">Nota bene - Error 404 - Logic not found</h3><div class="environment-body">         Bisogna notare che solo una matrice quadrata ammette inversa, quindi cercare l'inversa di una matrice rettangolare è un errore logico.     </div></div> </div></div><div class="definition environment" id="def3-26"><h2 class="environment-title">Definizione - Condizione necessaria e sufficiente per l'invertibilità di una matrice</h2><div class="environment-body">     Data una matrice <span class="math-span">\( A \in M_{n \times n}(\mathbb{K})\)</span> essa <strong>ammette inversa se e solo se il suo determinante è diverso da <span class="math-span">\( 0\)</span></strong>. </div></div><div class="definition environment" id="def3-27"><h2 class="environment-title">Definizione - Matrice singolare</h2><div class="environment-body">     Una matrice che <strong>non ammette inversa</strong> è detta <strong>singolare</strong>. </div></div><div class="demonstration environment" id="dem3-4"><h2 class="environment-title">Dimostrazione - Unicità della matrice inversa</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Se la <strong>matrice inversa esiste, essa è unica</strong>.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare questa proposizione consideriamo una matrice quadrata <span class="math-span">\( A\)</span> e ipotizziamo per assurdo che esistano due matrici inverse (<span class="math-span">\( B\)</span>, <span class="math-span">\( C\)</span>), allora l'espressione         <span class="math-block">\[             B \odot A \odot C         \]</span>         per la proprietà associativa, può essere svolta in due modi, ovvero         <span class="math-block">\begin{aligned}             &amp; (B \odot A) \odot C = B \odot (A \odot C)             &amp; \iff         \end{aligned}</span>         e, per definizione di matrice inversa, si ha che <span class="math-span">\( B \odot A = I\)</span> e che <span class="math-span">\( A \odot C = I\)</span>, quindi         <span class="math-block">\begin{aligned}             &amp; I \odot C = B \odot I             &amp; \iff \\             &amp; C = B             &amp;         \end{aligned}</span>         da cui si è dimostrata la proposizione.     </div></div> </div></div><div class="definition environment" id="def3-28"><h2 class="environment-title">Definizione - Invertibilità della matrice prodotto di due matrici invertibili</h2><div class="environment-body">     Il <strong>prodotto di due matrici invertibili</strong>, è anch'esso una <strong>matrice invertibile</strong>. </div></div><div class="demonstration environment" id="dem3-5"><h2 class="environment-title">Dimostrazione - Inversa del prodotto <span class="math-span">\( A \odot B\)</span> come prodotto di <span class="math-span">\( B^{-1} \odot A^{-1}\)</span></h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando due matrici invertibili <span class="math-span">\( A, B \in M_{n \times n}(\mathbb{K})\)</span> allora l'<strong>inverso del prodotto delle due matrici è il prodotto delle inverse commutate</strong>, ovvero         <span class="math-block">\[             (A \odot B)^{-1} = B^{-1} \odot A^{-1}         \]</span>     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare la proposizione è necessario dimostrare che l'inversa della matrice <span class="math-span">\( A \odot B\)</span> (che sarebbe <span class="math-span">\( (A \odot B)^{-1}\)</span>) è la matrice <span class="math-span">\( B^{-1} \odot A^{-1}\)</span>.          <br/>         Per farlo dimostriamo la seguente espressione         <span class="math-block">\begin{aligned}             &amp; (A \odot B) \odot (B^{-1} \odot A^{-1}) = I             &amp; \iff         \end{aligned}</span>         Per la proprietà associativa (e per definizione di matrice inversa), è quindi possibile scrivere         <span class="math-block">\begin{aligned}             &amp; A \odot (B \odot B^{-1}) \odot A^{-1} = I             &amp; \iff \\             &amp; A \odot I \odot A^{-1} = I             &amp; \iff \\             &amp; I = I         \end{aligned}</span>         che dimostra la proposizione.     </div></div> </div></div><div class="demonstration environment" id="dem3-6"><h2 class="environment-title">Dimostrazione - Trasposta del prodotto <span class="math-span">\( A \odot B\)</span> come prodotto di <span class="math-span">\( {}^{t} \! B \odot {}^{t} \! A\)</span></h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando una matrice <span class="math-span">\( A \in M_{m \times k}(\mathbb{K})\)</span> e <span class="math-span">\( B \in M_{k \times n}(\mathbb{K})\)</span> allora         <span class="math-block">\[             {}^t \! (A \odot B) = {}^t \! B \odot {}^t \! A         \]</span>     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare la proposizione, consideriamo le seguenti matrici:         <ul class="list-container"><li class="list-item">la matrice <span class="math-span">\( A\)</span>, di dimensione <span class="math-span">\( m \times k\)</span>             <span class="math-block">\[                 A                  =                 \left(                 \begin{array}{c}                     a_{i, j}                 \end{array}                 \right)                 =                 \left(                 \begin{array}{cccc}                     a_{1, 1} &amp; a_{1, 2} &amp; \cdots &amp; a_{1, k} \\                     a_{2, 1} &amp; a_{2, 2} &amp; \cdots &amp; a_{2, k} \\                     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\                     a_{m, 1} &amp; a_{m, 2} &amp; \cdots &amp; a_{m, k}                 \end{array}                 \right)             \]</span>             </li><li class="list-item">la matrice <span class="math-span">\( {}^{t} \! A\)</span>, di dimensione <span class="math-span">\( k \times m\)</span>             <span class="math-block">\[                 {}^{t} \! A                 =                 \left(                 \begin{array}{c}                     a_{j, i}                 \end{array}                 \right)                 =                 \left(                 \begin{array}{cccc}                     a_{1, 1} &amp; a_{1, 2} &amp; \cdots &amp; a_{1, m} \\                     a_{2, 1} &amp; a_{2, 2} &amp; \cdots &amp; a_{2, m} \\                     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\                     a_{k, 1} &amp; a_{k, 2} &amp; \cdots &amp; a_{k, m}                 \end{array}                 \right)             \]</span>             </li><li class="list-item">la matrice <span class="math-span">\( B\)</span>, di dimensione <span class="math-span">\( k \times n\)</span>             <span class="math-block">\[                 B                 =                 \left(                 \begin{array}{c}                     b_{i, j}                 \end{array}                 \right)                 =                 \left(                 \begin{array}{cccc}                     b_{1, 1} &amp; b_{1, 2} &amp; \cdots &amp; b_{1, n} \\                     b_{2, 1} &amp; b_{2, 2} &amp; \cdots &amp; b_{2, n} \\                     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\                     b_{k, 1} &amp; b_{k, 2} &amp; \cdots &amp; b_{k, n}                 \end{array}                 \right)             \]</span>             </li><li class="list-item">la matrice <span class="math-span">\( {}^{t} \! B\)</span>, di dimensione <span class="math-span">\( n \times k\)</span>             <span class="math-block">\[                 {}^{t} \! B                 =                 \left(                 \begin{array}{c}                     b_{j, i}                 \end{array}                 \right)                 =                 \left(                 \begin{array}{cccc}                     b_{1, 1} &amp; b_{1, 2} &amp; \cdots &amp; b_{1, k} \\                     b_{2, 1} &amp; b_{2, 2} &amp; \cdots &amp; b_{2, k} \\                     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\                     b_{n, 1} &amp; b_{n, 2} &amp; \cdots &amp; b_{n, k}                 \end{array}                 \right)             \]</span>             </li><li class="list-item">la matrice <span class="math-span">\( C = A \odot B\)</span>, di dimensione <span class="math-span">\( m \times n\)</span>             <span class="math-block">\[                 C                 =                 \left(                 \begin{array}{c}                     c_{i, j}                 \end{array}                 \right)                 =                 \left(                 \begin{array}{cccc}                     c_{1, 1} &amp; c_{1, 2} &amp; \cdots &amp; c_{1, n} \\                     c_{2, 1} &amp; c_{2, 2} &amp; \cdots &amp; c_{2, n} \\                     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\                     c_{m, 1} &amp; c_{m, 2} &amp; \cdots &amp; c_{m, n}                 \end{array}                 \right)             \]</span>             </li><li class="list-item">la matrice <span class="math-span">\( {}^{t} \! C = {}^{t} \! (A \odot B)\)</span>, di dimensione <span class="math-span">\( n \times m\)</span>             <span class="math-block">\[                 {}^{t} \! C                 =                 \left(                 \begin{array}{c}                     c_{j, i}                 \end{array}                 \right)                 =                 \left(                 \begin{array}{cccc}                     c_{1, 1} &amp; c_{1, 2} &amp; \cdots &amp; c_{1, m} \\                     c_{2, 1} &amp; c_{2, 2} &amp; \cdots &amp; c_{2, m} \\                     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\                     c_{n, 1} &amp; c_{n, 2} &amp; \cdots &amp; c_{n, m}                 \end{array}                 \right)             \]</span>             </li><li class="list-item">la matrice <span class="math-span">\( D = {}^{t} \! B \odot {}^{t} \! A\)</span>, di dimensione <span class="math-span">\( n \times m\)</span>             <span class="math-block">\[                 D                 =                 \left(                 \begin{array}{c}                     d_{i, j}                 \end{array}                 \right)                 =                 \left(                 \begin{array}{cccc}                     d_{1, 1} &amp; d_{1, 2} &amp; \cdots &amp; d_{1, m} \\                     d_{2, 1} &amp; d_{2, 2} &amp; \cdots &amp; d_{2, m} \\                     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\                     d_{n, 1} &amp; d_{n, 2} &amp; \cdots &amp; d_{n, m}                 \end{array}                 \right)             \]</span>         </li></ul>         si vuole quindi dimostrare che         <span class="math-block">\[             \left(                 \begin{array}{c}                     c_{j, i}                 \end{array}                 \right)             =             \left(                 \begin{array}{c}                     d_{i, j}                 \end{array}             \right)         \]</span>         ovvero che ogni elemento <span class="math-span">\( c_{j, i}\)</span> è uguale ad ogni elemento <span class="math-span">\( d_{i, j}\)</span>.         <br/>         Detto ciò, possiamo scivere un generico elemento <span class="math-span">\( c_{i, j}\)</span> come la seguente sommatoria         <span class="math-block">\[             c_{i, j} = \sum_{r = 1}^{k} a_{i, r} \cdot b_{r, j}         \]</span>         mentre un generico elemento di <span class="math-span">\( c_{j, i}\)</span> può essere scritto come (invertendo l'indice <span class="math-span">\( i\)</span> con <span class="math-span">\( j\)</span>)         <span class="math-block">\[             c_{j, i} = \sum_{r = 1}^{k} a_{j, r} \cdot b_{r, i}         \]</span>         Scriviamo quindi un generico elemento di <span class="math-span">\( D\)</span>, ovvero         <span class="math-block">\[             d_{i, j} = \sum_{r = 1}^{k} b_{r, i} \cdot a_{j, r}         \]</span>         in quanto stiamo considerando le trasposte. Utilizzando quindi la proprietà commutativa interna alla sommatoria si ottiene         <span class="math-block">\[             d_{i, j} = \sum_{r = 1}^{k} a_{j, r} \cdot b_{r, i} = c_{j, i}         \]</span>         che dimostra la proposizione.     </div></div> </div></div><div class="definition environment" id="def3-29"><h2 class="environment-title">Definizione - Elevamento a potenza di matrici quadrate</h2><div class="environment-body">     Considerando una matrice <span class="math-span">\( A \in M_{n \times n}(\mathbb{K})\)</span> e un intero <span class="math-span">\( k \geq 2\)</span>, la matrice <span class="math-span">\( A^{k}\)</span> è il risultato della moltiplicazione di <span class="math-span">\( k\)</span> matrici <span class="math-span">\( A\)</span>, ovvero     <span class="math-block">\[         A^{k} = A_{1} \odot A_{2} \odot \ldots \odot A_{k}      \]</span>     Inoltre si definisce anche      <span class="math-block">\begin{aligned}         &amp; A^{0} = I         &amp; A^{1} = A     \end{aligned}</span>     e, se <span class="math-span">\( A\)</span> è invertibile     <span class="math-block">\[         A^{-k} = (A^{-1})^{k}     \]</span>     ovvero, si ha che è uguale alla matrice inversa elevata <span class="math-span">\( k\)</span> volte. </div></div>
-            </article>
-            <nav class="buttons-container content-width">
-                <a class="navigation-button previous" href="lo-spazio-vettoriale-delle-matrici.html" rel="nofollow"><span>Lo spazio vettoriale delle matrici</span></a>
-                <a class="navigation-button next" href="operazioni-riga.html" rel="nofollow"><span>Operazioni riga</span></a>
-            </nav>
-        </section>
-        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
-            <span class="material-symbols-outlined">
-                keyboard_double_arrow_down
-            </span>
+        <span class="page-title"> Matrici </span>
+      </header>
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Geometria e algebra</h2>
+        <div class="index-container">
+          <ul class="parent-ul"
+            ><li class="section-li"
+              ><a href="../index.html" rel="nofollow">Indice</a></li
+            ><li class="section-li"
+              ><a
+                href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                rel="nofollow"
+                >Operazioni e strutture algebriche</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                    rel="nofollow"
+                    >Gruppi, anelli e campi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html"
+                    rel="nofollow"
+                    >Omomorfismi e isomorfismi</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                rel="nofollow"
+                >Spazi vettoriali</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                    rel="nofollow"
+                    >Nozioni preliminari su vettori e spazi vettoriali</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html"
+                    rel="nofollow"
+                    >Combinazione lineare e lineare indipendenza</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/sottostrutture-algebriche.html"
+                    rel="nofollow"
+                    >Sottostrutture algebriche</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html"
+                    rel="nofollow"
+                    >Operazioni tra sottospazi vettoriali</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li current"
+              >Matrici<ul
+                ><li class="subsection-li"
+                  ><a
+                    href="lo-spazio-vettoriale-delle-matrici.html"
+                    rel="nofollow"
+                    >Lo spazio vettoriale delle matrici</a
+                  ></li
+                ><li class="subsection-li current"
+                  >L'anello delle matrici quadrate<ul
+                    ><li class="definition-li"
+                      ><a href="#def3-11" rel="nofollow"
+                        >Matrice triangolare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-12" rel="nofollow"
+                        >Matrice diagonale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-13" rel="nofollow"
+                        >Matrice trasposta</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-14" rel="nofollow"
+                        >Somma di trasposte equivalente alla trasposizione della
+                        somma</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-15" rel="nofollow"
+                        >Traccia di una matrice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-16" rel="nofollow"
+                        >Matrice simmetrica</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem3-1" rel="nofollow"
+                        >Somma di matrici simmetriche come matrice simmetrica</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-17" rel="nofollow"
+                        >Matrice antisimmetrica</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-18" rel="nofollow"
+                        >Spazio delle righe (e delle colonne) di una matrice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-19" rel="nofollow"
+                        >Rango per righe (e per colonne) di una matrice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-20" rel="nofollow"
+                        >Prodotto tra matrici</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="#example10" rel="nofollow"
+                        >Calcolare il prodotto tra matrici</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-21" rel="nofollow"
+                        >Proprietà del prodotto tra matrici</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem3-2" rel="nofollow"
+                        >Traccia della matrice prodotto \( A \odot B\)
+                        equivalente alla traccia della matrice prodotto \( B
+                        \odot A\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-22" rel="nofollow"
+                        >Traccia invariante rispetto alla permutazione ciclica
+                        del prodotto tra matrici</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-23" rel="nofollow"
+                        >Anello delle matrici quadrate</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-24" rel="nofollow"
+                        >Matrice identica (unità moltiplicativa dell'anello
+                        delle matrici quadrate)</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem3-3" rel="nofollow"
+                        >Divisori dello zero nell'anello delle matrici
+                        quadrate</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-25" rel="nofollow"
+                        >Invertibilità di una matrice e matrice inversa - Prima
+                        definizione</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-26" rel="nofollow"
+                        >Condizione necessaria e sufficiente per l'invertibilità
+                        di una matrice</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-27" rel="nofollow"
+                        >Matrice singolare</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem3-4" rel="nofollow"
+                        >Unicità della matrice inversa</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-28" rel="nofollow"
+                        >Invertibilità della matrice prodotto di due matrici
+                        invertibili</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem3-5" rel="nofollow"
+                        >Inversa del prodotto \( A \odot B\) come prodotto di \(
+                        B^{-1} \odot A^{-1}\)</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem3-6" rel="nofollow"
+                        >Trasposta del prodotto \( A \odot B\) come prodotto di
+                        \( {}^{t} \! B \odot {}^{t} \! A\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def3-29" rel="nofollow"
+                        >Elevamento a potenza di matrici quadrate</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="operazioni-riga.html" rel="nofollow"
+                    >Operazioni riga</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                rel="nofollow"
+                >Sistemi lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Sistemi lineari come matrici</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                rel="nofollow"
+                >Applicazioni lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come funzioni</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/applicazioni-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/matrici-simili.html"
+                    rel="nofollow"
+                    >Matrici simili</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../determinante/definizioni-di-determinante.html"
+                rel="nofollow"
+                >Determinante</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/definizioni-di-determinante.html"
+                    rel="nofollow"
+                    >Definizioni di determinante</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/utilizzi-del-determinante.html"
+                    rel="nofollow"
+                    >Utilizzi del determinante</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                rel="nofollow"
+                >Autovalori e autovettori</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                    rel="nofollow"
+                    >Autovalori, autovettori e autospazi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html"
+                    rel="nofollow"
+                    >Diagonalizzazione di una matrice</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                rel="nofollow"
+                >Spazi vettoriali euclidei</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                    rel="nofollow"
+                    >Forme bilineari e prodotto scalare</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html"
+                    rel="nofollow"
+                    >Spazi vettoriali euclidei</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                rel="nofollow"
+                >Geometria analitica nello spazio</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                    rel="nofollow"
+                    >Rette nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/piani-nello-spazio.html"
+                    rel="nofollow"
+                    >Piani nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html"
+                    rel="nofollow"
+                    >Prodotto vettoriale</a
+                  ></li
+                ></ul
+              ></li
+            ></ul
+          >
         </div>
-            <footer class="footer-wrapper">
-                <div class="copyright-wrapper">
-                    <span> &copy; Copyright 2024</span> /
-                    <span>made by <a href="https://github.com/lorenzoarlo" rel="nofollow">lorenzoarlo</a></span>
-                </div>
-                /
-                <div class="privacy-wrapper">
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze
-                            cookie</a></span> /
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow"
-                            target="_blank">Privacy Policy</a></span>
-                </div>
-            </footer>
+      </aside>
+      <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button">
+        keyboard_double_arrow_right
+      </div>
+      <section class="content-wrapper">
+        <h1 class="section-title content-width"
+          >L'anello delle matrici quadrate</h1
+        >
+        <article class="content-container content-width">
+          <div class="definition environment" id="def3-11"
+            ><h2 class="environment-title">Definizione - Matrice triangolare</h2
+            ><div class="environment-body">
+              Una matrice quadrata
+              <span class="math-span"
+                >\( A \in M_{n \times n}(\mathbb{K})\)</span
+              >
+              si dice
+              <ul class="list-container"
+                ><li class="list-item"
+                  ><strong>triangolare alta</strong> se gli
+                  <strong
+                    >elementi al di sotto della diagonale principale sono tutti
+                    nulli</strong
+                  >, ovvero
+                  <span class="math-block"
+                    >\[ a_{i, j} = 0 \qquad \forall \ i \gt j \]</span
+                  > </li
+                ><li class="list-item"
+                  ><strong>triangolare bassa</strong> se gli
+                  <strong
+                    >elementi al di sopra della diagonale principale sono tutti
+                    nulli</strong
+                  >, ovvero
+                  <span class="math-block"
+                    >\[ a_{i, j} = 0 \qquad \forall \ i \lt j \]</span
+                  >
+                </li></ul
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - Ad esempio - Matrice triangolare alta</h3
+                ><div class="environment-body">
+                  La matrice
+                  <span class="math-span"
+                    >\( A \in M_{4 \times 4}(\mathbb{K})\)</span
+                  >
+                  è
+                  <span class="math-block"
+                    >\[ A = \left( \begin{array}{ccccc} 1 &amp; 2 &amp; 3 &amp;
+                    4 \\ 0 &amp; 5 &amp; 6 &amp; 2 \\ 0 &amp; 0 &amp; 1 &amp; 3
+                    \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{array} \right) \]</span
+                  >
+                  una matrice triangolare alta.
+                </div></div
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - Ad esempio - Matrice triangolare bassa</h3
+                ><div class="environment-body">
+                  La matrice
+                  <span class="math-span"
+                    >\( A \in M_{4 \times 4}(\mathbb{K})\)</span
+                  >
+                  è
+                  <span class="math-block"
+                    >\[ A = \left( \begin{array}{ccccc} 1 &amp; 0 &amp; 0 &amp;
+                    0 \\ 3 &amp; 5 &amp; 0 &amp; 0 \\ 4 &amp; 2 &amp; 1 &amp; 0
+                    \\ 5 &amp; 2 &amp; 1 &amp; 3 \end{array} \right) \]</span
+                  >
+                  una matrice triangolare bassa.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def3-12"
+            ><h2 class="environment-title">Definizione - Matrice diagonale</h2
+            ><div class="environment-body">
+              Una matrice quadrata che è
+              <strong
+                >contemporaneamente una matrice triangolare alta e una matrice
+                triangolare bassa</strong
+              >, è detta <strong>matrice diagonale</strong>.
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - Ad esempio</h3
+                ><div class="environment-body">
+                  La matrice
+                  <span class="math-span"
+                    >\( A \in M_{4 \times 4}(\mathbb{K})\)</span
+                  >
+                  è
+                  <span class="math-block"
+                    >\[ A = \left( \begin{array}{ccccc} 1 &amp; 0 &amp; 0 &amp;
+                    0 \\ 0 &amp; 5 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0
+                    \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{array} \right) \]</span
+                  >
+                  una matrice diagonale.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def3-13"
+            ><h2 class="environment-title">Definizione - Matrice trasposta</h2
+            ><div class="environment-body">
+              Considerando la matrice
+              <span class="math-span"
+                >\( A \in M_{m \times n}(\mathbb{K})\)</span
+              >
+              <span class="math-block"
+                >\[ A = \left( \begin{array}{c} a_{i, j} \end{array} \right)
+                \]</span
+              >
+              la <strong>matrice trasposta</strong> di
+              <span class="math-span">\( A\)</span> (<span class="math-span"
+                >\( {}^t \! {A}\)</span
+              >) è la matrice in cui
+              <strong>le righe e le colonne sono invertite</strong>, ovvero
+              <span class="math-block"
+                >\[ {}^t \! {A} = \left( \begin{array}{c} a_{j, i} \end{array}
+                \right) \]</span
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - Ad esempio</h3
+                ><div class="environment-body">
+                  Considerando la matrice
+                  <span class="math-block"
+                    >\[ A = \left( \begin{array}{ccc} 1 &amp; 2 &amp; 3 \\ 4
+                    &amp; 5 &amp; 6 \end{array} \right) \]</span
+                  >
+                  allora la sua trasposta sarà la matrice
+                  <span class="math-block"
+                    >\[ {}^{t} \! A = \left( \begin{array}{cc} 1 &amp; 4 \\ 2
+                    &amp; 5 \\ 3 &amp; 6 \end{array} \right) \]</span
+                  >
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def3-14"
+            ><h2 class="environment-title"
+              >Definizione - Somma di trasposte equivalente alla trasposizione
+              della somma</h2
+            ><div class="environment-body">
+              La <strong>somma di due matrici quadrate trasposte</strong> è
+              equivalente alla
+              <strong>trasposizione della somma delle due matrici</strong>
+              <span class="math-block"
+                >\[ {}^t \! {A} + {}^t \! {B} = {}^t \! {(A + B)} \]</span
+              >
+            </div></div
+          ><div class="definition environment" id="def3-15"
+            ><h2 class="environment-title"
+              >Definizione - Traccia di una matrice</h2
+            ><div class="environment-body">
+              La traccia di una matrice
+              <span class="math-span"
+                >\( A \in M_{n \times n}(\mathbb{K})\)</span
+              >
+              è la
+              <strong
+                >somma degli elementi che si trovano sulla diagonale
+                principale</strong
+              >, ovvero
+              <span class="math-block"
+                >\[ tr(A) = \sum_{i = 1}^{n} a_{i, i} \]</span
+              >
+            </div></div
+          ><div class="definition environment" id="def3-16"
+            ><h2 class="environment-title">Definizione - Matrice simmetrica</h2
+            ><div class="environment-body">
+              Una matrice quadrata <span class="math-span">\( A\)</span> si dice
+              <strong>simmetrica</strong> se è u<strong
+                >guale alla sua trasposta</strong
+              >, ovvero <span class="math-block">\[ A = {}^t \! {A} \]</span>
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - Ad esempio</h3
+                ><div class="environment-body">
+                  La matrice
+                  <span class="math-block"
+                    >\[ \left( \begin{array}{ccc} 1 &amp; 2 &amp; 3\\ 2 &amp; 4
+                    &amp; 5\\ 3 &amp; 5 &amp; 6 \end{array} \right) \]</span
+                  >
+                  è simmetrica.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem3-1"
+            ><h2 class="environment-title"
+              >Dimostrazione - Somma di matrici simmetriche come matrice
+              simmetrica</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando <strong>due matrici simmetriche</strong>
+                  <span class="math-span"
+                    >\( A, B \in M_{n \times n}(\mathbb{K})\)</span
+                  >, allora <strong>la matrice somma</strong>
+                  <span class="math-span">\( A + B\)</span> è anch'essa una
+                  <strong>matrice simmetrica</strong>.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale proposizione è necessario dimostrare che
+                  (considerando <span class="math-span">\( A\)</span> e
+                  <span class="math-span">\( B\)</span> due matrici simmetriche)
+                  <span class="math-block"
+                    >\[ A + B = {}^{t} \! (A + B) \]</span
+                  >
+                  Considerando quindi che, per definizione di matrice
+                  simmetrica, le matrici <span class="math-span">\( A\)</span> e
+                  <span class="math-span">\( B\)</span> sono uguali alle loro
+                  trasposte
+                  <span class="math-block"
+                    >\begin{aligned} &amp; A + B = {}^{t} \! A + {}^{t} \! B
+                    &amp; \iff \end{aligned}</span
+                  >
+                  e che la somma delle trasposte è uguale alla trasposta della
+                  somma
+                  <span class="math-block"
+                    >\begin{aligned} &amp; A + B = {}^{t} \! (A + B) &amp;
+                    \end{aligned}</span
+                  >
+                  si è dimostrata la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def3-17"
+            ><h2 class="environment-title"
+              >Definizione - Matrice antisimmetrica</h2
+            ><div class="environment-body">
+              Una matrice quadrata <span class="math-span">\( A\)</span> si dice
+              <strong>antisimmetrica</strong> se è uguale all'<strong
+                >opposto della sua trasposta</strong
+              >, ovvero <span class="math-block">\[ A = - {}^t \! {A} \]</span>
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - Ad esempio</h3
+                ><div class="environment-body">
+                  La matrice
+                  <span class="math-block"
+                    >\[ \left( \begin{array}{ccc} 0 &amp; -1 &amp; -7 \\ 1 &amp;
+                    0 &amp; -4 \\ 7 &amp; 4 &amp; 0 \end{array} \right) \]</span
+                  >
+                  è antisimmetrica.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def3-18"
+            ><h2 class="environment-title"
+              >Definizione - Spazio delle righe (e delle colonne) di una
+              matrice</h2
+            ><div class="environment-body">
+              Considerando
+              <span class="math-span"
+                >\( A \in M_{m \times n}(\mathbb{K})\)</span
+              >, lo <strong>spazio delle righe</strong> di
+              <span class="math-span">\( A\)</span> è l'<strong
+                >insieme di tutte le combinazione lineari delle
+                <span class="math-span">\( n\)</span>-uple delle righe</strong
+              >, ovvero
+              <span class="math-block"
+                >\[ \mathcal{R}(A) = \ \lt r_{1}, r_{2}, \ \ldots \ , r_{n} \gt
+                \]</span
+              >
+              Analogamente, lo <strong>spazio delle colonne</strong> è
+              l'i<strong
+                >nsieme di tutte le combinazioni lineari dell
+                <span class="math-span">\( m\)</span>-uple delle colonne</strong
+              >, ovvero
+              <span class="math-block"
+                >\[ \mathcal{C}(A) = \ \lt c_{1}, c_{2}, \ \ldots \ , c_{m} \gt
+                \]</span
+              >
+            </div></div
+          ><div class="definition environment" id="def3-19"
+            ><h2 class="environment-title"
+              >Definizione - Rango per righe (e per colonne) di una matrice</h2
+            ><div class="environment-body">
+              Considerando
+              <span class="math-span"
+                >\( A \in M_{m \times n}(\mathbb{K})\)</span
+              >, il
+              <strong
+                >rango per righe di una matrice è la dimensione dello spazio
+                delle righe</strong
+              >
+              di tale matrice, ovvero
+              <span class="math-block"
+                >\[ r_{\mathcal{R}}(A) = dim(\lt r_{1}, r_{2}, \ \ldots \ ,
+                r_{n}\gt) \]</span
+              >
+              Analogamente il
+              <strong
+                >rango per colonne è la dimensione dello spazio delle
+                colonne</strong
+              >
+              di tale matrice, ovvero
+              <span class="math-block"
+                >\[ r_{\mathcal{C}}(A) = dim(\lt r_{1}, r_{2}, \ \ldots \ ,
+                r_{n}\gt) \]</span
+              >
+            </div></div
+          ><div class="definition environment" id="def3-20"
+            ><h2 class="environment-title"
+              >Definizione - Prodotto tra matrici</h2
+            ><div class="environment-body">
+              Considerando una matrice
+              <span class="math-span"
+                >\( A \in M_{m \times x}(\mathbb{K})\)</span
+              >
+              di <span class="math-span">\( m\)</span> righe e
+              <span class="math-span">\( x\)</span> colonne e una matrice
+              <span class="math-span"
+                >\( B \in M_{x \times n}(\mathbb{K})\)</span
+              >
+              di <span class="math-span">\( x\)</span> righe e
+              <span class="math-span">\( n\)</span> colonne (ovvero il numero di
+              colonne di <span class="math-span">\( A\)</span> è uguale al
+              numero di righe di <span class="math-span">\( B\)</span>), allora
+              la matrice prodotto è una matrice
+              <span class="math-span">\( C \in M_{m \times n}\)</span> di
+              <span class="math-span">\( m\)</span> righe e
+              <span class="math-span">\( n\)</span> colonne contenente in ogni
+              "cella" <span class="math-span">\( i, j\)</span> la
+              <strong
+                >somma di tutti i prodotti della
+                <span class="math-span">\( i\)</span>-esima riga e della
+                <span class="math-span">\( j\)</span>-esima colonna</strong
+              >, ovvero
+              <span class="math-block"
+                >\[ A \odot B = C \qquad \text{con } c_{i, j} = \sum_{k = 1}^{x}
+                a_{i, k} + b_{k, j} \]</span
+              >
+              Si ha quindi che
+              <strong
+                >il prodotto tra matrici non è generalmente commutativo</strong
+              >.
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - Il prodotto matriciale in altre parole</h3
+                ><div class="environment-body">
+                  Altro metodo utile per ricordare l'ordine delle operazioni è
+                  prima predisporre la matrice prodotto, come una matrice
+                  <span class="math-span">\( m \times n\)</span> (nel caso il
+                  prodotto sia tra matrici
+                  <span class="math-span">\( m \times k\)</span> e
+                  <span class="math-span">\( k \times n\)</span>) e poi
+                  "riempire" la matrice inserendo nel punto
+                  <span class="math-span">\( (i,j)\)</span> la somma dei
+                  prodotti della riga
+                  <span class="math-span">\( i\)</span> della prima matrice con
+                  la colonna <span class="math-span">\( j\)</span> della
+                  seconda.
+                </div></div
+              >
+            </div></div
+          ><div class="myexample environment" id="example10"
+            ><h2 class="environment-title"
+              >Esempio - Calcolare il prodotto tra matrici</h2
+            ><div class="environment-body collapsed">
+              Considerando le matrici
+              <span class="math-block"
+                >\begin{aligned} &amp; A = \left( \begin{array}{ccc} 1 &amp; 2
+                &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ \end{array} \right) &amp; B =
+                \left( \begin{array}{cc} 7 &amp; 8 \\ 9 &amp; 1 \\ 2 &amp; 3
+                \end{array} \right) \end{aligned}</span
+              >
+              calcolare il prodotto
+              <span class="math-span">\( A \odot B\)</span>. <br />
+              Dato che abbiamo una matrice
+              <span class="math-span">\( 2 \times 3\)</span> e una matrice
+              <span class="math-span">\( 3 \times 2\)</span>, la matrice
+              prodotto sarà una matrice
+              <span class="math-span">\( 2 \times 2\)</span>, ovvero
+              <span class="math-block"
+                >\[ \begin{array}{ccl} \left( \begin{array}{ccc} 1 &amp; 2 &amp;
+                3 \\ 4 &amp; 5 &amp; 6 \\ \end{array} \right) \odot \left(
+                \begin{array}{cc} 7 &amp; 8 \\ 9 &amp; 1 \\ 2 &amp; 3
+                \end{array} \right) &amp; = &amp; \\ \left( \begin{array}{cc} (1
+                \cdot 7 + 2 \cdot 9 + 3 \cdot 2) &amp; (1 \cdot 8 + 2 \cdot 1 +
+                3 \cdot 3) \\ (4 \cdot 7 + 5 \cdot 9 + 6 \cdot 2) &amp; (4 \cdot
+                8 + 5 \cdot 6 + 3 \cdot 3) \\ \end{array} \right) &amp; = &amp;
+                \left( \begin{array}{cc} 31 &amp; 19 \\ 85 &amp; 71 \\
+                \end{array} \right) \end{array} \]</span
+              > </div
+            ><div class="environment-tail"
+              ><span
+                class="material-symbols-outlined body-visibility-icon"
+                onclick="expand_environment(event)"
+                >expand_more</span
+              ></div
+            ></div
+          ><div class="definition environment" id="def3-21"
+            ><h2 class="environment-title"
+              >Definizione - Proprietà del prodotto tra matrici</h2
+            ><div class="environment-body">
+              Considerando tre matrici
+              <span class="math-span">\( A, B, C\)</span> il cui prodotto è
+              ammissibile, allora è valida:
+              <ul class="list-container"
+                ><li class="list-item"
+                  >la <strong>proprietà associativa</strong>, ovvero
+                  <span class="math-block"
+                    >\[ (A \odot B) \odot C = A \odot (B \odot C) \]</span
+                  > </li
+                ><li class="list-item"
+                  >la <strong>proprietà distributiva</strong>, ovvero
+                  <span class="math-block"
+                    >\[ A \odot (B + C) = A \odot B + A \odot C \]</span
+                  >
+                </li></ul
+              >
+              Si ricorda tuttavia che il
+              <strong
+                >prodotto tra matrici non è generalmente commutativo</strong
+              >.
+            </div></div
+          ><div class="demonstration environment" id="dem3-2"
+            ><h2 class="environment-title"
+              >Dimostrazione - Traccia della matrice prodotto
+              <span class="math-span">\( A \odot B\)</span> equivalente alla
+              traccia della matrice prodotto
+              <span class="math-span">\( B \odot A\)</span></h2
+            ><div class="environment-body">
+              Dato la seguente proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando due matrici
+                  <span class="math-span"
+                    >\( A, B \in M_{n \times n}(\mathbb{K})\)</span
+                  >, la traccia del prodotto
+                  <span class="math-span">\( A \odot B\)</span> è equivalente
+                  alla traccia del prodotto
+                  <span class="math-span">\( B \odot A\)</span>, ovvero
+                  <span class="math-block"
+                    >\[ tr(A \odot B) = tr(B \odot A) \]</span
+                  >
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare la proposizione, consideriamo la matrice
+                  <span class="math-span">\( C\)</span> come la matrice prodotto
+                  <span class="math-span">\( A \odot B\)</span> e
+                  <span class="math-span">\( D\)</span> la matrice prodotto
+                  <span class="math-span">\( B \odot A\)</span>, ovvero
+                  <span class="math-block"
+                    >\[ \begin{array}{lcl} A &amp; = &amp; \left(
+                    \begin{array}{c} a_{i, j} \end{array} \right) \\ B &amp; =
+                    &amp; \left( \begin{array}{c} b_{i, j} \end{array} \right)
+                    \\ C = A \odot B &amp; = &amp; \left( \begin{array}{c} c_{i,
+                    j} \end{array} \right) \\ D = B \odot A &amp; = &amp; \left(
+                    \begin{array}{c} d_{i, j} \end{array} \right) \end{array}
+                    \]</span
+                  >
+                  Allora è possibile scrivere un qualsiasi elemento
+                  <span class="math-span">\( c_{i, j}\)</span> come
+                  <span class="math-block"
+                    >\[ c_{i, j} = \sum_{r = 1}^{n}(a_{i, r} \cdot b_{r, j})
+                    \]</span
+                  >
+                  e un qualsiasi elemento
+                  <span class="math-span">\( d_{i, j}\)</span> come
+                  <span class="math-block"
+                    >\[ d_{i, j} = \sum_{r = 1}^{n}(b_{i, r} \cdot a_{r, j})
+                    \]</span
+                  >
+                  Scrivendo quindi in questo modo le tracce di
+                  <span class="math-span">\( C\)</span> e
+                  <span class="math-span">\( D\)</span> si avrà
+                  <span class="math-block"
+                    >\begin{aligned} &amp; tr(C) = \sum_{i = 1}^{n}(c_{i, i}) =
+                    \sum_{i = 1}^{n}(\sum_{r = 1}^{n}(a_{i, r} \cdot b_{r, i}))
+                    \\ &amp; tr(D) = \sum_{i = 1}^{n}(d_{i, i}) = \sum_{i =
+                    1}^{n}(\sum_{r = 1}^{n}(b_{i, r} \cdot a_{r, i}))
+                    \end{aligned}</span
+                  >
+                  Commutando prima il prodotto interno alla sommatoria della
+                  traccia di <span class="math-span">\( D\)</span> e poi
+                  commutando l'ordine delle sommatorie (ovvero invertendo gli
+                  indici <span class="math-span">\( i\)</span> e
+                  <span class="math-span">\( r\)</span> grazie alla proprietà
+                  delle sommatorie), si ottiene
+                  <span class="math-block"
+                    >\begin{aligned} \sum_{i = 1}^{n}(\sum_{r = 1}^{n}(a_{i, r}
+                    \cdot b_{r, i})) = \sum_{i = 1}^{n}(\sum_{r = 1}^{n}(a_{i,
+                    r} \cdot b_{r, i})) \end{aligned}</span
+                  >
+                  che dimostra la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def3-22"
+            ><h2 class="environment-title"
+              >Definizione - Traccia invariante rispetto alla permutazione
+              ciclica del prodotto tra matrici</h2
+            ><div class="environment-body">
+              Considerando tre matrici
+              <span class="math-span">\( A, B, C \in M_{n \times n}(f)\)</span>,
+              allora la traccia è invariante rispetto alla permutazione ciclica,
+              ovvero
+              <span class="math-block"
+                >\[ tr(A \odot B \odot C) = tr(B \odot C \odot A) = tr(C \odot A
+                \odot B) \]</span
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - Attenzione!</h3
+                ><div class="environment-body">
+                  È da notare che la relazione non comprende
+                  <span class="math-span">\( tr(BAC)\)</span> e
+                  <span class="math-span">\( tr(ACB)\)</span> e
+                  <span class="math-span">\( tr(CBA)\)</span> im quanto non sono
+                  permutazioni cicliche.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def3-23"
+            ><h2 class="environment-title"
+              >Definizione - Anello delle matrici quadrate</h2
+            ><div class="environment-body">
+              La struttura algebrica
+              <span class="math-block"
+                >\[ (M_{n \times n}(\mathbb{K}), +, \odot) \]</span
+              >
+              dove <span class="math-span">\( \odot\)</span> è il prodotto righe
+              per colonne tra matrici, è un <strong>anello con unità</strong>.
+            </div></div
+          ><div class="definition environment" id="def3-24"
+            ><h2 class="environment-title"
+              >Definizione - Matrice identica (unità moltiplicativa dell'anello
+              delle matrici quadrate)</h2
+            ><div class="environment-body">
+              La <strong>matrice identica</strong> (anche detta unità
+              moltiplicativa dell'anello delle matrici quadrate
+              <span class="math-span"
+                >\( (M_{n \times n}(\mathbb{K}), +, \odot)\)</span
+              >) è la matrice diagonale
+              <span class="math-block"
+                >\[ I_{n} = \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp;
+                1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; \ddots &amp; 0 \\ 0 &amp; 0
+                &amp; 0 &amp; 1 \end{pmatrix} \]</span
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem3-3"
+            ><h2 class="environment-title"
+              >Dimostrazione - Divisori dello zero nell'anello delle matrici
+              quadrate</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  L'anello delle matrici quadrate
+                  <strong>ammette divisori dello zero</strong>.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare questa proposizione, consideriamo le matrici
+                  quadrate non nulle
+                  <span class="math-span"
+                    >\( A, B \in M_{n \times n}(\mathbb{K})\)</span
+                  >
+                  <span class="math-block"
+                    >\[ A = B = \left( \begin{array}{cc} 0 &amp; 0 \\ 1 &amp; 0
+                    \end{array} \right) \]</span
+                  >
+                  ed effettuando il prodotto
+                  <span class="math-span">\( A \odot B\)</span>
+                  <span class="math-block"
+                    >\[ \left( \begin{array}{cc} 0 &amp; 0 \\ 1 &amp; 0
+                    \end{array} \right) \odot \left( \begin{array}{cc} 0 &amp; 0
+                    \\ 1 &amp; 0 \end{array} \right) = \left( \begin{array}{cc}
+                    0 &amp; 0 \\ 0 &amp; 0 \end{array} \right) \]</span
+                  >
+                  si ottiene la matrice nulla, dimostrando quindi la
+                  proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def3-25"
+            ><h2 class="environment-title"
+              >Definizione - Invertibilità di una matrice e matrice inversa -
+              Prima definizione</h2
+            ><div class="environment-body">
+              Data una matrice
+              <span class="math-span"
+                >\( A \in M_{n \times n}(\mathbb{K})\)</span
+              >
+              essa <strong>ammette inversa</strong> (<span class="math-span"
+                >\( A^{-1}\)</span
+              >) se
+              <strong
+                >esiste una matrice tale che il prodotto matriciale tra le due è
+                la matrice identica</strong
+              >, ovvero
+              <span class="math-block"
+                >\[ A \odot A^{-1} = A^{-1} \odot A = I \]</span
+              >
+              Tale matrice, è detta matrice inversa di
+              <span class="math-span">\( A\)</span>.
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - Error 404 - Logic not found</h3
+                ><div class="environment-body">
+                  Bisogna notare che solo una matrice quadrata ammette inversa,
+                  quindi cercare l'inversa di una matrice rettangolare è un
+                  errore logico.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def3-26"
+            ><h2 class="environment-title"
+              >Definizione - Condizione necessaria e sufficiente per
+              l'invertibilità di una matrice</h2
+            ><div class="environment-body">
+              Data una matrice
+              <span class="math-span"
+                >\( A \in M_{n \times n}(\mathbb{K})\)</span
+              >
+              essa
+              <strong
+                >ammette inversa se e solo se il suo determinante è diverso da
+                <span class="math-span">\( 0\)</span></strong
+              >.
+            </div></div
+          ><div class="definition environment" id="def3-27"
+            ><h2 class="environment-title">Definizione - Matrice singolare</h2
+            ><div class="environment-body">
+              Una matrice che <strong>non ammette inversa</strong> è detta
+              <strong>singolare</strong>.
+            </div></div
+          ><div class="demonstration environment" id="dem3-4"
+            ><h2 class="environment-title"
+              >Dimostrazione - Unicità della matrice inversa</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Se la <strong>matrice inversa esiste, essa è unica</strong>.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare questa proposizione consideriamo una matrice
+                  quadrata <span class="math-span">\( A\)</span> e ipotizziamo
+                  per assurdo che esistano due matrici inverse (<span
+                    class="math-span"
+                    >\( B\)</span
+                  >, <span class="math-span">\( C\)</span>), allora
+                  l'espressione
+                  <span class="math-block">\[ B \odot A \odot C \]</span> per la
+                  proprietà associativa, può essere svolta in due modi, ovvero
+                  <span class="math-block"
+                    >\begin{aligned} &amp; (B \odot A) \odot C = B \odot (A
+                    \odot C) &amp; \iff \end{aligned}</span
+                  >
+                  e, per definizione di matrice inversa, si ha che
+                  <span class="math-span">\( B \odot A = I\)</span> e che
+                  <span class="math-span">\( A \odot C = I\)</span>, quindi
+                  <span class="math-block"
+                    >\begin{aligned} &amp; I \odot C = B \odot I &amp; \iff \\
+                    &amp; C = B &amp; \end{aligned}</span
+                  >
+                  da cui si è dimostrata la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def3-28"
+            ><h2 class="environment-title"
+              >Definizione - Invertibilità della matrice prodotto di due matrici
+              invertibili</h2
+            ><div class="environment-body">
+              Il <strong>prodotto di due matrici invertibili</strong>, è
+              anch'esso una <strong>matrice invertibile</strong>.
+            </div></div
+          ><div class="demonstration environment" id="dem3-5"
+            ><h2 class="environment-title"
+              >Dimostrazione - Inversa del prodotto
+              <span class="math-span">\( A \odot B\)</span> come prodotto di
+              <span class="math-span">\( B^{-1} \odot A^{-1}\)</span></h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando due matrici invertibili
+                  <span class="math-span"
+                    >\( A, B \in M_{n \times n}(\mathbb{K})\)</span
+                  >
+                  allora l'<strong
+                    >inverso del prodotto delle due matrici è il prodotto delle
+                    inverse commutate</strong
+                  >, ovvero
+                  <span class="math-block"
+                    >\[ (A \odot B)^{-1} = B^{-1} \odot A^{-1} \]</span
+                  >
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare la proposizione è necessario dimostrare che
+                  l'inversa della matrice
+                  <span class="math-span">\( A \odot B\)</span> (che sarebbe
+                  <span class="math-span">\( (A \odot B)^{-1}\)</span>) è la
+                  matrice
+                  <span class="math-span">\( B^{-1} \odot A^{-1}\)</span>.
+                  <br />
+                  Per farlo dimostriamo la seguente espressione
+                  <span class="math-block"
+                    >\begin{aligned} &amp; (A \odot B) \odot (B^{-1} \odot
+                    A^{-1}) = I &amp; \iff \end{aligned}</span
+                  >
+                  Per la proprietà associativa (e per definizione di matrice
+                  inversa), è quindi possibile scrivere
+                  <span class="math-block"
+                    >\begin{aligned} &amp; A \odot (B \odot B^{-1}) \odot A^{-1}
+                    = I &amp; \iff \\ &amp; A \odot I \odot A^{-1} = I &amp;
+                    \iff \\ &amp; I = I \end{aligned}</span
+                  >
+                  che dimostra la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem3-6"
+            ><h2 class="environment-title"
+              >Dimostrazione - Trasposta del prodotto
+              <span class="math-span">\( A \odot B\)</span> come prodotto di
+              <span class="math-span"
+                >\( {}^{t} \! B \odot {}^{t} \! A\)</span
+              ></h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando una matrice
+                  <span class="math-span"
+                    >\( A \in M_{m \times k}(\mathbb{K})\)</span
+                  >
+                  e
+                  <span class="math-span"
+                    >\( B \in M_{k \times n}(\mathbb{K})\)</span
+                  >
+                  allora
+                  <span class="math-block"
+                    >\[ {}^t \! (A \odot B) = {}^t \! B \odot {}^t \! A \]</span
+                  >
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare la proposizione, consideriamo le seguenti
+                  matrici:
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >la matrice <span class="math-span">\( A\)</span>, di
+                      dimensione <span class="math-span">\( m \times k\)</span>
+                      <span class="math-block"
+                        >\[ A = \left( \begin{array}{c} a_{i, j} \end{array}
+                        \right) = \left( \begin{array}{cccc} a_{1, 1} &amp;
+                        a_{1, 2} &amp; \cdots &amp; a_{1, k} \\ a_{2, 1} &amp;
+                        a_{2, 2} &amp; \cdots &amp; a_{2, k} \\ \vdots &amp;
+                        \vdots &amp; \ddots &amp; \vdots \\ a_{m, 1} &amp; a_{m,
+                        2} &amp; \cdots &amp; a_{m, k} \end{array} \right)
+                        \]</span
+                      > </li
+                    ><li class="list-item"
+                      >la matrice
+                      <span class="math-span">\( {}^{t} \! A\)</span>, di
+                      dimensione <span class="math-span">\( k \times m\)</span>
+                      <span class="math-block"
+                        >\[ {}^{t} \! A = \left( \begin{array}{c} a_{j, i}
+                        \end{array} \right) = \left( \begin{array}{cccc} a_{1,
+                        1} &amp; a_{1, 2} &amp; \cdots &amp; a_{1, m} \\ a_{2,
+                        1} &amp; a_{2, 2} &amp; \cdots &amp; a_{2, m} \\ \vdots
+                        &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{k, 1} &amp;
+                        a_{k, 2} &amp; \cdots &amp; a_{k, m} \end{array} \right)
+                        \]</span
+                      > </li
+                    ><li class="list-item"
+                      >la matrice <span class="math-span">\( B\)</span>, di
+                      dimensione <span class="math-span">\( k \times n\)</span>
+                      <span class="math-block"
+                        >\[ B = \left( \begin{array}{c} b_{i, j} \end{array}
+                        \right) = \left( \begin{array}{cccc} b_{1, 1} &amp;
+                        b_{1, 2} &amp; \cdots &amp; b_{1, n} \\ b_{2, 1} &amp;
+                        b_{2, 2} &amp; \cdots &amp; b_{2, n} \\ \vdots &amp;
+                        \vdots &amp; \ddots &amp; \vdots \\ b_{k, 1} &amp; b_{k,
+                        2} &amp; \cdots &amp; b_{k, n} \end{array} \right)
+                        \]</span
+                      > </li
+                    ><li class="list-item"
+                      >la matrice
+                      <span class="math-span">\( {}^{t} \! B\)</span>, di
+                      dimensione <span class="math-span">\( n \times k\)</span>
+                      <span class="math-block"
+                        >\[ {}^{t} \! B = \left( \begin{array}{c} b_{j, i}
+                        \end{array} \right) = \left( \begin{array}{cccc} b_{1,
+                        1} &amp; b_{1, 2} &amp; \cdots &amp; b_{1, k} \\ b_{2,
+                        1} &amp; b_{2, 2} &amp; \cdots &amp; b_{2, k} \\ \vdots
+                        &amp; \vdots &amp; \ddots &amp; \vdots \\ b_{n, 1} &amp;
+                        b_{n, 2} &amp; \cdots &amp; b_{n, k} \end{array} \right)
+                        \]</span
+                      > </li
+                    ><li class="list-item"
+                      >la matrice
+                      <span class="math-span">\( C = A \odot B\)</span>, di
+                      dimensione <span class="math-span">\( m \times n\)</span>
+                      <span class="math-block"
+                        >\[ C = \left( \begin{array}{c} c_{i, j} \end{array}
+                        \right) = \left( \begin{array}{cccc} c_{1, 1} &amp;
+                        c_{1, 2} &amp; \cdots &amp; c_{1, n} \\ c_{2, 1} &amp;
+                        c_{2, 2} &amp; \cdots &amp; c_{2, n} \\ \vdots &amp;
+                        \vdots &amp; \ddots &amp; \vdots \\ c_{m, 1} &amp; c_{m,
+                        2} &amp; \cdots &amp; c_{m, n} \end{array} \right)
+                        \]</span
+                      > </li
+                    ><li class="list-item"
+                      >la matrice
+                      <span class="math-span"
+                        >\( {}^{t} \! C = {}^{t} \! (A \odot B)\)</span
+                      >, di dimensione
+                      <span class="math-span">\( n \times m\)</span>
+                      <span class="math-block"
+                        >\[ {}^{t} \! C = \left( \begin{array}{c} c_{j, i}
+                        \end{array} \right) = \left( \begin{array}{cccc} c_{1,
+                        1} &amp; c_{1, 2} &amp; \cdots &amp; c_{1, m} \\ c_{2,
+                        1} &amp; c_{2, 2} &amp; \cdots &amp; c_{2, m} \\ \vdots
+                        &amp; \vdots &amp; \ddots &amp; \vdots \\ c_{n, 1} &amp;
+                        c_{n, 2} &amp; \cdots &amp; c_{n, m} \end{array} \right)
+                        \]</span
+                      > </li
+                    ><li class="list-item"
+                      >la matrice
+                      <span class="math-span"
+                        >\( D = {}^{t} \! B \odot {}^{t} \! A\)</span
+                      >, di dimensione
+                      <span class="math-span">\( n \times m\)</span>
+                      <span class="math-block"
+                        >\[ D = \left( \begin{array}{c} d_{i, j} \end{array}
+                        \right) = \left( \begin{array}{cccc} d_{1, 1} &amp;
+                        d_{1, 2} &amp; \cdots &amp; d_{1, m} \\ d_{2, 1} &amp;
+                        d_{2, 2} &amp; \cdots &amp; d_{2, m} \\ \vdots &amp;
+                        \vdots &amp; \ddots &amp; \vdots \\ d_{n, 1} &amp; d_{n,
+                        2} &amp; \cdots &amp; d_{n, m} \end{array} \right)
+                        \]</span
+                      >
+                    </li></ul
+                  >
+                  si vuole quindi dimostrare che
+                  <span class="math-block"
+                    >\[ \left( \begin{array}{c} c_{j, i} \end{array} \right) =
+                    \left( \begin{array}{c} d_{i, j} \end{array} \right)
+                    \]</span
+                  >
+                  ovvero che ogni elemento
+                  <span class="math-span">\( c_{j, i}\)</span> è uguale ad ogni
+                  elemento <span class="math-span">\( d_{i, j}\)</span>. <br />
+                  Detto ciò, possiamo scivere un generico elemento
+                  <span class="math-span">\( c_{i, j}\)</span> come la seguente
+                  sommatoria
+                  <span class="math-block"
+                    >\[ c_{i, j} = \sum_{r = 1}^{k} a_{i, r} \cdot b_{r, j}
+                    \]</span
+                  >
+                  mentre un generico elemento di
+                  <span class="math-span">\( c_{j, i}\)</span> può essere
+                  scritto come (invertendo l'indice
+                  <span class="math-span">\( i\)</span> con
+                  <span class="math-span">\( j\)</span>)
+                  <span class="math-block"
+                    >\[ c_{j, i} = \sum_{r = 1}^{k} a_{j, r} \cdot b_{r, i}
+                    \]</span
+                  >
+                  Scriviamo quindi un generico elemento di
+                  <span class="math-span">\( D\)</span>, ovvero
+                  <span class="math-block"
+                    >\[ d_{i, j} = \sum_{r = 1}^{k} b_{r, i} \cdot a_{j, r}
+                    \]</span
+                  >
+                  in quanto stiamo considerando le trasposte. Utilizzando quindi
+                  la proprietà commutativa interna alla sommatoria si ottiene
+                  <span class="math-block"
+                    >\[ d_{i, j} = \sum_{r = 1}^{k} a_{j, r} \cdot b_{r, i} =
+                    c_{j, i} \]</span
+                  >
+                  che dimostra la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def3-29"
+            ><h2 class="environment-title"
+              >Definizione - Elevamento a potenza di matrici quadrate</h2
+            ><div class="environment-body">
+              Considerando una matrice
+              <span class="math-span"
+                >\( A \in M_{n \times n}(\mathbb{K})\)</span
+              >
+              e un intero <span class="math-span">\( k \geq 2\)</span>, la
+              matrice <span class="math-span">\( A^{k}\)</span> è il risultato
+              della moltiplicazione di
+              <span class="math-span">\( k\)</span> matrici
+              <span class="math-span">\( A\)</span>, ovvero
+              <span class="math-block"
+                >\[ A^{k} = A_{1} \odot A_{2} \odot \ldots \odot A_{k} \]</span
+              >
+              Inoltre si definisce anche
+              <span class="math-block"
+                >\begin{aligned} &amp; A^{0} = I &amp; A^{1} = A
+                \end{aligned}</span
+              >
+              e, se <span class="math-span">\( A\)</span> è invertibile
+              <span class="math-block">\[ A^{-k} = (A^{-1})^{k} \]</span>
+              ovvero, si ha che è uguale alla matrice inversa elevata
+              <span class="math-span">\( k\)</span> volte.
+            </div></div
+          >
+        </article>
+        <nav class="buttons-container content-width">
+          <a
+            class="navigation-button previous"
+            href="lo-spazio-vettoriale-delle-matrici.html"
+            rel="nofollow"
+            ><span>Lo spazio vettoriale delle matrici</span></a
+          >
+          <a
+            class="navigation-button next"
+            href="operazioni-riga.html"
+            rel="nofollow"
+            ><span>Operazioni riga</span></a
+          >
+        </nav>
+      </section>
+      <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+        <span class="material-symbols-outlined">
+          keyboard_double_arrow_down
+        </span>
+      </div>
+      <footer class="footer-wrapper">
+        <div class="copyright-wrapper">
+          <span> &copy; Copyright 2024</span> /
+          <span
+            >made by
+            <a href="https://github.com/lorenzoarlo" rel="nofollow"
+              >lorenzoarlo</a
+            ></span
+          >
+        </div>
+        /
+        <div class="privacy-wrapper">
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/"
+              rel="nofollow"
+              >Pannello preferenze cookie</a
+            ></span
+          >
+          /
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html"
+              rel="nofollow"
+              target="_blank"
+              >Privacy Policy</a
+            ></span
+          >
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

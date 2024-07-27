@@ -1,93 +1,1893 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="IT">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="./../styles/style.css" />
     <link rel="stylesheet" href="./../styles/index-style.css" />
     <link rel="stylesheet" href="./../styles/main-index-page-style.css" />
-    <link media="print" rel="stylesheet" href="./../styles/print.css"  />
-    
-        <link rel="stylesheet" href="./../styles/content-style.css" />
-    
+    <link media="print" rel="stylesheet" href="./../styles/print.css" />
+
+    <link rel="stylesheet" href="./../styles/content-style.css" />
+
     <style>
-        :root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }
+      :root {
+        --bg-clr: #296a15;
+        --fg-clr: #e8e3e3;
+      }
     </style>
     <meta name="application-name" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-title" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#296a15" />
-    <link rel="apple-touch-icon" sizes="144x144" href="./../apple-icon-144x144.png">
-    <link rel="icon" type="image/x-icon" href="./../favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="./../android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./../favicon-96x96.png">
-    <meta name="msapplication-TileColor" content="#296a15">
-    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png">
-    <link rel="manifest" href="./../manifest.json">
-    <meta name="keywords" content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
-    <meta name="description" content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'.">
-    <meta name="robots" content="index">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="themeColor" content="#296a15">
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./../apple-icon-144x144.png" />
+    <link rel="icon" type="image/x-icon" href="./../favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./../android-icon-192x192.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./../favicon-96x96.png" />
+    <meta name="msapplication-TileColor" content="#296a15" />
+    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png" />
+    <link rel="manifest" href="./../manifest.json" />
+    <meta
+      name="keywords"
+      content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
+    <meta
+      name="description"
+      content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'." />
+    <meta name="robots" content="index" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="themeColor" content="#296a15" />
     <script src="./../scripts/script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
-    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <title>Geometria e algebra - Applicazioni lineari - Applicazioni lineari come funzioni </title>
-</head>
-<body>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
+    <script
+      defer
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title
+      >Geometria e algebra - Applicazioni lineari - Applicazioni lineari come
+      funzioni
+    </title>
+  </head>
+  <body>
     <div class="container">
-        <header class="header-wrapper">
-            <div class="title-wrapper">
-                <span class="title">
-                    Geometria e algebra
-                </span>
-                <span class="subtitle">
-                    by lorenzoarlo
-                </span>
-            </div>
-            <span class="page-title">
-                Applicazioni lineari
-            </span>
-        </header>
-        <aside class="sidebar">
-            <h2 class="sidebar-title">Geometria e algebra</h2>
-            <div class="index-container">
-                <ul class="parent-ul"><li class="section-li"><a href="../index.html" rel="nofollow">Indice</a></li><li class="section-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Operazioni e strutture algebriche</a><ul><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Gruppi, anelli e campi</a></li><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html" rel="nofollow">Omomorfismi e isomorfismi</a></li></ul></li><li class="section-li "><a href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html" rel="nofollow">Spazi vettoriali</a><ul><li class="subsection-li "><a href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html" rel="nofollow">Nozioni preliminari su vettori e spazi vettoriali</a></li><li class="subsection-li "><a href="../spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html" rel="nofollow">Combinazione lineare e lineare indipendenza</a></li><li class="subsection-li "><a href="../spazi-vettoriali/sottostrutture-algebriche.html" rel="nofollow">Sottostrutture algebriche</a></li><li class="subsection-li "><a href="../spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html" rel="nofollow">Operazioni tra sottospazi vettoriali</a></li></ul></li><li class="section-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Matrici</a><ul><li class="subsection-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Lo spazio vettoriale delle matrici</a></li><li class="subsection-li "><a href="../matrici/l-anello-delle-matrici-quadrate.html" rel="nofollow">L'anello delle matrici quadrate</a></li><li class="subsection-li "><a href="../matrici/operazioni-riga.html" rel="nofollow">Operazioni riga</a></li></ul></li><li class="section-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari</a><ul><li class="subsection-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari come matrici</a></li></ul></li><li class="section-li current">Applicazioni lineari<ul><li class="subsection-li current">Applicazioni lineari come funzioni<ul><li class="definition-li"><a href="#def5-1" rel="nofollow">Applicazione lineare tra spazi vettoriali</a></li><li class="demonstration-li"><a href="#dem5-1" rel="nofollow">Immagine del vettore nullo rispetto ad un'applicazione lineare uguale al vettore nullo</a></li><li class="myexample-li"><a href="#example18" rel="nofollow">Applicazione lineare</a></li><li class="definition-li"><a href="#def5-2" rel="nofollow">Applicazioni lineari come endomorfismi</a></li><li class="demonstration-li"><a href="#dem5-2" rel="nofollow">Teorema fondamentale delle applicazioni lineari</a></li><li class="definition-li"><a href="#def5-3" rel="nofollow">Immagine di un'applicazione lineare</a></li><li class="definition-li"><a href="#def5-4" rel="nofollow">Applicazione lineare suriettiva</a></li><li class="definition-li"><a href="#def5-5" rel="nofollow">Applicazione lineare iniettiva</a></li><li class="definition-li"><a href="#def5-6" rel="nofollow">Nucleo di un'applicazione lineare</a></li><li class="myexample-li"><a href="#example19" rel="nofollow">Calcolare il kernel di un'applicazione lineare</a></li><li class="demonstration-li"><a href="#dem5-3" rel="nofollow">Nucleo di \( f: V \to W\) come sottospazio vettoriale di \( V\)</a></li><li class="demonstration-li"><a href="#dem5-4" rel="nofollow">Immagine di \( f: V \to W\) come sottospazio vettoriale di \( W\)</a></li><li class="demonstration-li"><a href="#dem5-5" rel="nofollow">Nucleo di un'applicazione lineare iniettiva composto solo dal vettore nullo</a></li><li class="demonstration-li"><a href="#dem5-6" rel="nofollow">Equazione dimensionale</a></li><li class="demonstration-li"><a href="#dem5-7" rel="nofollow">Iniettività e suriettività di un'applicazione lineare nel caso la dimensione degli spazi vettoriali sia uguale</a></li><li class="demonstration-li"><a href="#dem5-8" rel="nofollow">Suriettività di \( f: V \to W\) e relazione tra le dimensioni di \( V\) e \( W\)</a></li><li class="demonstration-li"><a href="#dem5-9" rel="nofollow">Iniettività di \( f: V \to W\) e relazione tra le dimensioni di \( V\) e \( W\)</a></li><li class="definition-li"><a href="#def5-7" rel="nofollow">Applicazione lineare biunivoca come isomorfismo e spazi vettoriali isomorfi</a></li><li class="myexample-li"><a href="#example20" rel="nofollow">Spazi vettoriali isomorfi</a></li><li class="demonstration-li"><a href="#dem5-10" rel="nofollow">Funzione inversa di un isomorfismo come isomorfismo</a></li><li class="demonstration-li"><a href="#dem5-11" rel="nofollow">Composizione di applicazioni lineari come applicazione lineare</a></li><li class="demonstration-li"><a href="#dem5-12" rel="nofollow">Corollario - Composizioni di isomorfismi</a></li><li class="demonstration-li"><a href="#dem5-13" rel="nofollow">Isomorfismo associato alla \( n\)-upla delle coordinate</a></li><li class="demonstration-li"><a href="#dem5-14" rel="nofollow">Spazi vettoriali della stessa dimensione isomorfi</a></li></ul></li><li class="subsection-li "><a href="applicazioni-lineari-come-matrici.html" rel="nofollow">Applicazioni lineari come matrici</a></li><li class="subsection-li "><a href="matrici-simili.html" rel="nofollow">Matrici simili</a></li></ul></li><li class="section-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Determinante</a><ul><li class="subsection-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Definizioni di determinante</a></li><li class="subsection-li "><a href="../determinante/utilizzi-del-determinante.html" rel="nofollow">Utilizzi del determinante</a></li></ul></li><li class="section-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori e autovettori</a><ul><li class="subsection-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori, autovettori e autospazi</a></li><li class="subsection-li "><a href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html" rel="nofollow">Diagonalizzazione di una matrice</a></li></ul></li><li class="section-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Spazi vettoriali euclidei</a><ul><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Forme bilineari e prodotto scalare</a></li><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html" rel="nofollow">Spazi vettoriali euclidei</a></li></ul></li><li class="section-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Geometria analitica nello spazio</a><ul><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Rette nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/piani-nello-spazio.html" rel="nofollow">Piani nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html" rel="nofollow">Prodotto vettoriale</a></li></ul></li></ul>
-            </div>
-        </aside>
-        <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button" >
-            keyboard_double_arrow_right
+      <header class="header-wrapper">
+        <div class="title-wrapper">
+          <span class="title"> Geometria e algebra </span>
+          <span class="subtitle"> by lorenzoarlo </span>
         </div>
-        <section class="content-wrapper">
-            <h1 class="section-title content-width">Applicazioni lineari come funzioni</h1>
-            <article class="content-container content-width">
-                <div class="definition environment" id="def5-1"><h2 class="environment-title">Definizione - Applicazione lineare tra spazi vettoriali</h2><div class="environment-body">     Una applicazione lineare è una funzione del tipo     <span class="math-block">\[         f : V \to W     \]</span>     dove <span class="math-span">\( V\)</span> e <span class="math-span">\( W\)</span> sono spazi vettoriali la cui:     <ul class="list-container"><li class="list-item">immagine della somma è uguale alla somma delle immagini         <span class="math-block">\[             f(v + u) = f(v) + f (u)         \]</span>         </li><li class="list-item">immagine del prodotto per uno scalare è uguale al prodotto per uno scalare dell'immagine         <span class="math-block">\[             f(\lambda \cdot v) = \lambda \cdot f(v)         \]</span>     </li></ul>     <div class="mynote environment"><h3 class="environment-title">Nota bene - La condizione in breve</h3><div class="environment-body">         Le due condizioni possono essere riassunte anche nella condizione unica         <span class="math-block">\[             f(\alpha \cdot v + \beta \cdot u) = \alpha \cdot f(v) + \beta \cdot f(u)         \]</span>     </div></div> </div></div><div class="demonstration environment" id="dem5-1"><h2 class="environment-title">Dimostrazione - Immagine del vettore nullo rispetto ad un'applicazione lineare uguale al vettore nullo</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Se         <span class="math-block">\[             f : V \to W         \]</span>         è un'applicazione lineare, allora l'immagine del vettore nullo di <span class="math-span">\( V\)</span> è il vettore nullo di <span class="math-span">\( W\)</span>, ovvero         <span class="math-block">\[             f(0_{V}) = 0_{W}         \]</span>     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare la proposizione consideriamo l'uguaglianza          <span class="math-block">\begin{aligned}             &amp; f(0_{V} + 0_{V}) = f(0_{V}) + f(0_{V})             &amp; \iff         \end{aligned}</span>         che è valida per la linearità.         <br/>         Considerando quindi <span class="math-span">\( x \in W\)</span> come l'opposto di <span class="math-span">\( f(0_{V})\)</span>, aggiungiamolo ad entrambe le parti         <span class="math-block">\begin{aligned}             &amp; x + f(0_{V} + 0_{V}) = f(0_{V}) + f(0_{V}) + x             &amp; \iff         \end{aligned}</span>         Ora, dato che <span class="math-span">\( 0_{V} + 0_{V} = 0_{V}\)</span>, è possibile scrivere         <span class="math-block">\begin{aligned}             &amp; x + f(0_{V}) = f(0_{V}) + f(0_{V}) + x             &amp; \iff         \end{aligned}</span>         e per l'associatività è lecito scrivere         <span class="math-block">\begin{aligned}             &amp; x + f(0_{V}) = f(0_{V}) + (f(0_{V}) + x)             &amp; \iff         \end{aligned}</span>         Applicando quindi la definizione di opposto, si ha che <span class="math-span">\( x + f(0_{V}) = 0_{W}\)</span> e quindi         <span class="math-block">\begin{aligned}             &amp; 0_{W} = f(0_{V}) + 0_{W}             &amp; \iff         \end{aligned}</span>         e dato che qualsiasi elemento sommato all'elemento nullo è l'elemento stesso, si ha che         <span class="math-block">\[             0_{W} = f(0_{V})         \]</span>         che dimostra la proposizione.     </div></div> </div></div><div class="myexample environment" id="example18"><h2 class="environment-title">Esempio - Applicazione lineare</h2><div class="environment-body collapsed">     Un esempio di applicazione lineare è il limite per successioni convergenti, definibile come     <span class="math-block">\[         f : \{ a_{n} \} \to \mathbb{R}     \]</span>     dove <span class="math-span">\( \{ a_{n} \}\)</span> indica l'insieme infinito di tutte le successioni convergenti.     <br/>     Considerando i seguenti limiti     <span class="math-block">\begin{aligned}         &amp; \lim_{n \to + \infty} a_{n} = l         &amp; \lim_{n \to + \infty} b_{n} = m     \end{aligned}</span>     si ha, per l'algebra dei limiti finiti, che      <span class="math-block">\[         \lim_{n \to + \infty} (\alpha \cdot a_{n} + \beta \cdot b_{n}) = \alpha \cdot l + \beta \cdot m     \]</span>     che dimostra la linearità. </div><div class="environment-tail"><span class="material-symbols-outlined body-visibility-icon" onclick="expand_environment(event)">expand_more</span></div></div><div class="definition environment" id="def5-2"><h2 class="environment-title">Definizione - Applicazioni lineari come endomorfismi</h2><div class="environment-body">      Un'applicazione lineare il cui dominio è uguale al codominio, ovvero      <span class="math-block">\[         f: V \to V      \]</span>      è detta endomorfismo. </div></div><div class="demonstration environment" id="dem5-2"><h2 class="environment-title">Dimostrazione - Teorema fondamentale delle applicazioni lineari</h2><div class="environment-body">     Dato il teorema     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando due spazi vettoriali <span class="math-span">\( V\)</span> e <span class="math-span">\( W\)</span>, una base <span class="math-span">\( B_{V} = (v_{1}, \ \ldots \ , v_{n})\)</span> per <span class="math-span">\( V\)</span> e <span class="math-span">\( n\)</span> vettori <span class="math-span">\( w_{1}, \ \ldots \ , w_{n}\)</span> di <span class="math-span">\( W\)</span>, allora esiste ed è unica un'applicazione lineare         <span class="math-block">\[             f: V \to W         \]</span>         tale che          <span class="math-block">\[             f(v_{1}) = w_{1}             \quad , \quad               \ldots              \quad , \quad             f(v_{n}) = w_{n}         \]</span>     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare tale proposizione, è necessario dimostrare:         <ul class="list-container"><li class="list-item">esiste tale applicazione lineare. Per dimostrarlo, consideriamo quindi un vettore <span class="math-span">\( v \in V\)</span> che è combinazione lineare dei vettori di <span class="math-span">\( B_{V}\)</span>             <span class="math-block">\[                 v = a_{1} \cdot v_{1} + \ \ldots \ + a_{n} \cdot v_{n}             \]</span>             Significa quindi che ogni vettore è associato ad una <span class="math-span">\( n\)</span>-upla di coordinate. Consideriamo quindi la seguente funzione             <span class="math-block">\[                 f(v) = a_{1} \cdot w_{1} + \ \ldots \ + a_{n} \cdot w_{n}             \]</span>             dove <span class="math-span">\( (a_{1}, \ \ldots \ , a_{n})\)</span> sono le coordinate di <span class="math-span">\( v\)</span> rispetto a <span class="math-span">\( B_{V}\)</span>. Inoltre, dato che <span class="math-span">\( (a_{1}, \ \ldots \ , a_{n})\)</span> sono proprio le coordinate rispetto ai vettori della base, si ha che saranno del tipo             <span class="math-block">\[                 f(v_{1}) = f(1 \cdot v_{1} + 0 \cdot v_{2} + \ \ldots \ + 0 \cdot v_{n}) = 1 \cdot w_{1}             \]</span>             che dimostra quindi l'esistenza della funzione richiesta.              <br/>             È ora necessario che tale funzione sia un'applicazione lineare, ovvero che             <ul class="list-container"><li class="list-item"><span class="math-span">\( f(v + u) = f(v) + f(u)\)</span>: per farlo consideriamo le immagini dei vettori, ovvero                 <span class="math-block">\begin{aligned}                     &amp; f(v) = f \left(                      \sum_{i = 1}^{n} a_{i} \cdot v_{i} \right) = \sum_{i = 1}^{n} a_{i} \cdot w_{i}                     \\                     &amp; f(u) = f \left( \sum_{i = 1}^{n} b_{i} \cdot v_{i}                      \right) = \sum_{i = 1}^{n} b_{i} \cdot w_{i}                      \\                     &amp; f(v + u) = f \left( \sum_{i = 1}^{n} a_{n} \cdot v_{1} + b_{n} \cdot v_{i} \right) = \sum_{i = 1}^{n} a_{n} \cdot w_{1} + b_{n} \cdot w_{i}                 \end{aligned}</span>                 da cui, grazie alle proprietà delle sommatorie, è facile dimostrare la linearità della somma                 <span class="math-block">\[                     \sum_{i = 1}^{n} a_{n} \cdot w_{1} + b_{n} \cdot w_{i} = \sum_{i = 1}^{n} a_{i} \cdot w_{i} + \sum_{i = 1}^{n} b_{i} \cdot w_{i}                 \]</span>                 </li><li class="list-item"><span class="math-span">\( f(\alpha \cdot v) = \alpha \cdot f(v)\)</span>: per farlo consideriamo le immagini dei vettori, ovvero                 <span class="math-block">\begin{aligned}                     &amp; f(v) = f \left(                      \sum_{i = 1}^{n} a_{i} \cdot v_{i} \right) = \sum_{i = 1}^{n} a_{i} \cdot w_{i}                      \\                     &amp; \alpha \cdot f(v) = \alpha \cdot f \left(                      \sum_{i = 1}^{n} a_{i} \cdot v_{i} \right) = \alpha \cdot \sum_{i = 1}^{n} a_{i} \cdot w_{i}                      \\                     &amp; f(\alpha \cdot v) = f \left(                      \sum_{i = 1}^{n} \alpha \cdot a_{i} \cdot v_{i} \right) = \sum_{i = 1}^{n} \alpha \cdot a_{i} \cdot w_{i}                 \end{aligned}</span>                 da cui, grazie alla proprietà distributiva delle sommatorie, è facile dimostrare la linearità del prodotto per uno scalare                 <span class="math-block">\[                     \sum_{i = 1}^{n} \alpha \cdot a_{i} \cdot w_{i} = \alpha \cdot \sum_{i = 1}^{n} a_{i} \cdot w_{i}                  \]</span>             </li></ul>             Si è quindi dimostrata la linearità di <span class="math-span">\( f\)</span>;             </li><li class="list-item">tale applicazione lineare è unica. Per dimostrarlo consideriamo quindi due applicazioni lineari <span class="math-span">\( f_{1}\)</span> e <span class="math-span">\( f_{2}\)</span> tali che             <span class="math-block">\[                 f_{1}(v_{i}) = w_{i} = f_{2}(v_{i})             \]</span>             Dato che un qualsiasi vettore <span class="math-span">\( v \in V\)</span> può essere scritto come combinazione lineare di <span class="math-span">\( B_{V}\)</span> si ha che             <span class="math-block">\begin{aligned}                 &amp; f_{1}(v) = f_{1}(\sum_{i = 1}^{n} a_{i} \cdot v_{i})                 &amp; \iff             \end{aligned}</span>             e per la linearità di <span class="math-span">\( f_{1}\)</span> si ha che              <span class="math-block">\begin{aligned}                 &amp; f_{1}(\sum_{i = 1}^{n} a_{i} \cdot v_{i}) = \sum_{i = 1}^{n} a_{i} \cdot f_{1}(v_{i}) = \sum_{i = 1}^{n} a_{i} \cdot w_{i}                 &amp;             \end{aligned}</span>             Ora, dato che la combinazione lineare di un vettore rispetto ad una base è unica, ripetendo l'analogo ragionamento si otterrebbero sempre i coefficienti <span class="math-span">\( a_{i}\)</span>, e per questo motivo l'applicazione lineare è unica.         </li></ul>         Si è quindi dimostrato il teorema.     </div></div> </div></div><div class="definition environment" id="def5-3"><h2 class="environment-title">Definizione - Immagine di un'applicazione lineare</h2><div class="environment-body">     Considerando un'applicazione lineare <span class="math-span">\( f: V \to W\)</span>, la sua immagine è l'insieme dei vettori di <span class="math-span">\( W\)</span> a cui corrisponde almeno un elemento di <span class="math-span">\( V\)</span>, ovvero     <span class="math-block">\[         Im(f) = \{ w \in W          \ : \          \exists f(v) = w          \}         \quad         \text{con } v \in V     \]</span> </div></div><div class="definition environment" id="def5-4"><h2 class="environment-title">Definizione - Applicazione lineare suriettiva</h2><div class="environment-body">     Un'applicazione lineare <span class="math-span">\( f: V \to W\)</span> si dice suriettiva se ogni elemento del codominio è immagine di almeno un elemento del dominio, ovvero che     <span class="math-block">\[         W = Im(f)     \]</span> </div></div><div class="definition environment" id="def5-5"><h2 class="environment-title">Definizione - Applicazione lineare iniettiva</h2><div class="environment-body">     Un' applicazione lineare <span class="math-span">\( f: V \to W\)</span> si dice iniettiva se ogni <span class="math-span">\( y \in im(f)\)</span> è immagine solo di un elemento <span class="math-span">\( v \in V\)</span>, ovvero se ad ogni <span class="math-span">\( v \in V\)</span> corrisponde un distinto elemento <span class="math-span">\( w \in W\)</span>.     <br/>     Ciò implica che se <span class="math-span">\( v_{1}\)</span> è diverso da <span class="math-span">\( v_{2}\)</span>, allora l'immagine di <span class="math-span">\( v_{1}\)</span> sarà diversa dall'immagine di <span class="math-span">\( v_{2}\)</span>     <span class="math-block">\[         v_{1} \neq v_{2}          \qquad \implies \qquad         f(v_{1}) \neq f(v_{2})     \]</span> </div></div><div class="definition environment" id="def5-6"><h2 class="environment-title">Definizione - Nucleo di un'applicazione lineare</h2><div class="environment-body">    Considerando un'applicazione lineare <span class="math-span">\( f: V \to W\)</span>, il suo nucleo (<span class="math-span">\( ker(f)\)</span>, dall'inglese "kernel") è l'insieme di tutti i vettori la cui immagine è il vettore nullo di <span class="math-span">\( W\)</span>, ovvero     <span class="math-block">\[         ker(f) = \{ v \in V \ : \ f(v) = 0_{W} \}     \]</span> </div></div><div class="myexample environment" id="example19"><h2 class="environment-title">Esempio - Calcolare il kernel di un'applicazione lineare</h2><div class="environment-body collapsed">     Considerando l'applicazione lineare      <span class="math-block">\[         f: \mathbb{R}^{2} \to \mathbb{R}^{3}     \]</span>     definita come      <span class="math-block">\[         f(x, y) = (x + 2y, 2x + 4y, 3x + 6y)     \]</span>     allora il nucleo di <span class="math-span">\( f\)</span> sarà uguale a     <span class="math-block">\[         ker(f) = \{ (x, y) \in \mathbb{R}^{2}          \ : \          f(x,y) = (0, 0, 0) \}     \]</span>     ovvero tutti i vettori in cui      <span class="math-block">\[         \left\{         \begin{array}{ccccc}             x &amp; + &amp; 2y &amp; = &amp; 0  \\             2x &amp; + &amp; 4y &amp; = &amp; 0  \\             3x &amp; + &amp; 6y &amp; = &amp; 0         \end{array}         \right.         \qquad         \iff         \qquad         \left\{         \begin{array}{ccc}             x &amp; = &amp; -2t \\             y &amp; = &amp; t         \end{array}         \right.     \]</span>     ovvero si ha che il nucleo di <span class="math-span">\( f\)</span> sarà l'insieme     <span class="math-block">\[         \left(         \begin{array}{c}             x \\             y         \end{array}         \right)         =         t \cdot          \left(         \begin{array}{c}             -2 \\             1         \end{array}         \right)         \qquad         \implies         \qquad         ker(f) = \ \lt (-2, 1)\gt     \]</span> </div><div class="environment-tail"><span class="material-symbols-outlined body-visibility-icon" onclick="expand_environment(event)">expand_more</span></div></div><div class="demonstration environment" id="dem5-3"><h2 class="environment-title">Dimostrazione - Nucleo di <span class="math-span">\( f: V \to W\)</span> come sottospazio vettoriale di <span class="math-span">\( V\)</span></h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando un'applicazione lineare <span class="math-span">\( f: V \to W\)</span>, allora il nucleo di <span class="math-span">\( f\)</span> (ovvero <span class="math-span">\( ker(f)\)</span>) è un sottospazio vettoriale di <span class="math-span">\( V\)</span>.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare tale proposizione è necessario dimostrare che         <ul class="list-container"><li class="list-item">la somma di due vettori <span class="math-span">\( v_{1}, v_{2} \in ker(f)\)</span> è sempre interna al nucleo di <span class="math-span">\( f\)</span>, ovvero             <span class="math-block">\[                 f(v_{1}) = 0_{W}                  \text{ e }                 f(v_{2}) = 0_{W}                  \quad                 \implies                 \quad                 f(v_{1} + v_{2}) = 0_{W}             \]</span>             Per dimostrarlo consideriamo quindi la linearità di <span class="math-span">\( f\)</span>             <span class="math-block">\begin{aligned}                 &amp; f(v_{1} + v_{2}) = f(v_{1}) + f(v_{2})                  &amp; \iff             \end{aligned}</span>             e sostituendoli con la loro immagine si ha che             <span class="math-block">\begin{aligned}                 &amp; f(v_{1}) + f(v_{2}) = 0_{W} + 0_{W} = 0_{W}                 &amp;             \end{aligned}</span>             ovvero che la somma è interna;             </li><li class="list-item">il prodotto per uno scalare è interno al nucleo di <span class="math-span">\( f\)</span>, ovvero considerando un vettore <span class="math-span">\( v \in V\)</span>             <span class="math-block">\[                 f(v) = 0_{W}                 \qquad                 \implies                 \qquad                 f(\alpha \cdot v) = 0_{W}             \]</span>             Per dimostrarlo consideriamo quindi la linearità di <span class="math-span">\( f\)</span>             <span class="math-block">\begin{aligned}                 &amp; f(\alpha \cdot v) = \alpha \cdot f(v)                 &amp; \iff             \end{aligned}</span>             e sostituendo <span class="math-span">\( v\)</span> con la sua immagine si ha che             <span class="math-block">\begin{aligned}                 &amp; \alpha \cdot f(v)= \alpha \cdot 0_{W} = 0_{W}                 &amp;             \end{aligned}</span>             ovvero che il prodotto per uno scalare è interno.         </li></ul>         Si è quindi dimostrato che il nucleo di <span class="math-span">\( f\)</span> è un sottospazio vettoriale di <span class="math-span">\( V\)</span>.     </div></div> </div></div><div class="demonstration environment" id="dem5-4"><h2 class="environment-title">Dimostrazione - Immagine di <span class="math-span">\( f: V \to W\)</span> come sottospazio vettoriale di <span class="math-span">\( W\)</span></h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Data un'applicazione lineare <span class="math-span">\( f: V \to W\)</span>, allora l'immagine di <span class="math-span">\( f\)</span> (ovvero <span class="math-span">\( Im(f)\)</span>) è un sottospazio vettoriale di <span class="math-span">\( W\)</span>.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare tale proposizione è necessario dimostrare che         <ul class="list-container"><li class="list-item">la somma di due vettori <span class="math-span">\( w_{1}, w_{2} \in Im(f)\)</span> è sempre interna all'immagine di <span class="math-span">\( f\)</span>.             <br/>             Per dimostrarlo consideriamo che da definizione <span class="math-span">\( w_{1} = f(v_{1})\)</span> e che <span class="math-span">\( w_{2} = f(v_{2})\)</span>, quindi             <span class="math-block">\begin{aligned}                 &amp; w_{1} + w_{2} = f(v_{1}) + f(v_{2})                 &amp; \iff             \end{aligned}</span>             quindi, per linearità di <span class="math-span">\( f\)</span> si ha che             <span class="math-block">\begin{aligned}                 &amp; f(v_{1}) + f(v_{2}) = f(v_{1} + v_{2})                 &amp;             \end{aligned}</span>             ovvero che il vettore somma è ancora un vettore appartenente all'immagine;             </li><li class="list-item">il prodotto per uno scalare è interno all'immagine di <span class="math-span">\( f\)</span>.             <br/>             Per dimostrarlo consideriamo quindi un vettore <span class="math-span">\( w \in Im(f)\)</span> e consideriamo che tale vettore è per definizione <span class="math-span">\( w = f(v)\)</span>, ovvero             <span class="math-block">\begin{aligned}                 &amp; \alpha \cdot w = \alpha \cdot f(v)                 &amp; \iff             \end{aligned}</span>             e per linearità di <span class="math-span">\( f\)</span> si ha che             <span class="math-block">\begin{aligned}                 &amp; \alpha \cdot f(v) = f(\alpha \cdot v)                 &amp;             \end{aligned}</span>             ovvero che il prodotto per uno scalare è interno.         </li></ul>         Si è quindi dimostrato che l'immagine di <span class="math-span">\( f\)</span> è un sottospazio vettoriale di <span class="math-span">\( W\)</span>.     </div></div> </div></div><div class="demonstration environment" id="dem5-5"><h2 class="environment-title">Dimostrazione - Nucleo di un'applicazione lineare iniettiva composto solo dal vettore nullo</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando un'applicazione lineare <span class="math-span">\( f : V \to W\)</span>, <span class="math-span">\( f\)</span>, essa è iniettiva se e solo se il suo nucleo è composto solamente dal vettore nullo, ovvero         <span class="math-block">\[             ker(f) = \{ 0_{V} \}         \]</span>     </div></div>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Presenza del vettore nullo</h3><div class="environment-body">         È necessario notare che il vettore nullo è sempre presente nel nucleo, in quanto l'immagine del vettore nullo attraverso un'applicazione lineare è sempre il vettore nullo.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare tale proposizione è necessario dimostrare che:         <ul class="list-container"><li class="list-item">"Se <span class="math-span">\( f\)</span> è iniettiva, allora il nucleo di <span class="math-span">\( f\)</span> sarà composto solo dal vettore nullo", infatti considerando per assurdo un vettore <span class="math-span">\( v \in ker(f)\)</span> non nullo (<span class="math-span">\( v \neq 0_{V}\)</span>), otterremmo             <span class="math-block">\[                 f(v) = 0_{W} = f(0_{V})             \]</span>             che renderebbe <span class="math-span">\( f\)</span> non iniettiva in quanto il vettore nullo <span class="math-span">\( 0_{W}\)</span> sarebbe immagine di due vettori distinti.             </li><li class="list-item">"Se nel nucleo di <span class="math-span">\( f\)</span> è presente solo il vettore nullo, allora <span class="math-span">\( f\)</span> è iniettiva". Consideriamo per assurdo che due vettori <span class="math-span">\( v_{1}, v_{2} \in V\)</span> abbiano la stessa immagine, ovvero             <span class="math-block">\begin{aligned}                 f(v_{1}) = f(v_{2})             \end{aligned}</span>             È quindi possibile aggiungere l'opposto di <span class="math-span">\( f(v_{2})\)</span> da entrambi i lati e, utilizzando la linearità di <span class="math-span">\( f\)</span>, scrivere              <span class="math-block">\begin{aligned}                 &amp; f(v_{1}) - f(v_{2}) = 0_{W}                 &amp; \iff \\                 &amp; f(v_{1} - v_{2}) = 0_{W}                 &amp;             \end{aligned}</span>             Tale uguaglianza ci permette di dire che il vettore <span class="math-span">\( v_{1} - v_{2}\)</span> è un vettore del nucleo e, dato che per ipotesi nel nucleo è presente solo il vettore nullo, possiamo dire che quel vettore è proprio il vettore nullo <span class="math-span">\( 0_{V}\)</span>, ovvero             <span class="math-block">\begin{aligned}                 &amp; v_{1} - v_{2} = 0_{V}                  &amp; \iff             \end{aligned}</span>             Ora, "portando a destra" <span class="math-span">\( v_{2}\)</span>             <span class="math-block">\begin{aligned}                 &amp; v_{1} = v_{2}                 &amp;             \end{aligned}</span>             si ha che se due elementi hanno la stessa immagine (e nel nucleo è presente il solo vettore nullo), allora tali elementi sono uguali (che è la definizione di iniettività).          </li></ul>         Si è quindi dimostrata la proposizione.     </div></div> </div></div><div class="demonstration environment" id="dem5-6"><h2 class="environment-title">Dimostrazione - Equazione dimensionale</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando un'applicazione lineare <span class="math-span">\( f : V \to W\)</span>, si ha che la dimensione di <span class="math-span">\( V\)</span> è uguale alla somma delle dimensioni dell'immagine e del nucleo di <span class="math-span">\( f\)</span>, ovvero         <span class="math-block">\[             dim(V) = dim(Im(f)) + dim(ker(f))         \]</span>     </div></div>     <div class="mynote environment"><h3 class="environment-title">Nota bene - "Non posso né scendere né salire"</h3><div class="environment-body">         Ciò significa che fissata la dimensione di <span class="math-span">\( V\)</span>, nel caso cresca la dimensione dell'immagine di <span class="math-span">\( f\)</span>, la dimensione del nucleo dovrà diminuire (e viceversa). Tutto ciò deve avvenire ricordandosi che tali valori devono essere positivi o nulli.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare tale proposizione, consideriamo <span class="math-span">\( n = dim(V)\)</span> e una base per il nucleo di <span class="math-span">\( f\)</span> <span class="math-span">\( B_{ker}\)</span>         <span class="math-block">\[             B_{ker} = (v_{1}, \ \ldots \ , v_{r})         \]</span>         composta da <span class="math-span">\( r\)</span> vettori.         <br/>         Applichiamo il teorema del completamento ad una base per ottenere una base <span class="math-span">\( B_{V}\)</span> per <span class="math-span">\( V\)</span>, ovvero         <span class="math-block">\[             B_{V} = (v_{1}, \ \ldots \ , v_{r}, v_{r + 1}, \ \ldots \ , v_{n})         \]</span>         composta da <span class="math-span">\( n\)</span> vettori.         <br/>         Consideriamo ora le immagini dei vettori aggiunti, ovvero          <span class="math-block">\[             f(v_{r + 1})             \quad , \quad             \ldots              \quad , \quad              f(v_{n})         \]</span>         di cui è possibile dire che sono una base dell'immagine di <span class="math-span">\( f\)</span>, in quanto:         <ul class="list-container"><li class="list-item">sono un sistema di generatori per <span class="math-span">\( Im(f)\)</span>. Infatti, considerando un qualsiasi vettore <span class="math-span">\( f(v) \in Im(f)\)</span>, è possibile scrivere <span class="math-span">\( v\)</span> come combinazione lineare di <span class="math-span">\( B_{V}\)</span>, ovvero             <span class="math-block">\begin{aligned}                 &amp; f(v) = f(x_{1} \cdot v_{1} + \ \ldots \ + x_{r} \cdot v_{r} + x_{r + 1} \cdot v_{r + 1} + \ \ldots \ + x_{n} \cdot v_{n})                 &amp; \iff             \end{aligned}</span>              Ora, per la linearità di <span class="math-span">\( f\)</span> è possibile scrivere l'immagine di un generico vettore <span class="math-span">\( v\)</span> come              <span class="math-block">\begin{aligned}                 &amp; x_{1} \cdot f(v_{1}) + \ \ldots \ + x_{r} \cdot f(v_{r}) + x_{r + 1} \cdot f(v_{r + 1}) + \ \ldots \ + x_{n} \cdot f(v_{n})                 &amp; \iff             \end{aligned}</span>             Ricordando che i vettori <span class="math-span">\( (v_{1}, \ \ldots \ , v_{r})\)</span> sono elementi del nucleo (e quindi la loro immagine è nulla), è possibile scrivere             <span class="math-block">\begin{aligned}                 &amp; f(v) = x_{r + 1} \cdot f(v_{r + 1}) + \ \ldots \ + x_{n} \cdot f(v_{n})                 &amp;             \end{aligned}</span>             che dimostra il fatto tali vettori siano un sistema di generatori per <span class="math-span">\( Im(f)\)</span>.             </li><li class="list-item">sono vettori linearmente indipendenti. Per dimostrare ciò supponiamo             <span class="math-block">\begin{aligned}                 &amp; a_{r+1} \cdot f(v_{r + 1}) + \ \ldots \ + a_{n} \cdot f(v_{n}) = 0_{W}                 &amp; \iff             \end{aligned}</span>             Grazie alla linearità di <span class="math-span">\( f\)</span>, è possibile scrivere             <span class="math-block">\begin{aligned}                 &amp; f(a_{r + 1} \cdot v_{r + 1} + \ \ldots \ + a_{n} \cdot v_{n}) = 0_{W}                 &amp;              \end{aligned}</span>             che ci permette di dire che il vettore <span class="math-span">\( a_{r + 1} \cdot v_{r + 1} + \ \ldots \ + a_{n} \cdot v_{n}\)</span> appartiene al nucleo di <span class="math-span">\( f\)</span> (in quanto la sua immagine è il vettore nullo). Tale vettore può quindi essere rappresentato come combinazione lineare di <span class="math-span">\( B_{ker}\)</span>, ovvero             <span class="math-block">\begin{aligned}                 &amp; a_{r + 1} \cdot v_{r + 1} + \ \ldots \ + a_{n} \cdot v_{n} = a_{1} \cdot v_{1} + \ \ldots \ + a_{r} \cdot v_{r}                 &amp; \iff             \end{aligned}</span>             e aggiungendo da entrambi lati l'opposto della combinazione lineare di <span class="math-span">\( B_{ker}\)</span> si ottiene             <span class="math-block">\begin{aligned}                - a_{1} \cdot v_{1} - \ \ldots \ - a_{r} \cdot v_{r} + a_{r + 1} \cdot v_{r + 1} + \ \ldots \ + a_{n} \cdot v_{n} = 0_{V}                 &amp; \iff             \end{aligned}</span>             i cui coefficienti possono essere solo nulli, in quanto l'ipotesi iniziale era che tali vettori fossero linearmente indipendenti (in quanto sono i vettori della base <span class="math-span">\( B_{V}\)</span>).              <br/>             Si è dimostrata quindi la lineare indipendenza.         </li></ul>        Dunque si è dimostrato che i vettori <span class="math-span">\( (f(v_{r + 1}), \ \ldots \ , f(v_{n}))\)</span> sono una base per <span class="math-span">\( Im(f)\)</span>: ciò implica che la sua dimensione sia        <span class="math-block">\[             dim(Im(f)) = n - r        \]</span>        Ricordando che la dimensione di <span class="math-span">\( B_{ker} = r\)</span>, è ora semplice dimostrare che la dimensione di <span class="math-span">\( V\)</span> sia <span class="math-span">\( n\)</span> (come da ipotesi):        <span class="math-block">\[             \begin{array}{ccccc}                 dim(V) &amp; = &amp; dim(Im(f)) &amp; + &amp; dim(ker(f)) \\                 n &amp; = &amp; (n - r) &amp; + &amp; r             \end{array}        \]</span>        ovvero,        <span class="math-block">\[             n = n        \]</span>        che dimostra la proposizione.     </div></div> </div></div><div class="demonstration environment" id="dem5-7"><h2 class="environment-title">Dimostrazione - Iniettività e suriettività di un'applicazione lineare nel caso la dimensione degli spazi vettoriali sia uguale</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando due spazi vettoriali <span class="math-span">\( V\)</span> e <span class="math-span">\( W\)</span> della stessa dimensione, ovvero         <span class="math-block">\[             dim(V) = dim(W)         \]</span>         e un'applicazione lineare <span class="math-span">\( f : V \to W\)</span> allora <span class="math-span">\( f\)</span> è iniettiva se e solo se è suriettiva.      </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare tale proposizione è necessario dimostrare che, considerando la dimensione di <span class="math-span">\( V\)</span> uguale alla dimensione di <span class="math-span">\( W\)</span>":         <ul class="list-container"><li class="list-item">"se <span class="math-span">\( f\)</span> è iniettiva allora è anche suriettiva".              <br/>             Per dimsotrare ciò si consideri l'equazione dimensionale, ovvero             <span class="math-block">\[                 dim(V) = dim(Im(f)) + dim(ker(f))             \]</span>             e, ricordando che il nucleo delle applicazioni lineari iniettive è composto solo dal vettore nullo (ovvero che la dimensione del nucleo è <span class="math-span">\( 0\)</span>)             <span class="math-block">\[                 dim(ker(f)) = 0             \]</span>             è semplice ottenere che la dimensione di <span class="math-span">\( V\)</span> è uguale alla dimensione dell'immagine di <span class="math-span">\( f\)</span>             <span class="math-block">\[                 dim(V) = dim(Im(f)) + 0             \]</span>             e, dato che la dimensione di <span class="math-span">\( V\)</span> è uguale alla dimensione di <span class="math-span">\( W\)</span>, si ottiene la definizione di suriettività, ovvero             <span class="math-block">\[                 dim(Im(f)) = dim(W)             \]</span>             che dimostra la prima parte della proposizione.             </li><li class="list-item">"se <span class="math-span">\( f\)</span> è suriettiva allora è anche iniettiva". Per dimostrare consideriamo l'equazione dimensionale, ovvero             <span class="math-block">\[                 dim(V) = dim(Im(f)) + dim(ker(f))             \]</span>             e, ricordando la definizione di suriettività, ovvero             <span class="math-block">\[                 Im(f) = W             \]</span>             è semplice ottenere (per il fatto che la dimensione di <span class="math-span">\( V\)</span> sia uguale alla dimensione di <span class="math-span">\( W\)</span>) che la dimensione del nucleo è <span class="math-span">\( 0\)</span>, ovvero             <span class="math-block">\[                 dim(ker(f)) = 0             \]</span>             Provando ciò, si è dimostrata l'iniettività grazie al fatto che se il nucleo di <span class="math-span">\( f\)</span> è nullo, allora <span class="math-span">\( f\)</span> è iniettiva. Ciò dimostra la seconda implicazione.         </li></ul>         Si è quindi dimostrata la proposizione.     </div></div> </div></div><div class="demonstration environment" id="dem5-8"><h2 class="environment-title">Dimostrazione - Suriettività di <span class="math-span">\( f: V \to W\)</span> e relazione tra le dimensioni di <span class="math-span">\( V\)</span> e <span class="math-span">\( W\)</span></h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando un'applicazione lineare <span class="math-span">\( f : V \to W\)</span> suriettiva, allora si ha che la dimensione di <span class="math-span">\( V\)</span> è maggiore o uguale alla dimensione di <span class="math-span">\( W\)</span>, ovvero         <span class="math-block">\[             dim(V) \geq dim(W)         \]</span>     </div></div>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Altra prospettiva</h3><div class="environment-body">         Questa proposizione implica che un'applicazione lineare non può essere suriettiva se la dimensione di <span class="math-span">\( V\)</span> è minore della dimensione di <span class="math-span">\( W\)</span>,     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Considerando la definizione di suriettività         <span class="math-block">\[             Im(f) = W         \]</span>         e l'equazione dimensionale, si ha che         <span class="math-block">\[             \begin{array}{ccccc}                 dim(V) &amp; = &amp; dim(Im(f)) &amp; + &amp; dim(ker(f)) \\                 dim(V) &amp; = &amp; dim(W) &amp; + &amp; dim(ker(f))             \end{array}         \]</span>         che dimostra la proposizione, in quanto la dimensione del nucleo di <span class="math-span">\( f\)</span> è al minimo nulla.     </div></div> </div></div><div class="demonstration environment" id="dem5-9"><h2 class="environment-title">Dimostrazione - Iniettività di <span class="math-span">\( f: V \to W\)</span> e relazione tra le dimensioni di <span class="math-span">\( V\)</span> e <span class="math-span">\( W\)</span></h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando un'applicazione lineare <span class="math-span">\( f : V \to W\)</span>, iniettiva, allora si ha che la dimensione di <span class="math-span">\( V\)</span> è minore o uguale alla dimensione di <span class="math-span">\( W\)</span>, ovvero         <span class="math-block">\[             dim(V) \leq dim(W)         \]</span>     </div></div>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Altra prospettiva</h3><div class="environment-body">         Questa proposizione implica che un'applicazione lineare non può essere iniettiva se la dimensione di <span class="math-span">\( V\)</span> è maggiore della dimensione di <span class="math-span">\( W\)</span>.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Considerando che il nucleo di un'applicazione lineare iniettiva contiene solo il vettore nullo, si ha che         <span class="math-block">\[             dim(ker(f)) = 0         \]</span>         e considerando l'equazione dimensionale si ha che         <span class="math-block">\[             \begin{array}{ccccc}                 dim(V) &amp; = &amp; dim(Im(f)) &amp; + &amp; dim(ker(f)) \\                 dim(V) &amp; = &amp; dim(Im(f)) &amp; + &amp; 0             \end{array}         \]</span>         Dato che l'immagine di <span class="math-span">\( f\)</span> è inclusa in <span class="math-span">\( W\)</span>, ovvero         <span class="math-block">\[             dim(Im(f)) \leq dim(W)         \]</span>         si ha che          <span class="math-block">\[             dim(V) \leq dim(W)         \]</span>         che dimostra la proposizione.     </div></div> </div></div><div class="definition environment" id="def5-7"><h2 class="environment-title">Definizione - Applicazione lineare biunivoca come isomorfismo e spazi vettoriali isomorfi</h2><div class="environment-body">     Un'applicazione lineare <span class="math-span">\( f: V \to W\)</span> biunivoca è detta isomorfismo.      <br/>     Se esiste un isomorfismo <span class="math-span">\( f : V \to W\)</span> diciamo che <span class="math-span">\( V\)</span> e <span class="math-span">\( W\)</span> sono isomorfi, ovvero     <span class="math-block">\[         V \cong W     \]</span> </div></div><div class="myexample environment" id="example20"><h2 class="environment-title">Esempio - Spazi vettoriali isomorfi</h2><div class="environment-body collapsed">     Considerando lo spazio vettoriale dei polinomi a coefficienti reali nella variabile <span class="math-span">\( x\)</span> di grado minore o uguale a tre , ovvero <span class="math-span">\( \mathbb{R}^{\leq 3}[x]\)</span> e lo spazio vettoriale delle matrici quadrate <span class="math-span">\( 2 \times 2\)</span>, ovvero <span class="math-span">\( M_{2 \times 2}(\mathbb{R})\)</span>, allora esiste il seguente isomorfismo      <span class="math-block">\[         f(a x^{3} + b x^{2} + c x + d) =          \left(         \begin{array}{cc}             a &amp; b \\             c &amp; d         \end{array}         \right)     \]</span>     che rende i due spazi vettoriali isomorfi. </div><div class="environment-tail"><span class="material-symbols-outlined body-visibility-icon" onclick="expand_environment(event)">expand_more</span></div></div><div class="demonstration environment" id="dem5-10"><h2 class="environment-title">Dimostrazione - Funzione inversa di un isomorfismo come isomorfismo</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando un isomorfismo <span class="math-span">\( f: V \to W\)</span>, allora anche l'applicazione lineare          <span class="math-block">\[             f^{-1} : W \rightarrow V         \]</span>         è un isomorfismo.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare che <span class="math-span">\( f^{-1}\)</span> è un isomorfismo è sufficiente dimostrare la sua linearità (infatti la suriettività e l'iniettività sono già dimostrate in quanto è una funzione inversa). Per dimostrarlo è necessario dimostrare che         <ul class="list-container"><li class="list-item">la somma è lineare, ovvero che             <span class="math-block">\[                 f^{-1}(w_{1} + w_{2}) = f^{-1}(w_{1}) + f^{-1}(w_{2})             \]</span>             Consideriamo quindi che ogni vettore <span class="math-span">\( w_{1}, w_{2} \in W\)</span> è immagine un distinto vettore <span class="math-span">\( v_{1}, v_{2} \in V\)</span> attraverso <span class="math-span">\( f\)</span>, ovvero             <span class="math-block">\begin{aligned}                &amp; f^{-1}(w_{1} + w_{2}) = f^{-1}(f(v_{1}) + f(v_{2}))                &amp; \iff             \end{aligned}</span>             e per la linearità di <span class="math-span">\( f\)</span>, si ha che             <span class="math-block">\begin{aligned}                &amp; f^{-1}(w_{1} + w_{2}) = f^{-1}(f(v_{1} + v_{2}))                &amp; \iff             \end{aligned}</span>             e dato che la composizione con l'inversa annulla la funzione si ha che             <span class="math-block">\begin{aligned}                &amp; f^{-1}(w_{1} + w_{2}) = v_{1} + v_{2}                &amp; \iff             \end{aligned}</span>             Infine, ricordando che <span class="math-span">\( v_{1} = f^{-1}(w_{1})\)</span> si ottiene             <span class="math-block">\begin{aligned}                &amp; f^{-1}(w_{1} + w_{2}) = f^{-1}(w_{1}) + f^{-1}(w_{2})                &amp;             \end{aligned}</span>             che dimostra la proprietà;             </li><li class="list-item">il prodotto per uno scalare è lineare, ovvero che             <span class="math-block">\[                 f^{-1}(\alpha \cdot w) = \alpha \cdot f^{-1}(w)              \]</span>             Consideriamo quindi che ogni vettore <span class="math-span">\( w \in W\)</span> è immagine un distinto vettore <span class="math-span">\( v \in V\)</span> attraverso <span class="math-span">\( f\)</span>, ovvero             <span class="math-block">\begin{aligned}                &amp; f^{-1}(\alpha \cdot w) = f^{-1}(\alpha \cdot f(v))                 &amp; \iff             \end{aligned}</span>             e per la linearità di <span class="math-span">\( f\)</span>, si ha che             <span class="math-block">\begin{aligned}                &amp; f^{-1}(\alpha \cdot w) = f^{-1}(f(\alpha \cdot v))                &amp; \iff             \end{aligned}</span>             e dato che la composizione con l'inversa annulla la funzione si ha che             <span class="math-block">\begin{aligned}                &amp; f^{-1}(\alpha \cdot w) = \alpha \cdot v                &amp; \iff             \end{aligned}</span>             Infine, ricordando che <span class="math-span">\( v = f^{-1}(w)\)</span> si ottiene             <span class="math-block">\begin{aligned}                &amp; f^{-1}(\alpha \cdot w) = \alpha \cdot f^{-1}(w)                &amp;             \end{aligned}</span>             che dimostra la proprietà;         </li></ul>         Si è quindi dimostrata la proposizione.     </div></div> </div></div><div class="demonstration environment" id="dem5-11"><h2 class="environment-title">Dimostrazione - Composizione di applicazioni lineari come applicazione lineare</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando due applicazioni lineari <span class="math-span">\( f: V \to U\)</span> e <span class="math-span">\( g: U \to W\)</span>  allora anche la loro composizione, ovvero         <span class="math-block">\[             g \circ f: V \to W         \]</span>         è lineare.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare tale proposizione considerando <span class="math-span">\( v_{1}, v_{2} \in V\)</span> e la funzione <span class="math-span">\( h = g \circ f\)</span>, è necessario dimostrare la seguente proprietà         <span class="math-block">\[             h(\alpha \cdot v_{1} + \beta \cdot v_{2}) = \alpha \cdot h(v_{1}) + \beta \cdot h(v_{2}         \]</span>         Innanzitutto è possibile riscrivere la funzione composta <span class="math-span">\( h\)</span> come         <span class="math-block">\begin{aligned}            &amp; h(\alpha \cdot v_{1} + \beta \cdot v_{2}) = g(f(\alpha \cdot v_{1} + \beta \cdot v_{2}))            &amp; \iff         \end{aligned}</span>         e per la linearità di <span class="math-span">\( f\)</span>, si può scrivere         <span class="math-block">\begin{aligned}             &amp; g(f(\alpha \cdot v_{1} + \beta \cdot v_{2})) = g(\alpha \cdot f(v_{1}) + \beta \cdot f(v_{2}))             &amp; \iff         \end{aligned}</span>         mentre per la linearità di <span class="math-span">\( g\)</span>, si può scrivere         <span class="math-block">\begin{aligned}             &amp; g(\alpha \cdot f(v_{1}) + \beta \cdot f(v_{2})) = \alpha \cdot g(f(v_{1}) + \beta \cdot g(f(v_{2}))             &amp; \iff         \end{aligned}</span>         che è equivalente a         <span class="math-block">\begin{aligned}             &amp; \alpha \cdot h(v_{1}) + \beta \cdot h(v_{2})         \end{aligned}</span>         che dimostra la proprietà.     </div></div>  </div></div><div class="demonstration environment" id="dem5-12"><h2 class="environment-title">Dimostrazione - Corollario - Composizioni di isomorfismi</h2><div class="environment-body">     Dato il corollario     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando due isomorfismi <span class="math-span">\( f: V \to U\)</span> e <span class="math-span">\( g: U \to W\)</span>  allora anche la loro composizione, ovvero         <span class="math-block">\[             g \circ f: V \to W         \]</span>         è un isomorfismo.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare ciò è sufficiente ricordare che la composizione di applicazioni lineari è anch'essa una funzione lineare e che la composizione di due funzioni biunivoche è anch'essa una funzione biunivoca.     </div></div> </div></div><div class="demonstration environment" id="dem5-13"><h2 class="environment-title">Dimostrazione - Isomorfismo associato alla <span class="math-span">\( n\)</span>-upla delle coordinate</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando uno spazio vettoriale <span class="math-span">\( V\)</span> di dimensione <span class="math-span">\( n\)</span> e una base <span class="math-span">\( B_{V} = (v_{1}, \ \ldots \ , v_{n})\)</span> per <span class="math-span">\( V\)</span>, allora è sempre possibile costruire un isomorfismo         <span class="math-block">\[             f : V \to \mathbb{R}^{n}         \]</span>         tale che         <span class="math-block">\[             f(v) = (x_{1}, \ \ldots \ , x_{n})         \]</span>         dove <span class="math-span">\( x_{i}\)</span> sono le coordinate di <span class="math-span">\( v\)</span> rispetto a <span class="math-span">\( B_{V}\)</span>.     </div></div>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Spazi vettoriali di dimensione <span class="math-span">\( n\)</span> isomorfi a <span class="math-span">\( \mathbb{R}^{n}\)</span></h3><div class="environment-body">         Dato che tale isomorfismo esiste, significa che ogni spazio vettoriale <span class="math-span">\( V\)</span> di dimensione <span class="math-span">\( n\)</span> è isomorfo a <span class="math-span">\( \mathbb{R}^{n}\)</span>, ovvero         <span class="math-block">\[             n = dim(V)              \qquad             \implies             \qquad             V \cong \mathbb{R}^{n}         \]</span>     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare tale proposizione è necessario provare che         <ul class="list-container"><li class="list-item">tale funzione è lineare, ovvero considerando <span class="math-span">\( u, w \in V\)</span>             <span class="math-block">\[                 f(\alpha \cdot u + \beta \cdot w) = \alpha \cdot f(u) + \beta \cdot f(w)             \]</span>             Per farlo, si parterà dalle due espressioni separatamente per poi raggiungere lo stesso risultato.              <br/>             Consideriamo quindi             <span class="math-block">\begin{aligned}                 &amp; f(\alpha \cdot u + \beta \cdot w)                  &amp; \iff             \end{aligned}</span>             e che <span class="math-span">\( u, w\)</span> possono essere scritti come combinazione lineare di <span class="math-span">\( B_{V}\)</span>, ovvero             <span class="math-block">\begin{aligned}                 &amp; f(\alpha \cdot \sum_{i = 1}^{n} a_{i} \cdot v_{i} + \beta \cdot \sum_{i = 1}^{n} b_{i} \cdot v_{i})                 &amp; \iff             \end{aligned}</span>             e, per le proprietà delle sommatorie,             <span class="math-block">\begin{aligned}                 &amp; f(\sum_{i = 1}^{n} (\alpha \cdot a_{i} + \beta \cdot b_{i}) \cdot v_{i})                 &amp; \iff             \end{aligned}</span>             da cui si ottiene la seguente <span class="math-span">\( n\)</span>-upla di coordinate             <span class="math-block">\[                 (\alpha \cdot a_{1} + \beta \cdot b_{1}, \ \ldots \ , \alpha \cdot a_{n} + \beta \cdot b_{n})             \]</span>             Ora, considerando l'espressione a destra             <span class="math-block">\begin{aligned}                 &amp; \alpha \cdot f(u) + \beta \cdot f(w)                 &amp; \iff             \end{aligned}</span>             è possibile applicare l'immagine dei vettori             <span class="math-block">\begin{aligned}                 &amp; = \alpha \cdot (a_{1}, \ \ldots \ , a_{n}) + \beta \cdot (b_{1}, \ \ldots \ , b_{n})                 &amp; \iff             \end{aligned}</span>             da cui si ottiene la seguente <span class="math-span">\( n\)</span>-upla             <span class="math-block">\[                 (\alpha \cdot a_{1} + \beta \cdot b_{1}, \ \ldots \ , \alpha \cdot a_{n} + \beta \cdot b_{n})             \]</span>             Si è quindi dimostrata la linearità.             </li><li class="list-item">tale funzione è biunivoca. Per dimostrarlo è sufficiente considerare per la suriettività che <span class="math-span">\( B_{V}\)</span> è un sistema di generatori (ovvero che ogni vettori di <span class="math-span">\( V\)</span> è combinazione lineare di <span class="math-span">\( B_{V}\)</span>) e per l'iniettività che ogni vettore corrisponde ad un'unica <span class="math-span">\( n\)</span>-upla di coordinate rispetto ad una base;         </li></ul>         Si è  quindi dimostrata la proposizione.     </div></div> </div></div><div class="demonstration environment" id="dem5-14"><h2 class="environment-title">Dimostrazione - Spazi vettoriali della stessa dimensione isomorfi</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando due spazi vettoriali <span class="math-span">\( V\)</span> e <span class="math-span">\( W\)</span>, questi hanno la stessa dimensione se e solo se sono isomorfi.     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare tale proposizione è necessario dimostrare che:          <ul class="list-container"><li class="list-item">"se due spazi vettoriali hanno la stessa dimensione allora sono isomorfi". Considerando <span class="math-span">\( n\)</span> la dimensione di tali spazi, si ha che <span class="math-span">\( V\)</span> è isomorfo a <span class="math-span">\( \mathbb{R}^{n}\)</span> e che anche <span class="math-span">\( W\)</span> è isomorfo a <span class="math-span">\( \mathbb{R}^{n}\)</span>, per cui esisteranno le seguenti applicazioni lineari             <span class="math-block">\begin{aligned}                 &amp; V \cong \mathbb{R}^{n}                 \qquad                 \implies                 \qquad                 f: V \to \mathbb{R}^{n}                 &amp; \\                 &amp; W \cong \mathbb{R}^{n}                 \qquad                 \implies                 \qquad                 g: W \to \mathbb{R}^{n}                 &amp;             \end{aligned}</span>             da cui è possibile dire che esiste l'isomorfismo <span class="math-span">\( g^{-1}: \mathbb{R}^{n} \to W\)</span> e che esisterà l'isomorfismo <span class="math-span">\( h = g^{-1} \circ f\)</span>             <span class="math-block">\[                 h: V \to W             \]</span>             per cui è possibile dire che <span class="math-span">\( V\)</span> è isomorfo a <span class="math-span">\( W\)</span>.             <br/>             Si è quindi dimostrata l'implicazione.             </li><li class="list-item">"se due spazi vettoriali sono isomorfi allora hanno la stessa dimensione". Per farlo, consideriamo l'equazioni dimensionale di <span class="math-span">\( f: V \to W\)</span> e, consci del fatto che <span class="math-span">\( f\)</span> è biettiva (ovvero suriettiva e iniettiva) si ha che             <span class="math-block">\[                 \begin{array}{ccccc}                     dim(V) &amp; = &amp; dim(ker(f)) &amp; + &amp; dim(Im(f))  \\                     dim(V) &amp; = &amp; 0 &amp; + &amp; dim(W)                 \end{array}             \]</span>             in quanto <span class="math-span">\( dim(ker(f)) = 0\)</span> perchè <span class="math-span">\( f\)</span> è iniettiva e <span class="math-span">\( dim(Im(f)) = dim(W)\)</span> perchè <span class="math-span">\( f\)</span> è suriettiva.             <br/>             Si è quindi dimostrata l'implicazione.         </li></ul>         Si è quindi dimostrata la proposizione.     </div></div> </div></div>
-            </article>
-            <nav class="buttons-container content-width">
-                <a class="navigation-button previous" href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow"><span>Sistemi lineari come matrici</span></a>
-                <a class="navigation-button next" href="applicazioni-lineari-come-matrici.html" rel="nofollow"><span>Applicazioni lineari come matrici</span></a>
-            </nav>
-        </section>
-        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
-            <span class="material-symbols-outlined">
-                keyboard_double_arrow_down
-            </span>
+        <span class="page-title"> Applicazioni lineari </span>
+      </header>
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Geometria e algebra</h2>
+        <div class="index-container">
+          <ul class="parent-ul"
+            ><li class="section-li"
+              ><a href="../index.html" rel="nofollow">Indice</a></li
+            ><li class="section-li"
+              ><a
+                href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                rel="nofollow"
+                >Operazioni e strutture algebriche</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                    rel="nofollow"
+                    >Gruppi, anelli e campi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html"
+                    rel="nofollow"
+                    >Omomorfismi e isomorfismi</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                rel="nofollow"
+                >Spazi vettoriali</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                    rel="nofollow"
+                    >Nozioni preliminari su vettori e spazi vettoriali</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html"
+                    rel="nofollow"
+                    >Combinazione lineare e lineare indipendenza</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/sottostrutture-algebriche.html"
+                    rel="nofollow"
+                    >Sottostrutture algebriche</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html"
+                    rel="nofollow"
+                    >Operazioni tra sottospazi vettoriali</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                rel="nofollow"
+                >Matrici</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                    rel="nofollow"
+                    >Lo spazio vettoriale delle matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/l-anello-delle-matrici-quadrate.html"
+                    rel="nofollow"
+                    >L'anello delle matrici quadrate</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="../matrici/operazioni-riga.html" rel="nofollow"
+                    >Operazioni riga</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                rel="nofollow"
+                >Sistemi lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Sistemi lineari come matrici</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li current"
+              >Applicazioni lineari<ul
+                ><li class="subsection-li current"
+                  >Applicazioni lineari come funzioni<ul
+                    ><li class="definition-li"
+                      ><a href="#def5-1" rel="nofollow"
+                        >Applicazione lineare tra spazi vettoriali</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-1" rel="nofollow"
+                        >Immagine del vettore nullo rispetto ad un'applicazione
+                        lineare uguale al vettore nullo</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="#example18" rel="nofollow"
+                        >Applicazione lineare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def5-2" rel="nofollow"
+                        >Applicazioni lineari come endomorfismi</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-2" rel="nofollow"
+                        >Teorema fondamentale delle applicazioni lineari</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def5-3" rel="nofollow"
+                        >Immagine di un'applicazione lineare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def5-4" rel="nofollow"
+                        >Applicazione lineare suriettiva</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def5-5" rel="nofollow"
+                        >Applicazione lineare iniettiva</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def5-6" rel="nofollow"
+                        >Nucleo di un'applicazione lineare</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="#example19" rel="nofollow"
+                        >Calcolare il kernel di un'applicazione lineare</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-3" rel="nofollow"
+                        >Nucleo di \( f: V \to W\) come sottospazio vettoriale
+                        di \( V\)</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-4" rel="nofollow"
+                        >Immagine di \( f: V \to W\) come sottospazio vettoriale
+                        di \( W\)</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-5" rel="nofollow"
+                        >Nucleo di un'applicazione lineare iniettiva composto
+                        solo dal vettore nullo</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-6" rel="nofollow"
+                        >Equazione dimensionale</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-7" rel="nofollow"
+                        >Iniettività e suriettività di un'applicazione lineare
+                        nel caso la dimensione degli spazi vettoriali sia
+                        uguale</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-8" rel="nofollow"
+                        >Suriettività di \( f: V \to W\) e relazione tra le
+                        dimensioni di \( V\) e \( W\)</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-9" rel="nofollow"
+                        >Iniettività di \( f: V \to W\) e relazione tra le
+                        dimensioni di \( V\) e \( W\)</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def5-7" rel="nofollow"
+                        >Applicazione lineare biunivoca come isomorfismo e spazi
+                        vettoriali isomorfi</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="#example20" rel="nofollow"
+                        >Spazi vettoriali isomorfi</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-10" rel="nofollow"
+                        >Funzione inversa di un isomorfismo come isomorfismo</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-11" rel="nofollow"
+                        >Composizione di applicazioni lineari come applicazione
+                        lineare</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-12" rel="nofollow"
+                        >Corollario - Composizioni di isomorfismi</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-13" rel="nofollow"
+                        >Isomorfismo associato alla \( n\)-upla delle
+                        coordinate</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-14" rel="nofollow"
+                        >Spazi vettoriali della stessa dimensione isomorfi</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="applicazioni-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="matrici-simili.html" rel="nofollow"
+                    >Matrici simili</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../determinante/definizioni-di-determinante.html"
+                rel="nofollow"
+                >Determinante</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/definizioni-di-determinante.html"
+                    rel="nofollow"
+                    >Definizioni di determinante</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/utilizzi-del-determinante.html"
+                    rel="nofollow"
+                    >Utilizzi del determinante</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                rel="nofollow"
+                >Autovalori e autovettori</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                    rel="nofollow"
+                    >Autovalori, autovettori e autospazi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html"
+                    rel="nofollow"
+                    >Diagonalizzazione di una matrice</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                rel="nofollow"
+                >Spazi vettoriali euclidei</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                    rel="nofollow"
+                    >Forme bilineari e prodotto scalare</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html"
+                    rel="nofollow"
+                    >Spazi vettoriali euclidei</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                rel="nofollow"
+                >Geometria analitica nello spazio</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                    rel="nofollow"
+                    >Rette nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/piani-nello-spazio.html"
+                    rel="nofollow"
+                    >Piani nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html"
+                    rel="nofollow"
+                    >Prodotto vettoriale</a
+                  ></li
+                ></ul
+              ></li
+            ></ul
+          >
         </div>
-            <footer class="footer-wrapper">
-                <div class="copyright-wrapper">
-                    <span> &copy; Copyright 2024</span> /
-                    <span>made by <a href="https://github.com/lorenzoarlo" rel="nofollow">lorenzoarlo</a></span>
-                </div>
-                /
-                <div class="privacy-wrapper">
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze
-                            cookie</a></span> /
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow"
-                            target="_blank">Privacy Policy</a></span>
-                </div>
-            </footer>
+      </aside>
+      <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button">
+        keyboard_double_arrow_right
+      </div>
+      <section class="content-wrapper">
+        <h1 class="section-title content-width"
+          >Applicazioni lineari come funzioni</h1
+        >
+        <article class="content-container content-width">
+          <div class="definition environment" id="def5-1"
+            ><h2 class="environment-title"
+              >Definizione - Applicazione lineare tra spazi vettoriali</h2
+            ><div class="environment-body">
+              Una applicazione lineare è una funzione del tipo
+              <span class="math-block">\[ f : V \to W \]</span> dove
+              <span class="math-span">\( V\)</span> e
+              <span class="math-span">\( W\)</span> sono spazi vettoriali la
+              cui:
+              <ul class="list-container"
+                ><li class="list-item"
+                  >immagine della somma è uguale alla somma delle immagini
+                  <span class="math-block"
+                    >\[ f(v + u) = f(v) + f (u) \]</span
+                  > </li
+                ><li class="list-item"
+                  >immagine del prodotto per uno scalare è uguale al prodotto
+                  per uno scalare dell'immagine
+                  <span class="math-block"
+                    >\[ f(\lambda \cdot v) = \lambda \cdot f(v) \]</span
+                  >
+                </li></ul
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - La condizione in breve</h3
+                ><div class="environment-body">
+                  Le due condizioni possono essere riassunte anche nella
+                  condizione unica
+                  <span class="math-block"
+                    >\[ f(\alpha \cdot v + \beta \cdot u) = \alpha \cdot f(v) +
+                    \beta \cdot f(u) \]</span
+                  >
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-1"
+            ><h2 class="environment-title"
+              >Dimostrazione - Immagine del vettore nullo rispetto ad
+              un'applicazione lineare uguale al vettore nullo</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Se <span class="math-block">\[ f : V \to W \]</span> è
+                  un'applicazione lineare, allora l'immagine del vettore nullo
+                  di <span class="math-span">\( V\)</span> è il vettore nullo di
+                  <span class="math-span">\( W\)</span>, ovvero
+                  <span class="math-block">\[ f(0_{V}) = 0_{W} \]</span>
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare la proposizione consideriamo l'uguaglianza
+                  <span class="math-block"
+                    >\begin{aligned} &amp; f(0_{V} + 0_{V}) = f(0_{V}) +
+                    f(0_{V}) &amp; \iff \end{aligned}</span
+                  >
+                  che è valida per la linearità. <br />
+                  Considerando quindi
+                  <span class="math-span">\( x \in W\)</span> come l'opposto di
+                  <span class="math-span">\( f(0_{V})\)</span>, aggiungiamolo ad
+                  entrambe le parti
+                  <span class="math-block"
+                    >\begin{aligned} &amp; x + f(0_{V} + 0_{V}) = f(0_{V}) +
+                    f(0_{V}) + x &amp; \iff \end{aligned}</span
+                  >
+                  Ora, dato che
+                  <span class="math-span">\( 0_{V} + 0_{V} = 0_{V}\)</span>, è
+                  possibile scrivere
+                  <span class="math-block"
+                    >\begin{aligned} &amp; x + f(0_{V}) = f(0_{V}) + f(0_{V}) +
+                    x &amp; \iff \end{aligned}</span
+                  >
+                  e per l'associatività è lecito scrivere
+                  <span class="math-block"
+                    >\begin{aligned} &amp; x + f(0_{V}) = f(0_{V}) + (f(0_{V}) +
+                    x) &amp; \iff \end{aligned}</span
+                  >
+                  Applicando quindi la definizione di opposto, si ha che
+                  <span class="math-span">\( x + f(0_{V}) = 0_{W}\)</span> e
+                  quindi
+                  <span class="math-block"
+                    >\begin{aligned} &amp; 0_{W} = f(0_{V}) + 0_{W} &amp; \iff
+                    \end{aligned}</span
+                  >
+                  e dato che qualsiasi elemento sommato all'elemento nullo è
+                  l'elemento stesso, si ha che
+                  <span class="math-block">\[ 0_{W} = f(0_{V}) \]</span> che
+                  dimostra la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="myexample environment" id="example18"
+            ><h2 class="environment-title">Esempio - Applicazione lineare</h2
+            ><div class="environment-body collapsed">
+              Un esempio di applicazione lineare è il limite per successioni
+              convergenti, definibile come
+              <span class="math-block"
+                >\[ f : \{ a_{n} \} \to \mathbb{R} \]</span
+              >
+              dove <span class="math-span">\( \{ a_{n} \}\)</span> indica
+              l'insieme infinito di tutte le successioni convergenti. <br />
+              Considerando i seguenti limiti
+              <span class="math-block"
+                >\begin{aligned} &amp; \lim_{n \to + \infty} a_{n} = l &amp;
+                \lim_{n \to + \infty} b_{n} = m \end{aligned}</span
+              >
+              si ha, per l'algebra dei limiti finiti, che
+              <span class="math-block"
+                >\[ \lim_{n \to + \infty} (\alpha \cdot a_{n} + \beta \cdot
+                b_{n}) = \alpha \cdot l + \beta \cdot m \]</span
+              >
+              che dimostra la linearità. </div
+            ><div class="environment-tail"
+              ><span
+                class="material-symbols-outlined body-visibility-icon"
+                onclick="expand_environment(event)"
+                >expand_more</span
+              ></div
+            ></div
+          ><div class="definition environment" id="def5-2"
+            ><h2 class="environment-title"
+              >Definizione - Applicazioni lineari come endomorfismi</h2
+            ><div class="environment-body">
+              Un'applicazione lineare il cui dominio è uguale al codominio,
+              ovvero <span class="math-block">\[ f: V \to V \]</span> è detta
+              endomorfismo.
+            </div></div
+          ><div class="demonstration environment" id="dem5-2"
+            ><h2 class="environment-title"
+              >Dimostrazione - Teorema fondamentale delle applicazioni
+              lineari</h2
+            ><div class="environment-body">
+              Dato il teorema
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando due spazi vettoriali
+                  <span class="math-span">\( V\)</span> e
+                  <span class="math-span">\( W\)</span>, una base
+                  <span class="math-span"
+                    >\( B_{V} = (v_{1}, \ \ldots \ , v_{n})\)</span
+                  >
+                  per <span class="math-span">\( V\)</span> e
+                  <span class="math-span">\( n\)</span> vettori
+                  <span class="math-span">\( w_{1}, \ \ldots \ , w_{n}\)</span>
+                  di <span class="math-span">\( W\)</span>, allora esiste ed è
+                  unica un'applicazione lineare
+                  <span class="math-block">\[ f: V \to W \]</span> tale che
+                  <span class="math-block"
+                    >\[ f(v_{1}) = w_{1} \quad , \quad \ldots \quad , \quad
+                    f(v_{n}) = w_{n} \]</span
+                  >
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale proposizione, è necessario dimostrare:
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >esiste tale applicazione lineare. Per dimostrarlo,
+                      consideriamo quindi un vettore
+                      <span class="math-span">\( v \in V\)</span> che è
+                      combinazione lineare dei vettori di
+                      <span class="math-span">\( B_{V}\)</span>
+                      <span class="math-block"
+                        >\[ v = a_{1} \cdot v_{1} + \ \ldots \ + a_{n} \cdot
+                        v_{n} \]</span
+                      >
+                      Significa quindi che ogni vettore è associato ad una
+                      <span class="math-span">\( n\)</span>-upla di coordinate.
+                      Consideriamo quindi la seguente funzione
+                      <span class="math-block"
+                        >\[ f(v) = a_{1} \cdot w_{1} + \ \ldots \ + a_{n} \cdot
+                        w_{n} \]</span
+                      >
+                      dove
+                      <span class="math-span"
+                        >\( (a_{1}, \ \ldots \ , a_{n})\)</span
+                      >
+                      sono le coordinate di
+                      <span class="math-span">\( v\)</span> rispetto a
+                      <span class="math-span">\( B_{V}\)</span>. Inoltre, dato
+                      che
+                      <span class="math-span"
+                        >\( (a_{1}, \ \ldots \ , a_{n})\)</span
+                      >
+                      sono proprio le coordinate rispetto ai vettori della base,
+                      si ha che saranno del tipo
+                      <span class="math-block"
+                        >\[ f(v_{1}) = f(1 \cdot v_{1} + 0 \cdot v_{2} + \
+                        \ldots \ + 0 \cdot v_{n}) = 1 \cdot w_{1} \]</span
+                      >
+                      che dimostra quindi l'esistenza della funzione richiesta.
+                      <br />
+                      È ora necessario che tale funzione sia un'applicazione
+                      lineare, ovvero che
+                      <ul class="list-container"
+                        ><li class="list-item"
+                          ><span class="math-span"
+                            >\( f(v + u) = f(v) + f(u)\)</span
+                          >: per farlo consideriamo le immagini dei vettori,
+                          ovvero
+                          <span class="math-block"
+                            >\begin{aligned} &amp; f(v) = f \left( \sum_{i =
+                            1}^{n} a_{i} \cdot v_{i} \right) = \sum_{i = 1}^{n}
+                            a_{i} \cdot w_{i} \\ &amp; f(u) = f \left( \sum_{i =
+                            1}^{n} b_{i} \cdot v_{i} \right) = \sum_{i = 1}^{n}
+                            b_{i} \cdot w_{i} \\ &amp; f(v + u) = f \left(
+                            \sum_{i = 1}^{n} a_{n} \cdot v_{1} + b_{n} \cdot
+                            v_{i} \right) = \sum_{i = 1}^{n} a_{n} \cdot w_{1} +
+                            b_{n} \cdot w_{i} \end{aligned}</span
+                          >
+                          da cui, grazie alle proprietà delle sommatorie, è
+                          facile dimostrare la linearità della somma
+                          <span class="math-block"
+                            >\[ \sum_{i = 1}^{n} a_{n} \cdot w_{1} + b_{n} \cdot
+                            w_{i} = \sum_{i = 1}^{n} a_{i} \cdot w_{i} + \sum_{i
+                            = 1}^{n} b_{i} \cdot w_{i} \]</span
+                          > </li
+                        ><li class="list-item"
+                          ><span class="math-span"
+                            >\( f(\alpha \cdot v) = \alpha \cdot f(v)\)</span
+                          >: per farlo consideriamo le immagini dei vettori,
+                          ovvero
+                          <span class="math-block"
+                            >\begin{aligned} &amp; f(v) = f \left( \sum_{i =
+                            1}^{n} a_{i} \cdot v_{i} \right) = \sum_{i = 1}^{n}
+                            a_{i} \cdot w_{i} \\ &amp; \alpha \cdot f(v) =
+                            \alpha \cdot f \left( \sum_{i = 1}^{n} a_{i} \cdot
+                            v_{i} \right) = \alpha \cdot \sum_{i = 1}^{n} a_{i}
+                            \cdot w_{i} \\ &amp; f(\alpha \cdot v) = f \left(
+                            \sum_{i = 1}^{n} \alpha \cdot a_{i} \cdot v_{i}
+                            \right) = \sum_{i = 1}^{n} \alpha \cdot a_{i} \cdot
+                            w_{i} \end{aligned}</span
+                          >
+                          da cui, grazie alla proprietà distributiva delle
+                          sommatorie, è facile dimostrare la linearità del
+                          prodotto per uno scalare
+                          <span class="math-block"
+                            >\[ \sum_{i = 1}^{n} \alpha \cdot a_{i} \cdot w_{i}
+                            = \alpha \cdot \sum_{i = 1}^{n} a_{i} \cdot w_{i}
+                            \]</span
+                          >
+                        </li></ul
+                      >
+                      Si è quindi dimostrata la linearità di
+                      <span class="math-span">\( f\)</span>; </li
+                    ><li class="list-item"
+                      >tale applicazione lineare è unica. Per dimostrarlo
+                      consideriamo quindi due applicazioni lineari
+                      <span class="math-span">\( f_{1}\)</span> e
+                      <span class="math-span">\( f_{2}\)</span> tali che
+                      <span class="math-block"
+                        >\[ f_{1}(v_{i}) = w_{i} = f_{2}(v_{i}) \]</span
+                      >
+                      Dato che un qualsiasi vettore
+                      <span class="math-span">\( v \in V\)</span> può essere
+                      scritto come combinazione lineare di
+                      <span class="math-span">\( B_{V}\)</span> si ha che
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f_{1}(v) = f_{1}(\sum_{i = 1}^{n}
+                        a_{i} \cdot v_{i}) &amp; \iff \end{aligned}</span
+                      >
+                      e per la linearità di
+                      <span class="math-span">\( f_{1}\)</span> si ha che
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f_{1}(\sum_{i = 1}^{n} a_{i}
+                        \cdot v_{i}) = \sum_{i = 1}^{n} a_{i} \cdot f_{1}(v_{i})
+                        = \sum_{i = 1}^{n} a_{i} \cdot w_{i} &amp;
+                        \end{aligned}</span
+                      >
+                      Ora, dato che la combinazione lineare di un vettore
+                      rispetto ad una base è unica, ripetendo l'analogo
+                      ragionamento si otterrebbero sempre i coefficienti
+                      <span class="math-span">\( a_{i}\)</span>, e per questo
+                      motivo l'applicazione lineare è unica.
+                    </li></ul
+                  >
+                  Si è quindi dimostrato il teorema.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def5-3"
+            ><h2 class="environment-title"
+              >Definizione - Immagine di un'applicazione lineare</h2
+            ><div class="environment-body">
+              Considerando un'applicazione lineare
+              <span class="math-span">\( f: V \to W\)</span>, la sua immagine è
+              l'insieme dei vettori di <span class="math-span">\( W\)</span> a
+              cui corrisponde almeno un elemento di
+              <span class="math-span">\( V\)</span>, ovvero
+              <span class="math-block"
+                >\[ Im(f) = \{ w \in W \ : \ \exists f(v) = w \} \quad \text{con
+                } v \in V \]</span
+              >
+            </div></div
+          ><div class="definition environment" id="def5-4"
+            ><h2 class="environment-title"
+              >Definizione - Applicazione lineare suriettiva</h2
+            ><div class="environment-body">
+              Un'applicazione lineare
+              <span class="math-span">\( f: V \to W\)</span> si dice suriettiva
+              se ogni elemento del codominio è immagine di almeno un elemento
+              del dominio, ovvero che
+              <span class="math-block">\[ W = Im(f) \]</span>
+            </div></div
+          ><div class="definition environment" id="def5-5"
+            ><h2 class="environment-title"
+              >Definizione - Applicazione lineare iniettiva</h2
+            ><div class="environment-body">
+              Un' applicazione lineare
+              <span class="math-span">\( f: V \to W\)</span> si dice iniettiva
+              se ogni <span class="math-span">\( y \in im(f)\)</span> è immagine
+              solo di un elemento <span class="math-span">\( v \in V\)</span>,
+              ovvero se ad ogni
+              <span class="math-span">\( v \in V\)</span> corrisponde un
+              distinto elemento <span class="math-span">\( w \in W\)</span>.
+              <br />
+              Ciò implica che se <span class="math-span">\( v_{1}\)</span> è
+              diverso da <span class="math-span">\( v_{2}\)</span>, allora
+              l'immagine di <span class="math-span">\( v_{1}\)</span> sarà
+              diversa dall'immagine di
+              <span class="math-span">\( v_{2}\)</span>
+              <span class="math-block"
+                >\[ v_{1} \neq v_{2} \qquad \implies \qquad f(v_{1}) \neq
+                f(v_{2}) \]</span
+              >
+            </div></div
+          ><div class="definition environment" id="def5-6"
+            ><h2 class="environment-title"
+              >Definizione - Nucleo di un'applicazione lineare</h2
+            ><div class="environment-body">
+              Considerando un'applicazione lineare
+              <span class="math-span">\( f: V \to W\)</span>, il suo nucleo
+              (<span class="math-span">\( ker(f)\)</span>, dall'inglese
+              "kernel") è l'insieme di tutti i vettori la cui immagine è il
+              vettore nullo di <span class="math-span">\( W\)</span>, ovvero
+              <span class="math-block"
+                >\[ ker(f) = \{ v \in V \ : \ f(v) = 0_{W} \} \]</span
+              >
+            </div></div
+          ><div class="myexample environment" id="example19"
+            ><h2 class="environment-title"
+              >Esempio - Calcolare il kernel di un'applicazione lineare</h2
+            ><div class="environment-body collapsed">
+              Considerando l'applicazione lineare
+              <span class="math-block"
+                >\[ f: \mathbb{R}^{2} \to \mathbb{R}^{3} \]</span
+              >
+              definita come
+              <span class="math-block"
+                >\[ f(x, y) = (x + 2y, 2x + 4y, 3x + 6y) \]</span
+              >
+              allora il nucleo di <span class="math-span">\( f\)</span> sarà
+              uguale a
+              <span class="math-block"
+                >\[ ker(f) = \{ (x, y) \in \mathbb{R}^{2} \ : \ f(x,y) = (0, 0,
+                0) \} \]</span
+              >
+              ovvero tutti i vettori in cui
+              <span class="math-block"
+                >\[ \left\{ \begin{array}{ccccc} x &amp; + &amp; 2y &amp; =
+                &amp; 0 \\ 2x &amp; + &amp; 4y &amp; = &amp; 0 \\ 3x &amp; +
+                &amp; 6y &amp; = &amp; 0 \end{array} \right. \qquad \iff \qquad
+                \left\{ \begin{array}{ccc} x &amp; = &amp; -2t \\ y &amp; =
+                &amp; t \end{array} \right. \]</span
+              >
+              ovvero si ha che il nucleo di
+              <span class="math-span">\( f\)</span> sarà l'insieme
+              <span class="math-block"
+                >\[ \left( \begin{array}{c} x \\ y \end{array} \right) = t \cdot
+                \left( \begin{array}{c} -2 \\ 1 \end{array} \right) \qquad
+                \implies \qquad ker(f) = \ \lt (-2, 1)\gt \]</span
+              > </div
+            ><div class="environment-tail"
+              ><span
+                class="material-symbols-outlined body-visibility-icon"
+                onclick="expand_environment(event)"
+                >expand_more</span
+              ></div
+            ></div
+          ><div class="demonstration environment" id="dem5-3"
+            ><h2 class="environment-title"
+              >Dimostrazione - Nucleo di
+              <span class="math-span">\( f: V \to W\)</span> come sottospazio
+              vettoriale di <span class="math-span">\( V\)</span></h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando un'applicazione lineare
+                  <span class="math-span">\( f: V \to W\)</span>, allora il
+                  nucleo di <span class="math-span">\( f\)</span> (ovvero
+                  <span class="math-span">\( ker(f)\)</span>) è un sottospazio
+                  vettoriale di <span class="math-span">\( V\)</span>.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale proposizione è necessario dimostrare che
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >la somma di due vettori
+                      <span class="math-span"
+                        >\( v_{1}, v_{2} \in ker(f)\)</span
+                      >
+                      è sempre interna al nucleo di
+                      <span class="math-span">\( f\)</span>, ovvero
+                      <span class="math-block"
+                        >\[ f(v_{1}) = 0_{W} \text{ e } f(v_{2}) = 0_{W} \quad
+                        \implies \quad f(v_{1} + v_{2}) = 0_{W} \]</span
+                      >
+                      Per dimostrarlo consideriamo quindi la linearità di
+                      <span class="math-span">\( f\)</span>
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f(v_{1} + v_{2}) = f(v_{1}) +
+                        f(v_{2}) &amp; \iff \end{aligned}</span
+                      >
+                      e sostituendoli con la loro immagine si ha che
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f(v_{1}) + f(v_{2}) = 0_{W} +
+                        0_{W} = 0_{W} &amp; \end{aligned}</span
+                      >
+                      ovvero che la somma è interna; </li
+                    ><li class="list-item"
+                      >il prodotto per uno scalare è interno al nucleo di
+                      <span class="math-span">\( f\)</span>, ovvero considerando
+                      un vettore <span class="math-span">\( v \in V\)</span>
+                      <span class="math-block"
+                        >\[ f(v) = 0_{W} \qquad \implies \qquad f(\alpha \cdot
+                        v) = 0_{W} \]</span
+                      >
+                      Per dimostrarlo consideriamo quindi la linearità di
+                      <span class="math-span">\( f\)</span>
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f(\alpha \cdot v) = \alpha \cdot
+                        f(v) &amp; \iff \end{aligned}</span
+                      >
+                      e sostituendo <span class="math-span">\( v\)</span> con la
+                      sua immagine si ha che
+                      <span class="math-block"
+                        >\begin{aligned} &amp; \alpha \cdot f(v)= \alpha \cdot
+                        0_{W} = 0_{W} &amp; \end{aligned}</span
+                      >
+                      ovvero che il prodotto per uno scalare è interno.
+                    </li></ul
+                  >
+                  Si è quindi dimostrato che il nucleo di
+                  <span class="math-span">\( f\)</span> è un sottospazio
+                  vettoriale di <span class="math-span">\( V\)</span>.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-4"
+            ><h2 class="environment-title"
+              >Dimostrazione - Immagine di
+              <span class="math-span">\( f: V \to W\)</span> come sottospazio
+              vettoriale di <span class="math-span">\( W\)</span></h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Data un'applicazione lineare
+                  <span class="math-span">\( f: V \to W\)</span>, allora
+                  l'immagine di <span class="math-span">\( f\)</span> (ovvero
+                  <span class="math-span">\( Im(f)\)</span>) è un sottospazio
+                  vettoriale di <span class="math-span">\( W\)</span>.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale proposizione è necessario dimostrare che
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >la somma di due vettori
+                      <span class="math-span">\( w_{1}, w_{2} \in Im(f)\)</span>
+                      è sempre interna all'immagine di
+                      <span class="math-span">\( f\)</span>. <br />
+                      Per dimostrarlo consideriamo che da definizione
+                      <span class="math-span">\( w_{1} = f(v_{1})\)</span> e che
+                      <span class="math-span">\( w_{2} = f(v_{2})\)</span>,
+                      quindi
+                      <span class="math-block"
+                        >\begin{aligned} &amp; w_{1} + w_{2} = f(v_{1}) +
+                        f(v_{2}) &amp; \iff \end{aligned}</span
+                      >
+                      quindi, per linearità di
+                      <span class="math-span">\( f\)</span> si ha che
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f(v_{1}) + f(v_{2}) = f(v_{1} +
+                        v_{2}) &amp; \end{aligned}</span
+                      >
+                      ovvero che il vettore somma è ancora un vettore
+                      appartenente all'immagine; </li
+                    ><li class="list-item"
+                      >il prodotto per uno scalare è interno all'immagine di
+                      <span class="math-span">\( f\)</span>. <br />
+                      Per dimostrarlo consideriamo quindi un vettore
+                      <span class="math-span">\( w \in Im(f)\)</span> e
+                      consideriamo che tale vettore è per definizione
+                      <span class="math-span">\( w = f(v)\)</span>, ovvero
+                      <span class="math-block"
+                        >\begin{aligned} &amp; \alpha \cdot w = \alpha \cdot
+                        f(v) &amp; \iff \end{aligned}</span
+                      >
+                      e per linearità di
+                      <span class="math-span">\( f\)</span> si ha che
+                      <span class="math-block"
+                        >\begin{aligned} &amp; \alpha \cdot f(v) = f(\alpha
+                        \cdot v) &amp; \end{aligned}</span
+                      >
+                      ovvero che il prodotto per uno scalare è interno.
+                    </li></ul
+                  >
+                  Si è quindi dimostrato che l'immagine di
+                  <span class="math-span">\( f\)</span> è un sottospazio
+                  vettoriale di <span class="math-span">\( W\)</span>.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-5"
+            ><h2 class="environment-title"
+              >Dimostrazione - Nucleo di un'applicazione lineare iniettiva
+              composto solo dal vettore nullo</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando un'applicazione lineare
+                  <span class="math-span">\( f : V \to W\)</span>,
+                  <span class="math-span">\( f\)</span>, essa è iniettiva se e
+                  solo se il suo nucleo è composto solamente dal vettore nullo,
+                  ovvero
+                  <span class="math-block">\[ ker(f) = \{ 0_{V} \} \]</span>
+                </div></div
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - Presenza del vettore nullo</h3
+                ><div class="environment-body">
+                  È necessario notare che il vettore nullo è sempre presente nel
+                  nucleo, in quanto l'immagine del vettore nullo attraverso
+                  un'applicazione lineare è sempre il vettore nullo.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale proposizione è necessario dimostrare che:
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >"Se <span class="math-span">\( f\)</span> è iniettiva,
+                      allora il nucleo di
+                      <span class="math-span">\( f\)</span> sarà composto solo
+                      dal vettore nullo", infatti considerando per assurdo un
+                      vettore
+                      <span class="math-span">\( v \in ker(f)\)</span> non nullo
+                      (<span class="math-span">\( v \neq 0_{V}\)</span>),
+                      otterremmo
+                      <span class="math-block"
+                        >\[ f(v) = 0_{W} = f(0_{V}) \]</span
+                      >
+                      che renderebbe <span class="math-span">\( f\)</span> non
+                      iniettiva in quanto il vettore nullo
+                      <span class="math-span">\( 0_{W}\)</span> sarebbe immagine
+                      di due vettori distinti. </li
+                    ><li class="list-item"
+                      >"Se nel nucleo di <span class="math-span">\( f\)</span> è
+                      presente solo il vettore nullo, allora
+                      <span class="math-span">\( f\)</span> è iniettiva".
+                      Consideriamo per assurdo che due vettori
+                      <span class="math-span">\( v_{1}, v_{2} \in V\)</span>
+                      abbiano la stessa immagine, ovvero
+                      <span class="math-block"
+                        >\begin{aligned} f(v_{1}) = f(v_{2}) \end{aligned}</span
+                      >
+                      È quindi possibile aggiungere l'opposto di
+                      <span class="math-span">\( f(v_{2})\)</span> da entrambi i
+                      lati e, utilizzando la linearità di
+                      <span class="math-span">\( f\)</span>, scrivere
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f(v_{1}) - f(v_{2}) = 0_{W} &amp;
+                        \iff \\ &amp; f(v_{1} - v_{2}) = 0_{W} &amp;
+                        \end{aligned}</span
+                      >
+                      Tale uguaglianza ci permette di dire che il vettore
+                      <span class="math-span">\( v_{1} - v_{2}\)</span> è un
+                      vettore del nucleo e, dato che per ipotesi nel nucleo è
+                      presente solo il vettore nullo, possiamo dire che quel
+                      vettore è proprio il vettore nullo
+                      <span class="math-span">\( 0_{V}\)</span>, ovvero
+                      <span class="math-block"
+                        >\begin{aligned} &amp; v_{1} - v_{2} = 0_{V} &amp; \iff
+                        \end{aligned}</span
+                      >
+                      Ora, "portando a destra"
+                      <span class="math-span">\( v_{2}\)</span>
+                      <span class="math-block"
+                        >\begin{aligned} &amp; v_{1} = v_{2} &amp;
+                        \end{aligned}</span
+                      >
+                      si ha che se due elementi hanno la stessa immagine (e nel
+                      nucleo è presente il solo vettore nullo), allora tali
+                      elementi sono uguali (che è la definizione di
+                      iniettività).
+                    </li></ul
+                  >
+                  Si è quindi dimostrata la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-6"
+            ><h2 class="environment-title"
+              >Dimostrazione - Equazione dimensionale</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando un'applicazione lineare
+                  <span class="math-span">\( f : V \to W\)</span>, si ha che la
+                  dimensione di <span class="math-span">\( V\)</span> è uguale
+                  alla somma delle dimensioni dell'immagine e del nucleo di
+                  <span class="math-span">\( f\)</span>, ovvero
+                  <span class="math-block"
+                    >\[ dim(V) = dim(Im(f)) + dim(ker(f)) \]</span
+                  >
+                </div></div
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - "Non posso né scendere né salire"</h3
+                ><div class="environment-body">
+                  Ciò significa che fissata la dimensione di
+                  <span class="math-span">\( V\)</span>, nel caso cresca la
+                  dimensione dell'immagine di
+                  <span class="math-span">\( f\)</span>, la dimensione del
+                  nucleo dovrà diminuire (e viceversa). Tutto ciò deve avvenire
+                  ricordandosi che tali valori devono essere positivi o nulli.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale proposizione, consideriamo
+                  <span class="math-span">\( n = dim(V)\)</span> e una base per
+                  il nucleo di <span class="math-span">\( f\)</span>
+                  <span class="math-span">\( B_{ker}\)</span>
+                  <span class="math-block"
+                    >\[ B_{ker} = (v_{1}, \ \ldots \ , v_{r}) \]</span
+                  >
+                  composta da <span class="math-span">\( r\)</span> vettori.
+                  <br />
+                  Applichiamo il teorema del completamento ad una base per
+                  ottenere una base
+                  <span class="math-span">\( B_{V}\)</span> per
+                  <span class="math-span">\( V\)</span>, ovvero
+                  <span class="math-block"
+                    >\[ B_{V} = (v_{1}, \ \ldots \ , v_{r}, v_{r + 1}, \ \ldots
+                    \ , v_{n}) \]</span
+                  >
+                  composta da <span class="math-span">\( n\)</span> vettori.
+                  <br />
+                  Consideriamo ora le immagini dei vettori aggiunti, ovvero
+                  <span class="math-block"
+                    >\[ f(v_{r + 1}) \quad , \quad \ldots \quad , \quad f(v_{n})
+                    \]</span
+                  >
+                  di cui è possibile dire che sono una base dell'immagine di
+                  <span class="math-span">\( f\)</span>, in quanto:
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >sono un sistema di generatori per
+                      <span class="math-span">\( Im(f)\)</span>. Infatti,
+                      considerando un qualsiasi vettore
+                      <span class="math-span">\( f(v) \in Im(f)\)</span>, è
+                      possibile scrivere
+                      <span class="math-span">\( v\)</span> come combinazione
+                      lineare di <span class="math-span">\( B_{V}\)</span>,
+                      ovvero
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f(v) = f(x_{1} \cdot v_{1} + \
+                        \ldots \ + x_{r} \cdot v_{r} + x_{r + 1} \cdot v_{r + 1}
+                        + \ \ldots \ + x_{n} \cdot v_{n}) &amp; \iff
+                        \end{aligned}</span
+                      >
+                      Ora, per la linearità di
+                      <span class="math-span">\( f\)</span> è possibile scrivere
+                      l'immagine di un generico vettore
+                      <span class="math-span">\( v\)</span> come
+                      <span class="math-block"
+                        >\begin{aligned} &amp; x_{1} \cdot f(v_{1}) + \ \ldots \
+                        + x_{r} \cdot f(v_{r}) + x_{r + 1} \cdot f(v_{r + 1}) +
+                        \ \ldots \ + x_{n} \cdot f(v_{n}) &amp; \iff
+                        \end{aligned}</span
+                      >
+                      Ricordando che i vettori
+                      <span class="math-span"
+                        >\( (v_{1}, \ \ldots \ , v_{r})\)</span
+                      >
+                      sono elementi del nucleo (e quindi la loro immagine è
+                      nulla), è possibile scrivere
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f(v) = x_{r + 1} \cdot f(v_{r +
+                        1}) + \ \ldots \ + x_{n} \cdot f(v_{n}) &amp;
+                        \end{aligned}</span
+                      >
+                      che dimostra il fatto tali vettori siano un sistema di
+                      generatori per
+                      <span class="math-span">\( Im(f)\)</span>. </li
+                    ><li class="list-item"
+                      >sono vettori linearmente indipendenti. Per dimostrare ciò
+                      supponiamo
+                      <span class="math-block"
+                        >\begin{aligned} &amp; a_{r+1} \cdot f(v_{r + 1}) + \
+                        \ldots \ + a_{n} \cdot f(v_{n}) = 0_{W} &amp; \iff
+                        \end{aligned}</span
+                      >
+                      Grazie alla linearità di
+                      <span class="math-span">\( f\)</span>, è possibile
+                      scrivere
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f(a_{r + 1} \cdot v_{r + 1} + \
+                        \ldots \ + a_{n} \cdot v_{n}) = 0_{W} &amp;
+                        \end{aligned}</span
+                      >
+                      che ci permette di dire che il vettore
+                      <span class="math-span"
+                        >\( a_{r + 1} \cdot v_{r + 1} + \ \ldots \ + a_{n} \cdot
+                        v_{n}\)</span
+                      >
+                      appartiene al nucleo di
+                      <span class="math-span">\( f\)</span> (in quanto la sua
+                      immagine è il vettore nullo). Tale vettore può quindi
+                      essere rappresentato come combinazione lineare di
+                      <span class="math-span">\( B_{ker}\)</span>, ovvero
+                      <span class="math-block"
+                        >\begin{aligned} &amp; a_{r + 1} \cdot v_{r + 1} + \
+                        \ldots \ + a_{n} \cdot v_{n} = a_{1} \cdot v_{1} + \
+                        \ldots \ + a_{r} \cdot v_{r} &amp; \iff
+                        \end{aligned}</span
+                      >
+                      e aggiungendo da entrambi lati l'opposto della
+                      combinazione lineare di
+                      <span class="math-span">\( B_{ker}\)</span> si ottiene
+                      <span class="math-block"
+                        >\begin{aligned} - a_{1} \cdot v_{1} - \ \ldots \ -
+                        a_{r} \cdot v_{r} + a_{r + 1} \cdot v_{r + 1} + \ \ldots
+                        \ + a_{n} \cdot v_{n} = 0_{V} &amp; \iff
+                        \end{aligned}</span
+                      >
+                      i cui coefficienti possono essere solo nulli, in quanto
+                      l'ipotesi iniziale era che tali vettori fossero
+                      linearmente indipendenti (in quanto sono i vettori della
+                      base <span class="math-span">\( B_{V}\)</span>). <br />
+                      Si è dimostrata quindi la lineare indipendenza.
+                    </li></ul
+                  >
+                  Dunque si è dimostrato che i vettori
+                  <span class="math-span"
+                    >\( (f(v_{r + 1}), \ \ldots \ , f(v_{n}))\)</span
+                  >
+                  sono una base per <span class="math-span">\( Im(f)\)</span>:
+                  ciò implica che la sua dimensione sia
+                  <span class="math-block">\[ dim(Im(f)) = n - r \]</span>
+                  Ricordando che la dimensione di
+                  <span class="math-span">\( B_{ker} = r\)</span>, è ora
+                  semplice dimostrare che la dimensione di
+                  <span class="math-span">\( V\)</span> sia
+                  <span class="math-span">\( n\)</span> (come da ipotesi):
+                  <span class="math-block"
+                    >\[ \begin{array}{ccccc} dim(V) &amp; = &amp; dim(Im(f))
+                    &amp; + &amp; dim(ker(f)) \\ n &amp; = &amp; (n - r) &amp; +
+                    &amp; r \end{array} \]</span
+                  >
+                  ovvero, <span class="math-block">\[ n = n \]</span> che
+                  dimostra la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-7"
+            ><h2 class="environment-title"
+              >Dimostrazione - Iniettività e suriettività di un'applicazione
+              lineare nel caso la dimensione degli spazi vettoriali sia
+              uguale</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando due spazi vettoriali
+                  <span class="math-span">\( V\)</span> e
+                  <span class="math-span">\( W\)</span> della stessa dimensione,
+                  ovvero <span class="math-block">\[ dim(V) = dim(W) \]</span> e
+                  un'applicazione lineare
+                  <span class="math-span">\( f : V \to W\)</span> allora
+                  <span class="math-span">\( f\)</span> è iniettiva se e solo se
+                  è suriettiva.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale proposizione è necessario dimostrare che,
+                  considerando la dimensione di
+                  <span class="math-span">\( V\)</span> uguale alla dimensione
+                  di <span class="math-span">\( W\)</span>":
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >"se <span class="math-span">\( f\)</span> è iniettiva
+                      allora è anche suriettiva". <br />
+                      Per dimsotrare ciò si consideri l'equazione dimensionale,
+                      ovvero
+                      <span class="math-block"
+                        >\[ dim(V) = dim(Im(f)) + dim(ker(f)) \]</span
+                      >
+                      e, ricordando che il nucleo delle applicazioni lineari
+                      iniettive è composto solo dal vettore nullo (ovvero che la
+                      dimensione del nucleo è
+                      <span class="math-span">\( 0\)</span>)
+                      <span class="math-block">\[ dim(ker(f)) = 0 \]</span> è
+                      semplice ottenere che la dimensione di
+                      <span class="math-span">\( V\)</span> è uguale alla
+                      dimensione dell'immagine di
+                      <span class="math-span">\( f\)</span>
+                      <span class="math-block"
+                        >\[ dim(V) = dim(Im(f)) + 0 \]</span
+                      >
+                      e, dato che la dimensione di
+                      <span class="math-span">\( V\)</span> è uguale alla
+                      dimensione di <span class="math-span">\( W\)</span>, si
+                      ottiene la definizione di suriettività, ovvero
+                      <span class="math-block">\[ dim(Im(f)) = dim(W) \]</span>
+                      che dimostra la prima parte della proposizione. </li
+                    ><li class="list-item"
+                      >"se <span class="math-span">\( f\)</span> è suriettiva
+                      allora è anche iniettiva". Per dimostrare consideriamo
+                      l'equazione dimensionale, ovvero
+                      <span class="math-block"
+                        >\[ dim(V) = dim(Im(f)) + dim(ker(f)) \]</span
+                      >
+                      e, ricordando la definizione di suriettività, ovvero
+                      <span class="math-block">\[ Im(f) = W \]</span> è semplice
+                      ottenere (per il fatto che la dimensione di
+                      <span class="math-span">\( V\)</span> sia uguale alla
+                      dimensione di <span class="math-span">\( W\)</span>) che
+                      la dimensione del nucleo è
+                      <span class="math-span">\( 0\)</span>, ovvero
+                      <span class="math-block">\[ dim(ker(f)) = 0 \]</span>
+                      Provando ciò, si è dimostrata l'iniettività grazie al
+                      fatto che se il nucleo di
+                      <span class="math-span">\( f\)</span> è nullo, allora
+                      <span class="math-span">\( f\)</span> è iniettiva. Ciò
+                      dimostra la seconda implicazione.
+                    </li></ul
+                  >
+                  Si è quindi dimostrata la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-8"
+            ><h2 class="environment-title"
+              >Dimostrazione - Suriettività di
+              <span class="math-span">\( f: V \to W\)</span> e relazione tra le
+              dimensioni di <span class="math-span">\( V\)</span> e
+              <span class="math-span">\( W\)</span></h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando un'applicazione lineare
+                  <span class="math-span">\( f : V \to W\)</span> suriettiva,
+                  allora si ha che la dimensione di
+                  <span class="math-span">\( V\)</span> è maggiore o uguale alla
+                  dimensione di <span class="math-span">\( W\)</span>, ovvero
+                  <span class="math-block">\[ dim(V) \geq dim(W) \]</span>
+                </div></div
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - Altra prospettiva</h3
+                ><div class="environment-body">
+                  Questa proposizione implica che un'applicazione lineare non
+                  può essere suriettiva se la dimensione di
+                  <span class="math-span">\( V\)</span> è minore della
+                  dimensione di <span class="math-span">\( W\)</span>,
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Considerando la definizione di suriettività
+                  <span class="math-block">\[ Im(f) = W \]</span> e l'equazione
+                  dimensionale, si ha che
+                  <span class="math-block"
+                    >\[ \begin{array}{ccccc} dim(V) &amp; = &amp; dim(Im(f))
+                    &amp; + &amp; dim(ker(f)) \\ dim(V) &amp; = &amp; dim(W)
+                    &amp; + &amp; dim(ker(f)) \end{array} \]</span
+                  >
+                  che dimostra la proposizione, in quanto la dimensione del
+                  nucleo di <span class="math-span">\( f\)</span> è al minimo
+                  nulla.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-9"
+            ><h2 class="environment-title"
+              >Dimostrazione - Iniettività di
+              <span class="math-span">\( f: V \to W\)</span> e relazione tra le
+              dimensioni di <span class="math-span">\( V\)</span> e
+              <span class="math-span">\( W\)</span></h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando un'applicazione lineare
+                  <span class="math-span">\( f : V \to W\)</span>, iniettiva,
+                  allora si ha che la dimensione di
+                  <span class="math-span">\( V\)</span> è minore o uguale alla
+                  dimensione di <span class="math-span">\( W\)</span>, ovvero
+                  <span class="math-block">\[ dim(V) \leq dim(W) \]</span>
+                </div></div
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - Altra prospettiva</h3
+                ><div class="environment-body">
+                  Questa proposizione implica che un'applicazione lineare non
+                  può essere iniettiva se la dimensione di
+                  <span class="math-span">\( V\)</span> è maggiore della
+                  dimensione di <span class="math-span">\( W\)</span>.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Considerando che il nucleo di un'applicazione lineare
+                  iniettiva contiene solo il vettore nullo, si ha che
+                  <span class="math-block">\[ dim(ker(f)) = 0 \]</span> e
+                  considerando l'equazione dimensionale si ha che
+                  <span class="math-block"
+                    >\[ \begin{array}{ccccc} dim(V) &amp; = &amp; dim(Im(f))
+                    &amp; + &amp; dim(ker(f)) \\ dim(V) &amp; = &amp; dim(Im(f))
+                    &amp; + &amp; 0 \end{array} \]</span
+                  >
+                  Dato che l'immagine di <span class="math-span">\( f\)</span> è
+                  inclusa in <span class="math-span">\( W\)</span>, ovvero
+                  <span class="math-block">\[ dim(Im(f)) \leq dim(W) \]</span>
+                  si ha che
+                  <span class="math-block">\[ dim(V) \leq dim(W) \]</span> che
+                  dimostra la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def5-7"
+            ><h2 class="environment-title"
+              >Definizione - Applicazione lineare biunivoca come isomorfismo e
+              spazi vettoriali isomorfi</h2
+            ><div class="environment-body">
+              Un'applicazione lineare
+              <span class="math-span">\( f: V \to W\)</span> biunivoca è detta
+              isomorfismo. <br />
+              Se esiste un isomorfismo
+              <span class="math-span">\( f : V \to W\)</span> diciamo che
+              <span class="math-span">\( V\)</span> e
+              <span class="math-span">\( W\)</span> sono isomorfi, ovvero
+              <span class="math-block">\[ V \cong W \]</span>
+            </div></div
+          ><div class="myexample environment" id="example20"
+            ><h2 class="environment-title"
+              >Esempio - Spazi vettoriali isomorfi</h2
+            ><div class="environment-body collapsed">
+              Considerando lo spazio vettoriale dei polinomi a coefficienti
+              reali nella variabile <span class="math-span">\( x\)</span> di
+              grado minore o uguale a tre , ovvero
+              <span class="math-span">\( \mathbb{R}^{\leq 3}[x]\)</span> e lo
+              spazio vettoriale delle matrici quadrate
+              <span class="math-span">\( 2 \times 2\)</span>, ovvero
+              <span class="math-span">\( M_{2 \times 2}(\mathbb{R})\)</span>,
+              allora esiste il seguente isomorfismo
+              <span class="math-block"
+                >\[ f(a x^{3} + b x^{2} + c x + d) = \left( \begin{array}{cc} a
+                &amp; b \\ c &amp; d \end{array} \right) \]</span
+              >
+              che rende i due spazi vettoriali isomorfi. </div
+            ><div class="environment-tail"
+              ><span
+                class="material-symbols-outlined body-visibility-icon"
+                onclick="expand_environment(event)"
+                >expand_more</span
+              ></div
+            ></div
+          ><div class="demonstration environment" id="dem5-10"
+            ><h2 class="environment-title"
+              >Dimostrazione - Funzione inversa di un isomorfismo come
+              isomorfismo</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando un isomorfismo
+                  <span class="math-span">\( f: V \to W\)</span>, allora anche
+                  l'applicazione lineare
+                  <span class="math-block">\[ f^{-1} : W \rightarrow V \]</span>
+                  è un isomorfismo.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare che
+                  <span class="math-span">\( f^{-1}\)</span> è un isomorfismo è
+                  sufficiente dimostrare la sua linearità (infatti la
+                  suriettività e l'iniettività sono già dimostrate in quanto è
+                  una funzione inversa). Per dimostrarlo è necessario dimostrare
+                  che
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >la somma è lineare, ovvero che
+                      <span class="math-block"
+                        >\[ f^{-1}(w_{1} + w_{2}) = f^{-1}(w_{1}) +
+                        f^{-1}(w_{2}) \]</span
+                      >
+                      Consideriamo quindi che ogni vettore
+                      <span class="math-span">\( w_{1}, w_{2} \in W\)</span> è
+                      immagine un distinto vettore
+                      <span class="math-span">\( v_{1}, v_{2} \in V\)</span>
+                      attraverso <span class="math-span">\( f\)</span>, ovvero
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f^{-1}(w_{1} + w_{2}) =
+                        f^{-1}(f(v_{1}) + f(v_{2})) &amp; \iff
+                        \end{aligned}</span
+                      >
+                      e per la linearità di
+                      <span class="math-span">\( f\)</span>, si ha che
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f^{-1}(w_{1} + w_{2}) =
+                        f^{-1}(f(v_{1} + v_{2})) &amp; \iff \end{aligned}</span
+                      >
+                      e dato che la composizione con l'inversa annulla la
+                      funzione si ha che
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f^{-1}(w_{1} + w_{2}) = v_{1} +
+                        v_{2} &amp; \iff \end{aligned}</span
+                      >
+                      Infine, ricordando che
+                      <span class="math-span">\( v_{1} = f^{-1}(w_{1})\)</span>
+                      si ottiene
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f^{-1}(w_{1} + w_{2}) =
+                        f^{-1}(w_{1}) + f^{-1}(w_{2}) &amp; \end{aligned}</span
+                      >
+                      che dimostra la proprietà; </li
+                    ><li class="list-item"
+                      >il prodotto per uno scalare è lineare, ovvero che
+                      <span class="math-block"
+                        >\[ f^{-1}(\alpha \cdot w) = \alpha \cdot f^{-1}(w)
+                        \]</span
+                      >
+                      Consideriamo quindi che ogni vettore
+                      <span class="math-span">\( w \in W\)</span> è immagine un
+                      distinto vettore
+                      <span class="math-span">\( v \in V\)</span> attraverso
+                      <span class="math-span">\( f\)</span>, ovvero
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f^{-1}(\alpha \cdot w) =
+                        f^{-1}(\alpha \cdot f(v)) &amp; \iff \end{aligned}</span
+                      >
+                      e per la linearità di
+                      <span class="math-span">\( f\)</span>, si ha che
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f^{-1}(\alpha \cdot w) =
+                        f^{-1}(f(\alpha \cdot v)) &amp; \iff \end{aligned}</span
+                      >
+                      e dato che la composizione con l'inversa annulla la
+                      funzione si ha che
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f^{-1}(\alpha \cdot w) = \alpha
+                        \cdot v &amp; \iff \end{aligned}</span
+                      >
+                      Infine, ricordando che
+                      <span class="math-span">\( v = f^{-1}(w)\)</span> si
+                      ottiene
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f^{-1}(\alpha \cdot w) = \alpha
+                        \cdot f^{-1}(w) &amp; \end{aligned}</span
+                      >
+                      che dimostra la proprietà;
+                    </li></ul
+                  >
+                  Si è quindi dimostrata la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-11"
+            ><h2 class="environment-title"
+              >Dimostrazione - Composizione di applicazioni lineari come
+              applicazione lineare</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando due applicazioni lineari
+                  <span class="math-span">\( f: V \to U\)</span> e
+                  <span class="math-span">\( g: U \to W\)</span> allora anche la
+                  loro composizione, ovvero
+                  <span class="math-block">\[ g \circ f: V \to W \]</span> è
+                  lineare.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale proposizione considerando
+                  <span class="math-span">\( v_{1}, v_{2} \in V\)</span> e la
+                  funzione <span class="math-span">\( h = g \circ f\)</span>, è
+                  necessario dimostrare la seguente proprietà
+                  <span class="math-block"
+                    >\[ h(\alpha \cdot v_{1} + \beta \cdot v_{2}) = \alpha \cdot
+                    h(v_{1}) + \beta \cdot h(v_{2} \]</span
+                  >
+                  Innanzitutto è possibile riscrivere la funzione composta
+                  <span class="math-span">\( h\)</span> come
+                  <span class="math-block"
+                    >\begin{aligned} &amp; h(\alpha \cdot v_{1} + \beta \cdot
+                    v_{2}) = g(f(\alpha \cdot v_{1} + \beta \cdot v_{2})) &amp;
+                    \iff \end{aligned}</span
+                  >
+                  e per la linearità di <span class="math-span">\( f\)</span>,
+                  si può scrivere
+                  <span class="math-block"
+                    >\begin{aligned} &amp; g(f(\alpha \cdot v_{1} + \beta \cdot
+                    v_{2})) = g(\alpha \cdot f(v_{1}) + \beta \cdot f(v_{2}))
+                    &amp; \iff \end{aligned}</span
+                  >
+                  mentre per la linearità di
+                  <span class="math-span">\( g\)</span>, si può scrivere
+                  <span class="math-block"
+                    >\begin{aligned} &amp; g(\alpha \cdot f(v_{1}) + \beta \cdot
+                    f(v_{2})) = \alpha \cdot g(f(v_{1}) + \beta \cdot
+                    g(f(v_{2})) &amp; \iff \end{aligned}</span
+                  >
+                  che è equivalente a
+                  <span class="math-block"
+                    >\begin{aligned} &amp; \alpha \cdot h(v_{1}) + \beta \cdot
+                    h(v_{2}) \end{aligned}</span
+                  >
+                  che dimostra la proprietà.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-12"
+            ><h2 class="environment-title"
+              >Dimostrazione - Corollario - Composizioni di isomorfismi</h2
+            ><div class="environment-body">
+              Dato il corollario
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando due isomorfismi
+                  <span class="math-span">\( f: V \to U\)</span> e
+                  <span class="math-span">\( g: U \to W\)</span> allora anche la
+                  loro composizione, ovvero
+                  <span class="math-block">\[ g \circ f: V \to W \]</span> è un
+                  isomorfismo.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare ciò è sufficiente ricordare che la composizione
+                  di applicazioni lineari è anch'essa una funzione lineare e che
+                  la composizione di due funzioni biunivoche è anch'essa una
+                  funzione biunivoca.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-13"
+            ><h2 class="environment-title"
+              >Dimostrazione - Isomorfismo associato alla
+              <span class="math-span">\( n\)</span>-upla delle coordinate</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando uno spazio vettoriale
+                  <span class="math-span">\( V\)</span> di dimensione
+                  <span class="math-span">\( n\)</span> e una base
+                  <span class="math-span"
+                    >\( B_{V} = (v_{1}, \ \ldots \ , v_{n})\)</span
+                  >
+                  per <span class="math-span">\( V\)</span>, allora è sempre
+                  possibile costruire un isomorfismo
+                  <span class="math-block">\[ f : V \to \mathbb{R}^{n} \]</span>
+                  tale che
+                  <span class="math-block"
+                    >\[ f(v) = (x_{1}, \ \ldots \ , x_{n}) \]</span
+                  >
+                  dove <span class="math-span">\( x_{i}\)</span> sono le
+                  coordinate di <span class="math-span">\( v\)</span> rispetto a
+                  <span class="math-span">\( B_{V}\)</span>.
+                </div></div
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - Spazi vettoriali di dimensione
+                  <span class="math-span">\( n\)</span> isomorfi a
+                  <span class="math-span">\( \mathbb{R}^{n}\)</span></h3
+                ><div class="environment-body">
+                  Dato che tale isomorfismo esiste, significa che ogni spazio
+                  vettoriale <span class="math-span">\( V\)</span> di dimensione
+                  <span class="math-span">\( n\)</span> è isomorfo a
+                  <span class="math-span">\( \mathbb{R}^{n}\)</span>, ovvero
+                  <span class="math-block"
+                    >\[ n = dim(V) \qquad \implies \qquad V \cong \mathbb{R}^{n}
+                    \]</span
+                  >
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale proposizione è necessario provare che
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >tale funzione è lineare, ovvero considerando
+                      <span class="math-span">\( u, w \in V\)</span>
+                      <span class="math-block"
+                        >\[ f(\alpha \cdot u + \beta \cdot w) = \alpha \cdot
+                        f(u) + \beta \cdot f(w) \]</span
+                      >
+                      Per farlo, si parterà dalle due espressioni separatamente
+                      per poi raggiungere lo stesso risultato. <br />
+                      Consideriamo quindi
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f(\alpha \cdot u + \beta \cdot w)
+                        &amp; \iff \end{aligned}</span
+                      >
+                      e che <span class="math-span">\( u, w\)</span> possono
+                      essere scritti come combinazione lineare di
+                      <span class="math-span">\( B_{V}\)</span>, ovvero
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f(\alpha \cdot \sum_{i = 1}^{n}
+                        a_{i} \cdot v_{i} + \beta \cdot \sum_{i = 1}^{n} b_{i}
+                        \cdot v_{i}) &amp; \iff \end{aligned}</span
+                      >
+                      e, per le proprietà delle sommatorie,
+                      <span class="math-block"
+                        >\begin{aligned} &amp; f(\sum_{i = 1}^{n} (\alpha \cdot
+                        a_{i} + \beta \cdot b_{i}) \cdot v_{i}) &amp; \iff
+                        \end{aligned}</span
+                      >
+                      da cui si ottiene la seguente
+                      <span class="math-span">\( n\)</span>-upla di coordinate
+                      <span class="math-block"
+                        >\[ (\alpha \cdot a_{1} + \beta \cdot b_{1}, \ \ldots \
+                        , \alpha \cdot a_{n} + \beta \cdot b_{n}) \]</span
+                      >
+                      Ora, considerando l'espressione a destra
+                      <span class="math-block"
+                        >\begin{aligned} &amp; \alpha \cdot f(u) + \beta \cdot
+                        f(w) &amp; \iff \end{aligned}</span
+                      >
+                      è possibile applicare l'immagine dei vettori
+                      <span class="math-block"
+                        >\begin{aligned} &amp; = \alpha \cdot (a_{1}, \ \ldots \
+                        , a_{n}) + \beta \cdot (b_{1}, \ \ldots \ , b_{n}) &amp;
+                        \iff \end{aligned}</span
+                      >
+                      da cui si ottiene la seguente
+                      <span class="math-span">\( n\)</span>-upla
+                      <span class="math-block"
+                        >\[ (\alpha \cdot a_{1} + \beta \cdot b_{1}, \ \ldots \
+                        , \alpha \cdot a_{n} + \beta \cdot b_{n}) \]</span
+                      >
+                      Si è quindi dimostrata la linearità. </li
+                    ><li class="list-item"
+                      >tale funzione è biunivoca. Per dimostrarlo è sufficiente
+                      considerare per la suriettività che
+                      <span class="math-span">\( B_{V}\)</span> è un sistema di
+                      generatori (ovvero che ogni vettori di
+                      <span class="math-span">\( V\)</span> è combinazione
+                      lineare di <span class="math-span">\( B_{V}\)</span>) e
+                      per l'iniettività che ogni vettore corrisponde ad un'unica
+                      <span class="math-span">\( n\)</span>-upla di coordinate
+                      rispetto ad una base;
+                    </li></ul
+                  >
+                  Si è quindi dimostrata la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-14"
+            ><h2 class="environment-title"
+              >Dimostrazione - Spazi vettoriali della stessa dimensione
+              isomorfi</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando due spazi vettoriali
+                  <span class="math-span">\( V\)</span> e
+                  <span class="math-span">\( W\)</span>, questi hanno la stessa
+                  dimensione se e solo se sono isomorfi.
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale proposizione è necessario dimostrare che:
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >"se due spazi vettoriali hanno la stessa dimensione
+                      allora sono isomorfi". Considerando
+                      <span class="math-span">\( n\)</span> la dimensione di
+                      tali spazi, si ha che
+                      <span class="math-span">\( V\)</span> è isomorfo a
+                      <span class="math-span">\( \mathbb{R}^{n}\)</span> e che
+                      anche <span class="math-span">\( W\)</span> è isomorfo a
+                      <span class="math-span">\( \mathbb{R}^{n}\)</span>, per
+                      cui esisteranno le seguenti applicazioni lineari
+                      <span class="math-block"
+                        >\begin{aligned} &amp; V \cong \mathbb{R}^{n} \qquad
+                        \implies \qquad f: V \to \mathbb{R}^{n} &amp; \\ &amp; W
+                        \cong \mathbb{R}^{n} \qquad \implies \qquad g: W \to
+                        \mathbb{R}^{n} &amp; \end{aligned}</span
+                      >
+                      da cui è possibile dire che esiste l'isomorfismo
+                      <span class="math-span"
+                        >\( g^{-1}: \mathbb{R}^{n} \to W\)</span
+                      >
+                      e che esisterà l'isomorfismo
+                      <span class="math-span">\( h = g^{-1} \circ f\)</span>
+                      <span class="math-block">\[ h: V \to W \]</span> per cui è
+                      possibile dire che <span class="math-span">\( V\)</span> è
+                      isomorfo a <span class="math-span">\( W\)</span>. <br />
+                      Si è quindi dimostrata l'implicazione. </li
+                    ><li class="list-item"
+                      >"se due spazi vettoriali sono isomorfi allora hanno la
+                      stessa dimensione". Per farlo, consideriamo l'equazioni
+                      dimensionale di
+                      <span class="math-span">\( f: V \to W\)</span> e, consci
+                      del fatto che <span class="math-span">\( f\)</span> è
+                      biettiva (ovvero suriettiva e iniettiva) si ha che
+                      <span class="math-block"
+                        >\[ \begin{array}{ccccc} dim(V) &amp; = &amp;
+                        dim(ker(f)) &amp; + &amp; dim(Im(f)) \\ dim(V) &amp; =
+                        &amp; 0 &amp; + &amp; dim(W) \end{array} \]</span
+                      >
+                      in quanto
+                      <span class="math-span">\( dim(ker(f)) = 0\)</span> perchè
+                      <span class="math-span">\( f\)</span> è iniettiva e
+                      <span class="math-span">\( dim(Im(f)) = dim(W)\)</span>
+                      perchè <span class="math-span">\( f\)</span> è suriettiva.
+                      <br />
+                      Si è quindi dimostrata l'implicazione.
+                    </li></ul
+                  >
+                  Si è quindi dimostrata la proposizione.
+                </div></div
+              >
+            </div></div
+          >
+        </article>
+        <nav class="buttons-container content-width">
+          <a
+            class="navigation-button previous"
+            href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+            rel="nofollow"
+            ><span>Sistemi lineari come matrici</span></a
+          >
+          <a
+            class="navigation-button next"
+            href="applicazioni-lineari-come-matrici.html"
+            rel="nofollow"
+            ><span>Applicazioni lineari come matrici</span></a
+          >
+        </nav>
+      </section>
+      <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+        <span class="material-symbols-outlined">
+          keyboard_double_arrow_down
+        </span>
+      </div>
+      <footer class="footer-wrapper">
+        <div class="copyright-wrapper">
+          <span> &copy; Copyright 2024</span> /
+          <span
+            >made by
+            <a href="https://github.com/lorenzoarlo" rel="nofollow"
+              >lorenzoarlo</a
+            ></span
+          >
+        </div>
+        /
+        <div class="privacy-wrapper">
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/"
+              rel="nofollow"
+              >Pannello preferenze cookie</a
+            ></span
+          >
+          /
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html"
+              rel="nofollow"
+              target="_blank"
+              >Privacy Policy</a
+            ></span
+          >
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

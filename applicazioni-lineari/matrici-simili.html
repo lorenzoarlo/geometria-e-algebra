@@ -1,93 +1,784 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="IT">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="./../styles/style.css" />
     <link rel="stylesheet" href="./../styles/index-style.css" />
     <link rel="stylesheet" href="./../styles/main-index-page-style.css" />
-    <link media="print" rel="stylesheet" href="./../styles/print.css"  />
-    
-        <link rel="stylesheet" href="./../styles/content-style.css" />
-    
+    <link media="print" rel="stylesheet" href="./../styles/print.css" />
+
+    <link rel="stylesheet" href="./../styles/content-style.css" />
+
     <style>
-        :root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }
+      :root {
+        --bg-clr: #296a15;
+        --fg-clr: #e8e3e3;
+      }
     </style>
     <meta name="application-name" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-title" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#296a15" />
-    <link rel="apple-touch-icon" sizes="144x144" href="./../apple-icon-144x144.png">
-    <link rel="icon" type="image/x-icon" href="./../favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="./../android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./../favicon-96x96.png">
-    <meta name="msapplication-TileColor" content="#296a15">
-    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png">
-    <link rel="manifest" href="./../manifest.json">
-    <meta name="keywords" content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
-    <meta name="description" content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'.">
-    <meta name="robots" content="index">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="themeColor" content="#296a15">
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./../apple-icon-144x144.png" />
+    <link rel="icon" type="image/x-icon" href="./../favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./../android-icon-192x192.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./../favicon-96x96.png" />
+    <meta name="msapplication-TileColor" content="#296a15" />
+    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png" />
+    <link rel="manifest" href="./../manifest.json" />
+    <meta
+      name="keywords"
+      content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
+    <meta
+      name="description"
+      content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'." />
+    <meta name="robots" content="index" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="themeColor" content="#296a15" />
     <script src="./../scripts/script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
-    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
+    <script
+      defer
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <title>Geometria e algebra - Applicazioni lineari - Matrici simili </title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header class="header-wrapper">
-            <div class="title-wrapper">
-                <span class="title">
-                    Geometria e algebra
-                </span>
-                <span class="subtitle">
-                    by lorenzoarlo
-                </span>
-            </div>
-            <span class="page-title">
-                Applicazioni lineari
-            </span>
-        </header>
-        <aside class="sidebar">
-            <h2 class="sidebar-title">Geometria e algebra</h2>
-            <div class="index-container">
-                <ul class="parent-ul"><li class="section-li"><a href="../index.html" rel="nofollow">Indice</a></li><li class="section-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Operazioni e strutture algebriche</a><ul><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Gruppi, anelli e campi</a></li><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html" rel="nofollow">Omomorfismi e isomorfismi</a></li></ul></li><li class="section-li "><a href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html" rel="nofollow">Spazi vettoriali</a><ul><li class="subsection-li "><a href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html" rel="nofollow">Nozioni preliminari su vettori e spazi vettoriali</a></li><li class="subsection-li "><a href="../spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html" rel="nofollow">Combinazione lineare e lineare indipendenza</a></li><li class="subsection-li "><a href="../spazi-vettoriali/sottostrutture-algebriche.html" rel="nofollow">Sottostrutture algebriche</a></li><li class="subsection-li "><a href="../spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html" rel="nofollow">Operazioni tra sottospazi vettoriali</a></li></ul></li><li class="section-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Matrici</a><ul><li class="subsection-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Lo spazio vettoriale delle matrici</a></li><li class="subsection-li "><a href="../matrici/l-anello-delle-matrici-quadrate.html" rel="nofollow">L'anello delle matrici quadrate</a></li><li class="subsection-li "><a href="../matrici/operazioni-riga.html" rel="nofollow">Operazioni riga</a></li></ul></li><li class="section-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari</a><ul><li class="subsection-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari come matrici</a></li></ul></li><li class="section-li current">Applicazioni lineari<ul><li class="subsection-li "><a href="applicazioni-lineari-come-funzioni.html" rel="nofollow">Applicazioni lineari come funzioni</a></li><li class="subsection-li "><a href="applicazioni-lineari-come-matrici.html" rel="nofollow">Applicazioni lineari come matrici</a></li><li class="subsection-li current">Matrici simili<ul><li class="definition-li"><a href="#def5-15" rel="nofollow">Matrici simili</a></li><li class="demonstration-li"><a href="#dem5-19" rel="nofollow">Riflessività di matrici simili</a></li><li class="demonstration-li"><a href="#dem5-20" rel="nofollow">Simmetria di matrici simili</a></li><li class="demonstration-li"><a href="#dem5-21" rel="nofollow">Transitività di matrici simili</a></li><li class="demonstration-li"><a href="#dem5-22" rel="nofollow">Similarità tra matrici legate allo stesso endomorfismo rispetto a basi diverse</a></li><li class="demonstration-li"><a href="#dem5-23" rel="nofollow">Traccia di matrici simili</a></li><li class="demonstration-li"><a href="#dem5-24" rel="nofollow">Rango di matrici simili</a></li></ul></li></ul></li><li class="section-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Determinante</a><ul><li class="subsection-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Definizioni di determinante</a></li><li class="subsection-li "><a href="../determinante/utilizzi-del-determinante.html" rel="nofollow">Utilizzi del determinante</a></li></ul></li><li class="section-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori e autovettori</a><ul><li class="subsection-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori, autovettori e autospazi</a></li><li class="subsection-li "><a href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html" rel="nofollow">Diagonalizzazione di una matrice</a></li></ul></li><li class="section-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Spazi vettoriali euclidei</a><ul><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Forme bilineari e prodotto scalare</a></li><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html" rel="nofollow">Spazi vettoriali euclidei</a></li></ul></li><li class="section-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Geometria analitica nello spazio</a><ul><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Rette nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/piani-nello-spazio.html" rel="nofollow">Piani nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html" rel="nofollow">Prodotto vettoriale</a></li></ul></li></ul>
-            </div>
-        </aside>
-        <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button" >
-            keyboard_double_arrow_right
+      <header class="header-wrapper">
+        <div class="title-wrapper">
+          <span class="title"> Geometria e algebra </span>
+          <span class="subtitle"> by lorenzoarlo </span>
         </div>
-        <section class="content-wrapper">
-            <h1 class="section-title content-width">Matrici simili</h1>
-            <article class="content-container content-width">
-                <div class="definition environment" id="def5-15"><h2 class="environment-title">Definizione - Matrici simili</h2><div class="environment-body">     Due matrici <span class="math-span">\( A, B \in M_{n \times n}(\mathbb{K})\)</span> si dicono simili (<span class="math-span">\( \sim\)</span>) se esiste una matrice <span class="math-span">\( E \in M_{n \times n}(\mathbb{K})\)</span> invertibile tale che      <span class="math-block">\[         B = E^{-1} \odot A \odot E     \]</span>     La similarità è una relazione d'equivalenza, ovvero vale     <ul class="list-container"><li class="list-item">la riflessività;         </li><li class="list-item">la simmetria;         </li><li class="list-item">la transitività.     </li></ul>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Fun fact</h3><div class="environment-body">         Due matrici sono simili se rappresentano lo stesso endomorfismo rispetto a basi diverse.     </div></div> </div></div><div class="demonstration environment" id="dem5-19"><h2 class="environment-title">Dimostrazione - Riflessività di matrici simili</h2><div class="environment-body">     Data la proprietà     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Ogni matrice è simile a se stessa, ovvero         <span class="math-block">\[             A \sim A         \]</span>     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare  tale proprietà verifichiamo la definizione di similarità, ovvero         <span class="math-block">\begin{aligned}             &amp; A = E^{-1} \odot A \odot E             &amp; \iff          \end{aligned}</span>         Consideriamo infatti che esiste la matrice <span class="math-span">\( I\)</span> che è invertibile e verifichiamo che         <span class="math-block">\begin{aligned}             &amp; A = I^{-1} \odot A \odot I         \end{aligned}</span>         che dimostra la proprietà.     </div></div> </div></div><div class="demonstration environment" id="dem5-20"><h2 class="environment-title">Dimostrazione - Simmetria di matrici simili</h2><div class="environment-body">     Data la proprietà     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando le matrici <span class="math-span">\( A, B \in M_{n \times n}(\mathbb{K})\)</span>, se <span class="math-span">\( A\)</span> è simile a <span class="math-span">\( B\)</span>, allora <span class="math-span">\( B\)</span> è simile ad <span class="math-span">\( A\)</span>, ovvero         <span class="math-block">\[             A \sim B             \qquad             \implies             \qquad             B \sim A         \]</span>     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">        Per dimostrare tale proprietà è necessario provare l'esistenza di una matrice <span class="math-span">\( F \in M_{n \times n}(\mathbb{K})\)</span> invertibile tale che        <span class="math-block">\[            A = F^{-1} \odot B \odot F        \]</span>        Per farlo consideriamo la definizione di similarità, ovvero        <span class="math-block">\begin{aligned}            &amp; B = E^{-1} \odot A \odot E            &amp; \iff        \end{aligned}</span>        e moltiplichiamo a sinistra "da entrambe le parti" per la matrice <span class="math-span">\( E\)</span> e moltiplichiamo a destra per la matrice <span class="math-span">\( E^{-1}\)</span>, ovvero        <span class="math-block">\begin{aligned}            &amp; E \odot B \odot E^{-1} = E \odot (E^{-1} \odot A \odot E) \odot E^{-1}            &amp; \iff        \end{aligned}</span>        Ora, per l'associatività del prodotto tra matrici        <span class="math-block">\begin{aligned}            &amp; E \odot B \odot E^{-1} = (E \odot E^{-1}) \odot A \odot (E \odot E^{-1})            &amp; \iff         \end{aligned}</span>         ed eseguendo i calcoli nelle parentesi         <span class="math-block">\begin{aligned}             &amp; E \odot B \odot E^{-1} = I \odot A \odot I             &amp; \iff \\             &amp; A = E \odot B \odot E^{-1}             &amp;        \end{aligned}</span>        A questo punto è possibile porre <span class="math-span">\( F = E^{-1}\)</span> e scrivendo le matrici come l'inversa dell'inversa, si ha che        <span class="math-block">\begin{aligned}            &amp; A = (E^{-1})^{-1} \odot B \odot ((E^{-1})^{-1})^{-1}            &amp; \iff \\            &amp; A = F^{-1} \odot B \odot F            &amp;        \end{aligned}</span>        si dimostra la proprietà.     </div></div>     <div class="mynote environment"><h3 class="environment-title">Nota bene - Inversa della matrice che verifica <span class="math-span">\( A \sim B\)</span> come matrice che verifica <span class="math-span">\( B \sim A\)</span></h3><div class="environment-body">         Da tale dimostrazione si può dedurre che la matrice <span class="math-span">\( F\)</span> che verifica la similarità tra <span class="math-span">\( B \sim A\)</span> non è altro che la matrice <span class="math-span">\( E^{-1}\)</span> che verifica la similarità <span class="math-span">\( A \sim B\)</span>.     </div></div> </div></div><div class="demonstration environment" id="dem5-21"><h2 class="environment-title">Dimostrazione - Transitività di matrici simili</h2><div class="environment-body">     Data la proprietà     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando le matrici <span class="math-span">\( A, B, C \in M_{n \times n}(\mathbb{K})\)</span>, nel caso <span class="math-span">\( A\)</span> sia simile a <span class="math-span">\( B\)</span> e <span class="math-span">\( B\)</span> sia simile a <span class="math-span">\( C\)</span>, si ha che <span class="math-span">\( A\)</span> è simile a <span class="math-span">\( C\)</span>         <span class="math-block">\[             A \sim B             \qquad             \text{e}              \qquad              B \sim C             \qquad             A \sim C         \]</span>     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Considerando le definizioni di similarità e la simmetria tra matrici simili è possibile scrivere le matrici <span class="math-span">\( A, B, C\)</span> come         <span class="math-block">\[             \begin{array}{ccc}                 A \sim B &amp; \implies &amp; A = E^{-1} \odot B \odot E \\                 B \sim A &amp; \implies &amp; B = E \odot A \odot E^{-1} \\                 B \sim C &amp; \implies &amp; B = F^{-1} \odot C \odot F \\                 C \sim B &amp; \implies &amp; C = F \odot B \odot F^{-1}             \end{array}         \]</span>         Per dimostrare tale proprietà è necessario dimostrare l'esistenza di una matrice <span class="math-span">\( H\)</span> tale che         <span class="math-block">\begin{aligned}             A = H^{-1} \odot C \odot H             \qquad             \text{oppure}             \qquad             C = H \odot A \odot H^{-1}         \end{aligned}</span>         Considerando quindi la definizione         <span class="math-block">\begin{aligned}             &amp; B = E \odot A \odot E^{-1}             &amp; \iff         \end{aligned}</span>         è possibile sostituire <span class="math-span">\( B\)</span> con <span class="math-span">\( (F^{-1} \odot C \odot F)\)</span>         <span class="math-block">\begin{aligned}             &amp; F^{-1} \odot C \odot F = E \odot A \odot E^{-1}             &amp; \iff          \end{aligned}</span>         e moltiplicare per <span class="math-span">\( F\)</span> a sinistra da "entrambe le parti"         <span class="math-block">\begin{aligned}             &amp; F \odot F^{-1} \odot C \odot F = F \odot E \odot A \odot E^{-1}             &amp; \iff          \end{aligned}</span>         e poi moltiplicare per <span class="math-span">\( F^{-1}\)</span> a destra da "entrambe le parti"         <span class="math-block">\begin{aligned}             &amp; F \odot F^{-1} \odot C \odot F \odot F^{-1} = F \odot E \odot A \odot E^{-1} \odot F^{-1}             &amp; \iff          \end{aligned}</span>         È quindi possibile per la proprietà associativa         <span class="math-block">\begin{aligned}             &amp; (F \odot F^{-1}) \odot C \odot (F \odot F^{-1}) = F \odot E \odot A \odot E^{-1} \odot F^{-1}             &amp; \iff          \end{aligned}</span>         risolvere le moltiplicazioni fra matrici inverse e ottenere         <span class="math-block">\begin{aligned}             &amp; I \odot C \odot I = F \odot E \odot A \odot E^{-1} \odot F^{-1}             &amp; \iff          \end{aligned}</span>         È poi possibile riscrivere la moltiplicazione <span class="math-span">\( (E^{-1} \odot F^{-1})\)</span> come <span class="math-span">\( (F \odot E)^{-1}\)</span> ed ottenere         <span class="math-block">\begin{aligned}             &amp; C = (F \odot E) \odot A \odot (F \odot E)^{-1}             &amp; \iff          \end{aligned}</span>         e riscrivendo <span class="math-span">\( (F \odot E)\)</span> come <span class="math-span">\( H\)</span> si ottiene         <span class="math-block">\begin{aligned}             &amp; C = H \odot A \odot (H)^{-1}             &amp;         \end{aligned}</span>         che dimostra la proprietà.     </div></div> </div></div><div class="demonstration environment" id="dem5-22"><h2 class="environment-title">Dimostrazione - Similarità tra matrici legate allo stesso endomorfismo rispetto a basi diverse</h2><div class="environment-body">     Data la proposizione     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Considerando un'applicazione lineare <span class="math-span">\( f: V \to V\)</span> e le matrici ad essa associate <span class="math-span">\( M_{B_{V}, B_{V}}(f)\)</span> e <span class="math-span">\( M_{B_{V}', B_{V}'}(f)\)</span> (ovvero rispetto a basi diverse), si ha che         <span class="math-block">\[             M_{B_{V}, B_{V}}(f) \sim M_{B_{V}', B_{V}'}(f)         \]</span>     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Per dimostrare ciò è necessario provare l'esistenza di una matrice <span class="math-span">\( E\)</span> tale che         <span class="math-block">\[             M_{B_{V}', B_{V}'}(f) = E^{-1} \odot M_{B_{V}, B_{V}}(f) \odot E           \]</span>         Riscrivendo il procedimento per il "cambio delle basi legate alla matrice associata ad un'applicazione lineare" si ha che         <span class="math-block">\begin{aligned}             &amp; M_{B_{V}', B_{V}'}(f) =              M_{B_{V}, B_{V}'}(\text{id}_{V})             \odot              M_{B_{V}, B_{V}}(f)             \odot             M_{B_{V}', B_{V}}(\text{id}_{V})             &amp; \iff         \end{aligned}</span>         e dato che <span class="math-span">\( M_{B_{V}, B_{V}'}(\text{id}_{W})\)</span> può essere scritta anche come <span class="math-span">\( (M_{B_{V}', B_{V}}(\text{id}_{V}))^{-1}\)</span>, si ha che         <span class="math-block">\begin{aligned}             &amp; M_{B_{V}', B_{V}'}(f) =              (M_{B_{V}', B_{V}}(\text{id}_{V}))^{-1}             \odot              M_{B_{V}, B_{V}}(f)             \odot             M_{B_{V}', B_{V}}(\text{id}_{V})             &amp;         \end{aligned}</span>         che dimostra la proposizione.     </div></div> </div></div><div class="demonstration environment" id="dem5-23"><h2 class="environment-title">Dimostrazione - Traccia di matrici simili</h2><div class="environment-body">     Data la proprietà     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         La traccia di due matrici <span class="math-span">\( A, B \in M_{n \times n}(\mathbb{K})\)</span> simili è la stessa, ovvero         <span class="math-block">\[             A \sim B \qquad \implies \qquad tr(A) = tr(B)          \]</span>     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Considerando la definizione di similarità, si può scrivere          <span class="math-block">\begin{aligned}             &amp; tr(B) = tr(E^{-1} \odot A \odot E)             &amp; \iff         \end{aligned}</span>         e, considerando "l'invarianza della traccia rispetto alla permutazione ciclica del prodotto tra matrici" si ha che         <span class="math-block">\begin{aligned}             &amp; tr(E^{-1} \odot A \odot E) = tr(A \odot E \odot E^{-1})             &amp; \iff         \end{aligned}</span>         e grazie alla proprietà associativa         <span class="math-block">\begin{aligned}             &amp; tr(E^{-1} \odot A \odot E) = tr(A \odot (E \odot E^{-1}))             &amp; \iff         \end{aligned}</span>         e sostituendo <span class="math-span">\( E \odot E^{-1}\)</span> con <span class="math-span">\( I\)</span> e <span class="math-span">\( E^{-1} \odot A \odot E\)</span> con <span class="math-span">\( B\)</span>, si ottiene         <span class="math-block">\begin{aligned}             &amp; tr(B) = tr(A)             &amp;         \end{aligned}</span>         che dimostra la proposizione.     </div></div> </div></div><div class="demonstration environment" id="dem5-24"><h2 class="environment-title">Dimostrazione - Rango di matrici simili</h2><div class="environment-body">     Data la proprietà     <div class="proposition environment"><h3 class="environment-title">Enunciato:</h3><div class="environment-body">         Il rango di due matrici <span class="math-span">\( A, B \in M_{n \times n}(\mathbb{K})\)</span> simili è lo stesso, ovvero         <span class="math-block">\[             A \sim B \qquad \implies \qquad r(A) = r(B)          \]</span>     </div></div>     <div class="proof environment"><h3 class="environment-title">Dimostrazione:<span class="material-symbols-outlined body-visibility-icon" onclick="toggle_proof(event)">visibility_off</span></h3><div class="environment-body hyde">         Considerando la matrice <span class="math-span">\( A\)</span> come la matrice associata ad un endomorfismo <span class="math-span">\( f: V \to V\)</span>, sappiamo che il rango di <span class="math-span">\( A\)</span> è la dimensione dell'immagine di <span class="math-span">\( f\)</span>. Dato che due matrici simili rappresentano lo stesso endomorfismo <span class="math-span">\( f\)</span>, si ha che anche il rango di <span class="math-span">\( B\)</span> è uguale alla dimension dell'immagine di <span class="math-span">\( f\)</span>, ovvero         <span class="math-block">\[             r(A) = dim(Im(f))             \quad             \text{e}             \quad             r(B) = dim(Im(f))             \qquad             \implies             \qquad             r(A) = r(B)         \]</span>         Si è quindi dimostrata la proprietà.     </div></div> </div></div>
-            </article>
-            <nav class="buttons-container content-width">
-                <a class="navigation-button previous" href="applicazioni-lineari-come-matrici.html" rel="nofollow"><span>Applicazioni lineari come matrici</span></a>
-                <a class="navigation-button next" href="../determinante/definizioni-di-determinante.html" rel="nofollow"><span>Definizioni di determinante</span></a>
-            </nav>
-        </section>
-        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
-            <span class="material-symbols-outlined">
-                keyboard_double_arrow_down
-            </span>
+        <span class="page-title"> Applicazioni lineari </span>
+      </header>
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Geometria e algebra</h2>
+        <div class="index-container">
+          <ul class="parent-ul"
+            ><li class="section-li"
+              ><a href="../index.html" rel="nofollow">Indice</a></li
+            ><li class="section-li"
+              ><a
+                href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                rel="nofollow"
+                >Operazioni e strutture algebriche</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                    rel="nofollow"
+                    >Gruppi, anelli e campi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html"
+                    rel="nofollow"
+                    >Omomorfismi e isomorfismi</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                rel="nofollow"
+                >Spazi vettoriali</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                    rel="nofollow"
+                    >Nozioni preliminari su vettori e spazi vettoriali</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/combinazione-lineare-e-lineare-indipendenza.html"
+                    rel="nofollow"
+                    >Combinazione lineare e lineare indipendenza</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/sottostrutture-algebriche.html"
+                    rel="nofollow"
+                    >Sottostrutture algebriche</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali/operazioni-tra-sottospazi-vettoriali.html"
+                    rel="nofollow"
+                    >Operazioni tra sottospazi vettoriali</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                rel="nofollow"
+                >Matrici</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                    rel="nofollow"
+                    >Lo spazio vettoriale delle matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/l-anello-delle-matrici-quadrate.html"
+                    rel="nofollow"
+                    >L'anello delle matrici quadrate</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="../matrici/operazioni-riga.html" rel="nofollow"
+                    >Operazioni riga</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                rel="nofollow"
+                >Sistemi lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Sistemi lineari come matrici</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li current"
+              >Applicazioni lineari<ul
+                ><li class="subsection-li"
+                  ><a
+                    href="applicazioni-lineari-come-funzioni.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come funzioni</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="applicazioni-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come matrici</a
+                  ></li
+                ><li class="subsection-li current"
+                  >Matrici simili<ul
+                    ><li class="definition-li"
+                      ><a href="#def5-15" rel="nofollow">Matrici simili</a></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-19" rel="nofollow"
+                        >Riflessività di matrici simili</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-20" rel="nofollow"
+                        >Simmetria di matrici simili</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-21" rel="nofollow"
+                        >Transitività di matrici simili</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-22" rel="nofollow"
+                        >Similarità tra matrici legate allo stesso endomorfismo
+                        rispetto a basi diverse</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-23" rel="nofollow"
+                        >Traccia di matrici simili</a
+                      ></li
+                    ><li class="demonstration-li"
+                      ><a href="#dem5-24" rel="nofollow"
+                        >Rango di matrici simili</a
+                      ></li
+                    ></ul
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../determinante/definizioni-di-determinante.html"
+                rel="nofollow"
+                >Determinante</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/definizioni-di-determinante.html"
+                    rel="nofollow"
+                    >Definizioni di determinante</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/utilizzi-del-determinante.html"
+                    rel="nofollow"
+                    >Utilizzi del determinante</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                rel="nofollow"
+                >Autovalori e autovettori</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                    rel="nofollow"
+                    >Autovalori, autovettori e autospazi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html"
+                    rel="nofollow"
+                    >Diagonalizzazione di una matrice</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                rel="nofollow"
+                >Spazi vettoriali euclidei</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                    rel="nofollow"
+                    >Forme bilineari e prodotto scalare</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html"
+                    rel="nofollow"
+                    >Spazi vettoriali euclidei</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                rel="nofollow"
+                >Geometria analitica nello spazio</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                    rel="nofollow"
+                    >Rette nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/piani-nello-spazio.html"
+                    rel="nofollow"
+                    >Piani nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html"
+                    rel="nofollow"
+                    >Prodotto vettoriale</a
+                  ></li
+                ></ul
+              ></li
+            ></ul
+          >
         </div>
-            <footer class="footer-wrapper">
-                <div class="copyright-wrapper">
-                    <span> &copy; Copyright 2024</span> /
-                    <span>made by <a href="https://github.com/lorenzoarlo" rel="nofollow">lorenzoarlo</a></span>
-                </div>
-                /
-                <div class="privacy-wrapper">
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze
-                            cookie</a></span> /
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow"
-                            target="_blank">Privacy Policy</a></span>
-                </div>
-            </footer>
+      </aside>
+      <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button">
+        keyboard_double_arrow_right
+      </div>
+      <section class="content-wrapper">
+        <h1 class="section-title content-width">Matrici simili</h1>
+        <article class="content-container content-width">
+          <div class="definition environment" id="def5-15"
+            ><h2 class="environment-title">Definizione - Matrici simili</h2
+            ><div class="environment-body">
+              Due matrici
+              <span class="math-span"
+                >\( A, B \in M_{n \times n}(\mathbb{K})\)</span
+              >
+              si dicono simili (<span class="math-span">\( \sim\)</span>) se
+              esiste una matrice
+              <span class="math-span"
+                >\( E \in M_{n \times n}(\mathbb{K})\)</span
+              >
+              invertibile tale che
+              <span class="math-block">\[ B = E^{-1} \odot A \odot E \]</span>
+              La similarità è una relazione d'equivalenza, ovvero vale
+              <ul class="list-container"
+                ><li class="list-item">la riflessività; </li
+                ><li class="list-item">la simmetria; </li
+                ><li class="list-item">la transitività. </li></ul
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - Fun fact</h3
+                ><div class="environment-body">
+                  Due matrici sono simili se rappresentano lo stesso
+                  endomorfismo rispetto a basi diverse.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-19"
+            ><h2 class="environment-title"
+              >Dimostrazione - Riflessività di matrici simili</h2
+            ><div class="environment-body">
+              Data la proprietà
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Ogni matrice è simile a se stessa, ovvero
+                  <span class="math-block">\[ A \sim A \]</span>
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale proprietà verifichiamo la definizione di
+                  similarità, ovvero
+                  <span class="math-block"
+                    >\begin{aligned} &amp; A = E^{-1} \odot A \odot E &amp; \iff
+                    \end{aligned}</span
+                  >
+                  Consideriamo infatti che esiste la matrice
+                  <span class="math-span">\( I\)</span> che è invertibile e
+                  verifichiamo che
+                  <span class="math-block"
+                    >\begin{aligned} &amp; A = I^{-1} \odot A \odot I
+                    \end{aligned}</span
+                  >
+                  che dimostra la proprietà.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-20"
+            ><h2 class="environment-title"
+              >Dimostrazione - Simmetria di matrici simili</h2
+            ><div class="environment-body">
+              Data la proprietà
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando le matrici
+                  <span class="math-span"
+                    >\( A, B \in M_{n \times n}(\mathbb{K})\)</span
+                  >, se <span class="math-span">\( A\)</span> è simile a
+                  <span class="math-span">\( B\)</span>, allora
+                  <span class="math-span">\( B\)</span> è simile ad
+                  <span class="math-span">\( A\)</span>, ovvero
+                  <span class="math-block"
+                    >\[ A \sim B \qquad \implies \qquad B \sim A \]</span
+                  >
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare tale proprietà è necessario provare l'esistenza
+                  di una matrice
+                  <span class="math-span"
+                    >\( F \in M_{n \times n}(\mathbb{K})\)</span
+                  >
+                  invertibile tale che
+                  <span class="math-block"
+                    >\[ A = F^{-1} \odot B \odot F \]</span
+                  >
+                  Per farlo consideriamo la definizione di similarità, ovvero
+                  <span class="math-block"
+                    >\begin{aligned} &amp; B = E^{-1} \odot A \odot E &amp; \iff
+                    \end{aligned}</span
+                  >
+                  e moltiplichiamo a sinistra "da entrambe le parti" per la
+                  matrice <span class="math-span">\( E\)</span> e moltiplichiamo
+                  a destra per la matrice
+                  <span class="math-span">\( E^{-1}\)</span>, ovvero
+                  <span class="math-block"
+                    >\begin{aligned} &amp; E \odot B \odot E^{-1} = E \odot
+                    (E^{-1} \odot A \odot E) \odot E^{-1} &amp; \iff
+                    \end{aligned}</span
+                  >
+                  Ora, per l'associatività del prodotto tra matrici
+                  <span class="math-block"
+                    >\begin{aligned} &amp; E \odot B \odot E^{-1} = (E \odot
+                    E^{-1}) \odot A \odot (E \odot E^{-1}) &amp; \iff
+                    \end{aligned}</span
+                  >
+                  ed eseguendo i calcoli nelle parentesi
+                  <span class="math-block"
+                    >\begin{aligned} &amp; E \odot B \odot E^{-1} = I \odot A
+                    \odot I &amp; \iff \\ &amp; A = E \odot B \odot E^{-1} &amp;
+                    \end{aligned}</span
+                  >
+                  A questo punto è possibile porre
+                  <span class="math-span">\( F = E^{-1}\)</span> e scrivendo le
+                  matrici come l'inversa dell'inversa, si ha che
+                  <span class="math-block"
+                    >\begin{aligned} &amp; A = (E^{-1})^{-1} \odot B \odot
+                    ((E^{-1})^{-1})^{-1} &amp; \iff \\ &amp; A = F^{-1} \odot B
+                    \odot F &amp; \end{aligned}</span
+                  >
+                  si dimostra la proprietà.
+                </div></div
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - Inversa della matrice che verifica
+                  <span class="math-span">\( A \sim B\)</span> come matrice che
+                  verifica <span class="math-span">\( B \sim A\)</span></h3
+                ><div class="environment-body">
+                  Da tale dimostrazione si può dedurre che la matrice
+                  <span class="math-span">\( F\)</span> che verifica la
+                  similarità tra
+                  <span class="math-span">\( B \sim A\)</span> non è altro che
+                  la matrice <span class="math-span">\( E^{-1}\)</span> che
+                  verifica la similarità
+                  <span class="math-span">\( A \sim B\)</span>.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-21"
+            ><h2 class="environment-title"
+              >Dimostrazione - Transitività di matrici simili</h2
+            ><div class="environment-body">
+              Data la proprietà
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando le matrici
+                  <span class="math-span"
+                    >\( A, B, C \in M_{n \times n}(\mathbb{K})\)</span
+                  >, nel caso <span class="math-span">\( A\)</span> sia simile a
+                  <span class="math-span">\( B\)</span> e
+                  <span class="math-span">\( B\)</span> sia simile a
+                  <span class="math-span">\( C\)</span>, si ha che
+                  <span class="math-span">\( A\)</span> è simile a
+                  <span class="math-span">\( C\)</span>
+                  <span class="math-block"
+                    >\[ A \sim B \qquad \text{e} \qquad B \sim C \qquad A \sim C
+                    \]</span
+                  >
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Considerando le definizioni di similarità e la simmetria tra
+                  matrici simili è possibile scrivere le matrici
+                  <span class="math-span">\( A, B, C\)</span> come
+                  <span class="math-block"
+                    >\[ \begin{array}{ccc} A \sim B &amp; \implies &amp; A =
+                    E^{-1} \odot B \odot E \\ B \sim A &amp; \implies &amp; B =
+                    E \odot A \odot E^{-1} \\ B \sim C &amp; \implies &amp; B =
+                    F^{-1} \odot C \odot F \\ C \sim B &amp; \implies &amp; C =
+                    F \odot B \odot F^{-1} \end{array} \]</span
+                  >
+                  Per dimostrare tale proprietà è necessario dimostrare
+                  l'esistenza di una matrice
+                  <span class="math-span">\( H\)</span> tale che
+                  <span class="math-block"
+                    >\begin{aligned} A = H^{-1} \odot C \odot H \qquad
+                    \text{oppure} \qquad C = H \odot A \odot H^{-1}
+                    \end{aligned}</span
+                  >
+                  Considerando quindi la definizione
+                  <span class="math-block"
+                    >\begin{aligned} &amp; B = E \odot A \odot E^{-1} &amp; \iff
+                    \end{aligned}</span
+                  >
+                  è possibile sostituire
+                  <span class="math-span">\( B\)</span> con
+                  <span class="math-span">\( (F^{-1} \odot C \odot F)\)</span>
+                  <span class="math-block"
+                    >\begin{aligned} &amp; F^{-1} \odot C \odot F = E \odot A
+                    \odot E^{-1} &amp; \iff \end{aligned}</span
+                  >
+                  e moltiplicare per <span class="math-span">\( F\)</span> a
+                  sinistra da "entrambe le parti"
+                  <span class="math-block"
+                    >\begin{aligned} &amp; F \odot F^{-1} \odot C \odot F = F
+                    \odot E \odot A \odot E^{-1} &amp; \iff \end{aligned}</span
+                  >
+                  e poi moltiplicare per
+                  <span class="math-span">\( F^{-1}\)</span> a destra da
+                  "entrambe le parti"
+                  <span class="math-block"
+                    >\begin{aligned} &amp; F \odot F^{-1} \odot C \odot F \odot
+                    F^{-1} = F \odot E \odot A \odot E^{-1} \odot F^{-1} &amp;
+                    \iff \end{aligned}</span
+                  >
+                  È quindi possibile per la proprietà associativa
+                  <span class="math-block"
+                    >\begin{aligned} &amp; (F \odot F^{-1}) \odot C \odot (F
+                    \odot F^{-1}) = F \odot E \odot A \odot E^{-1} \odot F^{-1}
+                    &amp; \iff \end{aligned}</span
+                  >
+                  risolvere le moltiplicazioni fra matrici inverse e ottenere
+                  <span class="math-block"
+                    >\begin{aligned} &amp; I \odot C \odot I = F \odot E \odot A
+                    \odot E^{-1} \odot F^{-1} &amp; \iff \end{aligned}</span
+                  >
+                  È poi possibile riscrivere la moltiplicazione
+                  <span class="math-span">\( (E^{-1} \odot F^{-1})\)</span> come
+                  <span class="math-span">\( (F \odot E)^{-1}\)</span> ed
+                  ottenere
+                  <span class="math-block"
+                    >\begin{aligned} &amp; C = (F \odot E) \odot A \odot (F
+                    \odot E)^{-1} &amp; \iff \end{aligned}</span
+                  >
+                  e riscrivendo
+                  <span class="math-span">\( (F \odot E)\)</span> come
+                  <span class="math-span">\( H\)</span> si ottiene
+                  <span class="math-block"
+                    >\begin{aligned} &amp; C = H \odot A \odot (H)^{-1} &amp;
+                    \end{aligned}</span
+                  >
+                  che dimostra la proprietà.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-22"
+            ><h2 class="environment-title"
+              >Dimostrazione - Similarità tra matrici legate allo stesso
+              endomorfismo rispetto a basi diverse</h2
+            ><div class="environment-body">
+              Data la proposizione
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Considerando un'applicazione lineare
+                  <span class="math-span">\( f: V \to V\)</span> e le matrici ad
+                  essa associate
+                  <span class="math-span">\( M_{B_{V}, B_{V}}(f)\)</span> e
+                  <span class="math-span">\( M_{B_{V}', B_{V}'}(f)\)</span>
+                  (ovvero rispetto a basi diverse), si ha che
+                  <span class="math-block"
+                    >\[ M_{B_{V}, B_{V}}(f) \sim M_{B_{V}', B_{V}'}(f) \]</span
+                  >
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Per dimostrare ciò è necessario provare l'esistenza di una
+                  matrice <span class="math-span">\( E\)</span> tale che
+                  <span class="math-block"
+                    >\[ M_{B_{V}', B_{V}'}(f) = E^{-1} \odot M_{B_{V}, B_{V}}(f)
+                    \odot E \]</span
+                  >
+                  Riscrivendo il procedimento per il "cambio delle basi legate
+                  alla matrice associata ad un'applicazione lineare" si ha che
+                  <span class="math-block"
+                    >\begin{aligned} &amp; M_{B_{V}', B_{V}'}(f) = M_{B_{V},
+                    B_{V}'}(\text{id}_{V}) \odot M_{B_{V}, B_{V}}(f) \odot
+                    M_{B_{V}', B_{V}}(\text{id}_{V}) &amp; \iff
+                    \end{aligned}</span
+                  >
+                  e dato che
+                  <span class="math-span"
+                    >\( M_{B_{V}, B_{V}'}(\text{id}_{W})\)</span
+                  >
+                  può essere scritta anche come
+                  <span class="math-span"
+                    >\( (M_{B_{V}', B_{V}}(\text{id}_{V}))^{-1}\)</span
+                  >, si ha che
+                  <span class="math-block"
+                    >\begin{aligned} &amp; M_{B_{V}', B_{V}'}(f) = (M_{B_{V}',
+                    B_{V}}(\text{id}_{V}))^{-1} \odot M_{B_{V}, B_{V}}(f) \odot
+                    M_{B_{V}', B_{V}}(\text{id}_{V}) &amp; \end{aligned}</span
+                  >
+                  che dimostra la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-23"
+            ><h2 class="environment-title"
+              >Dimostrazione - Traccia di matrici simili</h2
+            ><div class="environment-body">
+              Data la proprietà
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  La traccia di due matrici
+                  <span class="math-span"
+                    >\( A, B \in M_{n \times n}(\mathbb{K})\)</span
+                  >
+                  simili è la stessa, ovvero
+                  <span class="math-block"
+                    >\[ A \sim B \qquad \implies \qquad tr(A) = tr(B) \]</span
+                  >
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Considerando la definizione di similarità, si può scrivere
+                  <span class="math-block"
+                    >\begin{aligned} &amp; tr(B) = tr(E^{-1} \odot A \odot E)
+                    &amp; \iff \end{aligned}</span
+                  >
+                  e, considerando "l'invarianza della traccia rispetto alla
+                  permutazione ciclica del prodotto tra matrici" si ha che
+                  <span class="math-block"
+                    >\begin{aligned} &amp; tr(E^{-1} \odot A \odot E) = tr(A
+                    \odot E \odot E^{-1}) &amp; \iff \end{aligned}</span
+                  >
+                  e grazie alla proprietà associativa
+                  <span class="math-block"
+                    >\begin{aligned} &amp; tr(E^{-1} \odot A \odot E) = tr(A
+                    \odot (E \odot E^{-1})) &amp; \iff \end{aligned}</span
+                  >
+                  e sostituendo
+                  <span class="math-span">\( E \odot E^{-1}\)</span> con
+                  <span class="math-span">\( I\)</span> e
+                  <span class="math-span">\( E^{-1} \odot A \odot E\)</span> con
+                  <span class="math-span">\( B\)</span>, si ottiene
+                  <span class="math-block"
+                    >\begin{aligned} &amp; tr(B) = tr(A) &amp;
+                    \end{aligned}</span
+                  >
+                  che dimostra la proposizione.
+                </div></div
+              >
+            </div></div
+          ><div class="demonstration environment" id="dem5-24"
+            ><h2 class="environment-title"
+              >Dimostrazione - Rango di matrici simili</h2
+            ><div class="environment-body">
+              Data la proprietà
+              <div class="proposition environment"
+                ><h3 class="environment-title">Enunciato:</h3
+                ><div class="environment-body">
+                  Il rango di due matrici
+                  <span class="math-span"
+                    >\( A, B \in M_{n \times n}(\mathbb{K})\)</span
+                  >
+                  simili è lo stesso, ovvero
+                  <span class="math-block"
+                    >\[ A \sim B \qquad \implies \qquad r(A) = r(B) \]</span
+                  >
+                </div></div
+              >
+              <div class="proof environment"
+                ><h3 class="environment-title"
+                  >Dimostrazione:<span
+                    class="material-symbols-outlined body-visibility-icon"
+                    onclick="toggle_proof(event)"
+                    >visibility_off</span
+                  ></h3
+                ><div class="environment-body hyde">
+                  Considerando la matrice
+                  <span class="math-span">\( A\)</span> come la matrice
+                  associata ad un endomorfismo
+                  <span class="math-span">\( f: V \to V\)</span>, sappiamo che
+                  il rango di <span class="math-span">\( A\)</span> è la
+                  dimensione dell'immagine di
+                  <span class="math-span">\( f\)</span>. Dato che due matrici
+                  simili rappresentano lo stesso endomorfismo
+                  <span class="math-span">\( f\)</span>, si ha che anche il
+                  rango di <span class="math-span">\( B\)</span> è uguale alla
+                  dimension dell'immagine di
+                  <span class="math-span">\( f\)</span>, ovvero
+                  <span class="math-block"
+                    >\[ r(A) = dim(Im(f)) \quad \text{e} \quad r(B) = dim(Im(f))
+                    \qquad \implies \qquad r(A) = r(B) \]</span
+                  >
+                  Si è quindi dimostrata la proprietà.
+                </div></div
+              >
+            </div></div
+          >
+        </article>
+        <nav class="buttons-container content-width">
+          <a
+            class="navigation-button previous"
+            href="applicazioni-lineari-come-matrici.html"
+            rel="nofollow"
+            ><span>Applicazioni lineari come matrici</span></a
+          >
+          <a
+            class="navigation-button next"
+            href="../determinante/definizioni-di-determinante.html"
+            rel="nofollow"
+            ><span>Definizioni di determinante</span></a
+          >
+        </nav>
+      </section>
+      <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+        <span class="material-symbols-outlined">
+          keyboard_double_arrow_down
+        </span>
+      </div>
+      <footer class="footer-wrapper">
+        <div class="copyright-wrapper">
+          <span> &copy; Copyright 2024</span> /
+          <span
+            >made by
+            <a href="https://github.com/lorenzoarlo" rel="nofollow"
+              >lorenzoarlo</a
+            ></span
+          >
+        </div>
+        /
+        <div class="privacy-wrapper">
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/"
+              rel="nofollow"
+              >Pannello preferenze cookie</a
+            ></span
+          >
+          /
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html"
+              rel="nofollow"
+              target="_blank"
+              >Privacy Policy</a
+            ></span
+          >
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

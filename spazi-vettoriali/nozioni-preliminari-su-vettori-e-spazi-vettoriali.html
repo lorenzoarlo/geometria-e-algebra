@@ -1,93 +1,541 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="IT">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="./../styles/style.css" />
     <link rel="stylesheet" href="./../styles/index-style.css" />
     <link rel="stylesheet" href="./../styles/main-index-page-style.css" />
-    <link media="print" rel="stylesheet" href="./../styles/print.css"  />
-    
-        <link rel="stylesheet" href="./../styles/content-style.css" />
-    
+    <link media="print" rel="stylesheet" href="./../styles/print.css" />
+
+    <link rel="stylesheet" href="./../styles/content-style.css" />
+
     <style>
-        :root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }
+      :root {
+        --bg-clr: #296a15;
+        --fg-clr: #e8e3e3;
+      }
     </style>
     <meta name="application-name" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-title" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#296a15" />
-    <link rel="apple-touch-icon" sizes="144x144" href="./../apple-icon-144x144.png">
-    <link rel="icon" type="image/x-icon" href="./../favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="./../android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./../favicon-96x96.png">
-    <meta name="msapplication-TileColor" content="#296a15">
-    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png">
-    <link rel="manifest" href="./../manifest.json">
-    <meta name="keywords" content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
-    <meta name="description" content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'.">
-    <meta name="robots" content="index">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="themeColor" content="#296a15">
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./../apple-icon-144x144.png" />
+    <link rel="icon" type="image/x-icon" href="./../favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./../android-icon-192x192.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./../favicon-96x96.png" />
+    <meta name="msapplication-TileColor" content="#296a15" />
+    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png" />
+    <link rel="manifest" href="./../manifest.json" />
+    <meta
+      name="keywords"
+      content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
+    <meta
+      name="description"
+      content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'." />
+    <meta name="robots" content="index" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="themeColor" content="#296a15" />
     <script src="./../scripts/script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
-    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <title>Geometria e algebra - Spazi vettoriali - Nozioni preliminari su vettori e spazi vettoriali </title>
-</head>
-<body>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
+    <script
+      defer
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title
+      >Geometria e algebra - Spazi vettoriali - Nozioni preliminari su vettori e
+      spazi vettoriali
+    </title>
+  </head>
+  <body>
     <div class="container">
-        <header class="header-wrapper">
-            <div class="title-wrapper">
-                <span class="title">
-                    Geometria e algebra
-                </span>
-                <span class="subtitle">
-                    by lorenzoarlo
-                </span>
-            </div>
-            <span class="page-title">
-                Spazi vettoriali
-            </span>
-        </header>
-        <aside class="sidebar">
-            <h2 class="sidebar-title">Geometria e algebra</h2>
-            <div class="index-container">
-                <ul class="parent-ul"><li class="section-li"><a href="../index.html" rel="nofollow">Indice</a></li><li class="section-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Operazioni e strutture algebriche</a><ul><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Gruppi, anelli e campi</a></li><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html" rel="nofollow">Omomorfismi e isomorfismi</a></li></ul></li><li class="section-li current">Spazi vettoriali<ul><li class="subsection-li current">Nozioni preliminari su vettori e spazi vettoriali<ul><li class="definition-li"><a href="#def2-1" rel="nofollow">Vettore</a></li><li class="definition-li"><a href="#def2-2" rel="nofollow">\( (\mathbb{R}^{n}, +)\) come gruppo commutativo</a></li><li class="definition-li"><a href="#def2-3" rel="nofollow">Somma tra vettori</a></li><li class="definition-li"><a href="#def2-4" rel="nofollow">Moltiplicazione per uno scalare</a></li><li class="definition-li"><a href="#def2-5" rel="nofollow">Spazio vettoriale</a></li></ul></li><li class="subsection-li "><a href="combinazione-lineare-e-lineare-indipendenza.html" rel="nofollow">Combinazione lineare e lineare indipendenza</a></li><li class="subsection-li "><a href="sottostrutture-algebriche.html" rel="nofollow">Sottostrutture algebriche</a></li><li class="subsection-li "><a href="operazioni-tra-sottospazi-vettoriali.html" rel="nofollow">Operazioni tra sottospazi vettoriali</a></li></ul></li><li class="section-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Matrici</a><ul><li class="subsection-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Lo spazio vettoriale delle matrici</a></li><li class="subsection-li "><a href="../matrici/l-anello-delle-matrici-quadrate.html" rel="nofollow">L'anello delle matrici quadrate</a></li><li class="subsection-li "><a href="../matrici/operazioni-riga.html" rel="nofollow">Operazioni riga</a></li></ul></li><li class="section-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari</a><ul><li class="subsection-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari come matrici</a></li></ul></li><li class="section-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html" rel="nofollow">Applicazioni lineari</a><ul><li class="subsection-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html" rel="nofollow">Applicazioni lineari come funzioni</a></li><li class="subsection-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-matrici.html" rel="nofollow">Applicazioni lineari come matrici</a></li><li class="subsection-li "><a href="../applicazioni-lineari/matrici-simili.html" rel="nofollow">Matrici simili</a></li></ul></li><li class="section-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Determinante</a><ul><li class="subsection-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Definizioni di determinante</a></li><li class="subsection-li "><a href="../determinante/utilizzi-del-determinante.html" rel="nofollow">Utilizzi del determinante</a></li></ul></li><li class="section-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori e autovettori</a><ul><li class="subsection-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori, autovettori e autospazi</a></li><li class="subsection-li "><a href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html" rel="nofollow">Diagonalizzazione di una matrice</a></li></ul></li><li class="section-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Spazi vettoriali euclidei</a><ul><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Forme bilineari e prodotto scalare</a></li><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html" rel="nofollow">Spazi vettoriali euclidei</a></li></ul></li><li class="section-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Geometria analitica nello spazio</a><ul><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Rette nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/piani-nello-spazio.html" rel="nofollow">Piani nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html" rel="nofollow">Prodotto vettoriale</a></li></ul></li></ul>
-            </div>
-        </aside>
-        <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button" >
-            keyboard_double_arrow_right
+      <header class="header-wrapper">
+        <div class="title-wrapper">
+          <span class="title"> Geometria e algebra </span>
+          <span class="subtitle"> by lorenzoarlo </span>
         </div>
-        <section class="content-wrapper">
-            <h1 class="section-title content-width">Nozioni preliminari su vettori e spazi vettoriali</h1>
-            <article class="content-container content-width">
-                <div class="definition environment" id="def2-1"><h2 class="environment-title">Definizione - Vettore</h2><div class="environment-body">     Generalizzando, un "vettore" è un elemento di un insieme.      <br/>     Tale insieme è indicata equivalentemente con <span class="math-span">\( (\mathbb{R}^{n}, +, \cdot)\)</span> o con <span class="math-span">\( \mathbb{R}^{n}\)</span>. </div></div><div class="definition environment" id="def2-2"><h2 class="environment-title">Definizione - <span class="math-span">\( (\mathbb{R}^{n}, +)\)</span> come gruppo commutativo</h2><div class="environment-body">     È possibile quindi trattare la struttura algebrica <span class="math-span">\( (\mathbb{R}^{n}, +)\)</span> come gruppo commutativo: l'elemento neutro è il vettore nullo (il vettore <span class="math-span">\( (0, \ \ldots \ , 0)\)</span>), l'inverso di un vettore <span class="math-span">\( v \in \mathbb{R}^{n}\)</span> rispetto a <span class="math-span">\( +\)</span> sarà il vettore <span class="math-span">\( -1 \cdot v\)</span>. </div></div><div class="definition environment" id="def2-3"><h2 class="environment-title">Definizione - Somma tra vettori</h2><div class="environment-body">     Il gruppo <span class="math-span">\( (\mathbb{R}^{n}, +, \cdot)\)</span> definisce l'operazione della somma: generalizzando si ha che dati due vettori <span class="math-span">\(  v, w \in \mathbb{R}^{n}\)</span>     <span class="math-block">\begin{aligned}         &amp; v = (v_{1}, v_{2}, \ \ldots \ , v_{n})         &amp; w = (w_{1}, w_{2}, \ \ldots \ , w_{n})     \end{aligned}</span>     la somma tra questi vettori è definita come     <span class="math-block">\begin{aligned}         v + w = (v_{1}, v_{2}, \ \ldots \ , v_{n}) + (w_{1}, w_{2}, \ \ldots \ , w_{n}) = (v_{1} + w_{1}, v_{2} + w_{2}, \ \ldots \ , v_{n} + w_{n})s     \end{aligned}</span> </div></div><div class="definition environment" id="def2-4"><h2 class="environment-title">Definizione - Moltiplicazione per uno scalare</h2><div class="environment-body">     La moltiplicazione per uno scalare (<span class="math-span">\( \cdot\)</span>) è un'operazione esterna tra vettori e numeri reali (ovvero gli scalari), definita come     <span class="math-block">\[         \cdot: \mathbb{R} \times \mathbb{R}^{n} \to \mathbb{R}^{n}     \]</span> </div></div><div class="definition environment" id="def2-5"><h2 class="environment-title">Definizione - Spazio vettoriale</h2><div class="environment-body">     Uno spazio vettoriale è una quaterna      <span class="math-block">\[         (\mathbb{K}, V, +, \cdot)     \]</span>     dove     <ul class="list-container"><li class="list-item"><span class="math-span">\( \mathbb{K}\)</span> è un <strong>campo</strong> i cui elementi sono detti "<strong>scalari</strong>";         </li><li class="list-item"><span class="math-span">\( V\)</span> è un <strong>insieme</strong> i cui elementi sono detti "vettori";         </li><li class="list-item"><span class="math-span">\( +\)</span> è un'<strong>operazione binaria</strong> su <span class="math-span">\( V\)</span> tale che <span class="math-span">\( (V, +)\)</span> è un gruppo commutativo;         </li><li class="list-item"><span class="math-span">\( \cdot\)</span> è l'operazione "<strong>prodotto per uno scalare</strong>" del tipo <span class="math-span">\( f: \mathbb{R} \times V \to V\)</span>.      </li></ul>     e deve valere:     <ul class="list-container"><li class="list-item">la <strong>proprietà distributiva a destra</strong> di <span class="math-span">\( \cdot\)</span>, ovvero considerando <span class="math-span">\( \alpha \in \mathbb{K}\)</span> e <span class="math-span">\( v, w \in V\)</span>         <span class="math-block">\[             \alpha \cdot (v + w) = (\alpha \cdot v) + (\alpha \cdot w)         \]</span>         (in altre parole, sommare due vettori e poi moltiplicarli per uno scalare è uguale a moltiplicarli individualmente e solo poi sommarli);         </li><li class="list-item">la <strong>proprietà distributiva a sinistra</strong> di <span class="math-span">\( \cdot\)</span>, ovvero considerando <span class="math-span">\( \alpha, \beta \in \mathbb{K}\)</span> e <span class="math-span">\( v\in V\)</span>         <span class="math-block">\[             (\alpha + \beta) \cdot v = (\alpha \cdot v) + (\beta \cdot v)         \]</span>         (in altre parole, sommare due scalari e poi moltiplicarli per un vettore è uguale a moltiplicarli individualmente e solo poi sommarli);         </li><li class="list-item">la <strong>proprietà associativa del prodotto per uno scalare</strong>, ovvero considerando <span class="math-span">\( \alpha, \beta \in \mathbb{K}\)</span> E <span class="math-span">\( v \in V\)</span>         <span class="math-block">\[             (\alpha \cdot \beta) \cdot v = \alpha \cdot (\beta \cdot v)         \]</span>         </li><li class="list-item">l'<strong>esistenza dell'unità</strong> (<span class="math-span">\( 1\)</span>) appartenente a <span class="math-span">\( \mathbb{K}\)</span> per il <strong>prodotto per uno scalare</strong>         <span class="math-block">\[             1 \cdot v = v \cdot 1 = v         \]</span>     </li></ul>     <div class="mynote environment"><h3 class="environment-title">Nota bene - We are not the same - Parte 1</h3><div class="environment-body">         È necessario notare che le operazioni <span class="math-span">\( +\)</span>, <span class="math-span">\( \cdot\)</span> non indicano la somma e il prodotto di <span class="math-span">\( \mathbb{R}\)</span>, ma una qualunque operazione che rispetta le proprietà.          Ciò non toglie che nella maggior parte dei casi esse indicheranno somma e prodotto.      </div></div>     <div class="mynote environment"><h3 class="environment-title">Nota bene - We are not the same - Parte 2</h3><div class="environment-body">         Per quanto riguarda le proprietà, è da notare che i simboli <span class="math-span">\( +\)</span>, <span class="math-span">\( \cdot\)</span> hanno più significati.          Ad esempio, considerando <span class="math-span">\( \alpha, \beta \in \mathbb{K}\)</span> e <span class="math-span">\( v, w \in V\)</span>:         <ul class="list-container"><li class="list-item">in <span class="math-span">\( \alpha + \beta\)</span>, il simbolo <span class="math-span">\( +\)</span> indica la somma interna al gruppo <span class="math-span">\( (V, +)\)</span> mentre in <span class="math-span">\( v + w\)</span> indica la somma tra vettori;             </li><li class="list-item">in <span class="math-span">\( \alpha \cdot \beta\)</span>, il simbolo <span class="math-span">\( \cdot\)</span> indica il prodotto tra i due scalari mentre in <span class="math-span">\( \alpha \cdot v\)</span> indica il prodotto per uno scalare ad un vettore.         </li></ul>     </div></div> </div></div>
-            </article>
-            <nav class="buttons-container content-width">
-                <a class="navigation-button previous" href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html" rel="nofollow"><span>Omomorfismi e isomorfismi</span></a>
-                <a class="navigation-button next" href="combinazione-lineare-e-lineare-indipendenza.html" rel="nofollow"><span>Combinazione lineare e lineare indipendenza</span></a>
-            </nav>
-        </section>
-        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
-            <span class="material-symbols-outlined">
-                keyboard_double_arrow_down
-            </span>
+        <span class="page-title"> Spazi vettoriali </span>
+      </header>
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Geometria e algebra</h2>
+        <div class="index-container">
+          <ul class="parent-ul"
+            ><li class="section-li"
+              ><a href="../index.html" rel="nofollow">Indice</a></li
+            ><li class="section-li"
+              ><a
+                href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                rel="nofollow"
+                >Operazioni e strutture algebriche</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                    rel="nofollow"
+                    >Gruppi, anelli e campi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html"
+                    rel="nofollow"
+                    >Omomorfismi e isomorfismi</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li current"
+              >Spazi vettoriali<ul
+                ><li class="subsection-li current"
+                  >Nozioni preliminari su vettori e spazi vettoriali<ul
+                    ><li class="definition-li"
+                      ><a href="#def2-1" rel="nofollow">Vettore</a></li
+                    ><li class="definition-li"
+                      ><a href="#def2-2" rel="nofollow"
+                        >\( (\mathbb{R}^{n}, +)\) come gruppo commutativo</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-3" rel="nofollow"
+                        >Somma tra vettori</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-4" rel="nofollow"
+                        >Moltiplicazione per uno scalare</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-5" rel="nofollow"
+                        >Spazio vettoriale</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="combinazione-lineare-e-lineare-indipendenza.html"
+                    rel="nofollow"
+                    >Combinazione lineare e lineare indipendenza</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="sottostrutture-algebriche.html" rel="nofollow"
+                    >Sottostrutture algebriche</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="operazioni-tra-sottospazi-vettoriali.html"
+                    rel="nofollow"
+                    >Operazioni tra sottospazi vettoriali</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                rel="nofollow"
+                >Matrici</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                    rel="nofollow"
+                    >Lo spazio vettoriale delle matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/l-anello-delle-matrici-quadrate.html"
+                    rel="nofollow"
+                    >L'anello delle matrici quadrate</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="../matrici/operazioni-riga.html" rel="nofollow"
+                    >Operazioni riga</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                rel="nofollow"
+                >Sistemi lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Sistemi lineari come matrici</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                rel="nofollow"
+                >Applicazioni lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come funzioni</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/applicazioni-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/matrici-simili.html"
+                    rel="nofollow"
+                    >Matrici simili</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../determinante/definizioni-di-determinante.html"
+                rel="nofollow"
+                >Determinante</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/definizioni-di-determinante.html"
+                    rel="nofollow"
+                    >Definizioni di determinante</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/utilizzi-del-determinante.html"
+                    rel="nofollow"
+                    >Utilizzi del determinante</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                rel="nofollow"
+                >Autovalori e autovettori</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                    rel="nofollow"
+                    >Autovalori, autovettori e autospazi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html"
+                    rel="nofollow"
+                    >Diagonalizzazione di una matrice</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                rel="nofollow"
+                >Spazi vettoriali euclidei</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                    rel="nofollow"
+                    >Forme bilineari e prodotto scalare</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html"
+                    rel="nofollow"
+                    >Spazi vettoriali euclidei</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                rel="nofollow"
+                >Geometria analitica nello spazio</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                    rel="nofollow"
+                    >Rette nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/piani-nello-spazio.html"
+                    rel="nofollow"
+                    >Piani nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html"
+                    rel="nofollow"
+                    >Prodotto vettoriale</a
+                  ></li
+                ></ul
+              ></li
+            ></ul
+          >
         </div>
-            <footer class="footer-wrapper">
-                <div class="copyright-wrapper">
-                    <span> &copy; Copyright 2024</span> /
-                    <span>made by <a href="https://github.com/lorenzoarlo" rel="nofollow">lorenzoarlo</a></span>
-                </div>
-                /
-                <div class="privacy-wrapper">
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze
-                            cookie</a></span> /
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow"
-                            target="_blank">Privacy Policy</a></span>
-                </div>
-            </footer>
+      </aside>
+      <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button">
+        keyboard_double_arrow_right
+      </div>
+      <section class="content-wrapper">
+        <h1 class="section-title content-width"
+          >Nozioni preliminari su vettori e spazi vettoriali</h1
+        >
+        <article class="content-container content-width">
+          <div class="definition environment" id="def2-1"
+            ><h2 class="environment-title">Definizione - Vettore</h2
+            ><div class="environment-body">
+              Generalizzando, un "vettore" è un elemento di un insieme. <br />
+              Tale insieme è indicata equivalentemente con
+              <span class="math-span">\( (\mathbb{R}^{n}, +, \cdot)\)</span> o
+              con <span class="math-span">\( \mathbb{R}^{n}\)</span>.
+            </div></div
+          ><div class="definition environment" id="def2-2"
+            ><h2 class="environment-title"
+              >Definizione -
+              <span class="math-span">\( (\mathbb{R}^{n}, +)\)</span> come
+              gruppo commutativo</h2
+            ><div class="environment-body">
+              È possibile quindi trattare la struttura algebrica
+              <span class="math-span">\( (\mathbb{R}^{n}, +)\)</span> come
+              gruppo commutativo: l'elemento neutro è il vettore nullo (il
+              vettore <span class="math-span">\( (0, \ \ldots \ , 0)\)</span>),
+              l'inverso di un vettore
+              <span class="math-span">\( v \in \mathbb{R}^{n}\)</span> rispetto
+              a <span class="math-span">\( +\)</span> sarà il vettore
+              <span class="math-span">\( -1 \cdot v\)</span>.
+            </div></div
+          ><div class="definition environment" id="def2-3"
+            ><h2 class="environment-title">Definizione - Somma tra vettori</h2
+            ><div class="environment-body">
+              Il gruppo
+              <span class="math-span">\( (\mathbb{R}^{n}, +, \cdot)\)</span>
+              definisce l'operazione della somma: generalizzando si ha che dati
+              due vettori
+              <span class="math-span">\( v, w \in \mathbb{R}^{n}\)</span>
+              <span class="math-block"
+                >\begin{aligned} &amp; v = (v_{1}, v_{2}, \ \ldots \ , v_{n})
+                &amp; w = (w_{1}, w_{2}, \ \ldots \ , w_{n}) \end{aligned}</span
+              >
+              la somma tra questi vettori è definita come
+              <span class="math-block"
+                >\begin{aligned} v + w = (v_{1}, v_{2}, \ \ldots \ , v_{n}) +
+                (w_{1}, w_{2}, \ \ldots \ , w_{n}) = (v_{1} + w_{1}, v_{2} +
+                w_{2}, \ \ldots \ , v_{n} + w_{n})s \end{aligned}</span
+              >
+            </div></div
+          ><div class="definition environment" id="def2-4"
+            ><h2 class="environment-title"
+              >Definizione - Moltiplicazione per uno scalare</h2
+            ><div class="environment-body">
+              La moltiplicazione per uno scalare (<span class="math-span"
+                >\( \cdot\)</span
+              >) è un'operazione esterna tra vettori e numeri reali (ovvero gli
+              scalari), definita come
+              <span class="math-block"
+                >\[ \cdot: \mathbb{R} \times \mathbb{R}^{n} \to \mathbb{R}^{n}
+                \]</span
+              >
+            </div></div
+          ><div class="definition environment" id="def2-5"
+            ><h2 class="environment-title">Definizione - Spazio vettoriale</h2
+            ><div class="environment-body">
+              Uno spazio vettoriale è una quaterna
+              <span class="math-block">\[ (\mathbb{K}, V, +, \cdot) \]</span>
+              dove
+              <ul class="list-container"
+                ><li class="list-item"
+                  ><span class="math-span">\( \mathbb{K}\)</span> è un
+                  <strong>campo</strong> i cui elementi sono detti
+                  "<strong>scalari</strong>"; </li
+                ><li class="list-item"
+                  ><span class="math-span">\( V\)</span> è un
+                  <strong>insieme</strong> i cui elementi sono detti "vettori"; </li
+                ><li class="list-item"
+                  ><span class="math-span">\( +\)</span> è un'<strong
+                    >operazione binaria</strong
+                  >
+                  su <span class="math-span">\( V\)</span> tale che
+                  <span class="math-span">\( (V, +)\)</span> è un gruppo
+                  commutativo; </li
+                ><li class="list-item"
+                  ><span class="math-span">\( \cdot\)</span> è l'operazione
+                  "<strong>prodotto per uno scalare</strong>" del tipo
+                  <span class="math-span"
+                    >\( f: \mathbb{R} \times V \to V\)</span
+                  >.
+                </li></ul
+              >
+              e deve valere:
+              <ul class="list-container"
+                ><li class="list-item"
+                  >la <strong>proprietà distributiva a destra</strong> di
+                  <span class="math-span">\( \cdot\)</span>, ovvero considerando
+                  <span class="math-span">\( \alpha \in \mathbb{K}\)</span> e
+                  <span class="math-span">\( v, w \in V\)</span>
+                  <span class="math-block"
+                    >\[ \alpha \cdot (v + w) = (\alpha \cdot v) + (\alpha \cdot
+                    w) \]</span
+                  >
+                  (in altre parole, sommare due vettori e poi moltiplicarli per
+                  uno scalare è uguale a moltiplicarli individualmente e solo
+                  poi sommarli); </li
+                ><li class="list-item"
+                  >la <strong>proprietà distributiva a sinistra</strong> di
+                  <span class="math-span">\( \cdot\)</span>, ovvero considerando
+                  <span class="math-span"
+                    >\( \alpha, \beta \in \mathbb{K}\)</span
+                  >
+                  e <span class="math-span">\( v\in V\)</span>
+                  <span class="math-block"
+                    >\[ (\alpha + \beta) \cdot v = (\alpha \cdot v) + (\beta
+                    \cdot v) \]</span
+                  >
+                  (in altre parole, sommare due scalari e poi moltiplicarli per
+                  un vettore è uguale a moltiplicarli individualmente e solo poi
+                  sommarli); </li
+                ><li class="list-item"
+                  >la
+                  <strong
+                    >proprietà associativa del prodotto per uno scalare</strong
+                  >, ovvero considerando
+                  <span class="math-span"
+                    >\( \alpha, \beta \in \mathbb{K}\)</span
+                  >
+                  E <span class="math-span">\( v \in V\)</span>
+                  <span class="math-block"
+                    >\[ (\alpha \cdot \beta) \cdot v = \alpha \cdot (\beta \cdot
+                    v) \]</span
+                  > </li
+                ><li class="list-item"
+                  >l'<strong>esistenza dell'unità</strong> (<span
+                    class="math-span"
+                    >\( 1\)</span
+                  >) appartenente a
+                  <span class="math-span">\( \mathbb{K}\)</span> per il
+                  <strong>prodotto per uno scalare</strong>
+                  <span class="math-block"
+                    >\[ 1 \cdot v = v \cdot 1 = v \]</span
+                  >
+                </li></ul
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - We are not the same - Parte 1</h3
+                ><div class="environment-body">
+                  È necessario notare che le operazioni
+                  <span class="math-span">\( +\)</span>,
+                  <span class="math-span">\( \cdot\)</span> non indicano la
+                  somma e il prodotto di
+                  <span class="math-span">\( \mathbb{R}\)</span>, ma una
+                  qualunque operazione che rispetta le proprietà. Ciò non toglie
+                  che nella maggior parte dei casi esse indicheranno somma e
+                  prodotto.
+                </div></div
+              >
+              <div class="mynote environment"
+                ><h3 class="environment-title"
+                  >Nota bene - We are not the same - Parte 2</h3
+                ><div class="environment-body">
+                  Per quanto riguarda le proprietà, è da notare che i simboli
+                  <span class="math-span">\( +\)</span>,
+                  <span class="math-span">\( \cdot\)</span> hanno più
+                  significati. Ad esempio, considerando
+                  <span class="math-span"
+                    >\( \alpha, \beta \in \mathbb{K}\)</span
+                  >
+                  e <span class="math-span">\( v, w \in V\)</span>:
+                  <ul class="list-container"
+                    ><li class="list-item"
+                      >in <span class="math-span">\( \alpha + \beta\)</span>, il
+                      simbolo <span class="math-span">\( +\)</span> indica la
+                      somma interna al gruppo
+                      <span class="math-span">\( (V, +)\)</span> mentre in
+                      <span class="math-span">\( v + w\)</span> indica la somma
+                      tra vettori; </li
+                    ><li class="list-item"
+                      >in
+                      <span class="math-span">\( \alpha \cdot \beta\)</span>, il
+                      simbolo <span class="math-span">\( \cdot\)</span> indica
+                      il prodotto tra i due scalari mentre in
+                      <span class="math-span">\( \alpha \cdot v\)</span> indica
+                      il prodotto per uno scalare ad un vettore.
+                    </li></ul
+                  >
+                </div></div
+              >
+            </div></div
+          >
+        </article>
+        <nav class="buttons-container content-width">
+          <a
+            class="navigation-button previous"
+            href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html"
+            rel="nofollow"
+            ><span>Omomorfismi e isomorfismi</span></a
+          >
+          <a
+            class="navigation-button next"
+            href="combinazione-lineare-e-lineare-indipendenza.html"
+            rel="nofollow"
+            ><span>Combinazione lineare e lineare indipendenza</span></a
+          >
+        </nav>
+      </section>
+      <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+        <span class="material-symbols-outlined">
+          keyboard_double_arrow_down
+        </span>
+      </div>
+      <footer class="footer-wrapper">
+        <div class="copyright-wrapper">
+          <span> &copy; Copyright 2024</span> /
+          <span
+            >made by
+            <a href="https://github.com/lorenzoarlo" rel="nofollow"
+              >lorenzoarlo</a
+            ></span
+          >
+        </div>
+        /
+        <div class="privacy-wrapper">
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/"
+              rel="nofollow"
+              >Pannello preferenze cookie</a
+            ></span
+          >
+          /
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html"
+              rel="nofollow"
+              target="_blank"
+              >Privacy Policy</a
+            ></span
+          >
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

@@ -1,93 +1,595 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="IT">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="./../styles/style.css" />
     <link rel="stylesheet" href="./../styles/index-style.css" />
     <link rel="stylesheet" href="./../styles/main-index-page-style.css" />
-    <link media="print" rel="stylesheet" href="./../styles/print.css"  />
-    
-        <link rel="stylesheet" href="./../styles/content-style.css" />
-    
+    <link media="print" rel="stylesheet" href="./../styles/print.css" />
+
+    <link rel="stylesheet" href="./../styles/content-style.css" />
+
     <style>
-        :root { --bg-clr: #296a15; --fg-clr: #e8e3e3; }
+      :root {
+        --bg-clr: #296a15;
+        --fg-clr: #e8e3e3;
+      }
     </style>
     <meta name="application-name" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-title" content="Geometria e algebra" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#296a15" />
-    <link rel="apple-touch-icon" sizes="144x144" href="./../apple-icon-144x144.png">
-    <link rel="icon" type="image/x-icon" href="./../favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="./../android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./../favicon-96x96.png">
-    <meta name="msapplication-TileColor" content="#296a15">
-    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png">
-    <link rel="manifest" href="./../manifest.json">
-    <meta name="keywords" content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
-    <meta name="description" content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'.">
-    <meta name="robots" content="index">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="themeColor" content="#296a15">
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./../apple-icon-144x144.png" />
+    <link rel="icon" type="image/x-icon" href="./../favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./../android-icon-192x192.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./../favicon-96x96.png" />
+    <meta name="msapplication-TileColor" content="#296a15" />
+    <meta name="msapplication-TileImage" content="./../ms-icon-144x144.png" />
+    <link rel="manifest" href="./../manifest.json" />
+    <meta
+      name="keywords"
+      content="geometria, algebra, geometria e algebra, algebra lineare, GAL" />
+    <meta
+      name="description"
+      content="Il seguente sito contiene gli appunti, le definizioni e le dimostrazioni spiegate del corso 'Geometria e algebra'." />
+    <meta name="robots" content="index" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="themeColor" content="#296a15" />
     <script src="./../scripts/script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
-    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <title>Geometria e algebra - Spazi vettoriali - Sottostrutture algebriche </title>
-</head>
-<body>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
+    <script
+      defer
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title
+      >Geometria e algebra - Spazi vettoriali - Sottostrutture algebriche
+    </title>
+  </head>
+  <body>
     <div class="container">
-        <header class="header-wrapper">
-            <div class="title-wrapper">
-                <span class="title">
-                    Geometria e algebra
-                </span>
-                <span class="subtitle">
-                    by lorenzoarlo
-                </span>
-            </div>
-            <span class="page-title">
-                Spazi vettoriali
-            </span>
-        </header>
-        <aside class="sidebar">
-            <h2 class="sidebar-title">Geometria e algebra</h2>
-            <div class="index-container">
-                <ul class="parent-ul"><li class="section-li"><a href="../index.html" rel="nofollow">Indice</a></li><li class="section-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Operazioni e strutture algebriche</a><ul><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html" rel="nofollow">Gruppi, anelli e campi</a></li><li class="subsection-li "><a href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html" rel="nofollow">Omomorfismi e isomorfismi</a></li></ul></li><li class="section-li current">Spazi vettoriali<ul><li class="subsection-li "><a href="nozioni-preliminari-su-vettori-e-spazi-vettoriali.html" rel="nofollow">Nozioni preliminari su vettori e spazi vettoriali</a></li><li class="subsection-li "><a href="combinazione-lineare-e-lineare-indipendenza.html" rel="nofollow">Combinazione lineare e lineare indipendenza</a></li><li class="subsection-li current">Sottostrutture algebriche<ul><li class="definition-li"><a href="#def2-19" rel="nofollow">Sottostruttura algebrica</a></li><li class="definition-li"><a href="#def2-20" rel="nofollow">Sottospazio vettoriale</a></li><li class="definition-li"><a href="#def2-21" rel="nofollow">Verificare che uno spazio vettoriale sia sottospazio di un altro</a></li><li class="myexample-li"><a href="#example9" rel="nofollow">Verificare che uno spazio vettoriale sia sottospazio di un altro</a></li><li class="definition-li"><a href="#def2-22" rel="nofollow">Sottospazi affini (traslati di un sottospazio vettoriale)</a></li></ul></li><li class="subsection-li "><a href="operazioni-tra-sottospazi-vettoriali.html" rel="nofollow">Operazioni tra sottospazi vettoriali</a></li></ul></li><li class="section-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Matrici</a><ul><li class="subsection-li "><a href="../matrici/lo-spazio-vettoriale-delle-matrici.html" rel="nofollow">Lo spazio vettoriale delle matrici</a></li><li class="subsection-li "><a href="../matrici/l-anello-delle-matrici-quadrate.html" rel="nofollow">L'anello delle matrici quadrate</a></li><li class="subsection-li "><a href="../matrici/operazioni-riga.html" rel="nofollow">Operazioni riga</a></li></ul></li><li class="section-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari</a><ul><li class="subsection-li "><a href="../sistemi-lineari/sistemi-lineari-come-matrici.html" rel="nofollow">Sistemi lineari come matrici</a></li></ul></li><li class="section-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html" rel="nofollow">Applicazioni lineari</a><ul><li class="subsection-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html" rel="nofollow">Applicazioni lineari come funzioni</a></li><li class="subsection-li "><a href="../applicazioni-lineari/applicazioni-lineari-come-matrici.html" rel="nofollow">Applicazioni lineari come matrici</a></li><li class="subsection-li "><a href="../applicazioni-lineari/matrici-simili.html" rel="nofollow">Matrici simili</a></li></ul></li><li class="section-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Determinante</a><ul><li class="subsection-li "><a href="../determinante/definizioni-di-determinante.html" rel="nofollow">Definizioni di determinante</a></li><li class="subsection-li "><a href="../determinante/utilizzi-del-determinante.html" rel="nofollow">Utilizzi del determinante</a></li></ul></li><li class="section-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori e autovettori</a><ul><li class="subsection-li "><a href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html" rel="nofollow">Autovalori, autovettori e autospazi</a></li><li class="subsection-li "><a href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html" rel="nofollow">Diagonalizzazione di una matrice</a></li></ul></li><li class="section-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Spazi vettoriali euclidei</a><ul><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html" rel="nofollow">Forme bilineari e prodotto scalare</a></li><li class="subsection-li "><a href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html" rel="nofollow">Spazi vettoriali euclidei</a></li></ul></li><li class="section-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Geometria analitica nello spazio</a><ul><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/rette-nello-spazio.html" rel="nofollow">Rette nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/piani-nello-spazio.html" rel="nofollow">Piani nello spazio</a></li><li class="subsection-li "><a href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html" rel="nofollow">Prodotto vettoriale</a></li></ul></li></ul>
-            </div>
-        </aside>
-        <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button" >
-            keyboard_double_arrow_right
+      <header class="header-wrapper">
+        <div class="title-wrapper">
+          <span class="title"> Geometria e algebra </span>
+          <span class="subtitle"> by lorenzoarlo </span>
         </div>
-        <section class="content-wrapper">
-            <h1 class="section-title content-width">Sottostrutture algebriche</h1>
-            <article class="content-container content-width">
-                <div class="definition environment" id="def2-19"><h2 class="environment-title">Definizione - Sottostruttura algebrica</h2><div class="environment-body">     Ogni struttura algebrica ammette l'esistenza di una sottostruttura.     Una <strong>sottostruttura</strong> è un <strong>sottoinsieme che mantiene le proprietà della struttura più grande</strong> (dove con proprietà si intendono le operazioni, elementi nulli, ecc..).     <div class="mynote environment"><h3 class="environment-title">Nota bene - Ad esempio</h3><div class="environment-body">         Considerando il gruppo <span class="math-span">\( (\mathbb{R}, +)\)</span>, allora possiamo dire che <span class="math-span">\( (\mathbb{Z}, +)\)</span> è un sottogruppo perchè <span class="math-span">\( \mathbb{Z} \subseteq \mathbb{R}\)</span> e <span class="math-span">\( (\mathbb{Z}, +)\)</span> è ancora un gruppo. Per verificare ciò, è sufficiente verificare per ogni elemento del sottoinsieme, l'operazione sia interna.     </div></div> </div></div><div class="definition environment" id="def2-20"><h2 class="environment-title">Definizione - Sottospazio vettoriale</h2><div class="environment-body">     Dato uno spazio vettoriale <span class="math-span">\( (\mathbb{K}, V, +, \cdot)\)</span>: considerando <span class="math-span">\( W\)</span> un sottoinsieme di <span class="math-span">\( V\)</span>  (<span class="math-span">\( W \subseteq V\)</span>), allora <span class="math-span">\( (\mathbb{K}, W, +, \cdot)\)</span> è detto <strong>sottospazio vettoriale</strong> di <span class="math-span">\( V\)</span> se:     <ul class="list-container"><li class="list-item">l'elemento nullo di <span class="math-span">\( V\)</span> appartiene anche a <span class="math-span">\( W\)</span>, ovvero         <span class="math-block">\[             0_{V} \in W         \]</span>         </li><li class="list-item">la somma di prodotti per uno scalare tra elementi di <span class="math-span">\( W\)</span> è interna a <span class="math-span">\( W\)</span> (le operazioni di <span class="math-span">\( V\)</span> sono interne a <span class="math-span">\( W\)</span>), ovvero         <span class="math-block">\begin{aligned}             &amp; \alpha w_{1} + \beta w_{2} \in W             &amp; \forall w_{1}, w_{2} \in W, \forall \alpha, \beta \in \mathbb{K}         \end{aligned}</span>     </li></ul> </div></div><div class="definition environment" id="def2-21"><h2 class="environment-title">Definizione - Verificare che uno spazio vettoriale sia sottospazio di un altro</h2><div class="environment-body">     Considerando due spazi vettoriali <span class="math-span">\( (\mathbb{K}, V, +, \cdot)\)</span> e <span class="math-span">\( (\mathbb{K}, W, +, \cdot)\)</span>, con l'insieme <span class="math-span">\( W\)</span> un sottoinsieme di <span class="math-span">\( V\)</span>, allora lo spazio vettoriale <span class="math-span">\( W\)</span> è un sottospazio di <span class="math-span">\( V\)</span> se:     <ul class="list-container"><li class="list-item">l'elemento nullo di <span class="math-span">\( V\)</span> appartiene anche a <span class="math-span">\( W\)</span>, ovvero         <span class="math-block">\[             0_{V} \in W         \]</span>         </li><li class="list-item">la somma di prodotti per uno scalare tra elementi di <span class="math-span">\( W\)</span> è interna a <span class="math-span">\( W\)</span>, ovvero considerando i vettori <span class="math-span">\( u, w \in W\)</span> e <span class="math-span">\( \alpha, \beta \in \mathbb{K}\)</span> si ha che         <span class="math-block">\[             (\alpha \cdot u + \beta \cdot w) \in W         \]</span>     </li></ul> </div></div><div class="myexample environment" id="example9"><h2 class="environment-title">Esempio - Verificare che uno spazio vettoriale sia sottospazio di un altro</h2><div class="environment-body collapsed">     Verificare che lo spazio vettoriale <span class="math-span">\( W\)</span>     <span class="math-block">\[         W = \{ (x, y) \in \mathbb{R}^{2}         \quad : \quad         5x - y = 0 \}     \]</span>     è un sottospazio di <span class="math-span">\( \mathbb{R}^{2}\)</span>.     <br/>     Per farlo, conviene riscrivere <span class="math-span">\( y\)</span> in funzione di <span class="math-span">\( x\)</span>, ovvero si ha che <span class="math-span">\( y = 5x\)</span>: si può quindi riscrivere una generico vettore di <span class="math-span">\( W\)</span> come      <span class="math-block">\[         (x, y)         \qquad \implies \qquad          (x, 5x)     \]</span>     Ora, è necessario verificare l'esistenza dell'elemento nullo di <span class="math-span">\( \mathbb{R}^{2}\)</span> in <span class="math-span">\( W\)</span>, ovvero considerando che il vettore nullo di <span class="math-span">\( (0, 0)\)</span> è l'elemento in cui <span class="math-span">\( x = y = 0\)</span>, si ha che     <span class="math-block">\[         (x, 5x) = (0, 5 \cdot 0) = (0, 0)     \]</span>     Infine, è necessario verificare che la somma e il prodotto per uno scalare siano interni a <span class="math-span">\( W\)</span>, ovvero     <span class="math-block">\begin{aligned}         &amp; \alpha \cdot (x, 5x) + \beta \cdot (x, 5x)          &amp; = \\          &amp; (\alpha \cdot x, 5 \cdot \alpha \cdot x) + (\beta \cdot x, 5 \cdot \beta \cdot x)         &amp; = \\         &amp; ((\alpha + \beta) \cdot x, (\alpha + \beta) \cdot 5x)         &amp;     \end{aligned}</span>     che è interno a <span class="math-span">\( W\)</span>. </div><div class="environment-tail"><span class="material-symbols-outlined body-visibility-icon" onclick="expand_environment(event)">expand_more</span></div></div><div class="mynote environment"><h3 class="environment-title">Nota bene - Sottospazi vettoriali di <span class="math-span">\( \mathbb{R}^{2}\)</span></h3><div class="environment-body">     I sottospazi vettoriali di <span class="math-span">\( \mathbb{R}^2\)</span> sono infiniti, in particolare sono:     <ul class="list-container"><li class="list-item">tutto <span class="math-span">\( \mathbb{R}^{2}\)</span>;         </li><li class="list-item">lo spazio contentente solo l'elemento <span class="math-span">\( (0, 0)\)</span>;         </li><li class="list-item">tutte le rette passanti per <span class="math-span">\( (0, 0)\)</span>.     </li></ul> </div></div><div class="mynote environment"><h3 class="environment-title">Nota bene - Sottospazi vettoriali di <span class="math-span">\( \mathbb{R}^{3}\)</span></h3><div class="environment-body">     I sottospazi vettoriali di <span class="math-span">\( \mathbb{R}^{3}\)</span> sono infiniti, in particolare:     <ul class="list-container"><li class="list-item">tutto <span class="math-span">\( \mathbb{R}^{3}\)</span>;         </li><li class="list-item">lo spazio contentente solo l'elemento <span class="math-span">\( (0, 0, 0)\)</span>;         </li><li class="list-item">tutte le rette passanti per <span class="math-span">\( (0, 0, 0)\)</span>;         </li><li class="list-item">tutti i piani passanti passanti per <span class="math-span">\( (0, 0, 0)\)</span>.     </li></ul> </div></div><div class="mynote environment"><h3 class="environment-title">Nota bene - Spazi vettoriali con un numero finito di sottospazi</h3><div class="environment-body">     Esempi di spazi vettoriali che ammettono un numero finito di sottospazi vettoriali sono:     <ul class="list-container"><li class="list-item"><span class="math-span">\( \mathbb{R}^{1}\)</span>, che ammette solo sé stesso come sottospazio;         </li><li class="list-item"><span class="math-span">\( \mathbb{Z}^{x}_{n}\)</span>, che ha un numero limitato di elementi.     </li></ul> </div></div><div class="definition environment" id="def2-22"><h2 class="environment-title">Definizione - Sottospazi affini (traslati di un sottospazio vettoriale)</h2><div class="environment-body">     Considerando un sottoinsieme <span class="math-span">\( S\)</span> di <span class="math-span">\( \mathbb{R}^{n}\)</span> che può essere visto come la traslazione di un sottospazio vettoriale <span class="math-span">\( U\)</span> di <span class="math-span">\( \mathbb{R}^{n}\)</span>, ovvero considerando un vettore costante <span class="math-span">\( \bar{v}\)</span>     <span class="math-block">\[         S = \{ u + \bar{v}         \ : \         \forall u \in U         \}     \]</span>     allora definiamo <span class="math-span">\( S\)</span> un <strong>sottospazio affine</strong> a <span class="math-span">\( U\)</span>.      <br/>     Tale sottospazio affine (anche se non è considerato un sottospazio vettoriale di <span class="math-span">\( \mathbb{R}^{n}\)</span> in quanto può non contenere il vettore nullo) <strong>ammette una base</strong>: inoltre la sua dimesnione è uguale a quella di <span class="math-span">\( U\)</span>, ovvero     <span class="math-block">\[         dim(S) = dim(U)     \]</span> </div></div>
-            </article>
-            <nav class="buttons-container content-width">
-                <a class="navigation-button previous" href="combinazione-lineare-e-lineare-indipendenza.html" rel="nofollow"><span>Combinazione lineare e lineare indipendenza</span></a>
-                <a class="navigation-button next" href="operazioni-tra-sottospazi-vettoriali.html" rel="nofollow"><span>Operazioni tra sottospazi vettoriali</span></a>
-            </nav>
-        </section>
-        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
-            <span class="material-symbols-outlined">
-                keyboard_double_arrow_down
-            </span>
+        <span class="page-title"> Spazi vettoriali </span>
+      </header>
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Geometria e algebra</h2>
+        <div class="index-container">
+          <ul class="parent-ul"
+            ><li class="section-li"
+              ><a href="../index.html" rel="nofollow">Indice</a></li
+            ><li class="section-li"
+              ><a
+                href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                rel="nofollow"
+                >Operazioni e strutture algebriche</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/gruppi-anelli-e-campi.html"
+                    rel="nofollow"
+                    >Gruppi, anelli e campi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../operazioni-e-strutture-algebriche/omomorfismi-e-isomorfismi.html"
+                    rel="nofollow"
+                    >Omomorfismi e isomorfismi</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li current"
+              >Spazi vettoriali<ul
+                ><li class="subsection-li"
+                  ><a
+                    href="nozioni-preliminari-su-vettori-e-spazi-vettoriali.html"
+                    rel="nofollow"
+                    >Nozioni preliminari su vettori e spazi vettoriali</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="combinazione-lineare-e-lineare-indipendenza.html"
+                    rel="nofollow"
+                    >Combinazione lineare e lineare indipendenza</a
+                  ></li
+                ><li class="subsection-li current"
+                  >Sottostrutture algebriche<ul
+                    ><li class="definition-li"
+                      ><a href="#def2-19" rel="nofollow"
+                        >Sottostruttura algebrica</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-20" rel="nofollow"
+                        >Sottospazio vettoriale</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-21" rel="nofollow"
+                        >Verificare che uno spazio vettoriale sia sottospazio di
+                        un altro</a
+                      ></li
+                    ><li class="myexample-li"
+                      ><a href="#example9" rel="nofollow"
+                        >Verificare che uno spazio vettoriale sia sottospazio di
+                        un altro</a
+                      ></li
+                    ><li class="definition-li"
+                      ><a href="#def2-22" rel="nofollow"
+                        >Sottospazi affini (traslati di un sottospazio
+                        vettoriale)</a
+                      ></li
+                    ></ul
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="operazioni-tra-sottospazi-vettoriali.html"
+                    rel="nofollow"
+                    >Operazioni tra sottospazi vettoriali</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                rel="nofollow"
+                >Matrici</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/lo-spazio-vettoriale-delle-matrici.html"
+                    rel="nofollow"
+                    >Lo spazio vettoriale delle matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../matrici/l-anello-delle-matrici-quadrate.html"
+                    rel="nofollow"
+                    >L'anello delle matrici quadrate</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a href="../matrici/operazioni-riga.html" rel="nofollow"
+                    >Operazioni riga</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                rel="nofollow"
+                >Sistemi lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../sistemi-lineari/sistemi-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Sistemi lineari come matrici</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                rel="nofollow"
+                >Applicazioni lineari</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/applicazioni-lineari-come-funzioni.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come funzioni</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/applicazioni-lineari-come-matrici.html"
+                    rel="nofollow"
+                    >Applicazioni lineari come matrici</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../applicazioni-lineari/matrici-simili.html"
+                    rel="nofollow"
+                    >Matrici simili</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../determinante/definizioni-di-determinante.html"
+                rel="nofollow"
+                >Determinante</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/definizioni-di-determinante.html"
+                    rel="nofollow"
+                    >Definizioni di determinante</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../determinante/utilizzi-del-determinante.html"
+                    rel="nofollow"
+                    >Utilizzi del determinante</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                rel="nofollow"
+                >Autovalori e autovettori</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/autovalori-autovettori-e-autospazi.html"
+                    rel="nofollow"
+                    >Autovalori, autovettori e autospazi</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../autovalori-e-autovettori/diagonalizzazione-di-una-matrice.html"
+                    rel="nofollow"
+                    >Diagonalizzazione di una matrice</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                rel="nofollow"
+                >Spazi vettoriali euclidei</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/forme-bilineari-e-prodotto-scalare.html"
+                    rel="nofollow"
+                    >Forme bilineari e prodotto scalare</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../spazi-vettoriali-euclidei/spazi-vettoriali-euclidei.html"
+                    rel="nofollow"
+                    >Spazi vettoriali euclidei</a
+                  ></li
+                ></ul
+              ></li
+            ><li class="section-li"
+              ><a
+                href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                rel="nofollow"
+                >Geometria analitica nello spazio</a
+              ><ul
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/rette-nello-spazio.html"
+                    rel="nofollow"
+                    >Rette nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/piani-nello-spazio.html"
+                    rel="nofollow"
+                    >Piani nello spazio</a
+                  ></li
+                ><li class="subsection-li"
+                  ><a
+                    href="../geometria-analitica-nello-spazio/prodotto-vettoriale.html"
+                    rel="nofollow"
+                    >Prodotto vettoriale</a
+                  ></li
+                ></ul
+              ></li
+            ></ul
+          >
         </div>
-            <footer class="footer-wrapper">
-                <div class="copyright-wrapper">
-                    <span> &copy; Copyright 2024</span> /
-                    <span>made by <a href="https://github.com/lorenzoarlo" rel="nofollow">lorenzoarlo</a></span>
-                </div>
-                /
-                <div class="privacy-wrapper">
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze
-                            cookie</a></span> /
-                    <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow"
-                            target="_blank">Privacy Policy</a></span>
-                </div>
-            </footer>
+      </aside>
+      <div class="sidebar-button" onclick="toggle_sidebar(this)" role="button">
+        keyboard_double_arrow_right
+      </div>
+      <section class="content-wrapper">
+        <h1 class="section-title content-width">Sottostrutture algebriche</h1>
+        <article class="content-container content-width">
+          <div class="definition environment" id="def2-19"
+            ><h2 class="environment-title"
+              >Definizione - Sottostruttura algebrica</h2
+            ><div class="environment-body">
+              Ogni struttura algebrica ammette l'esistenza di una
+              sottostruttura. Una <strong>sottostruttura</strong> è un
+              <strong
+                >sottoinsieme che mantiene le proprietà della struttura più
+                grande</strong
+              >
+              (dove con proprietà si intendono le operazioni, elementi nulli,
+              ecc..).
+              <div class="mynote environment"
+                ><h3 class="environment-title">Nota bene - Ad esempio</h3
+                ><div class="environment-body">
+                  Considerando il gruppo
+                  <span class="math-span">\( (\mathbb{R}, +)\)</span>, allora
+                  possiamo dire che
+                  <span class="math-span">\( (\mathbb{Z}, +)\)</span> è un
+                  sottogruppo perchè
+                  <span class="math-span"
+                    >\( \mathbb{Z} \subseteq \mathbb{R}\)</span
+                  >
+                  e <span class="math-span">\( (\mathbb{Z}, +)\)</span> è ancora
+                  un gruppo. Per verificare ciò, è sufficiente verificare per
+                  ogni elemento del sottoinsieme, l'operazione sia interna.
+                </div></div
+              >
+            </div></div
+          ><div class="definition environment" id="def2-20"
+            ><h2 class="environment-title"
+              >Definizione - Sottospazio vettoriale</h2
+            ><div class="environment-body">
+              Dato uno spazio vettoriale
+              <span class="math-span">\( (\mathbb{K}, V, +, \cdot)\)</span>:
+              considerando <span class="math-span">\( W\)</span> un sottoinsieme
+              di <span class="math-span">\( V\)</span> (<span class="math-span"
+                >\( W \subseteq V\)</span
+              >), allora
+              <span class="math-span">\( (\mathbb{K}, W, +, \cdot)\)</span> è
+              detto <strong>sottospazio vettoriale</strong> di
+              <span class="math-span">\( V\)</span> se:
+              <ul class="list-container"
+                ><li class="list-item"
+                  >l'elemento nullo di
+                  <span class="math-span">\( V\)</span> appartiene anche a
+                  <span class="math-span">\( W\)</span>, ovvero
+                  <span class="math-block">\[ 0_{V} \in W \]</span> </li
+                ><li class="list-item"
+                  >la somma di prodotti per uno scalare tra elementi di
+                  <span class="math-span">\( W\)</span> è interna a
+                  <span class="math-span">\( W\)</span> (le operazioni di
+                  <span class="math-span">\( V\)</span> sono interne a
+                  <span class="math-span">\( W\)</span>), ovvero
+                  <span class="math-block"
+                    >\begin{aligned} &amp; \alpha w_{1} + \beta w_{2} \in W
+                    &amp; \forall w_{1}, w_{2} \in W, \forall \alpha, \beta \in
+                    \mathbb{K} \end{aligned}</span
+                  >
+                </li></ul
+              >
+            </div></div
+          ><div class="definition environment" id="def2-21"
+            ><h2 class="environment-title"
+              >Definizione - Verificare che uno spazio vettoriale sia
+              sottospazio di un altro</h2
+            ><div class="environment-body">
+              Considerando due spazi vettoriali
+              <span class="math-span">\( (\mathbb{K}, V, +, \cdot)\)</span> e
+              <span class="math-span">\( (\mathbb{K}, W, +, \cdot)\)</span>, con
+              l'insieme <span class="math-span">\( W\)</span> un sottoinsieme di
+              <span class="math-span">\( V\)</span>, allora lo spazio vettoriale
+              <span class="math-span">\( W\)</span> è un sottospazio di
+              <span class="math-span">\( V\)</span> se:
+              <ul class="list-container"
+                ><li class="list-item"
+                  >l'elemento nullo di
+                  <span class="math-span">\( V\)</span> appartiene anche a
+                  <span class="math-span">\( W\)</span>, ovvero
+                  <span class="math-block">\[ 0_{V} \in W \]</span> </li
+                ><li class="list-item"
+                  >la somma di prodotti per uno scalare tra elementi di
+                  <span class="math-span">\( W\)</span> è interna a
+                  <span class="math-span">\( W\)</span>, ovvero considerando i
+                  vettori <span class="math-span">\( u, w \in W\)</span> e
+                  <span class="math-span"
+                    >\( \alpha, \beta \in \mathbb{K}\)</span
+                  >
+                  si ha che
+                  <span class="math-block"
+                    >\[ (\alpha \cdot u + \beta \cdot w) \in W \]</span
+                  >
+                </li></ul
+              >
+            </div></div
+          ><div class="myexample environment" id="example9"
+            ><h2 class="environment-title"
+              >Esempio - Verificare che uno spazio vettoriale sia sottospazio di
+              un altro</h2
+            ><div class="environment-body collapsed">
+              Verificare che lo spazio vettoriale
+              <span class="math-span">\( W\)</span>
+              <span class="math-block"
+                >\[ W = \{ (x, y) \in \mathbb{R}^{2} \quad : \quad 5x - y = 0 \}
+                \]</span
+              >
+              è un sottospazio di
+              <span class="math-span">\( \mathbb{R}^{2}\)</span>. <br />
+              Per farlo, conviene riscrivere
+              <span class="math-span">\( y\)</span> in funzione di
+              <span class="math-span">\( x\)</span>, ovvero si ha che
+              <span class="math-span">\( y = 5x\)</span>: si può quindi
+              riscrivere una generico vettore di
+              <span class="math-span">\( W\)</span> come
+              <span class="math-block"
+                >\[ (x, y) \qquad \implies \qquad (x, 5x) \]</span
+              >
+              Ora, è necessario verificare l'esistenza dell'elemento nullo di
+              <span class="math-span">\( \mathbb{R}^{2}\)</span> in
+              <span class="math-span">\( W\)</span>, ovvero considerando che il
+              vettore nullo di <span class="math-span">\( (0, 0)\)</span> è
+              l'elemento in cui <span class="math-span">\( x = y = 0\)</span>,
+              si ha che
+              <span class="math-block"
+                >\[ (x, 5x) = (0, 5 \cdot 0) = (0, 0) \]</span
+              >
+              Infine, è necessario verificare che la somma e il prodotto per uno
+              scalare siano interni a <span class="math-span">\( W\)</span>,
+              ovvero
+              <span class="math-block"
+                >\begin{aligned} &amp; \alpha \cdot (x, 5x) + \beta \cdot (x,
+                5x) &amp; = \\ &amp; (\alpha \cdot x, 5 \cdot \alpha \cdot x) +
+                (\beta \cdot x, 5 \cdot \beta \cdot x) &amp; = \\ &amp; ((\alpha
+                + \beta) \cdot x, (\alpha + \beta) \cdot 5x) &amp;
+                \end{aligned}</span
+              >
+              che è interno a <span class="math-span">\( W\)</span>. </div
+            ><div class="environment-tail"
+              ><span
+                class="material-symbols-outlined body-visibility-icon"
+                onclick="expand_environment(event)"
+                >expand_more</span
+              ></div
+            ></div
+          ><div class="mynote environment"
+            ><h3 class="environment-title"
+              >Nota bene - Sottospazi vettoriali di
+              <span class="math-span">\( \mathbb{R}^{2}\)</span></h3
+            ><div class="environment-body">
+              I sottospazi vettoriali di
+              <span class="math-span">\( \mathbb{R}^2\)</span> sono infiniti, in
+              particolare sono:
+              <ul class="list-container"
+                ><li class="list-item"
+                  >tutto
+                  <span class="math-span">\( \mathbb{R}^{2}\)</span>; </li
+                ><li class="list-item"
+                  >lo spazio contentente solo l'elemento
+                  <span class="math-span">\( (0, 0)\)</span>; </li
+                ><li class="list-item"
+                  >tutte le rette passanti per
+                  <span class="math-span">\( (0, 0)\)</span>.
+                </li></ul
+              >
+            </div></div
+          ><div class="mynote environment"
+            ><h3 class="environment-title"
+              >Nota bene - Sottospazi vettoriali di
+              <span class="math-span">\( \mathbb{R}^{3}\)</span></h3
+            ><div class="environment-body">
+              I sottospazi vettoriali di
+              <span class="math-span">\( \mathbb{R}^{3}\)</span> sono infiniti,
+              in particolare:
+              <ul class="list-container"
+                ><li class="list-item"
+                  >tutto
+                  <span class="math-span">\( \mathbb{R}^{3}\)</span>; </li
+                ><li class="list-item"
+                  >lo spazio contentente solo l'elemento
+                  <span class="math-span">\( (0, 0, 0)\)</span>; </li
+                ><li class="list-item"
+                  >tutte le rette passanti per
+                  <span class="math-span">\( (0, 0, 0)\)</span>; </li
+                ><li class="list-item"
+                  >tutti i piani passanti passanti per
+                  <span class="math-span">\( (0, 0, 0)\)</span>.
+                </li></ul
+              >
+            </div></div
+          ><div class="mynote environment"
+            ><h3 class="environment-title"
+              >Nota bene - Spazi vettoriali con un numero finito di
+              sottospazi</h3
+            ><div class="environment-body">
+              Esempi di spazi vettoriali che ammettono un numero finito di
+              sottospazi vettoriali sono:
+              <ul class="list-container"
+                ><li class="list-item"
+                  ><span class="math-span">\( \mathbb{R}^{1}\)</span>, che
+                  ammette solo sé stesso come sottospazio; </li
+                ><li class="list-item"
+                  ><span class="math-span">\( \mathbb{Z}^{x}_{n}\)</span>, che
+                  ha un numero limitato di elementi.
+                </li></ul
+              >
+            </div></div
+          ><div class="definition environment" id="def2-22"
+            ><h2 class="environment-title"
+              >Definizione - Sottospazi affini (traslati di un sottospazio
+              vettoriale)</h2
+            ><div class="environment-body">
+              Considerando un sottoinsieme
+              <span class="math-span">\( S\)</span> di
+              <span class="math-span">\( \mathbb{R}^{n}\)</span> che può essere
+              visto come la traslazione di un sottospazio vettoriale
+              <span class="math-span">\( U\)</span> di
+              <span class="math-span">\( \mathbb{R}^{n}\)</span>, ovvero
+              considerando un vettore costante
+              <span class="math-span">\( \bar{v}\)</span>
+              <span class="math-block"
+                >\[ S = \{ u + \bar{v} \ : \ \forall u \in U \} \]</span
+              >
+              allora definiamo <span class="math-span">\( S\)</span> un
+              <strong>sottospazio affine</strong> a
+              <span class="math-span">\( U\)</span>. <br />
+              Tale sottospazio affine (anche se non è considerato un sottospazio
+              vettoriale di
+              <span class="math-span">\( \mathbb{R}^{n}\)</span> in quanto può
+              non contenere il vettore nullo) <strong>ammette una base</strong>:
+              inoltre la sua dimesnione è uguale a quella di
+              <span class="math-span">\( U\)</span>, ovvero
+              <span class="math-block">\[ dim(S) = dim(U) \]</span>
+            </div></div
+          >
+        </article>
+        <nav class="buttons-container content-width">
+          <a
+            class="navigation-button previous"
+            href="combinazione-lineare-e-lineare-indipendenza.html"
+            rel="nofollow"
+            ><span>Combinazione lineare e lineare indipendenza</span></a
+          >
+          <a
+            class="navigation-button next"
+            href="operazioni-tra-sottospazi-vettoriali.html"
+            rel="nofollow"
+            ><span>Operazioni tra sottospazi vettoriali</span></a
+          >
+        </nav>
+      </section>
+      <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+        <span class="material-symbols-outlined">
+          keyboard_double_arrow_down
+        </span>
+      </div>
+      <footer class="footer-wrapper">
+        <div class="copyright-wrapper">
+          <span> &copy; Copyright 2024</span> /
+          <span
+            >made by
+            <a href="https://github.com/lorenzoarlo" rel="nofollow"
+              >lorenzoarlo</a
+            ></span
+          >
+        </div>
+        /
+        <div class="privacy-wrapper">
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/"
+              rel="nofollow"
+              >Pannello preferenze cookie</a
+            ></span
+          >
+          /
+          <span
+            ><a
+              href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html"
+              rel="nofollow"
+              target="_blank"
+              >Privacy Policy</a
+            ></span
+          >
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

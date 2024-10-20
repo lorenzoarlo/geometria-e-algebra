@@ -482,7 +482,7 @@
                   Infine si può esplicitare la sommatoria ottenendo
                   <span class="math-block"
                     >\begin{aligned} &amp; f(v) = \left( \sum_{j = 1}^{n} a_{1,
-                    j} \cdot x_{j} \right) \cdot w_{1} , \ \ldots \ , \left(
+                    j} \cdot x_{j} \right) \cdot w_{1} + \ \ldots \ + \left(
                     \sum_{j = 1}^{n} a_{m, j} \cdot x_{j} \right) \cdot w_{m}
                     &amp; \end{aligned}</span
                   >
@@ -542,8 +542,10 @@
               la sua immagine rispetto a <span class="math-span">\( f\)</span> e
               si deve scrivere tale vettore come combinazione lineare rispetto a
               <span class="math-span">\( B_{W}\)</span>. <br />
-              Le coordinate della combinazione lineare saranno una colonna della
-              matrice.
+              Le coordinate della combinazione lineare (rispetto a
+              <span class="math-span">\( B_W\)</span>) del
+              <span class="math-span">\( i\)</span>-esimo vettore saranno la
+              <span class="math-span">\( i\)</span>-esima colonna della matrice.
               <div class="mynote environment"
                 ><h3 class="environment-title"
                   >Nota bene - Is base canonica better?</h3
@@ -579,12 +581,12 @@
                 >\begin{aligned} &amp; f(v_{1}) = (4, 2, 8) \\ &amp; f(v_{2}) =
                 (-12, -6, 9) \end{aligned}</span
               >
-              e scriviamoli combinazione lineare di
+              e scriviamoli come combinazione lineare di
               <span class="math-span">\( B_{\mathbb{R}^{3}}\)</span> (per
               trovare le coordinate si utilizza un sistema lineare). <br />
               Si ha quindi che le coordinate di
               <span class="math-span">\( f(v_{1})\)</span> rispetto a
-              <span class="math-span">\( B_{\mathbb{R}^{3}}\)</span>
+              <span class="math-span">\( B_{\mathbb{R}^{3}}\)</span> sono
               <span class="math-block"
                 >\begin{aligned} &amp; f(v_{1}) = (4, 2, 8) = a \cdot (1, 0, 0)
                 + b \cdot (0, 2, 0) + c \cdot (0, 0, 3) &amp; \iff \\ &amp;
@@ -592,12 +594,13 @@
                 &amp; b \cdot 0 &amp; + &amp; c \cdot 0 \\ 2 &amp; = &amp; a
                 \cdot 0 &amp; + &amp; b \cdot 2 &amp; + &amp; c \cdot 0 \\ 8
                 &amp; = &amp; a \cdot 0 &amp; + &amp; b \cdot 0 &amp; + &amp; c
-                \cdot 3 \end{array} \right. \qquad \iff \qquad \left\{
+                \cdot 3 \end{array} \right. \qquad \implies \qquad \left\{
                 \begin{array}{ccc} a &amp; = &amp; 4 \\ b &amp; = &amp; 1 \\ c
-                &amp; = &amp; \frac{8}{3} \end{array} \right. &amp;
+                &amp; = &amp; \; {}^{8} /_{3\;} \end{array} \right. &amp;
                 \end{aligned}</span
               >
-              e le coordinate di <span class="math-span">\( f(v_{2})\)</span>
+              mentre le coordinate di
+              <span class="math-span">\( f(v_{2})\)</span> sono
               <span class="math-block"
                 >\begin{aligned} &amp; f(v_{2}) = (-12, -6, 9) = a \cdot (1, 0,
                 0) + b \cdot (0, 2, 0) + c \cdot (0, 0, 3) &amp; \iff \\ &amp;
@@ -605,7 +608,7 @@
                 + &amp; b \cdot 0 &amp; + &amp; c \cdot 0 \\ -6 &amp; = &amp; a
                 \cdot 0 &amp; + &amp; b \cdot 2 &amp; + &amp; c \cdot 0 \\ 9
                 &amp; = &amp; a \cdot 0 &amp; + &amp; b \cdot 0 &amp; + &amp; c
-                \cdot 3 \end{array} \right. \qquad \iff \qquad \left\{
+                \cdot 3 \end{array} \right. \qquad \implies \qquad \left\{
                 \begin{array}{ccc} a &amp; = &amp; -12 \\ b &amp; = &amp; -3 \\
                 c &amp; = &amp; 3 \end{array} \right. &amp; \end{aligned}</span
               >
@@ -613,7 +616,7 @@
               <span class="math-span">\( 3 \times 2\)</span>
               <span class="math-block"
                 >\begin{aligned} A = \left( \begin{array}{cc} 4 &amp; -12 \\ 1
-                &amp; -3 \\ \frac{8}{3} &amp; 3 \end{array} \right)
+                &amp; -3 \\ \; {}^{8} /_{3\;} &amp; 3 \end{array} \right)
                 \end{aligned}</span
               >
               Ora, nel caso si volesse ottenere l'immagine del vettore
@@ -622,25 +625,35 @@
               <span class="math-span">\( B_{\mathbb{R}^{2}}\)</span> (di cui si
               salterà il passaggio)
               <span class="math-block"
-                >\[ v \underset{B_{\mathbb{R}^{2}}}{\equiv} (\frac{1}{2},
-                -\frac{1}{3}) \]</span
+                >\[ v \underset{B_{\mathbb{R}^{2}}}{\equiv} (\; {}^{1} /_{2\;},
+                -\; {}^{1} /_{3\;}) \]</span
               >
-              e moltiplicando quindi
+              e calcolando quindi
               <span class="math-span">\( A \odot X\)</span> si avrà
               <span class="math-block"
                 >\begin{aligned} \left( \begin{array}{cc} 4 &amp; -12 \\ 1 &amp;
-                -3 \\ \frac{8}{3} &amp; 3 \end{array} \right) \odot \left(
-                \begin{array}{c} \frac{1}{2} \\ -\frac{1}{3} \end{array} \right)
-                = \left( \begin{array}{c} 6 \frac{3}{2} \\ \frac{1}{3} \\
-                \end{array} \right) \end{aligned}</span
+                -3 \\ \; {}^{8} /_{3\;} &amp; 3 \end{array} \right) \odot \left(
+                \begin{array}{c} \; {}^{1} /_{2\;} \\ -\; {}^{1} /_{3\;}
+                \end{array} \right) = \left( \begin{array}{c} 6 \\ \; {}^{3}
+                /_{2\;} \\ \; {}^{1} /_{3\;} \\ \end{array} \right)
+                \end{aligned}</span
               >
-              Per calcolare quindi il vettore immagine corrispondente a queste
-              coordinate si avrà
+              Utilizzando queste coordinate con la base
+              <span class="math-span">\( B_{\mathbb{R}^3}\)</span> si avrà la
+              seguente combinazione lineare
               <span class="math-block"
-                >\[ f((1, 1)) = 6 \cdot (1, 0, 0) + \frac{3}{2} \cdot (0, 2, 0)
-                + \frac{1}{3} \cdot (0, 0, 3) = (6, 3, 1) \]</span
+                >\[ 6 \cdot (1, 0, 0) + \frac{3}{2} \cdot (0, 2, 0) +
+                \frac{1}{3} \cdot (0, 0, 3) = (6, 3, 1) \]</span
               >
-              che è l'immagine del vettore scelto. </div
+              Calcolando ora, l'immagine attraverso
+              <span class="math-span">\( f\)</span> del vettore
+              <span class="math-span">\( (1, 1)\)</span> si ottiene
+              <span class="math-block"
+                >\[ \begin{split} f(1, 1) &amp; = ( (2 \cdot 1 + 4 \cdot 1), (1
+                + 2 \cdot 1), (4 \cdot 1 - 3 \cdot 1) ) \\ &amp; = (6, 3, 1)
+                \end{split} \]</span
+              >
+              che è esattamente lo stesso vettore. </div
             ><div class="environment-tail"
               ><span
                 class="material-symbols-outlined body-visibility-icon"
